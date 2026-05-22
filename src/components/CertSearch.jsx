@@ -200,7 +200,7 @@ export default function CertSearch() {
                   {/* Hash inmutable */}
                   <div className="flex flex-col gap-2 pt-2">
                     <span className="text-slate-500 font-medium flex items-center gap-1"><Cpu className="h-3.5 w-3.5" /> Firma Hash Digital (Inmutable):</span>
-                    <span className="font-mono text-[10px] sm:text-xs bg-slate-900 text-slate-300 p-3 rounded-custom-md border border-slate-800 word-break-all block leading-normal text-center shadow-inner select-all">
+                    <span className="font-mono text-[10px] sm:text-xs bg-slate-900 text-slate-300 p-3 rounded-custom-md border border-slate-800 break-all block leading-normal text-center shadow-inner select-all">
                       {searchResult.hash}
                     </span>
                   </div>
