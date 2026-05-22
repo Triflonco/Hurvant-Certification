@@ -33,7 +33,7 @@ export default function Header({ currentView, onViewChange }) {
           <img 
             src="/Logo.png" 
             alt="HURVANT Logo" 
-            className="h-[46px] w-auto object-contain"
+            className="h-[58px] w-auto object-contain"
           />
           <span className="hidden sm:inline-block text-[11px] font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
             Organismo Técnico

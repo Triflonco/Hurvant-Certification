@@ -18,8 +18,8 @@ export default function Footer({ onViewChange }) {
             <img 
               src="/Logo.png" 
               alt="HURVANT Logo" 
-              className="h-12 w-auto object-contain filter brightness-100 invert-0"
-              style={{ filter: 'drop-shadow(0px 2px 8px rgba(255,255,255,0.05))' }}
+              className="h-16 w-auto object-contain"
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
           </div>
           <p className="text-sm leading-relaxed text-slate-400">

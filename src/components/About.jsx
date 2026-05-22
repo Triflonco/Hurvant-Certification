@@ -20,11 +20,11 @@ export default function About() {
         {/* Filosofía del Talento */}
         <article className="lg:col-span-7 bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white rounded-custom-lg p-8 shadow-md border-l-4 border-hurvant-cyan relative overflow-hidden space-y-6">
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-cyan/10 to-transparent rounded-bl-full pointer-events-none" />
-          
+
           <span className="text-[10px] font-bold tracking-widest text-hurvant-cyan uppercase block">
             Filosofía Operativa
           </span>
-          
+
           <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white">
             “No todo el mundo sirve para todos los puestos”
           </h3>
@@ -57,7 +57,7 @@ export default function About() {
         <article className="lg:col-span-5 glass-card rounded-custom-lg p-8 border border-slate-200/60 shadow-xs space-y-6">
           <h3 className="text-lg font-bold text-hurvant-navy border-b border-slate-100 pb-3 flex items-center gap-2.5">
             <Target className="h-5.5 w-5.5 text-hurvant-indigo" />
-            Visión a Mediano y Largo Plazo
+            Visión a Medio y Largo Plazo
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Hurvant evoluciona continuamente hacia la estandarización de competencias. A mediano plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
@@ -87,12 +87,12 @@ export default function About() {
         {/* Declaración de la Alta Dirección */}
         <article className="glass-card rounded-custom-lg p-8 border border-slate-200/60 shadow-xs relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-indigo/5 to-transparent rounded-bl-full pointer-events-none" />
-          
+
           <h4 className="text-lg font-bold text-hurvant-navy mb-6 border-b border-slate-100 pb-3 flex items-center gap-2.5">
             <Milestone className="h-5.5 w-5.5 text-hurvant-indigo" />
             Declaración Institucional de la Alta Dirección
           </h4>
-          
+
           <div className="space-y-6">
             <blockquote className="border-l-4 border-hurvant-indigo pl-5 py-2 font-medium text-slate-700 italic text-xs sm:text-sm leading-relaxed bg-slate-50/50 rounded-r-custom-md">
               "La dirección de HURVANT asume el compromiso inequívoco de actuar con absoluta imparcialidad, independencia y neutralidad en el desarrollo de todas sus actividades de validación y evaluación.
@@ -122,7 +122,7 @@ export default function About() {
             <Users className="h-5.5 w-5.5 text-hurvant-cyan" />
             Comité de Salvaguarda de la Imparcialidad
           </h4>
-          
+
           <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-600">
             <p>
               Para garantizar un control externo real y transparente, HURVANT cuenta con un <strong>Comité de Salvaguarda de la Imparcialidad</strong> de composición equilibrada y carácter independiente.
@@ -149,7 +149,7 @@ export default function About() {
             <div className="bg-indigo-50/50 border border-indigo-100/50 p-5 rounded-custom-md flex items-start gap-3">
               <ShieldCheck className="h-6 w-6 text-hurvant-indigo mt-0.5 shrink-0" />
               <div className="text-xs sm:text-sm text-slate-600 leading-normal">
-                <strong className="text-hurvant-navy font-bold block mb-1">Competencia Principal:</strong> 
+                <strong className="text-hurvant-navy font-bold block mb-1">Competencia Principal:</strong>
                 El comité dispone de plena autoridad para revisar las auditorías de riesgos conductuales y de puesto de Hurvant, paralizar decisiones en caso de detectar indicios de conflicto, y tramitar de forma directa el escalado de quejas de clientes no resueltas.
               </div>
             </div>
