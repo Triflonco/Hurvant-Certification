@@ -67,7 +67,7 @@ export default function App() {
       <Header currentView={currentView} onViewChange={handleViewChange} />
 
       {/* Contenedor principal con animaciones suaves */}
-      <main className="flex-grow pt-10 pb-20" role="main">
+      <main className="flex-grow pt-16 pb-20" role="main">
         {currentView === 'home' && <HomeHero onViewChange={handleViewChange} />}
         {currentView === 'services' && <Services />}
         {currentView === 'sectors' && <Sectors />}
