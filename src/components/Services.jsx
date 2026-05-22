@@ -10,6 +10,7 @@ export default function Services() {
       title: 'Evaluación Operativa de Personas',
       subtitle: 'Análisis práctico y observacional en el entorno real',
       icon: Activity,
+      image: '/eval_interview.jpg',
       color: 'from-indigo-500 to-indigo-600',
       textColor: 'text-indigo-600',
       bgLight: 'bg-indigo-50/50',
@@ -120,8 +121,18 @@ export default function Services() {
               return (
                 <article
                   key={service.id}
-                  className={`glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs flex flex-col justify-between transition-all duration-300 glass-card-hover border-t-4 border-t-slate-300 ${service.borderColor}`}
+                  className={`glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs flex flex-col justify-between transition-all duration-300 glass-card-hover border-t-4 border-t-slate-300 overflow-hidden ${service.borderColor}`}
                 >
+                  {service.image && (
+                    <div className="h-44 -mx-6 -mt-6 mb-6 overflow-hidden relative border-b border-slate-200/60">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
+                    </div>
+                  )}
                   <div className="space-y-4">
                     <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm`}>
                       <IconComp className="h-6 w-6" />

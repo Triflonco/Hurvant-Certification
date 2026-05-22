@@ -8,6 +8,7 @@ export default function Sectors() {
       title: 'Sector Logística',
       subtitle: 'Entornos de alto ritmo y alta rotación de personal',
       icon: Truck,
+      image: '/stress_warehouse.jpg',
       color: 'from-indigo-600 to-indigo-800',
       accentColor: 'text-hurvant-indigo',
       badgeBg: 'bg-indigo-50 text-indigo-700 border-indigo-100',
@@ -77,6 +78,17 @@ export default function Sectors() {
               key={sector.id} 
               className="glass-card rounded-custom-lg border border-slate-200/60 shadow-md overflow-hidden flex flex-col justify-between"
             >
+              {sector.image && (
+                <div className="h-56 overflow-hidden relative border-b border-slate-200">
+                  <img 
+                    src={sector.image} 
+                    alt={sector.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent pointer-events-none" />
+                </div>
+              )}
+
               {/* Encabezado del Sector con gradiente premium */}
               <div className={`bg-gradient-to-r ${sector.color} text-white p-6 relative`}>
                 <div className="absolute top-4 right-4 bg-white/10 p-2.5 rounded-custom-md backdrop-blur-md">

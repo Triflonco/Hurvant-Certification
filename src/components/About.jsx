@@ -54,19 +54,29 @@ export default function About() {
         </article>
 
         {/* Misión y Visión de Futuro */}
-        <article className="lg:col-span-5 glass-card rounded-custom-lg p-8 border border-slate-200/60 shadow-xs space-y-6">
-          <h3 className="text-lg font-bold text-hurvant-navy border-b border-slate-100 pb-3 flex items-center gap-2.5">
-            <Target className="h-5.5 w-5.5 text-hurvant-indigo" />
-            Visión a Medio y Largo Plazo
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Hurvant evoluciona continuamente hacia la estandarización de competencias. A mediano plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
-          </p>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Nuestra hoja de ruta estratégica contempla la alineación regulatoria y la posterior solicitud de acreditación formal bajo modelos internacionales de la entidad nacional (ENAC), tales como la norma **UNE-EN ISO/IEC 17024** para la certificación de personas e **ISO/IEC 17020** para actividades de inspección.
-          </p>
-          <div className="bg-indigo-50/50 p-4 rounded-custom-md border border-indigo-100/40 text-xs text-slate-600 font-medium">
-            La acreditación oficial no es el punto de inicio comercial de nuestro proyecto, sino la consecuencia final de una metodología validada empíricamente en el mercado real de trabajo.
+        <article className="lg:col-span-5 glass-card rounded-custom-lg border border-slate-200/60 shadow-xs flex flex-col justify-between overflow-hidden">
+          <div className="h-48 overflow-hidden relative border-b border-slate-200/60">
+            <img 
+              src="/training_alignment.jpg" 
+              alt="HURVANT Technical Alignment & Governance" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
+          </div>
+          <div className="p-6 sm:p-8 space-y-6 flex-grow">
+            <h3 className="text-lg font-bold text-hurvant-navy border-b border-slate-100 pb-3 flex items-center gap-2.5">
+              <Target className="h-5.5 w-5.5 text-hurvant-indigo" />
+              Visión a Medio y Largo Plazo
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Hurvant evoluciona continuamente hacia la estandarización de competencias. A mediano plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
+            </p>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Nuestra hoja de ruta estratégica contempla la alineación regulatoria y la posterior solicitud de acreditación formal bajo modelos internacionales de la entidad nacional (ENAC), tales como la norma **UNE-EN ISO/IEC 17024** para la certificación de personas e **ISO/IEC 17020** para actividades de inspección.
+            </p>
+            <div className="bg-indigo-50/50 p-4 rounded-custom-md border border-indigo-100/40 text-xs text-slate-600 font-medium">
+              La acreditación oficial no es el punto de inicio comercial de nuestro proyecto, sino la consecuencia final de una metodología validada empíricamente en el mercado real de trabajo.
+            </div>
           </div>
         </article>
       </div>
