@@ -54,12 +54,12 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 text-slate-800 selection:bg-indigo-500 selection:text-white relative overflow-hidden">
-      {/* Marca de agua fija de fondo (ultra-difuminada y neutralizada en escala de grises) */}
+      {/* Marca de agua fija de fondo (ultra-difuminada y adaptada a la máxima dimensión de pantalla sin recortes) */}
       <div className="fixed inset-0 pointer-events-none flex items-center justify-center overflow-hidden" style={{ zIndex: 0 }}>
         <img 
           src="/Logo.png" 
           alt="HURVANT Background Watermark" 
-          className="w-[85%] max-w-[700px] h-auto object-contain opacity-[0.025] select-none filter grayscale pointer-events-none"
+          className="max-w-[90vw] max-h-[82vh] w-auto h-auto object-contain opacity-[0.025] select-none filter grayscale pointer-events-none"
         />
       </div>
 
