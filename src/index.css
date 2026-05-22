@@ -124,3 +124,10 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Justificación global de textos descriptivos e informativos */
+p, li, blockquote, dd {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
