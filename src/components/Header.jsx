@@ -24,16 +24,16 @@ export default function Header({ currentView, onViewChange }) {
     <header className="sticky top-0 left-0 w-full z-50 glass-header shadow-xs" role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo oficial con fondo transparente */}
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           onClick={() => handleNavClick('home')}
           className="flex items-center gap-3 transition-transform duration-200 active:scale-98"
           aria-label="HURVANT - Inicio"
         >
-          <img 
-            src="/Logo.png" 
-            alt="HURVANT Logo" 
-            className="h-[58px] w-auto object-contain"
+          <img
+            src="/Logo.png"
+            alt="HURVANT Logo"
+            className="h-[78px] w-auto object-contain"
           />
           <span className="hidden sm:inline-block text-[11px] font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
             Organismo Técnico
@@ -49,11 +49,10 @@ export default function Header({ currentView, onViewChange }) {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-3 py-2 text-[13px] font-bold rounded-custom-sm transition-all duration-200 relative ${
-                  isActive 
-                    ? 'text-hurvant-indigo bg-indigo-50/60' 
+                className={`px-3 py-2 text-[13px] font-bold rounded-custom-sm transition-all duration-200 relative ${isActive
+                    ? 'text-hurvant-indigo bg-indigo-50/60'
                     : 'text-slate-650 hover:text-hurvant-navy hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 {item.label}
                 {isActive && (
@@ -88,11 +87,10 @@ export default function Header({ currentView, onViewChange }) {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => handleNavClick(item.id)}
-                  className={`block px-4 py-3 text-base font-semibold rounded-custom-md transition-all ${
-                    isActive 
-                      ? 'text-hurvant-indigo bg-indigo-50/70 border-l-4 border-hurvant-indigo' 
+                  className={`block px-4 py-3 text-base font-semibold rounded-custom-md transition-all ${isActive
+                      ? 'text-hurvant-indigo bg-indigo-50/70 border-l-4 border-hurvant-indigo'
                       : 'text-slate-600 hover:text-hurvant-navy hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </a>
