@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeHero from './components/HomeHero';
-import Schemes from './components/Schemes';
-import Impartiality from './components/Impartiality';
+import Services from './components/Services';
+import Sectors from './components/Sectors';
+import Methodology from './components/Methodology';
+import About from './components/About';
 import ComplaintsWizard from './components/ComplaintsWizard';
 import CertSearch from './components/CertSearch';
+import Contact from './components/Contact';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -15,7 +18,16 @@ export default function App() {
     const handleHashChange = () => {
       const hash = window.location.hash || '#home';
       const viewId = hash.substring(1);
-      const validViews = ['home', 'schemes', 'impartiality', 'complaints', 'verification'];
+      const validViews = [
+        'home', 
+        'services', 
+        'sectors', 
+        'methodology', 
+        'about', 
+        'complaints', 
+        'verification', 
+        'contact'
+      ];
       
       if (validViews.includes(viewId)) {
         setCurrentView(viewId);
@@ -37,6 +49,7 @@ export default function App() {
   const handleViewChange = (viewId) => {
     setCurrentView(viewId);
     window.location.hash = `#${viewId}`;
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   return (
@@ -47,10 +60,13 @@ export default function App() {
       {/* Contenedor principal con animaciones suaves */}
       <main className="flex-grow pt-10 pb-20" role="main">
         {currentView === 'home' && <HomeHero onViewChange={handleViewChange} />}
-        {currentView === 'schemes' && <Schemes />}
-        {currentView === 'impartiality' && <Impartiality />}
+        {currentView === 'services' && <Services />}
+        {currentView === 'sectors' && <Sectors />}
+        {currentView === 'methodology' && <Methodology />}
+        {currentView === 'about' && <About />}
         {currentView === 'complaints' && <ComplaintsWizard />}
         {currentView === 'verification' && <CertSearch />}
+        {currentView === 'contact' && <Contact />}
       </main>
 
       {/* Footer corporativo oficial */}

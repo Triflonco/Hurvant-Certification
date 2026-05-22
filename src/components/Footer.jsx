@@ -23,52 +23,52 @@ export default function Footer({ onViewChange }) {
             />
           </div>
           <p className="text-sm leading-relaxed text-slate-400">
-            Organismo técnico especializado de tercera parte en evaluación de competencias de operarios y validación reglamentaria de maquinaria. Diseñado bajo principios innegociables de imparcialidad e independencia técnica.
+            Organismo técnico de tercera parte especializado en la evaluación práctica de competencias y la reducción del riesgo operativo y humano en entornos exigentes.
           </p>
         </div>
 
-        {/* Esquemas de Gobernanza */}
+        {/* Esquemas y Servicios */}
         <div>
           <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
             <ShieldCheck className="h-4 w-4 text-hurvant-cyan" />
-            Esquemas de Gobernanza
+            Servicios y Sectores
           </h3>
           <ul className="space-y-3">
             <li>
               <a 
-                href="#schemes" 
-                onClick={(e) => handleLinkClick(e, 'schemes')}
+                href="#services" 
+                onClick={(e) => handleLinkClick(e, 'services')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Esquema Operadores (ISO 17024)
+                Evaluación Operativa de Personas
               </a>
             </li>
             <li>
               <a 
-                href="#schemes" 
-                onClick={(e) => handleLinkClick(e, 'schemes')}
+                href="#sectors" 
+                onClick={(e) => handleLinkClick(e, 'sectors')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Inspección de Equipos (RD 1215/97)
+                Sectores Críticos: Logística y Hotelería
               </a>
             </li>
             <li>
               <a 
-                href="#impartiality" 
-                onClick={(e) => handleLinkClick(e, 'impartiality')}
+                href="#about" 
+                onClick={(e) => handleLinkClick(e, 'about')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Comité de Imparcialidad
+                Estructura de Imparcialidad y Calidad
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Garantías Públicas */}
+        {/* Garantías Públicas y Contacto */}
         <div>
           <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
             <Scale className="h-4 w-4 text-hurvant-indigo-light" />
-            Garantías Públicas
+            Gobernanza y Contacto
           </h3>
           <ul className="space-y-3">
             <li>
@@ -77,7 +77,7 @@ export default function Footer({ onViewChange }) {
                 onClick={(e) => handleLinkClick(e, 'complaints')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Canal de Quejas Oficiales
+                Canal de Quejas y Apelaciones
               </a>
             </li>
             <li>
@@ -86,16 +86,16 @@ export default function Footer({ onViewChange }) {
                 onClick={(e) => handleLinkClick(e, 'verification')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Registro de Verificación RGPD
+                Buscador de Certificados RGPD
               </a>
             </li>
             <li>
               <a 
-                href="#impartiality" 
-                onClick={(e) => handleLinkClick(e, 'impartiality')}
+                href="#contact" 
+                onClick={(e) => handleLinkClick(e, 'contact')}
                 className="text-sm hover:text-white transition-colors"
               >
-                Declaración Jurada Directiva
+                Solicitar Programa Piloto
               </a>
             </li>
           </ul>
@@ -105,15 +105,15 @@ export default function Footer({ onViewChange }) {
       {/* Franja Legal e Imparcialidad Obligatoria */}
       <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800/80 text-xs text-slate-500 space-y-4">
         <div className="bg-slate-950/40 border border-slate-800/60 rounded-custom-md p-5 leading-relaxed text-slate-400">
-          <strong>⚠️ Aviso Legal Importante (ENAC Impartiality compliance):</strong> HURVANT declara formalmente que de acuerdo con el marco UNE-EN ISO/IEC 17024 y UNE-EN ISO/IEC 17020, NO ofrece asesoría de prevención de riesgos laborales (PRL), NO realiza formación preparatoria para los esquemas que examina, y NO comercializa maquinaria industrial. Toda evaluación es realizada de manera estrictamente neutral por técnicos independientes autorizados por la Dirección de Certificación.
+          <strong>⚠️ Aviso Legal Importante (Cumplimiento de Imparcialidad):</strong> HURVANT declara formalmente que de acuerdo con las directrices UNE-EN ISO/IEC 17024 e ISO/IEC 17020, NO imparte formación preparatoria, NO ofrece asesoría comercial o técnica de prevención de riesgos laborales (PRL) y NO comercializa, distribuye ni alquila maquinaria o equipos de trabajo. Toda evaluación conductual y funcional es ejecutada con absoluta neutralidad por inspectores autorizados por la Alta Dirección de Calidad.
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} HURVANT. Todos los derechos reservados. Portal institucional de conformidad técnica.</p>
+          <p>&copy; {new Date().getFullYear()} HURVANT. Todos los derechos reservados. Portal institucional de validación técnica.</p>
           <div className="flex gap-6">
             <a 
-              href="#impartiality" 
-              onClick={(e) => handleLinkClick(e, 'impartiality')}
+              href="#about" 
+              onClick={(e) => handleLinkClick(e, 'about')}
               className="hover:text-slate-300 transition-colors"
             >
               Aviso de Imparcialidad
@@ -130,7 +130,7 @@ export default function Footer({ onViewChange }) {
               onClick={(e) => handleLinkClick(e, 'complaints')}
               className="hover:text-slate-300 transition-colors"
             >
-              Quejas Legales
+              Quejas y Apelaciones
             </a>
           </div>
         </div>

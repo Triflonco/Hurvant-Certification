@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { Menu, X, Landmark } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Header({ currentView, onViewChange }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Inicio' },
-    { id: 'schemes', label: 'Esquemas' },
-    { id: 'impartiality', label: 'Imparcialidad' },
+    { id: 'services', label: 'Qué hacemos' },
+    { id: 'sectors', label: 'Sectores' },
+    { id: 'methodology', label: 'Metodología' },
+    { id: 'about', label: 'Sobre Hurvant' },
     { id: 'complaints', label: 'Quejas y Apelaciones' },
-    { id: 'verification', label: 'Verificación' }
+    { id: 'verification', label: 'Verificación' },
+    { id: 'contact', label: 'Contacto' }
   ];
 
   const handleNavClick = (id) => {
@@ -37,8 +40,8 @@ export default function Header({ currentView, onViewChange }) {
           </span>
         </a>
 
-        {/* Menú Desktop */}
-        <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Navegación principal">
+        {/* Menú Desktop (se muestra en pantallas xl / de 1280px para arriba para evitar colapso de texto) */}
+        <nav className="hidden xl:flex items-center space-x-1" role="navigation" aria-label="Navegación principal">
           {navItems.map((item) => {
             const isActive = currentView === item.id;
             return (
@@ -46,23 +49,23 @@ export default function Header({ currentView, onViewChange }) {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-4 py-2 text-sm font-semibold rounded-custom-sm transition-all duration-200 relative ${
+                className={`px-3 py-2 text-[13px] font-bold rounded-custom-sm transition-all duration-200 relative ${
                   isActive 
                     ? 'text-hurvant-indigo bg-indigo-50/60' 
-                    : 'text-slate-600 hover:text-hurvant-navy hover:bg-slate-50'
+                    : 'text-slate-650 hover:text-hurvant-navy hover:bg-slate-50'
                 }`}
               >
                 {item.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan rounded-full" />
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan rounded-full" />
                 )}
               </a>
             );
           })}
         </nav>
 
-        {/* Botón de Menú Móvil */}
-        <div className="md:hidden flex items-center">
+        {/* Botón de Menú Móvil / Tablet */}
+        <div className="xl:hidden flex items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-custom-sm text-slate-600 hover:text-hurvant-navy hover:bg-slate-100 transition-colors"
@@ -74,9 +77,9 @@ export default function Header({ currentView, onViewChange }) {
         </div>
       </div>
 
-      {/* Menú Móvil Desplegable */}
+      {/* Menú Móvil / Tablet Desplegable */}
       {mobileMenuOpen && (
-        <div className="md:hidden glass-header border-t border-slate-100 animate-fade-in absolute w-full left-0 z-45 shadow-lg">
+        <div className="xl:hidden glass-header border-t border-slate-100 animate-fade-in absolute w-full left-0 z-45 shadow-lg">
           <nav className="px-4 pt-2 pb-6 space-y-1">
             {navItems.map((item) => {
               const isActive = currentView === item.id;
