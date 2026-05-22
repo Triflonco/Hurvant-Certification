@@ -9,6 +9,7 @@ import About from './components/About';
 import ComplaintsWizard from './components/ComplaintsWizard';
 import CertSearch from './components/CertSearch';
 import Contact from './components/Contact';
+import ClientDashboard from './components/ClientDashboard';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -26,7 +27,8 @@ export default function App() {
         'about', 
         'complaints', 
         'verification', 
-        'contact'
+        'contact',
+        'dashboard'
       ];
       
       if (validViews.includes(viewId)) {
@@ -76,6 +78,7 @@ export default function App() {
         {currentView === 'complaints' && <ComplaintsWizard />}
         {currentView === 'verification' && <CertSearch />}
         {currentView === 'contact' && <Contact />}
+        {currentView === 'dashboard' && <ClientDashboard />}
       </main>
 
       {/* Footer corporativo oficial */}

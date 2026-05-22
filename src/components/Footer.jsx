@@ -91,6 +91,15 @@ export default function Footer({ onViewChange }) {
             </li>
             <li>
               <a 
+                href="#dashboard" 
+                onClick={(e) => handleLinkClick(e, 'dashboard')}
+                className="text-sm text-hurvant-cyan hover:text-white transition-colors font-semibold"
+              >
+                Área Privada de Control (Ledger)
+              </a>
+            </li>
+            <li>
+              <a 
                 href="#contact" 
                 onClick={(e) => handleLinkClick(e, 'contact')}
                 className="text-sm hover:text-white transition-colors"

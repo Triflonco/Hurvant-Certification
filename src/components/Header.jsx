@@ -11,7 +11,7 @@ export default function Header({ currentView, onViewChange }) {
     { id: 'methodology', label: 'Metodología' },
     { id: 'about', label: 'Sobre Hurvant' },
     { id: 'complaints', label: 'Quejas y Apelaciones' },
-    { id: 'verification', label: 'Verificación' },
+    { id: 'dashboard', label: 'Área Privada' },
     { id: 'contact', label: 'Contacto' }
   ];
 
