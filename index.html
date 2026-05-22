@@ -3,44 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hurvant | Entidad técnica de tercera parte especializada en validación operativa de personas, adecuación de maquinaria RD 1215/97, compliance legal y trazabilidad documental.">
-  <title>HURVANT | Certificación y Validación Técnica</title>
+  <meta name="description" content="HURVANT | Organismo Técnico de Conformidad. Especializados en certificación de personas bajo UNE-EN ISO/IEC 17024 y validación de maquinaria según RD 1215/1997.">
+  <meta name="author" content="HURVANT">
+  <meta name="robots" content="index, follow">
+  <title>HURVANT - Organismo Técnico de Certificación y Validación</title>
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CABECERA PRINCIPAL CON GLASSMORPHISM -->
+  <!-- CABECERA PRINCIPAL INSTITUCIONAL -->
   <header class="main-header" role="banner">
     <div class="nav-container">
-      <a href="#home" class="logo" aria-label="Hurvant Inicio">
-        <div class="logo-icon" aria-hidden="true"></div>
-        HURVANT<span>.</span>
+      <a href="#home" class="logo" id="main-logo-link" aria-label="HURVANT - Inicio">
+        <img src="public/Logo.png" alt="HURVANT Logo" style="height: 52px; width: auto; object-fit: contain; vertical-align: middle;">
+        <span style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted); border-left: 2px solid var(--color-border); padding-left: 0.8rem; margin-left: 0.4rem; letter-spacing: 0.05em;">Organismo Técnico</span>
       </a>
       
       <nav class="main-nav" role="navigation" aria-label="Navegación principal">
-        <ul>
-          <li class="active"><a href="#home">Inicio</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#sectors">Sectores</a></li>
-          <li><a href="#methodology">Metodología</a></li>
-          <li><a href="#blog">Blog Técnico</a></li>
-          <li><a href="#governance">Gobernanza</a></li>
-          <li><a href="#contact">Calcular Riesgo</a></li>
-          <li>
-            <a href="#company-portal" class="btn-portal" aria-label="Acceso al portal corporativo de empresas">
-              <span>👤</span> Portal Empresa
-            </a>
-          </li>
-          <li>
-            <a href="#worker-portal" class="btn-portal btn-portal-primary" aria-label="Acceso al pasaporte técnico del trabajador">
-              <span>📱</span> Pasaporte QR
-            </a>
-          </li>
+        <ul id="nav-list">
+          <li class="active" id="nav-item-home"><a href="#home">Inicio</a></li>
+          <li id="nav-item-schemes"><a href="#schemes">Esquemas</a></li>
+          <li id="nav-item-impartiality"><a href="#impartiality">Imparcialidad</a></li>
+          <li id="nav-item-complaints"><a href="#complaints">Quejas y Apelaciones</a></li>
+          <li id="nav-item-verification"><a href="#verification">Verificación</a></li>
         </ul>
       </nav>
     </div>
@@ -51,948 +41,433 @@
 
     <!-- 1. VISTA: INICIO (HOME) -->
     <section id="home-view" class="view active" aria-labelledby="home-title">
-      <div class="hero-section">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <span class="hero-badge">Entidad Técnica de Tercera Parte</span>
-            <h1 id="home-title">Validación Operativa y <span>Compliance Técnico</span> Industrial</h1>
-            <p>
-              Aseguramos la aptitud práctica real de tus operarios y la adecuación de tus equipos de trabajo conforme al RD 1215/97. Blindaje jurídico B2B con trazabilidad documental criptográfica instantánea ante inspecciones.
-            </p>
-            <div class="hero-actions">
-              <a href="#contact" class="btn-portal btn-portal-primary" style="padding:0.8rem 1.8rem; font-size:1rem;">
-                Calcular Riesgo Legal 🧮
-              </a>
-              <a href="#services" class="btn-portal" style="padding:0.8rem 1.8rem; font-size:1rem;">
-                Ver Servicios Técnicos
-              </a>
-            </div>
-          </div>
+      <div class="section-container" style="max-width: 1100px;">
+        <header class="section-header">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Organismo Técnico de Conformidad</span>
+          <h1 id="home-title">Gobernanza, Certificación y Rigor Técnico de Tercera Parte</h1>
+          <p>Entidad independiente en proceso de adecuación y acreditación bajo normas internacionales de evaluación.</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start; margin-top: 2rem;">
           
-          <div class="hero-visual">
-            <article class="hero-card" aria-label="Panel de estadísticas en tiempo real">
-              <div class="hero-card-header">
-                <span style="font-size:0.8rem; font-weight:700; color:var(--color-slate-500); text-transform:uppercase;">Trazabilidad Activa</span>
-                <span class="status-tag">Servidor Conforme</span>
-              </div>
-              <div class="hero-card-stat">94.2%</div>
-              <div class="hero-card-stat-label">Índice de Aptitud Operativa</div>
+          <div>
+            <article class="formal-card" style="padding: 2rem 2.5rem; margin-bottom: 2rem;">
+              <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--color-text); margin-bottom: 1rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">
+                Compromiso de Independencia y Separación de Actividades
+              </h2>
+              <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                HURVANT se constituye como una entidad de evaluación de la conformidad técnica estrictamente de **tercera parte**. Operamos bajo los más rigurosos marcos de aseguramiento técnico para la certificación de competencias profesionales y la validación reglamentaria de equipos de trabajo.
+              </p>
               
-              <div class="hero-card-row">
-                <span>Operarios Verificados</span>
-                <span>1,248 Activos</span>
+              <div class="impartiality-declaration" style="font-size: 0.95rem; border-left-color: var(--color-accent); padding-left: 1.5rem; background: var(--color-bg); padding: 1.2rem; border-radius: var(--radius-sm); border-left: 4px solid var(--color-accent); margin-bottom: 1.2rem;">
+                <strong>Aviso de Cumplimiento Normativo (UNE-EN ISO/IEC 17024 & ISO/IEC 17020):</strong><br>
+                En estricto cumplimiento con la **cláusula 5.2 (Imparcialidad)**, HURVANT declara públicamente que **NO imparte formación, NO presta asesoría técnica en prevención de riesgos laborales (PRL) y NO comercializa ni alquila equipos de trabajo**. Esta separación radical de funciones garantiza la absoluta objetividad y la validez jurídica e institucional de nuestros dictámenes frente a auditorías y la Inspección de Trabajo.
               </div>
-              <div class="hero-card-row">
-                <span>Maquinaria Validada RD 1215</span>
-                <span>412 Equipos</span>
-              </div>
-              <div class="hero-card-row">
-                <span>Incidencias CAE Resueltas</span>
-                <span>0 Críticas</span>
-              </div>
-              <div class="hero-card-row">
-                <span>Estándar Metodológico</span>
-                <span>ISO 17024/17020</span>
+              
+              <p style="font-size: 0.95rem; color: var(--color-text-muted);">
+                Nuestra misión institucional es proporcionar confianza e imparcialidad en los procesos de evaluación de competencias y adecuación de maquinaria en España, garantizando trazabilidad total e inalterable.
+              </p>
+
+              <div style="display: flex; gap: 1rem; margin-top: 1.8rem;">
+                <a href="#verification" class="btn-action" style="padding: 0.7rem 1.4rem; font-size: 0.9rem; border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center;">
+                  🔍 Verificar Certificado
+                </a>
+                <a href="#schemes" class="btn-action" style="background: var(--color-surface); color: var(--color-text); border-color: var(--color-border); padding: 0.7rem 1.4rem; font-size: 0.9rem; border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center;">
+                  Ver Esquemas Técnicos
+                </a>
               </div>
             </article>
+
+            <!-- Pilares del Rigor Técnico -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Alineación ISO 17024</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Esquemas de evaluación estructurados bajo criterios de competencia objetivos, garantizando la aptitud técnica real de operarios críticos mediante exámenes teórico-prácticos neutrales.</p>
+              </div>
+              <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Auditoría RD 1215/97</h3>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Dictámenes y actas técnicas de adecuación de maquinaria de acuerdo con el Real Decreto 1215/1997, realizados por ingenieros de inspección técnica colegiados.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Grid de Métricas Corporativas -->
-      <section class="metrics-grid" aria-label="Métricas clave de Hurvant">
-        <div class="metric-card">
-          <span class="metric-num">0%</span>
-          <h3 class="metric-title">Fricción Administrativa</h3>
-          <p class="metric-desc">Validación documental CAE automatizada que se sincroniza directamente con tu software corporativo.</p>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">100%</span>
-          <h3 class="metric-title">Evidencia de Campo</h3>
-          <p class="metric-desc">Cada examen práctico a operarios y adecuación técnica a máquinas se registra con firma electrónica geolocalizada.</p>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">ISO</span>
-          <h3 class="metric-title">Estructura Acreditable</h3>
-          <p class="metric-desc">Metodología alineada con los requisitos UNE-EN ISO/IEC 17024 de evaluación de personas.</p>
-        </div>
-      </section>
-    </section>
-
-    <!-- 2. VISTA: SERVICIOS (INTERACTIVO) -->
-    <section id="services-view" class="view" aria-labelledby="services-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="services-title">Nuestros Servicios de Validación</h2>
-          <p>Estructurados bajo criterios objetivos y rigor técnico de tercera parte para mitigar el riesgo legal operacional.</p>
-        </header>
-
-        <div class="services-layout">
-          <!-- Menú Lateral -->
-          <nav class="services-menu" aria-label="Fichas de servicios">
-            <button class="service-tab-btn active" data-service="personas">
-              <span>Certificación de Personas</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-            <button class="service-tab-btn" data-service="prl">
-              <span>PRL Moderna y Cultura</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-            <button class="service-tab-btn" data-service="maquinaria">
-              <span>Adecuación RD 1215/97</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-            <button class="service-tab-btn" data-service="cae">
-              <span>Verificación Documental CAE</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-            <button class="service-tab-btn" data-service="observacion">
-              <span>Observaciones en Campo</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-            <button class="service-tab-btn" data-service="informes">
-              <span>Informes y Peritajes</span>
-              <div class="service-tab-btn-arrow" aria-hidden="true">></div>
-            </button>
-          </nav>
-
-          <!-- Panel de Contenido Dinámico -->
-          <article class="services-content-panel" aria-live="polite">
-            <!-- Pestaña 1: Personas -->
-            <div id="service-personas" class="service-detail active">
-              <div class="service-detail-header">
-                <h3>Certificación y Validación de Personas</h3>
-                <span class="service-detail-norm">Alineado con UNE-EN ISO/IEC 17024</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>La formación teórica tradicional en prevención no garantiza que un operario manipule una carretilla de forma segura en campo, exponiendo a la dirección a responsabilidades graves.</p>
+          <!-- Columna Lateral Derecha: Modelo de Certificado -->
+          <aside style="position: sticky; top: 110px;">
+            <div class="formal-card" style="padding: 1.8rem; text-align: center; border: 2px dashed var(--color-border); background: var(--color-bg-subtle);">
+              <h3 style="font-size: 1rem; font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">Modelo Oficial de Certificación</h3>
+              
+              <figure style="margin: 0 auto 1.2rem; overflow: hidden; border-radius: var(--radius-sm); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); max-width: 100%;">
+                <img src="public/Modelo Certificado de Competencia Hurvant.jpg" alt="Modelo Oficial de Certificado de Competencia Hurvant" style="width: 100%; height: auto; object-fit: cover;">
+                <figcaption style="padding: 0.6rem; font-size: 0.75rem; background: var(--color-surface); color: var(--color-text-muted); border-top: 1px solid var(--color-border); font-style: italic;">
+                  Certificado de Competencia Técnica (Esquema UNE-EN ISO/IEC 17024)
+                </figcaption>
+              </figure>
+              
+              <div style="text-align: left; font-size: 0.8rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+                <p><strong>Elementos de Seguridad Incorporados:</strong></p>
+                <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+                  <span style="color: var(--color-success);">✔</span>
+                  <span><strong>Código de Registro Único:</strong> Trazabilidad individual inmutable en el registro nacional de Hurvant.</span>
                 </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Evaluamos in-situ las habilidades técnicas y destrezas de cada operario bajo listas de chequeo objetivas estructuradas en tabletas con control de geolocalización.</p>
+                <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+                  <span style="color: var(--color-success);">✔</span>
+                  <span><strong>Firma Criptográfica SHA-256:</strong> Sello digital único que imposibilita la alteración o falsificación del documento.</span>
                 </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Expediente digital del examen accesible vía código QR en el Pasaporte Técnico del trabajador. Firma digital inmutable con sello de tiempo.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Certificado de Conformidad de Aptitud Práctica Operativa por puesto, y matriz de competencias actualizada en tiempo real para compras y HSE.</p>
+                <div style="display: flex; align-items: flex-start; gap: 0.4rem;">
+                  <span style="color: var(--color-success);">✔</span>
+                  <span><strong>Código QR de Verificación Inmediata:</strong> Enlace directo y seguro al validador web institucional.</span>
                 </div>
               </div>
-            </div>
-
-            <!-- Pestaña 2: PRL -->
-            <div id="service-prl" class="service-detail">
-              <div class="service-detail-header">
-                <h3>PRL Moderna y Cultura Preventiva Integrada</h3>
-                <span class="service-detail-norm">Enfoque de Cumplimiento Legal Efectivo</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>La prevención de "carpeta archivada" no frena los accidentes graves. Los Servicios de Prevención Ajenos (SPA) raramente auditan la eficacia de campo de las medidas preventivas escritas.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Realizamos auditorías de campo inopinadas para medir la brecha de cumplimiento entre los procedimientos de seguridad formales y la realidad diaria.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Registro histórico de no conformidades detectadas en planta con trazabilidad de acciones correctoras aplicadas.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Mapa de Riesgo Legal por secciones, índice predictivo de siniestralidad y plan de acción estructurado por criticidad.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pestaña 3: Maquinaria -->
-            <div id="service-maquinaria" class="service-detail">
-              <div class="service-detail-header">
-                <h3>Adecuación de Maquinaria y Equipos (RD 1215/97)</h3>
-                <span class="service-detail-norm">Real Decreto 1215/1997 Anexos I y II</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>Poner en marcha equipos modificados o carretillas alquiladas sin un informe técnico formal de tercera parte supone un alto riesgo penal para el jefe de planta ante atrapamientos.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Ingenieros mecánicos especialistas auditan físicamente los resguardos, mandos de seguridad, paradas de emergencia y señalética de tus líneas automatizadas y equipos móviles.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Placa de validación metálica adherida al equipo con código QR enlazado al informe técnico inalterable firmado por ingeniero colegiado.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Acta de Inspección de Adecuación RD 1215/1997 de conformidad o listado priorizado de medidas de ingeniería correctoras.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pestaña 4: CAE -->
-            <div id="service-cae" class="service-detail">
-              <div class="service-detail-header">
-                <h3>Verificación Documental y Técnica Avanzada CAE</h3>
-                <span class="service-detail-norm">Diligencia Debida en Subcontratación</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>Las plataformas CAE tradicionales aprueban de forma administrativa "papeles escaneados" sin criterio técnico. Un operario externo sin cualificación real entra en tus instalaciones.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Técnicos superiores de prevención auditan el contenido real, las firmas de aptitud y la idoneidad técnica de los recursos de las contratas concurrentes.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Alineación mediante API con plataformas líderes de CAE en España. Trazabilidad instantánea de accesos autorizados.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Dossier de Validación CAE de Alta Calidad y blindaje técnico ante responsabilidad subsidiaria de subcontratistas.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pestaña 5: Observacion -->
-            <div id="service-observacion" class="service-detail">
-              <div class="service-detail-header">
-                <h3>Observaciones Preventivas del Trabajo (OPT)</h3>
-                <span class="service-detail-norm">Seguridad Basada en el Comportamiento (SBC)</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>Demostrar ante la Inspección de Trabajo que el empresario ejerce su deber activo de vigilancia y supervisión sobre los empleados que incumplen las normas.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Visitas técnicas programadas y aleatorias donde se observan conductas operativas en caliente, registrando buenas prácticas y desviaciones.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Fotografías con sello temporal e informes firmados digitalmente en pantalla por el técnico y el responsable del área supervisada.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Actas de OPT trazables que sirven como salvaguarda jurídica demostrando la debida diligencia de la dirección.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pestaña 6: Informes -->
-            <div id="service-informes" class="service-detail">
-              <div class="service-detail-header">
-                <h3>Informes Técnicos y Peritajes de Contraste</h3>
-                <span class="service-detail-norm">Defensa Técnica Jurídica de Tercera Parte</span>
-              </div>
-              <div class="service-detail-grid">
-                <div class="service-detail-box">
-                  <h4>⚠️ El Desafío</h4>
-                  <p>Ante una sanción grave o una propuesta de recargo de prestaciones tras un accidente laboral, la empresa requiere un peritaje técnico independiente de alto nivel técnico contrastable.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>⚙️ Metodología</h4>
-                  <p>Reconstrucción científica de accidentes, análisis causal mediante método de árbol de causas e investigación técnica minuciosa de equipos.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>🔗 Trazabilidad</h4>
-                  <p>Metodología de cadena de custodia documental y de evidencias físicas inmutable.</p>
-                </div>
-                <div class="service-detail-box">
-                  <h4>📦 Entregable</h4>
-                  <p>Dossier de Peritaje Técnico firmado por ingenieros peritos judiciales para defensa en sala o alegaciones ante el INSS.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. VISTA: SECTORES OBJETIVO -->
-    <section id="sectors-view" class="view" aria-labelledby="sectors-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="sectors-title">Sectores Objetivo en España</h2>
-          <p>Adaptamos nuestros esquemas de validación operativa a las realidades regulatorias y críticas de las principales industrias del país.</p>
-        </header>
-
-        <div class="sectors-grid">
-          <!-- Sector 1: Logística -->
-          <article class="sector-card">
-            <div class="sector-icon" aria-hidden="true">🚜</div>
-            <h3>Logística y Distribución</h3>
-            <p>Uso masivo de ETTs, alta densidad de carretillas frontales y retráctiles. Solucionamos el control de accesos no autorizados y validamos la destreza práctica in-situ conforme a normas UNE.</p>
-            <div class="sector-stats">
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Siniestralidad</span>
-                <span class="sector-stat-val high-risk">Alta (Atropellos)</span>
-              </div>
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Foco de Validación</span>
-                <span class="sector-stat-val">Carretilleros express</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sector 2: Construcción -->
-          <article class="sector-card">
-            <div class="sector-icon" aria-hidden="true">🧱</div>
-            <h3>Construcción e Infraestructura</h3>
-            <p>Control de subcontratas complejo y subida masiva CAE. Evaluamos a los maquinistas de excavadoras y grúas de forma independiente a la TPC obligatoria del convenio para garantizar aptitud real.</p>
-            <div class="sector-stats">
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Siniestralidad</span>
-                <span class="sector-stat-val high-risk">Crítica (Caídas)</span>
-              </div>
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Foco de Validación</span>
-                <span class="sector-stat-val">Maquinistas pesados</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sector 3: Industria -->
-          <article class="sector-card">
-            <div class="sector-icon" aria-hidden="true">⚙️</div>
-            <h3>Industria Manufacturera y Metal</h3>
-            <p>Paradas de mantenimiento críticas y operaciones concurrentes. Auditorías de consignación de máquinas (sistemas LOTO) y validación de personal para operaciones críticas (soldadura, trabajos en altura).</p>
-            <div class="sector-stats">
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Siniestralidad</span>
-                <span class="sector-stat-val high-risk">Alta (Atrapamiento)</span>
-              </div>
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Foco de Validación</span>
-                <span class="sector-stat-val">Sistemas LOTO / Altura</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sector 4: Renovables -->
-          <article class="sector-card">
-            <div class="sector-icon" aria-hidden="true">⚡</div>
-            <h3>Energías Renovables</h3>
-            <p>Parques eólicos y plantas fotovoltaicas aisladas. Inspección técnica de sistemas de izado de aerogeneradores y validación práctica de rescate en altura para técnicos de mantenimiento.</p>
-            <div class="sector-stats">
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Siniestralidad</span>
-                <span class="sector-stat-val">Moderada</span>
-              </div>
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Foco de Validación</span>
-                <span class="sector-stat-val">Alturas y Rescate GWO</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sector 5: Agroalimentario -->
-          <article class="sector-card">
-            <div class="sector-icon" aria-hidden="true">🌾</div>
-            <h3>Sector Agroalimentario</h3>
-            <p>Contratación estacional masiva y líneas automatizadas de gran velocidad. Adecuación RD 1215 rápida e integración de criterios preventivos con las exigentes certificaciones IFS y BRC.</p>
-            <div class="sector-stats">
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Siniestralidad</span>
-                <span class="sector-stat-val">Media-Alta</span>
-              </div>
-              <div class="sector-stat-item">
-                <span class="sector-stat-label">Foco de Validación</span>
-                <span class="sector-stat-val">Líneas de producción</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. VISTA: METODOLOGÍA -->
-    <section id="methodology-view" class="view" aria-labelledby="methodology-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="methodology-title">Metodología de Tercera Parte</h2>
-          <p>Cómo estructuramos la evidencia técnica en campo para asegurar una validez a prueba de juicios.</p>
-        </header>
-        
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:3rem; margin-top:3rem;">
-          <div style="background:var(--color-bg-subtle); border:1px solid var(--color-border); padding:2.5rem; border-radius:12px;">
-            <div style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;">1. Criterios de Evaluación Claros</div>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">Diseñamos esquemas de evaluación alineados con las normas UNE-EN ISO 17024/17020 y reales decretos aplicables. Evitamos juicios subjetivos: o se cumplen las evidencias de seguridad requeridas o no se obtiene la conformidad.</p>
-          </div>
-          <div style="background:var(--color-bg-subtle); border:1px solid var(--color-border); padding:2.5rem; border-radius:12px;">
-            <div style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;">2. Captura de Evidencias Digitales</div>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">Nuestros inspectores capturan in-situ fotografías geolocalizadas, mediciones de equipos y firmas digitales. Todo se almacena de forma estructurada en nuestra plataforma digital con firmas HASH criptográficas.</p>
-          </div>
-          <div style="background:var(--color-bg-subtle); border:1px solid var(--color-border); padding:2.5rem; border-radius:12px;">
-            <div style="font-size:2rem; color:var(--color-accent); margin-bottom:1rem;">3. Imparcialidad y Blindaje</div>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">Como evaluadores independientes de tercera parte, no participamos en la consultoría de diseño básica ni en el suministro de equipos. Esta estricta separación garantiza informes objetivos, aceptados plenamente por la Inspección de Trabajo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. VISTA: PORTAL EMPRESA (DASHBOARD SAAS INTERACTIVO) -->
-    <section id="company-portal-view" class="view" aria-labelledby="company-title">
-      <div class="portal-container">
-        <header class="section-header" style="margin-bottom: 2rem;">
-          <h2 id="company-title">Portal de Empresas (SaaS)</h2>
-          <p>Visualiza y gestiona el cumplimiento, vencimientos e índices de aptitud de todo tu personal y maquinaria en tiempo real.</p>
-        </header>
-
-        <div class="dashboard-grid">
-          <!-- Sidebar -->
-          <aside class="dashboard-sidebar" role="complementary">
-            <div class="dashboard-profile">
-              <div class="profile-avatar" aria-hidden="true">AC</div>
-              <div class="profile-info">
-                <h4>Antonio Contreras</h4>
-                <p>Director HSE | Hurvant Demo</p>
-              </div>
-            </div>
-            
-            <nav class="dashboard-nav" aria-label="Navegación del dashboard">
-              <button class="db-nav-btn active" data-db-view="personal" aria-label="Ver matriz de operarios y personal">
-                👥 Personal Evaluado
-              </button>
-              <button class="db-nav-btn" data-db-view="equipos" aria-label="Ver inventario de maquinaria y adecuaciones">
-                🚜 Inventario Equipos (RD 1215)
-              </button>
-              <button class="db-nav-btn" data-db-view="cae" aria-label="Ver y cargar documentación CAE">
-                📄 Carga Documental CAE
-              </button>
-            </nav>
-            
-            <div style="margin-top:auto; font-size:0.75rem; color:var(--color-slate-500); text-align:center; border-top:1px solid var(--color-border); padding-top:1.5rem;">
-              Hurvant SaaS v1.4.2<br>Firma Digital Activa
             </div>
           </aside>
 
-          <!-- Content Area -->
-          <div class="dashboard-content">
-            
-            <!-- VISTA INTERNA: PERSONAL -->
-            <div id="personal-db-view" class="db-view active">
-              <div class="db-header">
-                <div class="db-header-title">
-                  <h3>Matriz de Competencias del Personal</h3>
-                  <p>Aptitud práctica real de carretilleros y operarios críticos.</p>
-                </div>
-                <div class="kpi-row" style="gap:1rem;">
-                  <div class="kpi-card" style="padding:0.8rem 1.2rem; min-width:140px;">
-                    <span class="kpi-card-val success" id="kpi-total-workers">4</span>
-                    <span class="kpi-card-label" style="font-size:0.65rem;">Total Operarios</span>
-                  </div>
-                  <div class="kpi-card" style="padding:0.8rem 1.2rem; min-width:140px;">
-                    <span class="kpi-card-val warning" id="kpi-pending-workers">1</span>
-                    <span class="kpi-card-label" style="font-size:0.65rem;">Pendientes</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Formulario de Registro Rápido -->
-              <section aria-labelledby="form-add-worker-title">
-                <h4 id="form-add-worker-title" style="font-size:0.9rem; font-weight:700; color:var(--color-slate-300); text-transform:uppercase; margin-bottom:0.5rem;">Registrar Operario para Evaluación Práctica</h4>
-                <form id="add-worker-form" class="form-row-inline">
-                  <div class="form-group">
-                    <label for="worker-name">Nombre y Apellidos</label>
-                    <input type="text" id="worker-name" class="form-input" placeholder="Ej. Juan Pérez Sanz" required autocomplete="name">
-                  </div>
-                  <div class="form-group">
-                    <label for="worker-role">Puesto / Competencia a Validar</label>
-                    <input type="text" id="worker-role" class="form-input" placeholder="Ej. Carretilla Frontal Tipo 1" required>
-                  </div>
-                  <button type="submit" class="btn-portal btn-portal-primary" style="height:40px; padding-inline:1.5rem;">
-                    Programar Examen
-                  </button>
-                </form>
-              </section>
-
-              <!-- Tabla de Personal -->
-              <div class="table-container">
-                <table class="data-table" id="operarios-table" aria-label="Tabla de matriz de competencias del personal de Hurvant">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID Operario</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Competencia Técnica</th>
-                      <th scope="col">Estado de Aptitud</th>
-                      <th scope="col">Vencimiento del Criterio</th>
-                      <th scope="col">Evidencia de Campo</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Inyectado por JS -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- VISTA INTERNA: EQUIPOS -->
-            <div id="equipos-db-view" class="db-view">
-              <div class="db-header">
-                <div class="db-header-title">
-                  <h3>Adecuación de Maquinaria (RD 1215/97)</h3>
-                  <p>Registro técnico de condiciones de seguridad físicas en planta.</p>
-                </div>
-              </div>
-
-              <div class="table-container">
-                <table class="data-table" id="equipos-table" aria-label="Tabla de adecuación de maquinaria de Hurvant">
-                  <thead>
-                    <tr>
-                      <th scope="col">Tag Equipo</th>
-                      <th scope="col">Descripción Técnica</th>
-                      <th scope="col">Estado RD 1215</th>
-                      <th scope="col">Inspector Firma</th>
-                      <th scope="col">Próxima Inspección</th>
-                      <th scope="col">Acción Documental</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Inyectado por JS -->
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- VISTA INTERNA: CAE -->
-            <div id="cae-db-view" class="db-view">
-              <div class="db-header">
-                <div class="db-header-title">
-                  <h3>Carga Documental Inteligente y CAE</h3>
-                  <p>Sube las evaluaciones y cualificaciones de tus contratas para validación por técnicos superiores.</p>
-                </div>
-              </div>
-
-              <div class="cae-upload-area" id="cae-upload-box" tabindex="0" role="button" aria-label="Subir documentación de contrata CAE">
-                <span class="upload-icon" aria-hidden="true">📤</span>
-                <p style="font-weight:700; color:var(--color-text);">Haz clic aquí o arrastra los archivos PDF de tu contrata para verificar</p>
-                <p style="font-size:0.8rem; color:var(--color-slate-500);">Formatos soportados: PDF firmado electrónicamente. Validación técnica en 30 seg.</p>
-                
-                <div class="upload-progress-container" id="cae-progress-container">
-                  <div class="upload-progress-bar" id="cae-progress-bar"></div>
-                </div>
-                <p class="upload-status-text" id="cae-status-text"></p>
-              </div>
-
-              <div class="table-container mt-2">
-                <table class="data-table" id="cae-table" aria-label="Tabla de control de subcontratistas CAE">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID Contrata</th>
-                      <th scope="col">Nombre Contratista</th>
-                      <th scope="col">Obra / Actividad Concurrente</th>
-                      <th scope="col">Estado CAE</th>
-                      <th scope="col">Aprobador Hurvant</th>
-                      <th scope="col">Historial</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>CON-482</td>
-                      <td>Montajes y Mantenimientos Industriales S.L.</td>
-                      <td>Parada Técnica Horno A</td>
-                      <td><span class="status-badge status-badge-active">CONFORME</span></td>
-                      <td>Aprobación Técnica Hurvant</td>
-                      <td><button class="action-btn" onclick="openTraceModal('CON-482')">Historial</button></td>
-                    </tr>
-                    <tr>
-                      <td>CON-231</td>
-                      <td>Limpiezas Técnicas del Centro</td>
-                      <td>Limpieza Silos Harina</td>
-                      <td><span class="status-badge status-badge-pending">PENDIENTE</span></td>
-                      <td>En Revisión (Ing. Rivas)</td>
-                      <td><button class="action-btn" onclick="openTraceModal('CON-231')">Revisar</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. VISTA: PORTAL TRABAJADOR (PASAPORTE QR DIGITAL MÓVIL Y ESCÁNER) -->
-    <section id="worker-portal-view" class="view" aria-labelledby="worker-title">
+    <!-- 2. VISTA: ESQUEMAS DE CERTIFICACIÓN -->
+    <section id="schemes-view" class="view" aria-labelledby="schemes-title">
       <div class="section-container">
         <header class="section-header">
-          <h2 id="worker-title">Pasaporte Técnico del Trabajador</h2>
-          <p>Un perfil digital inmutable de habilidades y aptitud operativa en campo.</p>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Marcos de Evaluación Oficiales</span>
+          <h2 id="schemes-title">Esquemas de Certificación y Validación Técnica</h2>
+          <p>Requisitos de competencia, normativas aplicables y procedimientos de evaluación técnica objetiva.</p>
         </header>
 
-        <div class="worker-split">
-          <!-- Columna Izquierda: Mockup Teléfono Móvil -->
-          <article class="mobile-mockup" aria-label="Simulador de Pasaporte Técnico Móvil">
-            <div class="mobile-camera-notch"></div>
-            <div class="mobile-screen">
-              
-              <div class="passport-card">
-                <div class="passport-card-header">
-                  <span class="passport-logo">HURVANT<span>.</span></span>
-                  <span style="font-size:0.7rem; font-weight:700; color:var(--color-accent); letter-spacing:0.05em; text-transform:uppercase;">Validación Práctica</span>
-                </div>
-                <div class="passport-body">
-                  <div class="passport-photo" aria-label="Fotografía del operario">👤</div>
-                  <div class="passport-info">
-                    <h5>Carlos Gómez Sánchez</h5>
-                    <p style="font-size:0.75rem;">Operario Especialista</p>
-                    <p style="font-size:0.7rem; color:var(--color-slate-500);">Logística Central S.L.</p>
-                  </div>
-                </div>
-
-                <!-- Código QR Clickable -->
-                <div class="passport-qr-box" id="passport-qr-trigger" tabindex="0" role="button" aria-label="Haz clic para escanear el código QR del trabajador y ver evidencias de aptitud">
-                  <!-- QR Generado con código vectorial inline simple para realismo -->
-                  <svg width="100" height="100" viewBox="0 0 29 29" style="fill: #0A192F;">
-                    <path d="M0 0h7v7H0zm1 1v5h5V1zm8 0h1v1H9zm1 1h1v1h-1zm-1 1h1v1H9zm2 0h1v1h-1zm-2 2h1v1H9zm1 1h1v1h-1zm12-5h7v7h-7zm1 1v5h5V1zm-14 8h1v1H8zm1 1h1v1H9zm2 0h1v1h-1zm-2 2h1v1H9zm1 1h1v1h-1zm1 1h1v1h-1zm8-5h1v1h-1zm1 1h1v1h-1zm1 1h1v1h-1zm-3 2h1v1h-1zm1 1h1v1h-1zm2 1h1v1h-1zm-9 4h7v7h-7zm1 1v5h5V22zm9-11h1v1h-1zm2 0h1v1h-1zm0 2h1v1h-1zm1 1h1v1h-1zm-3 2h1v1h-1zm1 1h1v1h-1zm2 1h1v1h-1zm-9 3h1v1H9zm1 1h1v1h-1zm1 1h1v1h-1zM0 22h7v7H0zm1 1v5h5v-5z" />
-                  </svg>
-                  <div style="position:absolute;font-size:0.6rem;bottom:4px;color:var(--color-slate-500);font-weight:700;text-transform:uppercase;">Click para Escanear</div>
-                </div>
-              </div>
-
-              <div style="background:var(--color-dark-800); border:1px solid var(--color-border); border-radius:12px; padding:1.2rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.8rem;">
-                <h6 style="font-weight:700; color:var(--color-text); text-transform:uppercase; font-size:0.75rem;">Aptitudes Validadas</h6>
-                <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--color-border); padding-block:0.3rem;">
-                  <span>Carretilla Frontal T4</span>
-                  <span style="color:var(--color-accent); font-weight:700;">Conforme</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--color-border); padding-block:0.3rem;">
-                  <span>Espacios Confinados</span>
-                  <span style="color:var(--color-accent); font-weight:700;">Conforme</span>
-                </div>
-                <div style="display:flex; justify-content:space-between; padding-block:0.3rem; color:var(--color-slate-500);">
-                  <span>Plataformas PEMP</span>
-                  <span>Sin Validar</span>
-                </div>
-              </div>
-
-            </div>
-          </article>
-
-          <!-- Columna Derecha: Simulador de Cámara de Inspección -->
-          <section class="scanner-simulator" aria-labelledby="scanner-sim-title">
-            <h3 id="scanner-sim-title" style="font-weight:800; font-size:1.5rem; color:var(--color-text);">Simulador de Escáner de Inspección</h3>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">
-              En el campo de trabajo, un inspector o responsable de seguridad puede escanear el QR del operario. Haz clic en el QR del teléfono de la izquierda o en el botón de abajo para activar la simulación de lectura.
-            </p>
-            
-            <div class="camera-view-mock" id="sim-camera-view">
-              <!-- Rellenado por JS al hacer clic -->
-              <div style="color:var(--color-slate-500); font-weight:600; text-align:center;">Cámara Inactiva<br><span style="font-size:0.8rem; font-weight:400;">Haz clic en el QR o en el botón inferior</span></div>
-            </div>
-
-            <p class="scanner-prompt" id="sim-scan-prompt">Esperando escaneo...</p>
-            
-            <button class="btn-portal btn-portal-primary flex-center" id="start-scan-simulator-btn" style="padding:0.8rem;">
-              🚀 Iniciar Simulación de Escaneo QR
-            </button>
-
-            <!-- Panel de Resultados Públicos (Página Pública de Trazabilidad) -->
-            <article class="validation-result-panel" id="sim-result-panel" aria-live="polite">
-              <!-- Inyectado por JS tras escaneo exitoso -->
-            </article>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. VISTA: BLOG / AUTORIDAD TÉCNICA -->
-    <section id="blog-view" class="view" aria-labelledby="blog-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="blog-title">Blog Técnico y Recursos de Compliance</h2>
-          <p>Análisis normativos de alta exigencia, sentencias en PRL y guías de control técnico industrial.</p>
-        </header>
-
-        <!-- Barra de Controles -->
-        <div class="blog-controls">
-          <search aria-label="Filtrar artículos del blog">
-            <div class="blog-filters">
-              <button class="blog-filter-btn active" data-filter="all">Todos los Artículos</button>
-              <button class="blog-filter-btn" data-filter="compliance">Compliance Legal</button>
-              <button class="blog-filter-btn" data-filter="rd1215">Seguridad Maquinaria</button>
-              <button class="blog-filter-btn" data-filter="trazabilidad">Trazabilidad</button>
-            </div>
-          </search>
+        <div style="display: flex; flex-direction: column; gap: 2.5rem;">
           
-          <div style="background:var(--color-surface); border:1px solid var(--color-border); padding:0.8rem 1.2rem; border-radius:8px; font-size:0.85rem; max-width:380px;">
-            🎁 <strong>Lead Magnet Gratuito:</strong> Descarga la plantilla <a href="#blog" onclick="alert('Descargando plantilla de checklist RD 1215 (Simulado)...')" style="color:var(--color-accent); font-weight:700; text-decoration:underline;">Check-list del Inspector en Logística</a>.
-          </div>
-        </div>
-
-        <!-- Grid de Artículos -->
-        <div class="blog-grid">
-          <!-- Artículo 1 -->
-          <article class="blog-post-card" data-category="compliance">
-            <div class="blog-post-img-mock" aria-hidden="true">
-              ⚖️
-              <span class="blog-post-category">Compliance Legal</span>
+          <article class="formal-card" style="padding: 2.5rem; margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.8rem; margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--color-text); margin-bottom: 0; border: none; padding: 0;">
+                ESQUEMA E-HVT-01: Certificación de Competencia para Operadores de Maquinaria de Elevación y Carga
+              </h3>
+              <span class="status-badge status-badge-active" style="font-size: 0.75rem; text-transform: uppercase;">Normativa: UNE-EN ISO/IEC 17024</span>
             </div>
-            <div class="blog-post-content">
-              <span class="blog-post-meta">22 de Mayo, 2026 | Inspector HSE</span>
-              <h3>La Responsabilidad Penal Directa del Director de Planta ante Accidentes de Maquinaria Alquilada</h3>
-              <p>Análisis de la jurisprudencia en España sobre la falta de informes de adecuación RD 1215 independientes previos a la puesta en marcha de equipos externos.</p>
-              <a href="#blog" onclick="alert('Funcionalidad de lectura completa (Simulada)...')">Leer Artículo Técnico →</a>
+            
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem; text-wrap: pretty;">
+              Este esquema define los requisitos mínimos, conocimientos teóricos y habilidades prácticas para certificar de manera objetiva a operadores profesionales de carretillas elevadoras (frontales, retráctiles), plataformas elevadoras móviles de personal (PEMP) y grúas de carga.
+            </p>
+
+            <div class="scheme-table-container">
+              <table class="scheme-table" aria-label="Detalles del Esquema de Competencia de Maquinaria">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 25%;">Fase del Proceso</th>
+                    <th scope="col">Requisitos Técnicos de Evaluación</th>
+                    <th scope="col" style="width: 30%;">Método de Evidencia Técnica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1. Requisitos Previos</strong></td>
+                    <td>Aptitud médica para el puesto de trabajo y mayoría de edad legal.</td>
+                    <td>Revisión documental obligatoria de aptitud médica en vigor.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Evaluación Teórica</strong></td>
+                    <td>Conocimientos de seguridad, física aplicada a cargas, y normativa española (RD 1215/1997, Convenios).</td>
+                    <td>Examen teórico escrito controlado bajo supervisión del examinador (mínimo 80% de aciertos).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3. Evaluación Práctica</strong></td>
+                    <td>Maniobras de precisión, control de estabilidad, estiba segura de cargas y simulacro de situaciones de emergencia in-situ.</td>
+                    <td>Evaluación de campo individualizada por el inspector con lista de verificación objetiva y control GPS.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4. Mantenimiento y Vigencia</strong></td>
+                    <td>Seguimiento periódico de incidentes y siniestros laborales durante el período de vigencia de 5 años.</td>
+                    <td>Declaración del empleador de actividad continuada y auditoría del expediente técnico a los 5 años para renovación.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
 
-          <!-- Artículo 2 -->
-          <article class="blog-post-card" data-category="rd1215">
-            <div class="blog-post-img-mock" aria-hidden="true">
-              🔧
-              <span class="blog-post-category">Seguridad Maquinaria</span>
+          <article class="formal-card" style="padding: 2.5rem; margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.8rem; margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--color-text); margin-bottom: 0; border: none; padding: 0;">
+                ESQUEMA E-HVT-02: Inspección y Validación de Maquinaria y Equipos de Trabajo (RD 1215/1997)
+              </h3>
+              <span class="status-badge status-badge-active" style="font-size: 0.75rem; text-transform: uppercase;">Normativa: UNE-EN ISO/IEC 17020</span>
             </div>
-            <div class="blog-post-content">
-              <span class="blog-post-meta">15 de Mayo, 2026 | Ing. Mecánico</span>
-              <h3>Cómo Diseñar un Plan de Consignación LOTO Infalible en Líneas de Producción Automatizadas</h3>
-              <p>Evita los fallos críticos de bloqueo de energía eléctrica, neumática e hidráulica durante tareas de mantenimiento industrial con contratas.</p>
-              <a href="#blog" onclick="alert('Funcionalidad de lectura completa (Simulada)...')">Leer Artículo Técnico →</a>
+            
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.5rem; text-wrap: pretty;">
+              Procedimiento técnico independiente para auditar la adecuación física y documental de equipos de trabajo e instalaciones industriales con el fin de emitir certificados de conformidad de acuerdo con las especificaciones del Real Decreto 1215/1997.
+            </p>
+
+            <div class="scheme-table-container">
+              <table class="scheme-table" aria-label="Detalles del Esquema de Validación de Maquinaria">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 25%;">Fase del Proceso</th>
+                    <th scope="col">Requisitos Técnicos de Adecuación</th>
+                    <th scope="col" style="width: 30%;">Método de Evidencia Técnica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1. Análisis Inicial</strong></td>
+                    <td>Auditoría de manuales del fabricante, marcado CE de la máquina y registros de mantenimiento obligatorio.</td>
+                    <td>Estudio de gabinete y revisión de la documentación legal del equipo de trabajo.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Inspección Técnica Física</strong></td>
+                    <td>Evaluación de resguardos físicos, sistemas de mando, bloqueos de seguridad, paradas de emergencia y señalización.</td>
+                    <td>Inspección in-situ con pruebas mecánicas y eléctricas activas por ingenieros colegiados.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3. Dictamen y Emisión</strong></td>
+                    <td>Generación de informe técnico detallando conformidad o desviaciones categorizadas por criticidad.</td>
+                    <td>Emisión de Acta Técnica Oficial de Inspección y colocación de placa identificativa física en la máquina con código QR.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4. Control Periódico</strong></td>
+                    <td>Inspecciones obligatorias periódicas para evaluar desgaste, modificaciones críticas o incidencias.</td>
+                    <td>Auditoría trienal técnica presencial de seguimiento de condiciones de seguridad mecánicas.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
 
-          <!-- Artículo 3 -->
-          <article class="blog-post-card" data-category="trazabilidad">
-            <div class="blog-post-img-mock" aria-hidden="true">
-              🔐
-              <span class="blog-post-category">Trazabilidad</span>
-            </div>
-            <div class="blog-post-content">
-              <span class="blog-post-meta">08 de Mayo, 2026 | Téc. Auditor</span>
-              <h3>El Sello Criptográfico en Actas de Examen Práctico: Validez probatoria en procesos judiciales</h3>
-              <p>Por qué un simple PDF sin firmas de geolocalización ni hashes SHA256 carece de peso probatorio frente a reclamaciones del recargo de prestaciones.</p>
-              <a href="#blog" onclick="alert('Funcionalidad de lectura completa (Simulada)...')">Leer Artículo Técnico →</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- 8. VISTA: GOBERNANZA E IMPARCIALIDAD -->
-    <section id="governance-view" class="view" aria-labelledby="governance-title">
+    <!-- 3. VISTA: IMPARCIALIDAD Y GOBERNANZA -->
+    <section id="impartiality-view" class="view" aria-labelledby="impartiality-title">
       <div class="section-container">
         <header class="section-header">
-          <h2 id="governance-title">Gobernanza, Calidad e Imparcialidad</h2>
-          <p>Estructura institucional robusta orientada a garantizar un juicio técnico independiente e incorruptible.</p>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Salvaguarda Institucional</span>
+          <h2 id="impartiality-title">Estructura de Imparcialidad y Gobernanza</h2>
+          <p>Política de independencia y funcionamiento del Comité de Salvaguarda externo.</p>
         </header>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; margin-top:3rem;">
-          <article style="display:flex; flex-direction:column; gap:1.5rem;" aria-labelledby="comite-title">
-            <h3 id="comite-title" style="font-size:1.5rem; font-weight:800; color:var(--color-text);">Comité de Salvaguarda de la Imparcialidad</h3>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">
-              Para consolidar el alineamiento estricto con los requerimientos UNE-EN ISO 17024/17020, disponemos de un Comité de Imparcialidad externo compuesto por profesionales de reconocido prestigio de colegios oficiales de ingenieros, expertos preventores independientes y representantes del sector industrial.
-            </p>
-            <div style="background:var(--color-bg-subtle); border:1px solid var(--color-border); padding:1.5rem; border-radius:8px; font-size:0.85rem;">
-              ⚠️ <strong>Funciones del Comité:</strong> Revisar anualmente los esquemas de examen práctico de Hurvant, asegurar que no existan conflictos de interés comerciales y procesar de forma imparcial las posibles apelaciones de los dictámenes de validación.
-            </div>
-          </article>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; margin-top: 2rem;">
+          
+          <div>
+            <article class="formal-card" style="padding: 2.5rem; margin-bottom: 0;">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text); margin-bottom: 1.2rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.6rem;">
+                Declaración Institucional de la Alta Dirección
+              </h3>
+              
+              <div class="impartiality-declaration" style="margin-block: 0; font-size: 0.95rem; line-height: 1.7;">
+                "La dirección de HURVANT asume el compromiso inequívoco de actuar con absoluta imparcialidad, independencia y neutralidad en el desarrollo de todas sus actividades de certificación e inspección.
+                
+                Entendemos que la imparcialidad es el valor fundacional de la evaluación de la conformidad. Por ello, hemos diseñado un sistema de gobernanza donde las decisiones técnicas se basan exclusivamente en evidencias objetivas del cumplimiento, exentas de cualquier influencia comercial, corporativa o financiera externa.
+                
+                No permitimos que presiones económicas o comerciales comprometan la rigurosidad e imparcialidad de nuestros dictámenes técnicos. Cualquier potencial conflicto de interés es identificado, analizado y mitigado activamente bajo el amparo directo del Comité de Salvaguarda de la Imparcialidad."
+              </div>
 
-          <article style="display:flex; flex-direction:column; gap:1.5rem;" aria-labelledby="declaracion-title">
-            <h3 id="declaracion-title" style="font-size:1.5rem; font-weight:800; color:var(--color-text);">Declaración de Independencia y Canal Ético</h3>
-            <p style="color:var(--color-slate-300); font-size:0.95rem;">
-              Hurvant no presta asesoría comercial de prevención propia, venta de maquinaria ni servicios de consultoría de diseño básico. Solo medimos la aptitud y el cumplimiento con rigor científico y técnico de tercera parte independiente.
-            </p>
-            <div style="border-left:3px solid var(--color-accent); padding-left:1.5rem; font-style:italic; font-size:0.95rem; color:var(--color-slate-300);">
-              "El rigor y la imparcialidad no son negociables. Cada certificado emitido con nuestro hash digital es el respaldo de un examen exhaustivo, ajeno a presiones de plazos comerciales."
-              <br><strong style="color:var(--color-text); font-style:normal; font-size:0.8rem; text-transform:uppercase; display:block; margin-top:0.5rem;">— CEO de Hurvant</strong>
-            </div>
-            <button class="btn-portal" style="max-width:220px;" onclick="alert('Accediendo al canal seguro de denuncias de Hurvant (Simulado)...')">Canal Ético y de Apelación 🛡️</button>
-          </article>
+              <div class="signature-box" style="margin-top: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1rem;">
+                <p><strong>Fdo. Dirección General de Hurvant</strong></p>
+                <p style="font-size: 0.8rem; color: var(--color-text-muted);">Sello Oficial de Calidad y Gobernanza</p>
+              </div>
+            </article>
+          </div>
+
+          <div>
+            <article class="formal-card" style="padding: 2.5rem; margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-text); margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.6rem;">
+                Comité de Salvaguarda de la Imparcialidad
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+                Para garantizar un control externo real y de acuerdo con las normativas UNE-EN ISO/IEC 17024 e ISO/IEC 17020, HURVANT cuenta con un **Comité de Salvaguarda de la Imparcialidad** de composición equilibrada y carácter independiente.
+              </p>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+                Este órgano de supervisión está compuesto exclusivamente por miembros externos que representan el interés de los diferentes actores del sector, impidiendo que una sola fuerza domine las decisiones de calidad:
+              </p>
+              <ul style="font-size: 0.85rem; color: var(--color-text-muted); padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem;">
+                <li>Represenantes de **Colegios Oficiales de Ingenieros** de España.</li>
+                <li>Técnicos superiores y expertos prevencionistas de reconocido prestigio.</li>
+                <li>Asociaciones sectoriales de usuarios de maquinaria industrial y logística.</li>
+              </ul>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; background: var(--color-bg); padding: 0.8rem; border-radius: var(--radius-sm);">
+                <strong>Competencia Principal:</strong> El comité dispone de plena autoridad para revisar auditorías de riesgos, paralizar decisiones de certificación en caso de detectar indicios de conflicto, y tramitar de forma directa el escalado de quejas no resueltas.
+              </p>
+            </article>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- 9. VISTA: CONTACTO Y CÁLCULO DE RIESGO (AUDIT WIZARD) -->
-    <section id="contact-view" class="view" aria-labelledby="contact-title">
+    <!-- 4. VISTA: QUEJAS Y APELACIONES -->
+    <section id="complaints-view" class="view" aria-labelledby="complaints-title">
       <div class="section-container">
-        <header class="section-header" style="text-align:center; margin-inline:auto;">
-          <h2 id="contact-title">Calculadora de Riesgo de Exposición Legal</h2>
-          <p>Evalúa en 4 pasos el nivel de riesgo de recargo de prestaciones y sanción penal de tu planta o almacén.</p>
+        <header class="section-header">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Garantía de Transparencia</span>
+          <h2 id="complaints-title">Procedimiento Oficial de Quejas y Apelaciones</h2>
+          <p>Procedimiento público y regulado para el registro y resolución de reclamaciones técnicas.</p>
         </header>
 
-        <div class="audit-wizard-container">
-          <!-- Barra de Progreso Superior -->
-          <div class="wizard-progress">
-            <div class="wizard-progress-bar"></div>
-            <div class="wizard-step-node active">1</div>
-            <div class="wizard-step-node">2</div>
-            <div class="wizard-step-node">3</div>
-            <div class="wizard-step-node">4</div>
-          </div>
-
-          <!-- Formulario Central del Wizard -->
-          <form id="wizard-inputs-form" action="#" method="POST" onsubmit="return false;">
-            
-            <!-- PASO 1: SECTOR -->
-            <div class="wizard-step-panel active" data-step="1">
-              <h3 style="font-size:1.2rem; font-weight:800; color:var(--color-text);">Paso 1: Sector Primario de Actividad</h3>
-              <p style="color:var(--color-slate-300); font-size:0.9rem;">El sector determina el nivel de riesgo inherente y la normativa preventiva aplicable.</p>
+        <div style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 3.5rem; align-items: start; margin-top: 2rem;">
+          
+          <div>
+            <div class="formal-card" style="padding: 2rem;">
+              <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Definiciones Reguladas</h3>
               
-              <div class="form-group mt-1">
-                <label for="wizard-sector-select">Selecciona el Sector</label>
-                <select id="wizard-sector-select" class="form-input" style="width:100%; color:white; background:var(--color-dark-900);" required>
-                  <option value="" disabled selected>-- Elegir Sector --</option>
-                  <option value="logistica">Logística y Almacenes</option>
-                  <option value="construccion">Construcción y Obras</option>
-                  <option value="industria">Industria Metalúrgica / Manufactura</option>
-                  <option value="renovables">Energías Renovables</option>
-                  <option value="agro">Sector Agroalimentario / Envasado</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- PASO 2: VARIABLES OPERATIVAS -->
-            <div class="wizard-step-panel" data-step="2">
-              <h3 style="font-size:1.2rem; font-weight:800; color:var(--color-text);">Paso 2: Densidad de Recursos Críticos</h3>
-              <p style="color:var(--color-slate-300); font-size:0.9rem;">Variables de carga operativa en tus instalaciones.</p>
-              
-              <div class="form-group mt-1">
-                <label for="w-workers-num">Trabajadores en Planta / Almacén</label>
-                <input type="number" id="w-workers-num" class="form-input" placeholder="Ej. 45" min="1" required>
-              </div>
-              
-              <div class="form-group mt-1">
-                <label for="w-machinery-num">Número de Equipos de Trabajo / Maquinaria Móvil</label>
-                <input type="number" id="w-machinery-num" class="form-input" placeholder="Ej. 12" min="0">
-              </div>
-            </div>
-
-            <!-- PASO 3: CONTROL DOCUMENTAL -->
-            <div class="wizard-step-panel" data-step="3">
-              <h3 style="font-size:1.2rem; font-weight:800; color:var(--color-text);">Paso 3: Datos de Contacto y Control</h3>
-              <p style="color:var(--color-slate-300); font-size:0.9rem;">Información sobre la coordinación documental y tu empresa.</p>
-              
-              <div class="form-group mt-1">
-                <label for="w-cae-status">¿Dispones de Control de Firmas Prácticas en Contratas CAE?</label>
-                <select id="w-cae-status" class="form-input" style="width:100%; color:white; background:var(--color-dark-900);">
-                  <option value="si">Sí, verificamos firmas y vigencias</option>
-                  <option value="no">No, solo subida administrativa básica</option>
-                </select>
-              </div>
-
-              <div class="form-group mt-1">
-                <label for="w-company-name">Nombre de la Empresa</label>
-                <input type="text" id="w-company-name" class="form-input" placeholder="Ej. Logística Industrial S.A." required autocomplete="organization">
-              </div>
-
-              <div class="form-group mt-1">
-                <label for="w-email">Tu Correo Corporativo</label>
-                <input type="email" id="w-email" class="form-input" placeholder="Ej. hse@miempresa.com" required autocomplete="email">
-              </div>
-            </div>
-
-            <!-- PASO 4: RESULTADO -->
-            <div class="wizard-step-panel" data-step="4" id="risk-result-box">
-              <h3 style="font-size:1.2rem; font-weight:800; color:var(--color-text);">Paso 4: Tu Nivel de Exposición de Riesgo Legal</h3>
-              <p style="color:var(--color-slate-300); font-size:0.9rem; margin-bottom:1rem;">Índice calculado según variables operativas indicadas.</p>
-              
-              <div class="risk-gauge-container">
-                <div class="risk-meter">
-                  <svg class="risk-circle-svg" width="160" height="160">
-                    <circle class="risk-circle-bg" cx="80" cy="80" r="70" />
-                    <!-- stroke-dasharray representa el perímetro del círculo: 2 * pi * r => 2 * 3.14 * 70 = 440 -->
-                    <circle class="risk-circle-fill" id="risk-svg-fill" cx="80" cy="80" r="70" />
-                  </svg>
-                  <span class="risk-circle-val" id="risk-svg-value">0%</span>
+              <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <div>
+                  <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.3rem; text-transform: uppercase;">Queja Técnica (ISO 17024/17020)</h4>
+                  <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+                    Expresión de insatisfacción presentada por cualquier persona u organización a HURVANT, relacionada con el comportamiento de nuestro personal, las instalaciones de examen o la conducta de candidatos evaluados.
+                  </p>
                 </div>
                 
                 <div>
-                  <h4 id="risk-severity-label" style="font-size:1.1rem; font-weight:800;">Calculando...</h4>
-                  <p id="risk-descr-text" style="font-size:0.9rem; color:var(--color-slate-300); margin-top:0.8rem; text-wrap:pretty;"></p>
+                  <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.3rem; text-transform: uppercase;">Apelación Técnica</h4>
+                  <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.5;">
+                    Solicitud presentada por un candidato, empleador o entidad interesada ante HURVANT para la revisión formal de una decisión técnica o dictamen de evaluación de conformidad no favorable.
+                  </p>
+                </div>
+
+                <div style="background: var(--color-bg); padding: 1rem; border-radius: var(--radius-sm); border-left: 2px solid var(--color-border); font-size: 0.75rem; color: var(--color-text-muted);">
+                  Todas las quejas y apelaciones son procesadas por la Dirección de Calidad de forma inalterable y supervisadas por el **Comité de Imparcialidad**.
                 </div>
               </div>
             </div>
-
-          </form>
-
-          <!-- Botones de Navegación del Wizard -->
-          <div class="wizard-buttons">
-            <button class="btn-portal" id="wizard-prev-btn" style="visibility: hidden;">Atrás</button>
-            <button class="btn-portal btn-portal-primary" id="wizard-next-btn">Siguiente Paso</button>
           </div>
 
+          <div>
+            <div class="formal-card" style="padding: 2.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--color-text); margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.6rem;">
+                Formulario Oficial de Registro de Incidencias
+              </h3>
+              
+              <!-- Feedback Success Area -->
+              <div id="complaint-feedback-box" class="form-feedback">
+                <strong style="font-size: 1.1rem; display: block; margin-bottom: 0.5rem;">✔ Expediente Registrado Exitosamente</strong>
+                <p>Su solicitud ha sido grabada de manera formal e inmutable en el Registro General de Control de Hurvant.</p>
+                <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); padding: 0.8rem 1.2rem; margin-block: 1rem; border-radius: var(--radius-sm); font-family: monospace; font-size: 0.85rem; color: var(--color-text);">
+                  Código de Expediente: <strong id="complaint-ticket-id" style="color: var(--color-accent);">EXP-Q-2026-0000</strong>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+                  El asunto ha sido remitido al Comité de Imparcialidad para su estudio técnico. Recibirá una resolución de su expediente en un plazo máximo de 15 días hábiles al correo electrónico indicado.
+                </p>
+              </div>
+
+              <!-- Main Form -->
+              <form id="official-complaint-form" class="formal-form" method="POST" action="#" novalidate>
+                <div class="form-group">
+                  <label for="complaint-category">Tipo de Reclamación</label>
+                  <select id="complaint-category" class="form-select" required>
+                    <option value="" disabled selected>Seleccione la modalidad...</option>
+                    <option value="queja">Queja Técnica (Comportamiento / Calidad)</option>
+                    <option value="apelacion">Apelación de Dictamen (Revisión de Examen / Inspección)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="complaint-name">Nombre Completo del Remitente</label>
+                  <input type="text" id="complaint-name" class="form-input" placeholder="Ej. Francisco García López" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                  <label for="complaint-email">Email de Contacto Oficial</label>
+                  <input type="email" id="complaint-email" class="form-input" placeholder="Ej. f.garcia@empresa.com" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="complaint-code">Código de Expediente Asociado (Opcional)</label>
+                  <input type="text" id="complaint-code" class="form-input" placeholder="Ej. HVT-0982 o EQ-ALM-01 (si aplica)">
+                </div>
+
+                <div class="form-group">
+                  <label for="complaint-details">Descripción Técnica y Motivos</label>
+                  <textarea id="complaint-details" class="form-textarea" placeholder="Describa con precisión técnica los hechos, fechas, equipos u operarios involucrados, detallando las evidencias objetivas correspondientes." required></textarea>
+                </div>
+
+                <div style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.5rem;">
+                  <input type="checkbox" id="complaint-gdpr" style="margin-top: 0.25rem;" required>
+                  <label for="complaint-gdpr" style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; text-transform: none; font-weight: normal; letter-spacing: normal;">
+                    Acepto el tratamiento oficial de los datos personales proporcionados únicamente para la resolución del expediente de queja/apelación técnica de conformidad con la LOPDGDD 3/2018 y el RGPD.
+                  </label>
+                </div>
+
+                <button type="submit" id="btn-submit-complaint" class="btn-action" style="margin-top: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; font-weight: 700;">
+                  Registrar Expediente Oficial
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. VISTA: REGISTRO DE VERIFICACIÓN -->
+    <section id="verification-view" class="view" aria-labelledby="verification-title">
+      <div class="section-container">
+        <header class="section-header">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem;">Transparencia y Protección de Datos</span>
+          <h2 id="verification-title">Buscador Seguro de Resoluciones y Certificados</h2>
+          <p>Validador institucional individual en cumplimiento estricto de la LOPDGDD y directivas de privacidad.</p>
+        </header>
+
+        <div class="search-console">
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.8rem;">Consulta de Vigencia en Registro Público</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); max-width: 550px; margin: 0 auto 1.5rem; line-height: 1.5;">
+            Conforme a la Ley Orgánica 3/2018 (LOPDGDD), HURVANT **no publica listados masivos** de personas certificadas para proteger la privacidad. Puede verificar la vigencia de cualquier certificado de competencia u hoja de inspección introduciendo el código alfanumérico único.
+          </p>
+
+          <form id="certificate-search-form" class="search-form" action="#" novalidate>
+            <input type="text" id="verification-search-input" class="search-input" placeholder="Ej. HVT-0982, EQ-ALM-01" required aria-label="Código único de certificado">
+            <button type="submit" id="btn-verify-search" class="btn-action" style="padding-inline: 1.5rem;">
+              Validar Código
+            </button>
+          </form>
+
+          <!-- Search Success Result Area -->
+          <article id="search-result-box" class="search-result">
+            <!-- Injected dynamically by JS -->
+          </article>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- PIE DE PÁGINA CORPORATIVO -->
+  <!-- PIE DE PÁGINA OFICIAL -->
   <footer class="main-footer" role="contentinfo">
     <div class="footer-container">
+      
       <div class="footer-col">
-        <div class="logo" style="margin-bottom:1rem;">
-          <div class="logo-icon" aria-hidden="true"></div>
-          HURVANT<span>.</span>
-        </div>
-        <p style="font-size:0.85rem; line-height:1.5;">
-          Entidad técnica de tercera parte especializada en la adecuación de equipos RD 1215/97, control documental CAE avanzado y evaluación de competencias.
+        <img src="public/Logo.png" alt="HURVANT Logo" style="height: 48px; width: auto; object-fit: contain; margin-bottom: 1rem;">
+        <p style="font-size: 0.8rem; line-height: 1.5; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+          Organismo técnico especializado de tercera parte en evaluación de competencias de operarios y validación reglamentaria de maquinaria. Diseñado bajo principios innegociables de imparcialidad técnica.
         </p>
       </div>
 
       <div class="footer-col">
-        <h3>Servicios</h3>
+        <h3>Esquemas de Gobernanza</h3>
         <ul>
-          <li><a href="#services">Certificación de Personas</a></li>
-          <li><a href="#services">Adecuación RD 1215/97</a></li>
-          <li><a href="#services">PRL Moderna de Campo</a></li>
-          <li><a href="#services">Verificación CAE Técnica</a></li>
+          <li><a href="#schemes">Esquema Operadores (ISO 17024)</a></li>
+          <li><a href="#schemes">Inspección de Equipos (RD 1215/97)</a></li>
+          <li><a href="#impartiality">Comité de Imparcialidad</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>Sectores</h3>
+        <h3>Garantías Públicas</h3>
         <ul>
-          <li><a href="#sectors">Logística y ETTs</a></li>
-          <li><a href="#sectors">Construcción e Infraestructuras</a></li>
-          <li><a href="#sectors">Industria y Metalúrgica</a></li>
-          <li><a href="#sectors">Energías Renovables</a></li>
+          <li><a href="#complaints">Canal de Quejas Oficiales</a></li>
+          <li><a href="#verification">Registro de Verificación RGPD</a></li>
+          <li><a href="#impartiality">Declaración Jurada Directiva</a></li>
         </ul>
       </div>
 
-      <div class="footer-col">
-        <h3>Gobernanza y Calidad</h3>
-        <ul>
-          <li><a href="#governance">Comité de Imparcialidad</a></li>
-          <li><a href="#governance">Canal Ético Seguro</a></li>
-          <li><a href="#governance">Política de Calidad</a></li>
-          <li><a href="#governance">Gestión de Conflictos</a></li>
-        </ul>
-      </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 HURVANT. Todos los derechos reservados. Diseñado para el cumplimiento B2B riguroso en España.</p>
+      <p>&copy; 2026 HURVANT. Todos los derechos reservados. Portal institucional de conformidad técnica.</p>
       <div class="footer-bottom-links">
-        <a href="#governance" onclick="alert('Política de Imparcialidad y Confidencialidad activa (Demo)...')">Imparcialidad</a>
-        <a href="#governance" onclick="alert('Canal Ético corporativo activo (Demo)...')">Canal Ético</a>
-        <a href="#governance" onclick="alert('Términos legales y de calidad (Demo)...')">Aviso Legal</a>
+        <a href="#impartiality">Aviso de Imparcialidad</a>
+        <a href="#verification">Cumplimiento RGPD</a>
+        <a href="#complaints">Quejas Legales</a>
       </div>
     </div>
   </footer>
-
-  <!-- VENTANA MODAL PARA TRAZABILIDAD Y CERTIFICADOS (INTERACTIVA) -->
-  <div id="trace-modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog">
-    <div class="modal-window">
-      <button class="close-modal-btn" aria-label="Cerrar ventana modal">×</button>
-      <div class="modal-header">
-        <h4>Evidencia y Trazabilidad Criptográfica</h4>
-      </div>
-      <div id="trace-modal-dynamic-content">
-        <!-- Inyectado dinámicamente por JS según el elemento clicado -->
-      </div>
-    </div>
-  </div>
 
   <!-- Scripts -->
   <script src="app.js"></script>
