@@ -31,9 +31,9 @@ export default function Contact() {
       alert('Debe aceptar la política de privacidad y protección de datos RGPD.');
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     // Simular envío de datos a API técnico-operativa de Hurvant
     setTimeout(() => {
       setIsSubmitting(false);
@@ -93,11 +93,11 @@ export default function Contact() {
             <ul className="space-y-3.5">
               <li className="flex items-center gap-3.5 text-xs text-slate-600">
                 <Mail className="h-4.5 w-4.5 text-hurvant-indigo shrink-0" />
-                <span>contacto@hurvant.com</span>
+                <span>hola@hurvant.com</span>
               </li>
               <li className="flex items-center gap-3.5 text-xs text-slate-600">
                 <Phone className="h-4.5 w-4.5 text-hurvant-indigo shrink-0" />
-                <span>+34 910 000 000 (Central Madrid)</span>
+                <span>+34 611888179 (Sede)</span>
               </li>
               <li className="flex items-center gap-3.5 text-xs text-slate-600">
                 <Building className="h-4.5 w-4.5 text-hurvant-indigo shrink-0" />
@@ -117,7 +117,7 @@ export default function Contact() {
               <div className="h-16 w-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mx-auto border border-emerald-100 shadow-xs">
                 <CheckCircle2 className="h-10 w-10" />
               </div>
-              
+
               <div className="space-y-2">
                 <h3 className="text-2xl font-black text-hurvant-navy">¡Solicitud Registrada con Éxito!</h3>
                 <p className="text-sm text-slate-600 max-w-md mx-auto">
@@ -250,11 +250,10 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-700 block">Tipo de Intervención Solicitada *</label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${
-                    formData.tipoSolicitud === 'piloto'
+                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${formData.tipoSolicitud === 'piloto'
                       ? 'border-hurvant-indigo bg-indigo-50/40 text-hurvant-navy'
                       : 'border-slate-200 hover:bg-slate-50'
-                  }`}>
+                    }`}>
                     <input
                       type="radio"
                       name="tipoSolicitud"
@@ -267,11 +266,10 @@ export default function Contact() {
                     <span className="text-[10px] text-slate-500 leading-normal block">Validación controlada de operarios en un área delimitada.</span>
                   </label>
 
-                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${
-                    formData.tipoSolicitud === 'exploratoria'
+                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${formData.tipoSolicitud === 'exploratoria'
                       ? 'border-hurvant-indigo bg-indigo-50/40 text-hurvant-navy'
                       : 'border-slate-200 hover:bg-slate-50'
-                  }`}>
+                    }`}>
                     <input
                       type="radio"
                       name="tipoSolicitud"
@@ -284,11 +282,10 @@ export default function Contact() {
                     <span className="text-[10px] text-slate-500 leading-normal block">Reunión técnica para evaluar el encaje funcional en sus centros.</span>
                   </label>
 
-                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${
-                    formData.tipoSolicitud === 'consulta'
+                  <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${formData.tipoSolicitud === 'consulta'
                       ? 'border-hurvant-indigo bg-indigo-50/40 text-hurvant-navy'
                       : 'border-slate-200 hover:bg-slate-50'
-                  }`}>
+                    }`}>
                     <input
                       type="radio"
                       name="tipoSolicitud"
