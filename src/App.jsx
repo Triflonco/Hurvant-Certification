@@ -1,0 +1,60 @@
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomeHero from './components/HomeHero';
+import Schemes from './components/Schemes';
+import Impartiality from './components/Impartiality';
+import ComplaintsWizard from './components/ComplaintsWizard';
+import CertSearch from './components/CertSearch';
+
+export default function App() {
+  const [currentView, setCurrentView] = useState('home');
+
+  useEffect(() => {
+    // Sincronizar ruta inicial basada en el Hash de la URL
+    const handleHashChange = () => {
+      const hash = window.location.hash || '#home';
+      const viewId = hash.substring(1);
+      const validViews = ['home', 'schemes', 'impartiality', 'complaints', 'verification'];
+      
+      if (validViews.includes(viewId)) {
+        setCurrentView(viewId);
+      } else {
+        window.location.hash = '#home';
+        setCurrentView('home');
+      }
+    };
+
+    // Escuchar cambios de hash
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Ejecutar al cargar la app
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  const handleViewChange = (viewId) => {
+    setCurrentView(viewId);
+    window.location.hash = `#${viewId}`;
+  };
+
+  return (
+    <div className="flex flex-col min-h-screen bg-slate-50 text-slate-800 selection:bg-indigo-500 selection:text-white">
+      {/* Cabecera Glassmorphic */}
+      <Header currentView={currentView} onViewChange={handleViewChange} />
+
+      {/* Contenedor principal con animaciones suaves */}
+      <main className="flex-grow pt-10 pb-20" role="main">
+        {currentView === 'home' && <HomeHero onViewChange={handleViewChange} />}
+        {currentView === 'schemes' && <Schemes />}
+        {currentView === 'impartiality' && <Impartiality />}
+        {currentView === 'complaints' && <ComplaintsWizard />}
+        {currentView === 'verification' && <CertSearch />}
+      </main>
+
+      {/* Footer corporativo oficial */}
+      <Footer onViewChange={handleViewChange} />
+    </div>
+  );
+}
