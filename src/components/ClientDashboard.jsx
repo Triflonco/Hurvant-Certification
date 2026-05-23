@@ -3,7 +3,7 @@ import {
   Building, Users, FileText, Database, ShieldAlert, 
   TrendingUp, Search, Plus, UserPlus, LogOut, Lock, 
   CheckCircle2, AlertTriangle, Compass, Cpu, Download, Key,
-  HelpCircle
+  HelpCircle, Trash2
 } from 'lucide-react';
 
 export const REGULATED_JOBS = [
@@ -291,6 +291,47 @@ export default function ClientDashboard() {
 
     setCompanySuccess(true);
     setTimeout(() => setCompanySuccess(false), 3000);
+  };
+
+  // 8c. Baja reactiva de empresas y operarios
+  const handleDeleteCompany = (id, nombre) => {
+    // Verificar si la empresa tiene operarios asignados en el estado
+    const hasOperators = operators.some(op => op.empresa === nombre);
+    if (hasOperators) {
+      alert(`No se puede dar de baja la empresa "${nombre}" porque tiene operarios asignados en el Onboarding. Por favor, dé de baja a los operarios primero.`);
+      return;
+    }
+
+    if (window.confirm(`¿Está seguro de que desea dar de baja la empresa "${nombre}"? Esta acción se registrará en el ledger de calidad.`)) {
+      setCompanies(prev => prev.filter(c => c.id !== id));
+    }
+  };
+
+  const handleDeleteOperator = (id, nombre, empresa, aptitudMedica) => {
+    if (window.confirm(`¿Está seguro de que desea dar de baja al operario "${nombre}"? Esta acción revocará todas sus firmas criptográficas.`)) {
+      setOperators(prev => prev.filter(op => op.id !== id));
+
+      // Decrementar conteo en la base de datos de empresas y recalcular conformidad
+      setCompanies(prev => prev.map(comp => {
+        if (comp.nombre === empresa) {
+          const updatedOperatorsCount = Math.max(0, comp.operarios - 1);
+          
+          // Recalcular conformidad en base a los operarios restantes
+          const remainingOps = operators.filter(o => o.id !== id && o.empresa === empresa);
+          const remainingAptos = remainingOps.filter(o => o.aptitudMedica).length;
+          const newConformity = updatedOperatorsCount > 0 
+            ? `${Math.round((remainingAptos / updatedOperatorsCount) * 100)}%` 
+            : '100%';
+
+          return { 
+            ...comp, 
+            operarios: updatedOperatorsCount,
+            conformidad: newConformity
+          };
+        }
+        return comp;
+      }));
+    }
   };
 
   // 9. Filtrado de datos por buscador
@@ -745,8 +786,18 @@ export default function ClientDashboard() {
                           </div>
 
                           <div className="mt-3 pt-2 border-t border-dashed border-slate-100 flex justify-between items-center text-xs">
-                            <span className="text-slate-500 font-medium">Tasa Conformidad:</span>
-                            <span className="font-black text-emerald-600 uppercase tracking-wide">{comp.conformidad}</span>
+                            <div className="flex items-center gap-1">
+                              <span className="text-slate-500 font-medium">Tasa Conformidad:</span>
+                              <span className="font-black text-emerald-600 uppercase tracking-wide">{comp.conformidad}</span>
+                            </div>
+                            <button
+                              onClick={() => handleDeleteCompany(comp.id, comp.nombre)}
+                              className="text-[10px] font-bold text-rose-600 bg-rose-50 border border-rose-150 hover:bg-rose-100 px-2 py-1 rounded flex items-center gap-1 transition-all active:scale-95 cursor-pointer"
+                              title="Dar de baja empresa"
+                            >
+                              <Trash2 className="h-3 w-3" />
+                              <span>Dar de Baja</span>
+                            </button>
                           </div>
                         </article>
                       ))}
@@ -898,13 +949,22 @@ export default function ClientDashboard() {
                               <strong className="text-sm font-bold text-hurvant-navy">{op.nombre}</strong>
                               <span className="text-[10px] text-slate-400 block font-mono">DNI: {op.dni} | Registro ID: {op.id}</span>
                             </div>
-                            <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase ${
-                              op.aptitudMedica 
-                                ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                                : 'bg-rose-50 text-rose-700 border-rose-200'
-                            }`}>
-                              {op.estado}
-                            </span>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase ${
+                                op.aptitudMedica 
+                                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                                  : 'bg-rose-50 text-rose-700 border-rose-200'
+                              }`}>
+                                {op.estado}
+                              </span>
+                              <button
+                                onClick={() => handleDeleteOperator(op.id, op.nombre, op.empresa, op.aptitudMedica)}
+                                className="text-rose-600 bg-rose-50 hover:bg-rose-100 border border-rose-150 p-1.5 rounded flex items-center justify-center active:scale-95 transition-all cursor-pointer shadow-xs"
+                                title="Dar de baja operario"
+                              >
+                                <Trash2 className="h-3.5 w-3.5" />
+                              </button>
+                            </div>
                           </div>
 
                           <div className="text-xs text-slate-650 space-y-1 pt-2 border-t border-slate-100">
