@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Building, Users, FileText, Database, ShieldAlert, 
   TrendingUp, Search, Plus, UserPlus, LogOut, Lock, 
@@ -67,83 +67,98 @@ export default function ClientDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
 
   // 3. Base de Datos en Memoria de Operarios (Con datos iniciales e inserción reactiva)
-  const [operators, setOperators] = useState([
-    {
-      id: 'OP-4892',
-      nombre: 'Carlos Gómez Sánchez',
-      dni: '50389281A',
-      puesto: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)',
-      empresa: 'Mercadona Logística España',
-      aptitudMedica: true,
-      fechaAlta: '12/10/2025',
-      estado: 'Auditado - Conforme',
-      hash: 'sha256-4a7b9c9d8e7f6a5b4c3d2e1f9876543210abcdef0123456789abcdef012345'
-    },
-    {
-      id: 'OP-1143',
-      nombre: 'Marta Ruiz Calvo',
-      dni: '02899482B',
-      puesto: 'Operador de Trabajos en Espacios Confinados (Atmósferas Peligrosas)',
-      empresa: 'Hilton Hotels Group',
-      aptitudMedica: true,
-      fechaAlta: '04/02/2026',
-      estado: 'Auditado - Conforme',
-      hash: 'sha256-8e2d1f9d8c7b6a5a4c3b2a1a0987654321fedcba0123456789abcdef987654'
-    },
-    {
-      id: 'OP-0731',
-      nombre: 'Jorge Benítez Ortiz',
-      dni: '48299104K',
-      puesto: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)',
-      empresa: 'FCC Industrial Madrid',
-      aptitudMedica: true,
-      fechaAlta: '15/05/2023',
-      estado: 'Reevaluación Requerida',
-      hash: 'sha256-f5c2b9f3e4d5c6b7a8d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0'
-    },
-    {
-      id: 'OP-3048',
-      nombre: 'Sofía Lanza Mendoza',
-      dni: '78299120Z',
-      puesto: 'Operador de Plataformas Elevadoras PEMP (Norma UNE 58923)',
-      empresa: 'Mercadona Logística España',
-      aptitudMedica: false,
-      fechaAlta: '20/05/2026',
-      estado: 'Inapto Temporal',
-      hash: 'sha256-3bb4c5d6e7f8g9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4'
-    }
-  ]);
+  const [operators, setOperators] = useState(() => {
+    const saved = localStorage.getItem('hurvant_operators');
+    return saved ? JSON.parse(saved) : [
+      {
+        id: 'OP-4892',
+        nombre: 'Carlos Gómez Sánchez',
+        dni: '50389281A',
+        puesto: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)',
+        empresa: 'Mercadona Logística España',
+        aptitudMedica: true,
+        fechaAlta: '12/10/2025',
+        estado: 'Auditado - Conforme',
+        hash: 'sha256-4a7b9c9d8e7f6a5b4c3d2e1f9876543210abcdef0123456789abcdef012345'
+      },
+      {
+        id: 'OP-1143',
+        nombre: 'Marta Ruiz Calvo',
+        dni: '02899482B',
+        puesto: 'Operador de Trabajos en Espacios Confinados (Atmósferas Peligrosas)',
+        empresa: 'Hilton Hotels Group',
+        aptitudMedica: true,
+        fechaAlta: '04/02/2026',
+        estado: 'Auditado - Conforme',
+        hash: 'sha256-8e2d1f9d8c7b6a5a4c3b2a1a0987654321fedcba0123456789abcdef987654'
+      },
+      {
+        id: 'OP-0731',
+        nombre: 'Jorge Benítez Ortiz',
+        dni: '48299104K',
+        puesto: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)',
+        empresa: 'FCC Industrial Madrid',
+        aptitudMedica: true,
+        fechaAlta: '15/05/2023',
+        estado: 'Reevaluación Requerida',
+        hash: 'sha256-f5c2b9f3e4d5c6b7a8d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0'
+      },
+      {
+        id: 'OP-3048',
+        nombre: 'Sofía Lanza Mendoza',
+        dni: '78299120Z',
+        puesto: 'Operador de Plataformas Elevadoras PEMP (Norma UNE 58923)',
+        empresa: 'Mercadona Logística España',
+        aptitudMedica: false,
+        fechaAlta: '20/05/2026',
+        estado: 'Inapto Temporal',
+        hash: 'sha256-3bb4c5d6e7f8g9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4'
+      }
+    ];
+  });
 
   // 4. Base de Datos de Empresas Clientes
-  const [companies, setCompanies] = useState([
-    {
-      id: 'EMP-01',
-      nombre: 'Mercadona Logística España',
-      cif: 'A-46000000',
-      centro: 'C.L. Madrid Sur (Valdemoro)',
-      operarios: 14,
-      conformidad: '100%',
-      puestoCritico: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)'
-    },
-    {
-      id: 'EMP-02',
-      nombre: 'Hilton Hotels Group',
-      cif: 'B-82000012',
-      centro: 'División Baleares (Palma)',
-      operarios: 12,
-      conformidad: '88%',
-      puestoCritico: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)'
-    },
-    {
-      id: 'EMP-03',
-      nombre: 'FCC Industrial Madrid',
-      cif: 'A-28000948',
-      centro: 'Parque de Maquinaria Norte',
-      operarios: 6,
-      conformidad: '100%',
-      puestoCritico: 'Operador de Grúa Móvil Autopropulsada - Cat. A (ITC MIE-AEM-4)'
-    }
-  ]);
+  const [companies, setCompanies] = useState(() => {
+    const saved = localStorage.getItem('hurvant_companies');
+    return saved ? JSON.parse(saved) : [
+      {
+        id: 'EMP-01',
+        nombre: 'Mercadona Logística España',
+        cif: 'A-46000000',
+        centro: 'C.L. Madrid Sur (Valdemoro)',
+        operarios: 14,
+        conformidad: '100%',
+        puestoCritico: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)'
+      },
+      {
+        id: 'EMP-02',
+        nombre: 'Hilton Hotels Group',
+        cif: 'B-82000012',
+        centro: 'División Baleares (Palma)',
+        operarios: 12,
+        conformidad: '88%',
+        puestoCritico: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)'
+      },
+      {
+        id: 'EMP-03',
+        nombre: 'FCC Industrial Madrid',
+        cif: 'A-28000948',
+        centro: 'Parque de Maquinaria Norte',
+        operarios: 6,
+        conformidad: '100%',
+        puestoCritico: 'Operador de Grúa Móvil Autopropulsada - Cat. A (ITC MIE-AEM-4)'
+      }
+    ];
+  });
+
+  // Sincronización automática de datos locales en localStorage
+  useEffect(() => {
+    localStorage.setItem('hurvant_operators', JSON.stringify(operators));
+  }, [operators]);
+
+  useEffect(() => {
+    localStorage.setItem('hurvant_companies', JSON.stringify(companies));
+  }, [companies]);
 
   // 5. Estado para Filtrados / Buscadores
   const [companySearch, setCompanySearch] = useState('');
@@ -173,64 +188,71 @@ export default function ClientDashboard() {
   const [showCompanyGuide, setShowCompanyGuide] = useState(false);
 
   // 6c. Estados para Gestión de Usuarios
-  const [users, setUsers] = useState([
-    {
-      id: 'USR-0541',
-      nombre: 'Gina Torres Bernal',
-      email: 'ginatorres.bernal@gmail.com',
-      rol: 'Gerente Administradora',
-      numColegiado: 'DNI-Z0541040Q',
-      fechaAlta: '23/05/2026'
-    },
-    {
-      id: 'USR-1002',
-      nombre: 'David Felipe Pineda',
-      email: 'felipe10pinedatorres@gmail.com',
-      rol: 'Técnico Especialista',
-      numColegiado: 'CC-1002366081',
-      fechaAlta: '23/05/2026'
-    },
-    {
-      id: 'USR-3172',
-      nombre: 'Antonio Contreras',
-      email: 'styloaerografo@gmail.com',
-      rol: 'Gerente (Superusuario)',
-      numColegiado: 'DNI-31723466A',
-      fechaAlta: '23/05/2026'
-    },
-    {
-      id: 'USR-9843',
-      nombre: 'Carlos Valenzuela',
-      email: 'carlos.valenzuela@hurvant.com',
-      rol: 'Inspector Técnico',
-      numColegiado: '9843-COITI',
-      fechaAlta: '10/01/2025'
-    },
-    {
-      id: 'USR-1120',
-      nombre: 'Amparo Serra Rius',
-      email: 'amparo.serra@hurvant.com',
-      rol: 'Inspector Técnico',
-      numColegiado: '11202-COITI',
-      fechaAlta: '02/02/2025'
-    },
-    {
-      id: 'USR-0021',
-      nombre: 'Javier Rivas Moreno',
-      email: 'javier.rivas@hurvant.com',
-      rol: 'Administrador',
-      numColegiado: '7829-COITI',
-      fechaAlta: '15/12/2024'
-    },
-    {
-      id: 'USR-3049',
-      nombre: 'Marta Soler Puig',
-      email: 'marta.soler@mercadona.es',
-      rol: 'Prevencionista',
-      numColegiado: 'PRL-48299',
-      fechaAlta: '18/10/2025'
-    }
-  ]);
+  const [users, setUsers] = useState(() => {
+    const saved = localStorage.getItem('hurvant_users');
+    return saved ? JSON.parse(saved) : [
+      {
+        id: 'USR-0541',
+        nombre: 'Gina Torres Bernal',
+        email: 'ginatorres.bernal@gmail.com',
+        rol: 'Gerente Administradora',
+        numColegiado: 'DNI-Z0541040Q',
+        fechaAlta: '23/05/2026'
+      },
+      {
+        id: 'USR-1002',
+        nombre: 'David Felipe Pineda',
+        email: 'felipe10pinedatorres@gmail.com',
+        rol: 'Técnico Especialista',
+        numColegiado: 'CC-1002366081',
+        fechaAlta: '23/05/2026'
+      },
+      {
+        id: 'USR-3172',
+        nombre: 'Antonio Contreras',
+        email: 'styloaerografo@gmail.com',
+        rol: 'Gerente (Superusuario)',
+        numColegiado: 'DNI-31723466A',
+        fechaAlta: '23/05/2026'
+      },
+      {
+        id: 'USR-9843',
+        nombre: 'Carlos Valenzuela',
+        email: 'carlos.valenzuela@hurvant.com',
+        rol: 'Inspector Técnico',
+        numColegiado: '9843-COITI',
+        fechaAlta: '10/01/2025'
+      },
+      {
+        id: 'USR-1120',
+        nombre: 'Amparo Serra Rius',
+        email: 'amparo.serra@hurvant.com',
+        rol: 'Inspector Técnico',
+        numColegiado: '11202-COITI',
+        fechaAlta: '02/02/2025'
+      },
+      {
+        id: 'USR-0021',
+        nombre: 'Javier Rivas Moreno',
+        email: 'javier.rivas@hurvant.com',
+        rol: 'Administrador',
+        numColegiado: '7829-COITI',
+        fechaAlta: '15/12/2024'
+      },
+      {
+        id: 'USR-3049',
+        nombre: 'Marta Soler Puig',
+        email: 'marta.soler@mercadona.es',
+        rol: 'Prevencionista',
+        numColegiado: 'PRL-48299',
+        fechaAlta: '18/10/2025'
+      }
+    ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('hurvant_users', JSON.stringify(users));
+  }, [users]);
   const [userSearch, setUserSearch] = useState('');
   const [newUser, setNewUser] = useState({
     nombre: '',
