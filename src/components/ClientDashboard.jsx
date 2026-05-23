@@ -175,6 +175,14 @@ export default function ClientDashboard() {
   // 6c. Estados para Gestión de Usuarios
   const [users, setUsers] = useState([
     {
+      id: 'USR-3172',
+      nombre: 'Antonio Contreras',
+      email: 'styloaerografo@gmail.com',
+      rol: 'Gerente (Superusuario)',
+      numColegiado: 'DNI-31723466A',
+      fechaAlta: '23/05/2026'
+    },
+    {
       id: 'USR-9843',
       nombre: 'Carlos Valenzuela',
       email: 'carlos.valenzuela@hurvant.com',
@@ -216,6 +224,13 @@ export default function ClientDashboard() {
   });
   const [userSuccess, setUserSuccess] = useState(false);
 
+  // 6d. Usuario actualmente activo logueado en sesión
+  const [currentUser, setCurrentUser] = useState({
+    nombre: 'Carlos Valenzuela',
+    rol: 'Inspector Técnico',
+    numColegiado: '9843-COITI'
+  });
+
   // 7. Gestión de Formularios e Inputs de Login
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -225,12 +240,25 @@ export default function ClientDashboard() {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     
-    // Credenciales Demo de Gobernanza Hurvant
+    // Credenciales de Control y Gobernanza Hurvant
     if (credentials.email === 'admin@hurvant.com' && credentials.password === 'hurvant2026') {
+      setCurrentUser({
+        nombre: 'Carlos Valenzuela',
+        rol: 'Inspector Técnico',
+        numColegiado: '9843-COITI'
+      });
+      setIsLoggedIn(true);
+      setLoginError('');
+    } else if (credentials.email === 'styloaerografo@gmail.com' && credentials.password === '318275') {
+      setCurrentUser({
+        nombre: 'Antonio Contreras',
+        rol: 'Gerente (Superusuario)',
+        numColegiado: 'GER-31723'
+      });
       setIsLoggedIn(true);
       setLoginError('');
     } else {
-      setLoginError('Credenciales incorrectas. Pruebe con: admin@hurvant.com / hurvant2026');
+      setLoginError('Credenciales incorrectas. Verifique los datos de acceso proporcionados.');
     }
   };
 
@@ -416,8 +444,8 @@ export default function ClientDashboard() {
   };
 
   const handleDeleteUser = (id, nombre) => {
-    if (nombre === 'Carlos Valenzuela') {
-      alert('No se puede dar de baja a sí mismo mientras su sesión de Inspector General esté iniciada.');
+    if (nombre === currentUser.nombre) {
+      alert(`No se puede dar de baja a sí mismo mientras su sesión de ${currentUser.rol} esté iniciada.`);
       return;
     }
 
@@ -528,11 +556,21 @@ export default function ClientDashboard() {
               </button>
             </form>
 
-            <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-custom-md text-[10px] text-slate-500 text-center mt-6 space-y-1 leading-normal font-semibold">
-              <span className="text-hurvant-indigo font-bold uppercase block tracking-wider">Acceso de Demostración:</span>
-              <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">admin@hurvant.com</code></div>
-              <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">hurvant2026</code></div>
-            </div>
+            <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-custom-md text-[10px] text-slate-500 text-left mt-6 space-y-2 leading-normal font-semibold">
+               <span className="text-hurvant-indigo font-bold uppercase block tracking-wider text-center">Acceso de Demostración y Gobernanza:</span>
+               
+               <div className="border-b border-slate-200/60 pb-1.5">
+                 <strong className="text-[9px] text-slate-400 block uppercase">1. Perfil Inspector Técnico</strong>
+                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">admin@hurvant.com</code></div>
+                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">hurvant2026</code></div>
+               </div>
+
+               <div>
+                 <strong className="text-[9px] text-hurvant-indigo block uppercase">2. Superusuario Gerente (Antonio Contreras)</strong>
+                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">styloaerografo@gmail.com</code></div>
+                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">318275</code></div>
+               </div>
+             </div>
           </div>
         </section>
       ) : (
@@ -556,8 +594,8 @@ export default function ClientDashboard() {
             
             <div className="flex items-center gap-4 shrink-0 bg-slate-50 p-2.5 rounded-custom-md border border-slate-200/60">
               <div className="text-right">
-                <strong className="text-xs font-black text-slate-800 block">Carlos Valenzuela</strong>
-                <span className="text-[10px] text-slate-500 font-semibold block">Inspector General Calidad</span>
+                <strong className="text-xs font-black text-slate-800 block">{currentUser.nombre}</strong>
+                <span className="text-[10px] text-slate-500 font-semibold block">{currentUser.rol}</span>
               </div>
               <button
                 onClick={handleLogout}
