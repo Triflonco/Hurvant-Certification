@@ -133,17 +133,19 @@ export default function Services() {
             </p>
           </div>
 
-          {/* Grid de Servicios */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {initialServices.map((service) => {
+          {/* Grid de Servicios como Filas Horizontales Premium */}
+          <div className="space-y-8">
+            {initialServices.map((service, idx) => {
               const IconComp = service.icon;
               return (
                 <article
                   key={service.id}
-                  className={`glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs flex flex-col justify-between transition-all duration-300 glass-card-hover border-t-4 border-t-slate-300 overflow-hidden ${service.borderColor}`}
+                  className={`glass-card rounded-custom-lg p-6 lg:p-8 border border-slate-200/60 shadow-xs flex flex-col ${
+                    idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  } gap-8 items-center transition-all duration-300 glass-card-hover border-l-4 border-l-slate-300 overflow-hidden ${service.borderColor}`}
                 >
                   {service.image && (
-                    <div className="h-44 -mx-6 -mt-6 mb-6 overflow-hidden relative border-b border-slate-200/60">
+                    <div className="w-full lg:w-5/12 h-52 lg:h-64 rounded-custom-md overflow-hidden relative border border-slate-200/60 shrink-0">
                       <img 
                         src={service.image} 
                         alt={service.title} 
@@ -152,26 +154,33 @@ export default function Services() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
                     </div>
                   )}
-                  <div className="space-y-4">
-                    <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm`}>
-                      <IconComp className="h-6 w-6" />
+                  
+                  <div className="flex-grow space-y-4 w-full">
+                    <div className="flex items-center gap-4">
+                      <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm shrink-0`}>
+                        <IconComp className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg lg:text-xl font-bold text-hurvant-navy leading-tight">{service.title}</h3>
+                        <span className="text-xs text-slate-400 font-medium block mt-0.5">{service.subtitle}</span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-hurvant-navy leading-tight">{service.title}</h3>
-                      <span className="text-xs text-slate-400 font-medium block mt-1">{service.subtitle}</span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{service.description}</p>
                     
-                    <ul className="space-y-2.5 pt-4 border-t border-slate-100">
-                      {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600">
-                          <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5`}>
-                            ✓
-                          </span>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">{service.description}</p>
+                    
+                    <div className="pt-4 border-t border-slate-100">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
+                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
+                        {service.details.map((detail, dIdx) => (
+                          <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
+                            <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5`}>
+                              ✓
+                            </span>
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </article>
               );

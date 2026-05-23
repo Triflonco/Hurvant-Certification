@@ -93,72 +93,76 @@ export default function Sectors() {
         </p>
       </header>
 
-      {/* Grid de Sectores */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
-        {sectorsData.map((sector) => {
+      {/* Stack de Sectores como Filas Horizontales Premium */}
+      <div className="space-y-12 mb-12">
+        {sectorsData.map((sector, idx) => {
           const IconComp = sector.icon;
           return (
             <article 
               key={sector.id} 
-              className="glass-card rounded-custom-lg border border-slate-200/60 shadow-md overflow-hidden flex flex-col justify-between"
+              className={`glass-card rounded-custom-lg border border-slate-200/60 shadow-md overflow-hidden flex flex-col ${
+                idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              } gap-0 items-stretch`}
             >
               {sector.image && (
-                <div className="h-56 overflow-hidden relative border-b border-slate-200">
+                <div className="w-full lg:w-5/12 h-64 lg:h-auto min-h-[320px] overflow-hidden relative shrink-0">
                   <img 
                     src={sector.image} 
                     alt={sector.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-103 absolute inset-0"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-slate-900/10 to-transparent pointer-events-none" />
                 </div>
               )}
 
-              {/* Encabezado del Sector con gradiente premium */}
-              <div className={`bg-gradient-to-r ${sector.color} text-white p-6 relative`}>
-                <div className="absolute top-4 right-4 bg-white/10 p-2.5 rounded-custom-md backdrop-blur-md">
-                  <IconComp className="h-6 w-6 text-white" />
-                </div>
-                <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-white mb-2`}>
-                  Área de Evaluación
-                </span>
-                <h3 className="text-xl sm:text-2xl font-black tracking-tight">{sector.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-200/90 font-medium mt-1">{sector.subtitle}</p>
-              </div>
-
-              {/* Contenido */}
-              <div className="p-6 sm:p-8 space-y-6 flex-grow">
-                {/* Desafíos detectados */}
-                <div className="space-y-4">
-                  <h4 className="text-xs font-black text-slate-800 uppercase tracking-widest flex items-center gap-2 border-b border-slate-100 pb-2">
-                    <ShieldAlert className="h-4 w-4 text-rose-500 shrink-0" />
-                    Problemas y Brechas Detectadas:
-                  </h4>
-                  <ul className="space-y-2.5">
-                    {sector.problems.map((problem, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
-                        <span className="h-1.5 w-1.5 rounded-full bg-rose-500 shrink-0 mt-1.5" />
-                        <span>{problem}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Contenido a dos columnas (en pantalla grande) para los detalles */}
+              <div className="flex-grow flex flex-col justify-between w-full">
+                {/* Encabezado del Sector con gradiente premium */}
+                <div className={`bg-gradient-to-r ${sector.color} text-white p-6 relative shrink-0`}>
+                  <div className="absolute top-4 right-4 bg-white/10 p-2.5 rounded-custom-md backdrop-blur-md">
+                    <IconComp className="h-6 w-6 text-white" />
+                  </div>
+                  <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-white mb-2`}>
+                    Área de Intervención Crítica
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black tracking-tight">{sector.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-200/95 font-medium mt-1">{sector.subtitle}</p>
                 </div>
 
-                {/* Lo que evalúa Hurvant */}
-                <div className="space-y-4 pt-4 border-t border-slate-100">
-                  <h4 className="text-xs font-black text-slate-800 uppercase tracking-widest flex items-center gap-2 border-b border-slate-100 pb-2">
-                    <CheckCircle2 className={`h-4 w-4 ${sector.accentColor} shrink-0`} />
-                    Parámetros que Evalúa Hurvant:
-                  </h4>
-                  <ul className="space-y-2.5">
-                    {sector.evaluations.map((evalItem, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-normal">
-                        <span className={`inline-flex h-4.5 w-4.5 rounded-full ${sector.badgeBg} flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5`}>
-                          ✓
-                        </span>
-                        <span>{evalItem}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-start flex-grow">
+                  {/* Desafíos detectados */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs font-black text-slate-800 uppercase tracking-widest flex items-center gap-2 border-b border-slate-100 pb-2">
+                      <ShieldAlert className="h-4 w-4 text-rose-500 shrink-0" />
+                      Problemas y Brechas Detectadas:
+                    </h4>
+                    <ul className="space-y-2.5">
+                      {sector.problems.map((problem, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-650 leading-relaxed">
+                          <span className="h-1.5 w-1.5 rounded-full bg-rose-500 shrink-0 mt-1.5" />
+                          <span>{problem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Lo que evalúa Hurvant */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs font-black text-slate-800 uppercase tracking-widest flex items-center gap-2 border-b border-slate-100 pb-2">
+                      <CheckCircle2 className={`h-4 w-4 ${sector.accentColor} shrink-0`} />
+                      Parámetros que Evalúa Hurvant:
+                    </h4>
+                    <ul className="space-y-2.5">
+                      {sector.evaluations.map((evalItem, eIdx) => (
+                        <li key={eIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                          <span className={`inline-flex h-4.5 w-4.5 rounded-full ${sector.badgeBg} flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5`}>
+                            ✓
+                          </span>
+                          <span>{evalItem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </article>
