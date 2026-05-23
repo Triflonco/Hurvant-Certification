@@ -587,34 +587,6 @@ export default function ClientDashboard() {
                 <span>Acceder a la Consola</span>
               </button>
             </form>
-
-            <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-custom-md text-[10px] text-slate-500 text-left mt-6 space-y-2.5 leading-normal font-semibold max-h-56 overflow-y-auto">
-               <span className="text-hurvant-indigo font-bold uppercase block tracking-wider text-center">Acceso de Demostración y Gobernanza:</span>
-               
-               <div className="border-b border-slate-200/60 pb-1.5">
-                 <strong className="text-[9px] text-slate-400 block uppercase">1. Perfil Inspector Técnico</strong>
-                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">admin@hurvant.com</code></div>
-                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">hurvant2026</code></div>
-               </div>
-
-               <div className="border-b border-slate-200/60 pb-1.5">
-                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">2. Gerente Administradora (Gina Torres)</strong>
-                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">ginatorres.bernal@gmail.com</code></div>
-                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">Gtorres2026</code></div>
-               </div>
-
-               <div className="border-b border-slate-200/60 pb-1.5">
-                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">3. Técnico Especialista (David F. Pineda)</strong>
-                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">felipe10pinedatorres@gmail.com</code></div>
-                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">Ppineda2026</code></div>
-               </div>
-
-               <div>
-                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">4. Superusuario Gerente (Antonio Contreras)</strong>
-                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">styloaerografo@gmail.com</code></div>
-                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">318275</code></div>
-               </div>
-             </div>
           </div>
         </section>
       ) : (
