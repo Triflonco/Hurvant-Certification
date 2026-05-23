@@ -70,7 +70,7 @@ export default function About() {
               Visión a Medio y Largo Plazo
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Hurvant evoluciona continuamente hacia la estandarización de competencias. A mediano plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
+              Hurvant evoluciona continuamente hacia la estandarización de competencias. A medio plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
             </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Nuestra hoja de ruta estratégica contempla la alineación regulatoria y la posterior solicitud de acreditación formal bajo modelos internacionales de la entidad nacional (ENAC), tales como la norma <strong>UNE-EN ISO/IEC 17024</strong> para la certificación de personas e <strong>ISO/IEC 17020</strong> para actividades de inspección.
@@ -171,7 +171,7 @@ export default function About() {
       {/* Nota Oficial de Lanzamiento y Acreditación */}
       <div className="mt-16 bg-gradient-to-br from-slate-900 via-slate-950 to-hurvant-navy-dark border border-slate-800/80 text-white rounded-custom-lg p-6 lg:p-8 relative overflow-hidden shadow-lg border-l-4 border-amber-500">
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full pointer-events-none" />
-        
+
         <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-850">
           <div>
             <span className="text-[9px] font-black tracking-widest text-amber-400 uppercase block mb-1">Estatus Regulatorio e Implantación</span>

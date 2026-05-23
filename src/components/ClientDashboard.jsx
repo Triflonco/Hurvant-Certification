@@ -2,8 +2,56 @@ import React, { useState } from 'react';
 import { 
   Building, Users, FileText, Database, ShieldAlert, 
   TrendingUp, Search, Plus, UserPlus, LogOut, Lock, 
-  CheckCircle2, AlertTriangle, Compass, Cpu, Download, Key
+  CheckCircle2, AlertTriangle, Compass, Cpu, Download, Key,
+  HelpCircle
 } from 'lucide-react';
+
+export const REGULATED_JOBS = [
+  {
+    category: "Equipos de Elevación e Izaje (UNE / ITC)",
+    options: [
+      "Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)",
+      "Operador de Carretillas Elevadoras >10t (Norma UNE 58451)",
+      "Operador de Plataformas Elevadoras PEMP (Norma UNE 58923)",
+      "Operador de Grúa Móvil Autopropulsada - Cat. A (ITC MIE-AEM-4)",
+      "Operador de Grúa Móvil Autopropulsada - Cat. B (ITC MIE-AEM-4)",
+      "Operador de Grúa Torre y Pluma (ITC MIE-AEM-2)",
+      "Operador de Puente Grúa, Pórticos y Semipórticos (Norma UNE 58140-1)",
+      "Operador de Manipuladoras Telescópicas (Norma UNE 58451 / UNE-EN 1459)",
+      "Operador de Maquinaria de Movimiento de Tierras y Excavadoras (UNE-EN 474)"
+    ]
+  },
+  {
+    category: "Seguridad Industrial y Trabajos de Riesgo Especial",
+    options: [
+      "Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)",
+      "Técnico en Trabajos Verticales y Acceso por Cuerda - ANETVA / IRATA",
+      "Operador de Trabajos en Espacios Confinados (Atmósferas Peligrosas)",
+      "Técnico Supervisor de Líneas de Vida y Puntos de Anclaje (UNE-EN 795)",
+      "Operador de Rescate Industrial en Altura y Espacios Confinados",
+      "Supervisor de Trabajos en Atmósferas Explosivas (Directiva ATEX)"
+    ]
+  },
+  {
+    category: "Ensayos No Destructivos (END / NDT - ISO 9712)",
+    options: [
+      "Técnico END - Inspección Visual (VT) Nivel II / III (UNE-EN ISO 9712)",
+      "Técnico END - Partículas Magnéticas (MT) Nivel II / III (UNE-EN ISO 9712)",
+      "Técnico END - Líquidos Penetrantes (PT) Nivel II / III (UNE-EN ISO 9712)",
+      "Técnico END - Ultrasonidos (UT) Nivel II / III (UNE-EN ISO 9712)",
+      "Técnico END - Radiografía Industrial (RT) Nivel II (UNE-EN ISO 9712)",
+      "Inspector Técnico de Soldaduras y Construcción (UNE-EN ISO 17637)"
+    ]
+  },
+  {
+    category: "Organismos de Inspección y Adecuación (ISO 17020 / RD 1215)",
+    options: [
+      "Inspector Técnico de Adecuación de Equipos de Trabajo (RD 1215/1997)",
+      "Inspector Técnico de Estanterías Metálicas y Almacenes (UNE-EN 15635)",
+      "Inspector de Seguridad en Máquinas e Integración Robotizada (ISO 12100)"
+    ]
+  }
+];
 
 export default function ClientDashboard() {
   // 1. Estados de Autenticación
@@ -24,7 +72,7 @@ export default function ClientDashboard() {
       id: 'OP-4892',
       nombre: 'Carlos Gómez Sánchez',
       dni: '50389281A',
-      puesto: 'Operador de Carretilla Retráctil T4',
+      puesto: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)',
       empresa: 'Mercadona Logística España',
       aptitudMedica: true,
       fechaAlta: '12/10/2025',
@@ -35,7 +83,7 @@ export default function ClientDashboard() {
       id: 'OP-1143',
       nombre: 'Marta Ruiz Calvo',
       dni: '02899482B',
-      puesto: 'Operador en Espacios Confinados Cat. C',
+      puesto: 'Operador de Trabajos en Espacios Confinados (Atmósferas Peligrosas)',
       empresa: 'Hilton Hotels Group',
       aptitudMedica: true,
       fechaAlta: '04/02/2026',
@@ -46,7 +94,7 @@ export default function ClientDashboard() {
       id: 'OP-0731',
       nombre: 'Jorge Benítez Ortiz',
       dni: '48299104K',
-      puesto: 'Operador Trabajos en Altura Telco',
+      puesto: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)',
       empresa: 'FCC Industrial Madrid',
       aptitudMedica: true,
       fechaAlta: '15/05/2023',
@@ -57,7 +105,7 @@ export default function ClientDashboard() {
       id: 'OP-3048',
       nombre: 'Sofía Lanza Mendoza',
       dni: '78299120Z',
-      puesto: 'Operador de Plataforma Elevadora (PEMP)',
+      puesto: 'Operador de Plataformas Elevadoras PEMP (Norma UNE 58923)',
       empresa: 'Mercadona Logística España',
       aptitudMedica: false,
       fechaAlta: '20/05/2026',
@@ -75,7 +123,7 @@ export default function ClientDashboard() {
       centro: 'C.L. Madrid Sur (Valdemoro)',
       operarios: 14,
       conformidad: '100%',
-      puestoCritico: 'Carretilleros Frontal y Retráctil'
+      puestoCritico: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)'
     },
     {
       id: 'EMP-02',
@@ -84,7 +132,7 @@ export default function ClientDashboard() {
       centro: 'División Baleares (Palma)',
       operarios: 12,
       conformidad: '88%',
-      puestoCritico: 'Personal de Pisos y Altura'
+      puestoCritico: 'Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)'
     },
     {
       id: 'EMP-03',
@@ -93,7 +141,7 @@ export default function ClientDashboard() {
       centro: 'Parque de Maquinaria Norte',
       operarios: 6,
       conformidad: '100%',
-      puestoCritico: 'Operadores de Grúas de Carga'
+      puestoCritico: 'Operador de Grúa Móvil Autopropulsada - Cat. A (ITC MIE-AEM-4)'
     }
   ]);
 
@@ -106,12 +154,23 @@ export default function ClientDashboard() {
   const [newOperator, setNewOperator] = useState({
     nombre: '',
     dni: '',
-    puesto: 'Operador de Carretilla Retráctil T4',
+    puesto: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)',
     empresa: 'Mercadona Logística España',
     aptitudMedica: true
   });
 
   const [registerSuccess, setRegisterSuccess] = useState(false);
+
+  // 6b. Formulario de Alta de Empresa Cliente
+  const [newCompany, setNewCompany] = useState({
+    nombre: '',
+    cif: '',
+    centro: '',
+    puestoCritico: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)'
+  });
+
+  const [companySuccess, setCompanySuccess] = useState(false);
+  const [showCompanyGuide, setShowCompanyGuide] = useState(false);
 
   // 7. Gestión de Formularios e Inputs de Login
   const handleLoginChange = (e) => {
@@ -187,13 +246,51 @@ export default function ClientDashboard() {
     setNewOperator({
       nombre: '',
       dni: '',
-      puesto: 'Operador de Carretilla Retráctil T4',
+      puesto: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)',
       empresa: 'Mercadona Logística España',
       aptitudMedica: true
     });
 
     setRegisterSuccess(true);
     setTimeout(() => setRegisterSuccess(false), 3000);
+  };
+
+  // 8b. Registro reactivo de Empresas Clientes
+  const handleCompanyChange = (e) => {
+    const { name, value } = e.target;
+    setNewCompany(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleCompanySubmit = (e) => {
+    e.preventDefault();
+    
+    if (!newCompany.nombre || !newCompany.cif || !newCompany.centro) {
+      alert('Por favor, cumplimente los campos obligatorios de la empresa.');
+      return;
+    }
+
+    const compId = `EMP-${Math.floor(10 + Math.random() * 90)}`;
+    const freshComp = {
+      id: compId,
+      nombre: newCompany.nombre,
+      cif: newCompany.cif.toUpperCase(),
+      centro: newCompany.centro,
+      operarios: 0,
+      conformidad: '100%',
+      puestoCritico: newCompany.puestoCritico
+    };
+
+    setCompanies(prev => [freshComp, ...prev]);
+
+    setNewCompany({
+      nombre: '',
+      cif: '',
+      centro: '',
+      puestoCritico: 'Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)'
+    });
+
+    setCompanySuccess(true);
+    setTimeout(() => setCompanySuccess(false), 3000);
   };
 
   // 9. Filtrado de datos por buscador
@@ -407,6 +504,37 @@ export default function ClientDashboard() {
               {/* SUBVISTA A: RESUMEN OPERATIVO */}
               {activeTab === 'overview' && (
                 <div className="space-y-8 animate-fade-in">
+                  {/* Banner de Guía Rápida e Inicio */}
+                  <div className="glass-card rounded-custom-lg p-5 border border-slate-200/60 bg-gradient-to-r from-hurvant-navy/5 to-indigo-500/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="space-y-1 text-center md:text-left">
+                      <h4 className="text-xs font-black text-hurvant-indigo uppercase tracking-wider flex items-center gap-1.5 justify-center md:justify-start">
+                        <Building className="h-4 w-4" />
+                        Gobernanza y Actividad Técnico-Operativa
+                      </h4>
+                      <p className="text-xs text-slate-650 font-semibold leading-relaxed">
+                        Para iniciar el onboarding de operarios y realizar ensayos o dictámenes, es necesario dar de alta a la empresa cliente asociada primero.
+                      </p>
+                    </div>
+                    <div className="flex gap-2.5 shrink-0">
+                      <button
+                        onClick={() => {
+                          setActiveTab('companies');
+                          setShowCompanyGuide(true);
+                        }}
+                        className="inline-flex items-center gap-1.5 bg-white hover:bg-slate-50 text-hurvant-navy border border-slate-200 font-bold text-xs px-4 py-2.5 rounded-custom-md shadow-xs active:scale-97 transition-all"
+                      >
+                        <HelpCircle className="h-3.5 w-3.5 text-hurvant-indigo" />
+                        <span>¿Cómo crear Empresa Cliente?</span>
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('companies')}
+                        className="inline-flex items-center gap-1.5 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-xs px-4 py-2.5 rounded-custom-md shadow-xs active:scale-97 transition-all hover:brightness-110"
+                      >
+                        <Plus className="h-3.5 w-3.5" />
+                        <span>Alta de Empresa</span>
+                      </button>
+                    </div>
+                  </div>
                   {/* Tarjetas de Métricas en Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <article className="glass-card rounded-custom-lg p-5 border border-slate-200/60 bg-white shadow-xs">
@@ -483,45 +611,146 @@ export default function ClientDashboard() {
 
               {/* SUBVISTA B: EMPRESAS CLIENTES */}
               {activeTab === 'companies' && (
-                <div className="space-y-6 animate-fade-in">
-                  <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-                    <h3 className="text-base font-black text-hurvant-navy uppercase tracking-widest shrink-0">Directorio de Empresas Autorizadas</h3>
-                    <div className="relative w-full sm:max-w-xs">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 animate-fade-in items-start">
+                  
+                  {/* Formulario de Alta de Empresa Cliente a la Izquierda */}
+                  <form onSubmit={handleCompanySubmit} className="lg:col-span-5 glass-card rounded-custom-lg p-6 border border-slate-200/60 bg-white shadow-md space-y-5">
+                    <div className="flex justify-between items-center border-b border-slate-100 pb-3">
+                      <h3 className="text-sm font-black text-hurvant-navy uppercase tracking-widest flex items-center gap-2">
+                        <Building className="h-4.5 w-4.5 text-hurvant-indigo" />
+                        Alta de Empresa Cliente
+                      </h3>
+                      <button
+                        type="button"
+                        onClick={() => setShowCompanyGuide(true)}
+                        className="text-[10px] font-black text-hurvant-indigo bg-indigo-50 border border-indigo-150 px-2.5 py-1 rounded-full flex items-center gap-1 hover:bg-indigo-100 active:scale-95 transition-all cursor-pointer"
+                        title="Ver instrucciones detalladas"
+                      >
+                        <HelpCircle className="h-3.5 w-3.5" />
+                        ¿Cómo crear?
+                      </button>
+                    </div>
+
+                    {companySuccess && (
+                      <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-custom-md text-xs font-bold text-emerald-700 text-center flex items-center justify-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5" />
+                        <span>¡Empresa Cliente Registrada con Éxito!</span>
+                      </div>
+                    )}
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="comp-nombre" className="text-xs font-bold text-slate-700 block">Nombre Comercial de la Empresa</label>
                       <input
                         type="text"
-                        value={companySearch}
-                        onChange={(e) => setCompanySearch(e.target.value)}
-                        placeholder="Buscar CIF o Nombre..."
-                        className="w-full text-xs px-3.5 py-2 pl-9 rounded-custom-md border border-slate-250 focus:outline-none focus:border-hurvant-indigo"
+                        id="comp-nombre"
+                        name="nombre"
+                        required
+                        value={newCompany.nombre}
+                        onChange={handleCompanyChange}
+                        placeholder="Ej. Mercadona Logística España"
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-semibold"
                       />
-                      <Search className="h-4 w-4 text-slate-400 absolute left-3 top-2.5" />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 gap-6">
-                    {filteredCompanies.map(comp => (
-                      <article key={comp.id} className="glass-card rounded-custom-lg p-6 border border-slate-200/60 bg-white shadow-xs grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
-                        <div className="space-y-1">
-                          <span className="text-[10px] font-bold text-hurvant-indigo uppercase tracking-wider">Empresa Cliente</span>
-                          <h4 className="text-base font-black text-hurvant-navy">{comp.nombre}</h4>
-                          <span className="text-xs text-slate-400 font-mono block">CIF: {comp.cif}</span>
-                        </div>
-                        <div className="text-xs text-slate-650">
-                          <strong className="block text-slate-850 font-bold">Centro de Trabajo:</strong>
-                          {comp.centro}
-                        </div>
-                        <div className="text-xs text-slate-650">
-                          <strong className="block text-slate-850 font-bold">Puesto Crítico Auditado:</strong>
-                          {comp.puestoCritico}
-                        </div>
-                        <div className="text-right flex justify-between md:flex-col items-center md:items-end gap-2">
-                          <span className="text-[10px] font-bold bg-indigo-50 border border-indigo-100 text-hurvant-indigo px-3 py-1 rounded-full uppercase">
-                            {comp.operarios} Operarios
-                          </span>
-                          <span className="text-xs font-bold text-slate-500">Conformidad: <strong className="text-emerald-600 font-black">{comp.conformidad}</strong></span>
-                        </div>
-                      </article>
-                    ))}
+                    <div className="space-y-1.5">
+                      <label htmlFor="comp-cif" className="text-xs font-bold text-slate-700 block">CIF / NIF de la Empresa</label>
+                      <input
+                        type="text"
+                        id="comp-cif"
+                        name="cif"
+                        required
+                        value={newCompany.cif}
+                        onChange={handleCompanyChange}
+                        placeholder="Ej. A-46000000"
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-mono font-bold"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="comp-centro" className="text-xs font-bold text-slate-700 block">Centro de Trabajo Principal</label>
+                      <input
+                        type="text"
+                        id="comp-centro"
+                        name="centro"
+                        required
+                        value={newCompany.centro}
+                        onChange={handleCompanyChange}
+                        placeholder="Ej. C.L. Madrid Sur (Valdemoro)"
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-semibold"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="comp-puestoCritico" className="text-xs font-bold text-slate-700 block">Puesto Crítico a Certificar</label>
+                      <select
+                        id="comp-puestoCritico"
+                        name="puestoCritico"
+                        value={newCompany.puestoCritico}
+                        onChange={handleCompanyChange}
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 bg-white focus:outline-none focus:border-hurvant-indigo transition-all font-semibold"
+                      >
+                        {REGULATED_JOBS.map((group, gIdx) => (
+                          <optgroup key={gIdx} label={group.category} className="font-bold text-slate-800 bg-slate-50">
+                            {group.options.map((opt, oIdx) => (
+                              <option key={oIdx} value={opt} className="font-normal text-slate-700 bg-white">
+                                {opt}
+                              </option>
+                            ))}
+                          </optgroup>
+                        ))}
+                      </select>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-custom-md shadow-md active:scale-98 transition-all hover:brightness-110"
+                    >
+                      <Plus className="h-4.5 w-4.5" />
+                      <span>Registrar Empresa Cliente</span>
+                    </button>
+                  </form>
+
+                  {/* Directorio de Empresas a la Derecha */}
+                  <div className="lg:col-span-7 space-y-4 w-full">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center border-b border-slate-100 pb-3">
+                      <h3 className="text-xs font-black text-slate-800 uppercase tracking-widest shrink-0">Directorio de Empresas Autorizadas</h3>
+                      <div className="relative w-full sm:max-w-xs">
+                        <input
+                          type="text"
+                          value={companySearch}
+                          onChange={(e) => setCompanySearch(e.target.value)}
+                          placeholder="Buscar CIF o Nombre..."
+                          className="w-full text-xs px-3.5 py-1.5 pl-8 rounded-custom-md border border-slate-250 focus:outline-none focus:border-hurvant-indigo"
+                        />
+                        <Search className="h-3.5 w-3.5 text-slate-400 absolute left-2.5 top-2" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 max-h-[520px] overflow-y-auto pr-2">
+                      {filteredCompanies.map(comp => (
+                        <article key={comp.id} className="bg-white border border-slate-200/60 rounded-custom-md p-5 shadow-xs hover:border-hurvant-indigo/25 transition-all hover:shadow-sm">
+                          <div className="flex justify-between items-start gap-4 mb-2">
+                            <div className="space-y-0.5">
+                              <strong className="text-sm font-bold text-hurvant-navy block">{comp.nombre}</strong>
+                              <span className="text-[10px] text-slate-400 block font-mono">CIF: {comp.cif} | Registro ID: {comp.id}</span>
+                            </div>
+                            <span className="text-[10px] font-bold bg-indigo-50 border border-indigo-100 text-hurvant-indigo px-3 py-0.5 rounded-full uppercase shrink-0">
+                              {comp.operarios} Operarios
+                            </span>
+                          </div>
+
+                          <div className="text-xs text-slate-650 space-y-1.5 pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div><span className="font-semibold text-slate-500">Centro:</span> {comp.centro}</div>
+                            <div><span className="font-semibold text-slate-500">Puesto Crítico:</span> {comp.puestoCritico}</div>
+                          </div>
+
+                          <div className="mt-3 pt-2 border-t border-dashed border-slate-100 flex justify-between items-center text-xs">
+                            <span className="text-slate-500 font-medium">Tasa Conformidad:</span>
+                            <span className="font-black text-emerald-600 uppercase tracking-wide">{comp.conformidad}</span>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -581,10 +810,15 @@ export default function ClientDashboard() {
                         onChange={handleOperatorChange}
                         className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 bg-white focus:outline-none focus:border-hurvant-indigo transition-all font-semibold"
                       >
-                        <option value="Operador de Carretilla Retráctil T4">Carretilla Retráctil T4</option>
-                        <option value="Operador en Espacios Confinados Cat. C">Espacios Confinados Cat. C</option>
-                        <option value="Operador Trabajos en Altura Telco">Altura Telco</option>
-                        <option value="Operador de Plataforma Elevadora (PEMP)">Plataforma Elevadora (PEMP)</option>
+                        {REGULATED_JOBS.map((group, gIdx) => (
+                          <optgroup key={gIdx} label={group.category} className="font-bold text-slate-800 bg-slate-50">
+                            {group.options.map((opt, oIdx) => (
+                              <option key={oIdx} value={opt} className="font-normal text-slate-700 bg-white">
+                                {opt}
+                              </option>
+                            ))}
+                          </optgroup>
+                        ))}
                       </select>
                     </div>
 
@@ -601,6 +835,20 @@ export default function ClientDashboard() {
                           <option key={c.id} value={c.nombre}>{c.nombre}</option>
                         ))}
                       </select>
+                      <div className="flex justify-between items-center mt-1">
+                        <span className="text-[10px] text-slate-400 font-semibold">¿La empresa no figura en la lista?</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setActiveTab('companies');
+                            setShowCompanyGuide(true);
+                          }}
+                          className="text-[10px] font-bold text-hurvant-indigo hover:underline flex items-center gap-0.5 cursor-pointer bg-transparent border-none p-0"
+                        >
+                          <Plus className="h-3 w-3" />
+                          Crear Empresa Cliente
+                        </button>
+                      </div>
                     </div>
 
                     <div className="flex items-center gap-3 bg-slate-50 p-4 rounded-custom-md border border-slate-200/60">
@@ -793,6 +1041,112 @@ export default function ClientDashboard() {
             </div>
           </div>
         </section>
+      )}
+
+      {/* Modal Guía Técnica: Cómo crear la Empresa Cliente */}
+      {showCompanyGuide && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+          <div className="bg-white border border-slate-200 rounded-custom-lg shadow-2xl max-w-xl w-full overflow-hidden animate-scale-up relative">
+            
+            {/* Header del Modal */}
+            <div className="bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white p-6 relative">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-white/10 to-transparent rounded-bl-full pointer-events-none" />
+              <div className="flex justify-between items-start">
+                <div className="space-y-1">
+                  <span className="text-[9px] font-black text-indigo-200 uppercase tracking-widest block font-sans">Manual de Calidad y Gobernanza</span>
+                  <h3 id="guide-title" className="text-lg font-black tracking-tight font-sans">¿Cómo crear una Empresa Cliente?</h3>
+                </div>
+                <button 
+                  onClick={() => setShowCompanyGuide(false)}
+                  className="text-white/80 hover:text-white bg-white/10 hover:bg-white/20 h-8 w-8 rounded-full flex items-center justify-center active:scale-95 transition-all text-sm font-bold cursor-pointer"
+                  aria-label="Cerrar"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            {/* Contenido del Modal (Pasos con Íconos) */}
+            <div className="p-6 space-y-6 max-h-[70vh] overflow-y-auto font-sans">
+              <p className="text-xs text-slate-500 leading-relaxed font-semibold">
+                Para mantener la trazabilidad criptográfica y cumplir con la legislación española (Real Decreto 1215/1997 y normas UNE/ENAC), siga estas directrices para la correcta alta en el ledger de gobernanza de Hurvant:
+              </p>
+
+              <div className="space-y-4">
+                {/* Paso 1 */}
+                <div className="flex gap-4 items-start">
+                  <div className="h-8 w-8 rounded-full bg-indigo-50 border border-indigo-150 text-hurvant-indigo font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    1
+                  </div>
+                  <div className="space-y-1">
+                    <strong className="text-xs font-bold text-hurvant-navy block">Razón Social y CIF/NIF Válido</strong>
+                    <p className="text-[11px] text-slate-500 leading-normal">
+                      Introduzca el Nombre Comercial de la empresa y su CIF/NIF en vigor en España (ej. A-12345678 o B-98765432). El sistema formateará e indexará el CIF en mayúsculas de manera inmutable para futuros dictámenes oficiales.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Paso 2 */}
+                <div className="flex gap-4 items-start">
+                  <div className="h-8 w-8 rounded-full bg-indigo-50 border border-indigo-150 text-hurvant-indigo font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    2
+                  </div>
+                  <div className="space-y-1">
+                    <strong className="text-xs font-bold text-hurvant-navy block">Definición de Centro Geográfico</strong>
+                    <p className="text-[11px] text-slate-500 leading-normal">
+                      Indique el emplazamiento físico o planta industrial (ej. <em>Planta Martorell, C.L. Girona Norte</em>). Esto permite geolocalizar de forma precisa las evaluaciones de campo in-situ por satélite.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Paso 3 */}
+                <div className="flex gap-4 items-start">
+                  <div className="h-8 w-8 rounded-full bg-indigo-50 border border-indigo-150 text-hurvant-indigo font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    3
+                  </div>
+                  <div className="space-y-1">
+                    <strong className="text-xs font-bold text-hurvant-navy block">Asignación de Puesto Crítico</strong>
+                    <p className="text-[11px] text-slate-500 leading-normal">
+                      Seleccione el perfil o maquinaria principal a certificar en el centro. El sistema adaptará automáticamente los flujos de idoneidad técnica en base a la norma UNE aplicable (ej. UNE 58451 para carretillas).
+                    </p>
+                  </div>
+                </div>
+
+                {/* Paso 4 */}
+                <div className="flex gap-4 items-start">
+                  <div className="h-8 w-8 rounded-full bg-indigo-50 border border-indigo-150 text-hurvant-indigo font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    4
+                  </div>
+                  <div className="space-y-1">
+                    <strong className="text-xs font-bold text-hurvant-navy block">Vinculación de Operarios</strong>
+                    <p className="text-[11px] text-slate-500 leading-normal">
+                      Una vez registrada, la empresa aparecerá reactivamente en el directorio. En ese instante, ya podrá seleccionar esta empresa en la sección de <strong>"Alta y Onboarding de Operario"</strong> para registrar a sus trabajadores y firmar sus firmas criptográficas SHA-256.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Nota de Seguridad */}
+              <div className="bg-amber-50 border border-amber-150 p-4 rounded-custom-md text-[11px] text-amber-850 leading-relaxed font-semibold flex gap-2.5 items-start">
+                <ShieldAlert className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="block text-amber-900 mb-0.5">Seguridad y Cumplimiento Normativo</strong>
+                  Los datos registrados pasan a formar parte del Libro de Registro Digital de Hurvant. Cualquier cambio estructural requiere un dictamen de auditoría firmado por un inspector colegiado.
+                </div>
+              </div>
+            </div>
+
+            {/* Footer del Modal */}
+            <div className="bg-slate-50 p-4 border-t border-slate-100 flex justify-end gap-3 font-sans">
+              <button 
+                onClick={() => setShowCompanyGuide(false)}
+                className="bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-xs px-5 py-2.5 rounded-custom-md active:scale-97 hover:brightness-110 shadow-sm transition-all cursor-pointer"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
