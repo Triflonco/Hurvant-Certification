@@ -172,6 +172,50 @@ export default function ClientDashboard() {
   const [companySuccess, setCompanySuccess] = useState(false);
   const [showCompanyGuide, setShowCompanyGuide] = useState(false);
 
+  // 6c. Estados para Gestión de Usuarios
+  const [users, setUsers] = useState([
+    {
+      id: 'USR-9843',
+      nombre: 'Carlos Valenzuela',
+      email: 'carlos.valenzuela@hurvant.com',
+      rol: 'Inspector Técnico',
+      numColegiado: '9843-COITI',
+      fechaAlta: '10/01/2025'
+    },
+    {
+      id: 'USR-1120',
+      nombre: 'Amparo Serra Rius',
+      email: 'amparo.serra@hurvant.com',
+      rol: 'Inspector Técnico',
+      numColegiado: '11202-COITI',
+      fechaAlta: '02/02/2025'
+    },
+    {
+      id: 'USR-0021',
+      nombre: 'Javier Rivas Moreno',
+      email: 'javier.rivas@hurvant.com',
+      rol: 'Administrador',
+      numColegiado: '7829-COITI',
+      fechaAlta: '15/12/2024'
+    },
+    {
+      id: 'USR-3049',
+      nombre: 'Marta Soler Puig',
+      email: 'marta.soler@mercadona.es',
+      rol: 'Prevencionista',
+      numColegiado: 'PRL-48299',
+      fechaAlta: '18/10/2025'
+    }
+  ]);
+  const [userSearch, setUserSearch] = useState('');
+  const [newUser, setNewUser] = useState({
+    nombre: '',
+    email: '',
+    rol: 'Inspector Técnico',
+    numColegiado: ''
+  });
+  const [userSuccess, setUserSuccess] = useState(false);
+
   // 7. Gestión de Formularios e Inputs de Login
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -334,6 +378,54 @@ export default function ClientDashboard() {
     }
   };
 
+  // 8d. Gestión de usuarios del sistema
+  const handleUserChange = (e) => {
+    const { name, value } = e.target;
+    setNewUser(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleUserSubmit = (e) => {
+    e.preventDefault();
+
+    if (!newUser.nombre || !newUser.email) {
+      alert('Por favor, cumplimente los campos obligatorios del usuario.');
+      return;
+    }
+
+    const usrId = `USR-${Math.floor(1000 + Math.random() * 9000)}`;
+    const freshUsr = {
+      id: usrId,
+      nombre: newUser.nombre,
+      email: newUser.email.toLowerCase(),
+      rol: newUser.rol,
+      numColegiado: newUser.rol === 'Inspector Técnico' || newUser.rol === 'Administrador' ? newUser.numColegiado || 'Col-N/A' : 'N/A',
+      fechaAlta: new Date().toLocaleDateString('es-ES')
+    };
+
+    setUsers(prev => [freshUsr, ...prev]);
+
+    setNewUser({
+      nombre: '',
+      email: '',
+      rol: 'Inspector Técnico',
+      numColegiado: ''
+    });
+
+    setUserSuccess(true);
+    setTimeout(() => setUserSuccess(false), 3000);
+  };
+
+  const handleDeleteUser = (id, nombre) => {
+    if (nombre === 'Carlos Valenzuela') {
+      alert('No se puede dar de baja a sí mismo mientras su sesión de Inspector General esté iniciada.');
+      return;
+    }
+
+    if (window.confirm(`¿Está seguro de que desea dar de baja al usuario "${nombre}"? Se revocarán todas sus credenciales de firma.`)) {
+      setUsers(prev => prev.filter(u => u.id !== id));
+    }
+  };
+
   // 9. Filtrado de datos por buscador
   const filteredCompanies = companies.filter(c => 
     c.nombre.toLowerCase().includes(companySearch.toLowerCase()) || 
@@ -344,6 +436,11 @@ export default function ClientDashboard() {
     op.nombre.toLowerCase().includes(operatorSearch.toLowerCase()) || 
     op.dni.toLowerCase().includes(operatorSearch.toLowerCase()) || 
     op.empresa.toLowerCase().includes(operatorSearch.toLowerCase())
+  );
+
+  const filteredUsers = users.filter(usr => 
+    usr.nombre.toLowerCase().includes(userSearch.toLowerCase()) || 
+    usr.email.toLowerCase().includes(userSearch.toLowerCase())
   );
 
   const matchedTrace = traceSearch.trim() 
@@ -511,6 +608,18 @@ export default function ClientDashboard() {
                 >
                   <Users className="h-4.5 w-4.5" />
                   <span>Operarios & Onboarding</span>
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('users')}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-custom-md text-xs font-bold transition-all shrink-0 w-full text-left ${
+                    activeTab === 'users'
+                      ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white shadow-sm'
+                      : 'text-slate-650 hover:bg-slate-50 hover:text-hurvant-navy'
+                  }`}
+                >
+                  <UserPlus className="h-4.5 w-4.5" />
+                  <span>Control de Usuarios</span>
                 </button>
 
                 <button
@@ -980,6 +1089,150 @@ export default function ClientDashboard() {
                             <code className="text-[10px] font-mono bg-slate-900 text-slate-300 p-2 rounded-custom-sm block break-all text-center select-all shadow-inner leading-normal">
                               {op.hash}
                             </code>
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* SUBVISTA C2: GESTIÓN DE USUARIOS */}
+              {activeTab === 'users' && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 animate-fade-in items-start">
+                  
+                  {/* Formulario de Alta de Usuario a la Izquierda */}
+                  <form onSubmit={handleUserSubmit} className="lg:col-span-5 glass-card rounded-custom-lg p-6 border border-slate-200/60 bg-white shadow-md space-y-5">
+                    <h3 className="text-sm font-black text-hurvant-navy uppercase tracking-widest border-b border-slate-100 pb-3 flex items-center gap-2">
+                      <UserPlus className="h-4.5 w-4.5 text-hurvant-indigo" />
+                      Alta de Usuario del Sistema
+                    </h3>
+
+                    {userSuccess && (
+                      <div className="bg-emerald-50 border border-emerald-100 p-4 rounded-custom-md text-xs font-bold text-emerald-700 text-center flex items-center justify-center gap-2">
+                        <CheckCircle2 className="h-4.5 w-4.5" />
+                        <span>¡Usuario Registrado con Éxito!</span>
+                      </div>
+                    )}
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="user-nombre" className="text-xs font-bold text-slate-700 block">Nombre Completo</label>
+                      <input
+                        type="text"
+                        id="user-nombre"
+                        name="nombre"
+                        required
+                        value={newUser.nombre}
+                        onChange={handleUserChange}
+                        placeholder="Ej. Amparo Serra Rius"
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-semibold"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="user-email" className="text-xs font-bold text-slate-700 block">Correo Electrónico</label>
+                      <input
+                        type="email"
+                        id="user-email"
+                        name="email"
+                        required
+                        value={newUser.email}
+                        onChange={handleUserChange}
+                        placeholder="Ej. amparo.serra@hurvant.com"
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-semibold"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label htmlFor="user-rol" className="text-xs font-bold text-slate-700 block">Cargo / Rol Autorizado</label>
+                      <select
+                        id="user-rol"
+                        name="rol"
+                        value={newUser.rol}
+                        onChange={handleUserChange}
+                        className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 bg-white focus:outline-none focus:border-hurvant-indigo transition-all font-semibold"
+                      >
+                        <option value="Administrador">Administrador de Sistema</option>
+                        <option value="Inspector Técnico">Inspector Técnico (Firmante)</option>
+                        <option value="Prevencionista">Técnico de Prevención (PRL)</option>
+                        <option value="Empleado">Empleado / Consultor</option>
+                      </select>
+                    </div>
+
+                    {(newUser.rol === 'Inspector Técnico' || newUser.rol === 'Administrador') && (
+                      <div className="space-y-1.5 animate-fade-in">
+                        <label htmlFor="user-colegiado" className="text-xs font-bold text-slate-700 block">Nº de Colegiado o Licencia Técnica</label>
+                        <input
+                          type="text"
+                          id="user-colegiado"
+                          name="numColegiado"
+                          required
+                          value={newUser.numColegiado}
+                          onChange={handleUserChange}
+                          placeholder="Ej. 11202-COITI"
+                          className="w-full text-xs px-3.5 py-2.5 rounded-custom-md border border-slate-200 focus:outline-none focus:border-hurvant-indigo focus:ring-2 focus:ring-indigo-100 transition-all font-mono font-bold"
+                        />
+                      </div>
+                    )}
+
+                    <button
+                      type="submit"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-custom-md shadow-md active:scale-98 transition-all hover:brightness-110"
+                    >
+                      <Plus className="h-4.5 w-4.5" />
+                      <span>Registrar Nuevo Usuario</span>
+                    </button>
+                  </form>
+
+                  {/* Directorio de Usuarios Autorizados a la Derecha */}
+                  <div className="lg:col-span-7 space-y-4 w-full">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center border-b border-slate-100 pb-3">
+                      <h3 className="text-xs font-black text-slate-800 uppercase tracking-widest shrink-0">Directorio de Usuarios de Sistema</h3>
+                      <div className="relative w-full sm:max-w-xs">
+                        <input
+                          type="text"
+                          value={userSearch}
+                          onChange={(e) => setUserSearch(e.target.value)}
+                          placeholder="Buscar nombre o email..."
+                          className="w-full text-xs px-3.5 py-1.5 pl-8 rounded-custom-md border border-slate-250 focus:outline-none focus:border-hurvant-indigo"
+                        />
+                        <Search className="h-3.5 w-3.5 text-slate-400 absolute left-2.5 top-2" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 max-h-[520px] overflow-y-auto pr-2">
+                      {filteredUsers.map(usr => (
+                        <article key={usr.id} className="bg-white border border-slate-200/60 rounded-custom-md p-5 shadow-xs hover:border-hurvant-indigo/25 transition-all hover:shadow-sm">
+                          <div className="flex justify-between items-start gap-4 mb-2">
+                            <div className="space-y-0.5">
+                              <strong className="text-sm font-bold text-hurvant-navy block">{usr.nombre}</strong>
+                              <span className="text-[10px] text-slate-400 block font-mono">Email: {usr.email} | ID: {usr.id}</span>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase ${
+                                usr.rol === 'Administrador'
+                                  ? 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                                  : usr.rol === 'Inspector Técnico'
+                                  ? 'bg-amber-50 text-amber-700 border-amber-200'
+                                  : usr.rol === 'Prevencionista'
+                                  ? 'bg-cyan-50 text-cyan-700 border-cyan-200'
+                                  : 'bg-slate-50 text-slate-700 border-slate-200'
+                              }`}>
+                                {usr.rol}
+                              </span>
+                              <button
+                                onClick={() => handleDeleteUser(usr.id, usr.nombre)}
+                                className="text-rose-600 bg-rose-50 hover:bg-rose-100 border border-rose-150 p-1.5 rounded flex items-center justify-center active:scale-95 transition-all cursor-pointer shadow-xs"
+                                title="Dar de baja usuario"
+                              >
+                                <Trash2 className="h-3.5 w-3.5" />
+                              </button>
+                            </div>
+                          </div>
+
+                          <div className="text-xs text-slate-650 space-y-1.5 pt-2 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <div><span className="font-semibold text-slate-500">Alta:</span> {usr.fechaAlta}</div>
+                            <div><span className="font-semibold text-slate-500">Colegiado / Reg:</span> <code className="bg-slate-100 px-1 py-0.5 rounded font-mono font-bold text-slate-700">{usr.numColegiado}</code></div>
                           </div>
                         </article>
                       ))}
