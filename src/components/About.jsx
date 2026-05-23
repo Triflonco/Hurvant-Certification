@@ -167,6 +167,33 @@ export default function About() {
           </div>
         </article>
       </div>
+
+      {/* Nota Oficial de Lanzamiento y Acreditación */}
+      <div className="mt-16 bg-gradient-to-br from-slate-900 via-slate-950 to-hurvant-navy-dark border border-slate-800/80 text-white rounded-custom-lg p-6 lg:p-8 relative overflow-hidden shadow-lg border-l-4 border-amber-500">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full pointer-events-none" />
+        
+        <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-850">
+          <div>
+            <span className="text-[9px] font-black tracking-widest text-amber-400 uppercase block mb-1">Estatus Regulatorio e Implantación</span>
+            <h4 className="text-base sm:text-lg font-black text-white">Lanzamiento Comercial y Plan de Acreditación ENAC</h4>
+          </div>
+          <span className="text-[10px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full uppercase tracking-wider">
+            Cataluña · Fase de Lanzamiento 2026
+          </span>
+        </header>
+
+        <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+          <p>
+            <strong>HURVANT Certification</strong> es una entidad técnica de nueva creación que iniciará sus operaciones oficiales de campo en los próximos meses, desplegando inicialmente su actividad de validación en las provincias de <strong>Barcelona, Tarragona, Girona y Lleida (Comunidad Autónoma de Cataluña)</strong>.
+          </p>
+          <p>
+            En esta fase de lanzamiento, todas nuestras evaluaciones de aptitud conductual, inspecciones de puesta a disposición de maquinaria (Real Decreto 1215/1997) y Ensayos No Destructivos (END) se ejecutan bajo manuales de procedimiento técnico e instrucciones de trabajo en estricta conformidad con las <strong>normas de seguridad españolas y europeas (Reglamento de Aparatos de Elevación, Instrucciones MIE-AEM, Normativas Técnicas UNE e ISO 9712)</strong>.
+          </p>
+          <p>
+            HURVANT ha estructurado y diseñado todos sus manuales de calidad, políticas y comisiones de gobernanza desde el primer día bajo los rigurosos estándares internacionales de acreditación. Declaramos de forma transparente que <strong>actualmente nos encontramos en la fase previa de implantación comercial y no disponemos todavía de la acreditación formal otorgada por la Entidad Nacional de Acreditación (ENAC)</strong>. La solicitud formal de acreditación técnica bajo las normas <strong>UNE-EN ISO/IEC 17024</strong> (organismo de certificación de personas) y <strong>UNE-EN ISO/IEC 17020</strong> (organismo de inspección) se tramitará ante ENAC en los meses posteriores a la consolidación de nuestra base operativa en Cataluña.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

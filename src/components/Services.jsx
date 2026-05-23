@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight } from 'lucide-react';
+import { Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight, Cpu } from 'lucide-react';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('services');
@@ -190,92 +190,147 @@ export default function Services() {
       ) : (
         <div className="space-y-8">
           {/* Banner de Posicionamiento ENAC/Roadmap */}
-          <div className="bg-slate-900 text-white p-6 rounded-custom-lg border-l-4 border-hurvant-cyan relative overflow-hidden shadow-md">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-cyan/15 to-transparent rounded-bl-full pointer-events-none" />
-            <span className="text-[10px] font-bold tracking-widest text-hurvant-cyan uppercase block mb-1">Gobernanza y Transición de Calidad</span>
-            <h3 className="text-lg font-bold mb-2">Visión de Acreditación como Entidad de Certificación de Tercera Parte</h3>
-            <p className="text-xs sm:text-sm leading-relaxed text-slate-300">
-              Hurvant Certification nace con una metodología robusta e independiente de evaluación objetiva. Aunque actualmente operamos en fase de validación de mercado (sin acreditar), nuestra estructura, manuales y comisiones técnicas han sido diseñados desde el primer día bajo los rigurosos requisitos internacionales para auditorías e inspecciones de calidad. Esto garantiza a nuestros clientes el máximo rigor hoy, y una transición fluida hacia el reconocimiento de ENAC mañana.
-            </p>
+          <div className="bg-slate-900 text-white p-6 lg:p-8 rounded-custom-lg border-l-4 border-amber-500 relative overflow-hidden shadow-md space-y-4">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full pointer-events-none" />
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+              <span className="text-[10px] font-bold tracking-widest text-amber-400 uppercase block">Gobernanza y Transición de Calidad</span>
+              <span className="text-[9px] font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                Cataluña · Pre-Acreditación 2026
+              </span>
+            </div>
+            <h3 className="text-lg lg:text-xl font-bold mb-2">Visión de Acreditación como Entidad de Certificación de Tercera Parte</h3>
+            <div className="space-y-3 text-xs sm:text-sm leading-relaxed text-slate-300">
+              <p>
+                <strong>HURVANT Certification</strong> es una entidad técnica de nueva creación que iniciará sus operaciones de campo en los próximos meses, enfocándose inicialmente en el mercado de <strong>Cataluña (provincias de Barcelona, Tarragona, Girona y Lleida)</strong>. Nuestra metodología, manuales e instrucciones técnicas han sido estructurados desde el primer día bajo los rigurosos requisitos de las normas internacionales de calidad.
+              </p>
+              <p>
+                Declaramos con absoluta transparencia y sinceridad que <strong>actualmente nos encontramos en fase de lanzamiento comercial y no disponemos todavía de la acreditación formal otorgada por la Entidad Nacional de Acreditación (ENAC)</strong>. Nuestra hoja de ruta estratégica contempla la consolidación inicial de operaciones en Cataluña y la subsiguiente solicitud de acreditación técnica bajo las normas <strong>UNE-EN ISO/IEC 17024</strong> (certificación de personas) e <strong>ISO/IEC 17020</strong> (organismo de inspección) ante ENAC.
+              </p>
+            </div>
           </div>
 
           {/* Acordeones / Paneles Técnicos de los Esquemas de la Hoja de Ruta */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Esquema 1 */}
-            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6">
-              <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
-                <div>
-                  <span className="text-[10px] font-bold tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17024</span>
-                  <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
-                    Esquema E-HVT-01: Certificación de Competencia de Personas
-                  </h4>
+            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
+                  <div>
+                    <span className="text-[10px] font-bold tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17024</span>
+                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
+                      Esquema E-HVT-01: Certificación de Competencia de Personas
+                    </h4>
+                  </div>
+                  <GraduationCap className="h-8 w-8 text-hurvant-indigo shrink-0 bg-indigo-50 p-1.5 rounded-custom-md" />
                 </div>
-                <GraduationCap className="h-8 w-8 text-hurvant-indigo shrink-0 bg-indigo-50 p-1.5 rounded-custom-md" />
-              </div>
-              
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Diseñado para evaluar y certificar de manera inalterable la competencia técnica de operarios especializados en equipos exigentes como carretillas elevadoras, plataformas y grúas de carga, alineado con la norma <strong>UNE-EN ISO/IEC 17024</strong>.
-              </p>
+                
+                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
+                  Diseñado para evaluar y certificar de manera inalterable la competencia técnica de operarios especializados en equipos exigentes como carretillas elevadoras, plataformas y grúas de carga, alineado con la norma <strong>UNE-EN ISO/IEC 17024</strong>.
+                </p>
 
-              <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
-                <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-indigo shrink-0">1. Pre-requisito:</span>
-                    <span>Revisión de aptitud médica laboral y formación básica de operador.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-indigo shrink-0">2. Examen Teórico:</span>
-                    <span>Evaluación controlada sobre seguridad en cargas y física de estabilidad.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-indigo shrink-0">3. Examen Práctico:</span>
-                    <span>Examen presencial individual de maniobras y simulación de fallos in-situ.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-indigo shrink-0">4. Mantenimiento:</span>
-                    <span>Vigencia por 5 años sujeta a informe anual de siniestralidad de la empresa.</span>
-                  </li>
-                </ul>
+                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
+                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-indigo shrink-0">1. Pre-requisito:</span>
+                      <span>Revisión de aptitud médica laboral y formación básica de operador.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-indigo shrink-0">2. Examen Teórico:</span>
+                      <span>Evaluación controlada sobre seguridad en cargas y física de estabilidad.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-indigo shrink-0">3. Examen Práctico:</span>
+                      <span>Examen presencial individual de maniobras y simulación de fallos in-situ.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-indigo shrink-0">4. Mantenimiento:</span>
+                      <span>Vigencia por 5 años sujeta a informe anual de siniestralidad de la empresa.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </article>
 
             {/* Esquema 2 */}
-            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6">
-              <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
-                <div>
-                  <span className="text-[10px] font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020</span>
-                  <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
-                    Esquema E-HVT-02: Inspección y Adecuación (RD 1215/97)
-                  </h4>
+            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
+                  <div>
+                    <span className="text-[10px] font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020</span>
+                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
+                      Esquema E-HVT-02: Inspección y Adecuación (RD 1215/97)
+                    </h4>
+                  </div>
+                  <Wrench className="h-8 w-8 text-hurvant-cyan shrink-0 bg-cyan-50 p-1.5 rounded-custom-md" />
                 </div>
-                <Wrench className="h-8 w-8 text-hurvant-cyan shrink-0 bg-cyan-50 p-1.5 rounded-custom-md" />
-              </div>
-              
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Procedimiento independiente para la validación física de maquinaria de trabajo de acuerdo a las exigencias legales del <strong>Real Decreto 1215/1997</strong>, estructurado para futuras acreditaciones de tipo <strong>ISO/IEC 17020</strong>.
-              </p>
+                
+                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
+                  Procedimiento independiente para la validación física de maquinaria de trabajo de acuerdo a las exigencias legales del <strong>Real Decreto 1215/1997</strong>, estructurado para futuras acreditaciones de tipo <strong>ISO/IEC 17020</strong>.
+                </p>
 
-              <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
-                <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-cyan shrink-0">1. Auditoría Inicial:</span>
-                    <span>Examen minucioso de manuales de uso, marcado CE y fichas de mantenimiento.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-cyan shrink-0">2. Examen Físico:</span>
-                    <span>Pruebas mecánicas y eléctricas de sistemas de parada y resguardos físicos.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-cyan shrink-0">3. Emisión de Acta:</span>
-                    <span>Informe estructurado y placa de identificación física con código QR único.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                    <span className="font-bold text-hurvant-cyan shrink-0">4. Inspección Trienal:</span>
-                    <span>Seguimiento de seguridad obligatorio cada 3 años para mantener la validez.</span>
-                  </li>
-                </ul>
+                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
+                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-cyan shrink-0">1. Auditoría Inicial:</span>
+                      <span>Examen minucioso de manuales de uso, marcado CE y fichas de mantenimiento.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-cyan shrink-0">2. Examen Físico:</span>
+                      <span>Pruebas mecánicas y eléctricas de sistemas de parada y resguardos físicos.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-cyan shrink-0">3. Emisión de Acta:</span>
+                      <span>Informe estructurado y placa de identificación física con código QR único.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-hurvant-cyan shrink-0">4. Inspección Trienal:</span>
+                      <span>Seguimiento de seguridad obligatorio cada 3 años para mantener la validez.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            {/* Esquema 3 */}
+            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
+              <div className="space-y-6">
+                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
+                  <div>
+                    <span className="text-[10px] font-bold tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020/9712</span>
+                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
+                      Esquema E-HVT-03: Ensayos END y Grúas de Elevación
+                    </h4>
+                  </div>
+                  <Cpu className="h-8 w-8 text-amber-500 shrink-0 bg-amber-50 p-1.5 rounded-custom-md" />
+                </div>
+                
+                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
+                  Procedimiento instrumental para la validación de integridad física en grúas e izaje bajo normas UNE e <strong>ISO 9712 / ISO 17020</strong>, preparado para futuros reconocimientos.
+                </p>
+
+                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
+                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-amber-600 shrink-0">1. Inspección Visual (VT):</span>
+                      <span>Control de soldaduras según norma UNE-EN ISO 17637.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-amber-600 shrink-0">2. Ensayos NDT (MT/PT):</span>
+                      <span>Detección de fisuras por partículas magnéticas y líquidos penetrantes.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-amber-600 shrink-0">3. Ultrasonidos (UT):</span>
+                      <span>Evaluación volumétrica de espesores y soldaduras críticas (UNE-EN ISO 17640).</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <span className="font-bold text-amber-600 shrink-0">4. Inspectores Certificados:</span>
+                      <span>Operadores certificados bajo UNE-EN ISO 9712 Nivel II/III.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </article>
           </div>
