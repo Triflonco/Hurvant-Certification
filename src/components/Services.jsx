@@ -43,6 +43,25 @@ export default function Services() {
       ]
     },
     {
+      id: 'inspeccion-equipos',
+      title: 'Inspección de Equipos y NDT',
+      subtitle: 'Ensayos no destructivos y validación física',
+      icon: Wrench,
+      image: '/ndt_testing_weld.png',
+      color: 'from-amber-500 to-amber-600',
+      textColor: 'text-amber-600',
+      bgLight: 'bg-amber-50/50',
+      borderColor: 'hover:border-amber-500/30',
+      description: 'Ensayos No Destructivos (NDT) e inspección reglamentaria para certificar la seguridad estructural de maquinaria pesada e izaje.',
+      details: [
+        'Inspección reglamentaria de grúas, eslingas y accesorios de izaje.',
+        'Ensayos NDT: ultrasonidos, partículas magnéticas y líquidos penetrantes.',
+        'Inspección y adecuación de maquinaria según el RD 1215/1997.',
+        'Pruebas mecánicas de fatiga y estabilidad estructural in-situ.',
+        'Emisión de dictámenes técnicos y firma digital inmutable en el ledger.'
+      ]
+    },
+    {
       id: 'programas-piloto',
       title: 'Programas Piloto de Validación',
       subtitle: 'Implementación controlada y de cero fricción',
@@ -82,7 +101,7 @@ export default function Services() {
           className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
             activeTab === 'services'
               ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white shadow-md'
-              : 'text-slate-600 hover:text-hurvant-navy hover:bg-white/80'
+              : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
           }`}
         >
           <Activity className="h-5 w-5" />
@@ -93,7 +112,7 @@ export default function Services() {
           className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
             activeTab === 'roadmap'
               ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-cyan text-white shadow-md'
-              : 'text-slate-600 hover:text-hurvant-navy hover:bg-white/80'
+              : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
           }`}
         >
           <GraduationCap className="h-5.5 w-5.5" />
@@ -115,7 +134,7 @@ export default function Services() {
           </div>
 
           {/* Grid de Servicios */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {initialServices.map((service) => {
               const IconComp = service.icon;
               return (

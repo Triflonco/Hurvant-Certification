@@ -53,6 +53,30 @@ export default function Sectors() {
         'Mantenimiento riguroso de los estándares operativos de la marca.',
         'Comportamiento profesional y asertivo frente a situaciones de tensión.'
       ]
+    },
+    {
+      id: 'heavy-industry',
+      title: 'Sector Heavy Industry y Grúas',
+      subtitle: 'Operaciones críticas de izaje y fatiga estructural',
+      icon: Factory,
+      image: '/crane_lifting_inspection.png',
+      color: 'from-amber-600 to-amber-700',
+      accentColor: 'text-amber-600',
+      badgeBg: 'bg-amber-50 text-amber-700 border-amber-100',
+      problems: [
+        'Fatiga acumulada y pérdida de reflejos en maniobras de alto tonelaje.',
+        'Desgaste oculto e inspecciones deficientes en eslingas y accesorios de izaje.',
+        'Falta de control de seguridad continuo en la estabilidad de grúas móviles.',
+        'Saturación de protocolos documentales sin inspección física real en campo.',
+        'Riesgo de siniestralidad catastrófica por desajuste conductual del operador.'
+      ],
+      evaluations: [
+        'Comportamiento seguro y tolerancia al estrés en maniobras complejas.',
+        'Validación física rigurosa de eslingas, ganchos y accesorios (NDT).',
+        'Cálculo presencial de estabilidad y control de fatiga del operador.',
+        'Auditoría y marcaje físico de maquinaria según el RD 1215/1997.',
+        'Registro criptográfico de aptitud técnica in-situ en el ledger privado.'
+      ]
     }
   ];
 
@@ -70,7 +94,7 @@ export default function Sectors() {
       </header>
 
       {/* Grid de Sectores */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
         {sectorsData.map((sector) => {
           const IconComp = sector.icon;
           return (

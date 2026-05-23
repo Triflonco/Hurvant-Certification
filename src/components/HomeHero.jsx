@@ -64,8 +64,8 @@ export default function HomeHero({ onViewChange }) {
                 </p>
                 
                 {/* Declaración Jurada destacada en color corporativo */}
-                <div className="bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white p-5 rounded-custom-md border-l-4 border-hurvant-cyan space-y-2.5">
-                  <span className="text-[10px] font-bold tracking-widest text-hurvant-cyan uppercase block">
+                <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-hurvant-navy-dark text-white p-6 rounded-custom-md border-l-4 border-amber-500 border border-slate-800/80 shadow-md space-y-2.5">
+                  <span className="text-[10px] font-bold tracking-widest text-amber-400 uppercase block">
                     Aviso de Imparcialidad (UNE-EN ISO/IEC 17024 & ISO/IEC 17020)
                   </span>
                   <p className="text-xs sm:text-sm leading-relaxed text-slate-200">
