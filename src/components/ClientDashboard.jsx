@@ -175,6 +175,22 @@ export default function ClientDashboard() {
   // 6c. Estados para Gestión de Usuarios
   const [users, setUsers] = useState([
     {
+      id: 'USR-0541',
+      nombre: 'Gina Torres Bernal',
+      email: 'ginatorres.bernal@gmail.com',
+      rol: 'Gerente Administradora',
+      numColegiado: 'DNI-Z0541040Q',
+      fechaAlta: '23/05/2026'
+    },
+    {
+      id: 'USR-1002',
+      nombre: 'David Felipe Pineda',
+      email: 'felipe10pinedatorres@gmail.com',
+      rol: 'Técnico Especialista',
+      numColegiado: 'CC-1002366081',
+      fechaAlta: '23/05/2026'
+    },
+    {
       id: 'USR-3172',
       nombre: 'Antonio Contreras',
       email: 'styloaerografo@gmail.com',
@@ -254,6 +270,22 @@ export default function ClientDashboard() {
         nombre: 'Antonio Contreras',
         rol: 'Gerente (Superusuario)',
         numColegiado: 'GER-31723'
+      });
+      setIsLoggedIn(true);
+      setLoginError('');
+    } else if (credentials.email === 'ginatorres.bernal@gmail.com' && credentials.password === 'Gtorres2026') {
+      setCurrentUser({
+        nombre: 'Gina Torres Bernal',
+        rol: 'Gerente Administradora',
+        numColegiado: 'DNI-Z0541040Q'
+      });
+      setIsLoggedIn(true);
+      setLoginError('');
+    } else if (credentials.email === 'felipe10pinedatorres@gmail.com' && credentials.password === 'Ppineda2026') {
+      setCurrentUser({
+        nombre: 'David Felipe Pineda',
+        rol: 'Técnico Especialista',
+        numColegiado: 'CC-1002366081'
       });
       setIsLoggedIn(true);
       setLoginError('');
@@ -556,7 +588,7 @@ export default function ClientDashboard() {
               </button>
             </form>
 
-            <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-custom-md text-[10px] text-slate-500 text-left mt-6 space-y-2 leading-normal font-semibold">
+            <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-custom-md text-[10px] text-slate-500 text-left mt-6 space-y-2.5 leading-normal font-semibold max-h-56 overflow-y-auto">
                <span className="text-hurvant-indigo font-bold uppercase block tracking-wider text-center">Acceso de Demostración y Gobernanza:</span>
                
                <div className="border-b border-slate-200/60 pb-1.5">
@@ -565,8 +597,20 @@ export default function ClientDashboard() {
                  <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">hurvant2026</code></div>
                </div>
 
+               <div className="border-b border-slate-200/60 pb-1.5">
+                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">2. Gerente Administradora (Gina Torres)</strong>
+                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">ginatorres.bernal@gmail.com</code></div>
+                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">Gtorres2026</code></div>
+               </div>
+
+               <div className="border-b border-slate-200/60 pb-1.5">
+                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">3. Técnico Especialista (David F. Pineda)</strong>
+                 <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">felipe10pinedatorres@gmail.com</code></div>
+                 <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">Ppineda2026</code></div>
+               </div>
+
                <div>
-                 <strong className="text-[9px] text-hurvant-indigo block uppercase">2. Superusuario Gerente (Antonio Contreras)</strong>
+                 <strong className="text-[9px] text-hurvant-indigo block uppercase font-black">4. Superusuario Gerente (Antonio Contreras)</strong>
                  <div>Usuario: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">styloaerografo@gmail.com</code></div>
                  <div>Password: <code className="bg-slate-200 px-1 rounded font-mono font-bold text-slate-700">318275</code></div>
                </div>
