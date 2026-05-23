@@ -60,10 +60,10 @@ export default function Contact() {
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-hurvant-navy">Evaluación de Riesgo Humano y Competencias</h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              ¿Quiere validar si la metodología práctica de Hurvant es la adecuada para sus operarios de almacén o personal de servicios? Proponemos la realización de un **Programa Piloto Controlado**.
+              ¿Quiere validar si la metodología práctica de Hurvant es la adecuada para sus operarios de almacén o personal de servicios? Proponemos la realización de un <strong>Programa Piloto Controlado</strong>.
             </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Definimos un equipo de trabajo o un área de operación acotada, evaluamos las variables conductuales y funcionales clave y entregamos el primer informe de riesgo operativo **sin alterar su producción diaria**.
+              Definimos un equipo de trabajo o un área de operación acotada, evaluamos las variables conductuales y funcionales clave y entregamos el primer informe de riesgo operativo <strong>sin alterar su producción diaria</strong>.
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export default function Contact() {
               {/* Grid Nombre y Empresa */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label htmlFor="nombre" className="text-xs font-bold text-slate-700 block">Nombre Completo *</label>
+                  <label htmlFor="nombre" className="text-xs font-bold text-slate-700 block">Nombre Completo</label>
                   <input
                     type="text"
                     id="nombre"
@@ -168,7 +168,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="empresa" className="text-xs font-bold text-slate-700 block">Empresa / Organización *</label>
+                  <label htmlFor="empresa" className="text-xs font-bold text-slate-700 block">Empresa / Organización</label>
                   <input
                     type="text"
                     id="empresa"
@@ -185,7 +185,7 @@ export default function Contact() {
               {/* Cargo e Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
-                  <label htmlFor="cargo" className="text-xs font-bold text-slate-700 block">Cargo / Puesto *</label>
+                  <label htmlFor="cargo" className="text-xs font-bold text-slate-700 block">Cargo / Puesto</label>
                   <input
                     type="text"
                     id="cargo"
@@ -199,7 +199,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="email" className="text-xs font-bold text-slate-700 block">Correo Electrónico Corporativo *</label>
+                  <label htmlFor="email" className="text-xs font-bold text-slate-700 block">Correo Electrónico Corporativo</label>
                   <input
                     type="email"
                     id="email"
@@ -229,7 +229,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label htmlFor="sector" className="text-xs font-bold text-slate-700 block">Sector de Operación *</label>
+                  <label htmlFor="sector" className="text-xs font-bold text-slate-700 block">Sector de Operación</label>
                   <select
                     id="sector"
                     name="sector"
@@ -248,7 +248,7 @@ export default function Contact() {
 
               {/* Tipo de Solicitud */}
               <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-700 block">Tipo de Intervención Solicitada *</label>
+                <label className="text-xs font-bold text-slate-700 block">Tipo de Intervención Solicitada</label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <label className={`border rounded-custom-md p-3.5 flex flex-col justify-between cursor-pointer transition-all ${formData.tipoSolicitud === 'piloto'
                       ? 'border-hurvant-indigo bg-indigo-50/40 text-hurvant-navy'

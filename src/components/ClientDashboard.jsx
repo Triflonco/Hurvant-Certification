@@ -238,7 +238,7 @@ export default function ClientDashboard() {
               )}
 
               <div className="space-y-1.5">
-                <label htmlFor="email" className="text-xs font-bold text-slate-700 block">Correo Electrónico *</label>
+                <label htmlFor="email" className="text-xs font-bold text-slate-700 block">Correo Electrónico</label>
                 <input
                   type="email"
                   id="email"
@@ -252,7 +252,7 @@ export default function ClientDashboard() {
               </div>
 
               <div className="space-y-1.5">
-                <label htmlFor="password" className="text-xs font-bold text-slate-700 block">Contraseña de Control *</label>
+                <label htmlFor="password" className="text-xs font-bold text-slate-700 block">Contraseña de Control</label>
                 <input
                   type="password"
                   id="password"
@@ -545,7 +545,7 @@ export default function ClientDashboard() {
                     )}
 
                     <div className="space-y-1.5">
-                      <label htmlFor="nombre" className="text-xs font-bold text-slate-700 block">Nombre Completo *</label>
+                      <label htmlFor="nombre" className="text-xs font-bold text-slate-700 block">Nombre Completo</label>
                       <input
                         type="text"
                         id="nombre"
@@ -559,7 +559,7 @@ export default function ClientDashboard() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="dni" className="text-xs font-bold text-slate-700 block">DNI / NIE *</label>
+                      <label htmlFor="dni" className="text-xs font-bold text-slate-700 block">DNI / NIE</label>
                       <input
                         type="text"
                         id="dni"
@@ -573,7 +573,7 @@ export default function ClientDashboard() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="puesto" className="text-xs font-bold text-slate-700 block">Puesto Técnico de Trabajo *</label>
+                      <label htmlFor="puesto" className="text-xs font-bold text-slate-700 block">Puesto Técnico de Trabajo</label>
                       <select
                         id="puesto"
                         name="puesto"
@@ -589,7 +589,7 @@ export default function ClientDashboard() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label htmlFor="empresa" className="text-xs font-bold text-slate-700 block">Empresa Cliente Asignada *</label>
+                      <label htmlFor="empresa" className="text-xs font-bold text-slate-700 block">Empresa Cliente Asignada</label>
                       <select
                         id="empresa"
                         name="empresa"

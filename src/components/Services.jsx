@@ -225,7 +225,7 @@ export default function Services() {
               </div>
               
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Procedimiento independiente para la validación física de maquinaria de trabajo de acuerdo a las exigencias legales del <strong>Real Decreto 1215/1997</strong>, estructurado para futuras acreditaciones de tipo **ISO/IEC 17020**.
+                Procedimiento independiente para la validación física de maquinaria de trabajo de acuerdo a las exigencias legales del <strong>Real Decreto 1215/1997</strong>, estructurado para futuras acreditaciones de tipo <strong>ISO/IEC 17020</strong>.
               </p>
 
               <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">

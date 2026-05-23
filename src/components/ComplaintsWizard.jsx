@@ -158,7 +158,7 @@ export default function ComplaintsWizard() {
                   {/* Categoría */}
                   <div className="flex flex-col space-y-2">
                     <label htmlFor="complaint-category" className="text-xs font-bold text-hurvant-navy uppercase tracking-wider">
-                      Tipo de Reclamación *
+                      Tipo de Reclamación
                     </label>
                     <select
                       id="complaint-category"
@@ -176,7 +176,7 @@ export default function ComplaintsWizard() {
                   {/* Nombre */}
                   <div className="flex flex-col space-y-2">
                     <label htmlFor="complaint-name" className="text-xs font-bold text-hurvant-navy uppercase tracking-wider">
-                      Nombre Completo del Remitente *
+                      Nombre Completo del Remitente
                     </label>
                     <input
                       type="text"
@@ -193,7 +193,7 @@ export default function ComplaintsWizard() {
                   {/* Email */}
                   <div className="flex flex-col space-y-2">
                     <label htmlFor="complaint-email" className="text-xs font-bold text-hurvant-navy uppercase tracking-wider">
-                      Email de Contacto Oficial *
+                      Email de Contacto Oficial
                     </label>
                     <input
                       type="email"
@@ -226,7 +226,7 @@ export default function ComplaintsWizard() {
                 {/* Detalles */}
                 <div className="flex flex-col space-y-2">
                   <label htmlFor="complaint-details" className="text-xs font-bold text-hurvant-navy uppercase tracking-wider">
-                    Descripción Técnica y Motivos *
+                    Descripción Técnica y Motivos
                   </label>
                   <textarea
                     id="complaint-details"

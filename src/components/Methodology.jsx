@@ -71,7 +71,7 @@ export default function Methodology() {
         <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-white/5 to-transparent rounded-bl-full pointer-events-none" />
         <h3 className="text-lg font-bold mb-3">Evaluación Empírica vs Exámenes Convencionales</h3>
         <p className="text-xs sm:text-sm leading-relaxed text-slate-300">
-          La formación tradicional en prevención de riesgos (PRL) y los cursos teóricos convencionales a menudo se quedan en papel y no garantizan el comportamiento seguro ni el encaje ergonómico del trabajador. La metodología de Hurvant se despliega en el **contexto de trabajo real** y bajo observación objetiva del comportamiento físico y psicofísico directo, facilitando datos inalterables y con valor probatorio para la toma de decisiones empresariales.
+          La formación tradicional en prevención de riesgos (PRL) y los cursos teóricos convencionales a menudo se quedan en papel y no garantizan el comportamiento seguro ni el encaje ergonómico del trabajador. La metodología de Hurvant se despliega en el <strong>contexto de trabajo real</strong> y bajo observación objetiva del comportamiento físico y psicofísico directo, facilitando datos inalterables y con valor probatorio para la toma de decisiones empresariales.
         </p>
       </div>
 

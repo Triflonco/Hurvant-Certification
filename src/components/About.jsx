@@ -72,7 +72,7 @@ export default function About() {
               Hurvant evoluciona continuamente hacia la estandarización de competencias. A mediano plazo, consolidaremos esquemas propios de validación y estándares internos sectoriales para la certificación formal de personas.
             </p>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Nuestra hoja de ruta estratégica contempla la alineación regulatoria y la posterior solicitud de acreditación formal bajo modelos internacionales de la entidad nacional (ENAC), tales como la norma **UNE-EN ISO/IEC 17024** para la certificación de personas e **ISO/IEC 17020** para actividades de inspección.
+              Nuestra hoja de ruta estratégica contempla la alineación regulatoria y la posterior solicitud de acreditación formal bajo modelos internacionales de la entidad nacional (ENAC), tales como la norma <strong>UNE-EN ISO/IEC 17024</strong> para la certificación de personas e <strong>ISO/IEC 17020</strong> para actividades de inspección.
             </p>
             <div className="bg-indigo-50/50 p-4 rounded-custom-md border border-indigo-100/40 text-xs text-slate-600 font-medium">
               La acreditación oficial no es el punto de inicio comercial de nuestro proyecto, sino la consecuencia final de una metodología validada empíricamente en el mercado real de trabajo.

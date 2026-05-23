@@ -60,7 +60,7 @@ export default function HomeHero({ onViewChange }) {
               
               <div className="space-y-4">
                 <p className="text-sm sm:text-base leading-relaxed text-slate-600">
-                  HURVANT se constituye como una entidad técnica especializada y de estricta **tercera parte**. Operamos bajo los más rigurosos marcos de aseguramiento técnico para la validación objetiva de capacidades y el control del riesgo humano y conductual.
+                  HURVANT se constituye como una entidad técnica especializada y de estricta <strong>tercera parte</strong>. Operamos bajo los más rigurosos marcos de aseguramiento técnico para la validación objetiva de capacidades y el control del riesgo humano y conductual.
                 </p>
                 
                 {/* Declaración Jurada destacada en color corporativo */}
@@ -69,7 +69,7 @@ export default function HomeHero({ onViewChange }) {
                     Aviso de Imparcialidad (UNE-EN ISO/IEC 17024 & ISO/IEC 17020)
                   </span>
                   <p className="text-xs sm:text-sm leading-relaxed text-slate-200">
-                    En estricto cumplimiento con los principios internacionales de gobernanza, HURVANT declara públicamente que **NO imparte formación, NO presta asesoría técnica en prevención de riesgos laborales (PRL) y NO comercializa ni alquila equipos de trabajo**. Esta separación radical garantiza la absoluta objetividad de nuestros informes y auditorías frente a inspecciones laborales.
+                    En estricto cumplimiento con los principios internacionales de gobernanza, HURVANT declara públicamente que <strong>NO imparte formación, NO presta asesoría técnica en prevención de riesgos laborales (PRL) y NO comercializa ni alquila equipos de trabajo</strong>. Esta separación radical garantiza la absoluta objetividad de nuestros informes y auditorías frente a inspecciones laborales.
                   </p>
                 </div>
               </div>
