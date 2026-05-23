@@ -1,6 +1,7 @@
 import React from 'react';
 import { Target, Landmark, Milestone, Award, Users, ShieldCheck, HeartHandshake } from 'lucide-react';
 
+//paco//
 export default function About() {
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="about-title">
@@ -56,9 +57,9 @@ export default function About() {
         {/* Misión y Visión de Futuro */}
         <article className="lg:col-span-5 glass-card rounded-custom-lg border border-slate-200/60 shadow-xs flex flex-col justify-between overflow-hidden">
           <div className="h-48 overflow-hidden relative border-b border-slate-200/60">
-            <img 
-              src="/training_alignment.jpg" 
-              alt="HURVANT Technical Alignment & Governance" 
+            <img
+              src="/training_alignment.jpg"
+              alt="HURVANT Technical Alignment & Governance"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
