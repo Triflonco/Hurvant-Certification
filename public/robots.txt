@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Evitar la indexación de la consola de administración e intranet privada basada en hash
+Disallow: /*#dashboard
+
+# Enlace al sitemap oficial de Hurvant
+Sitemap: https://www.hurvant.com/sitemap.xml
