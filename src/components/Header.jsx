@@ -11,7 +11,7 @@ export default function Header({ currentView, onViewChange }) {
     { id: 'methodology', label: 'Metodología' },
     { id: 'about', label: 'Sobre Hurvant' },
     { id: 'complaints', label: 'Quejas y Apelaciones' },
-    { id: 'dashboard', label: 'Área Privada' },
+    { id: 'verification', label: 'Verificación' },
     { id: 'contact', label: 'Contacto' }
   ];
 
@@ -22,7 +22,7 @@ export default function Header({ currentView, onViewChange }) {
 
   return (
     <header className="sticky top-0 left-0 w-full z-50 glass-header shadow-xs" role="banner">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-28 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo oficial con fondo transparente */}
         <a
           href="#home"
@@ -33,7 +33,7 @@ export default function Header({ currentView, onViewChange }) {
           <img
             src="/Logo.png"
             alt="HURVANT Logo"
-            className="h-[76px] sm:h-[96px] w-auto object-contain"
+            className="h-[58px] w-auto object-contain"
           />
           <span className="hidden sm:inline-block text-[11px] font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
             Organismo Técnico
