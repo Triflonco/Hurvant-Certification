@@ -10,7 +10,7 @@ export default function Footer({ onViewChange }) {
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
         {/* Info de Marca */}
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
