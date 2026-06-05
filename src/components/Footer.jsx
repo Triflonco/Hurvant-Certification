@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, FileText, Scale } from 'lucide-react';
+import { ShieldCheck, Scale, Globe } from 'lucide-react';
 
 export default function Footer({ onViewChange }) {
   const handleLinkClick = (e, viewId) => {
@@ -10,7 +10,7 @@ export default function Footer({ onViewChange }) {
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         {/* Info de Marca */}
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
@@ -105,6 +105,36 @@ export default function Footer({ onViewChange }) {
                 className="text-sm hover:text-white transition-colors"
               >
                 Solicitar Programa Piloto
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Webs del Grupo */}
+        <div>
+          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
+            <Globe className="h-4 w-4 text-hurvant-cyan" />
+            Webs del Grupo
+          </h3>
+          <ul className="space-y-3">
+            <li>
+              <a 
+                href="https://trace.hurvant.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Hurvant Trace
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.hurvantphoto.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Hurvant Photo
               </a>
             </li>
           </ul>
