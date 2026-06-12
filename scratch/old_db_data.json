@@ -1,0 +1,164 @@
+{
+  "perfiles_usuarios": [],
+  "empresas_clientes": [
+    {
+      "id": "c299806c-964f-4a06-93b5-9dc14e74d366",
+      "codigo_empresa": "EMP-02",
+      "nombre": "Hilton Hotels Group",
+      "cif": "B-82000012",
+      "centro": "División Baleares (Palma)",
+      "puesto_critico": "Técnico en Trabajos en Altura y Escaleras de Acceso (RD 2177/2004)",
+      "conformidad": 100,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    },
+    {
+      "id": "bc580e76-d8a4-435e-bb3c-f0a51e1bce23",
+      "codigo_empresa": "EMP-03",
+      "nombre": "FCC Industrial Madrid",
+      "cif": "A-28000948",
+      "centro": "Parque de Maquinaria Norte",
+      "puesto_critico": "Operador de Grúa Móvil Autopropulsada - Cat. A (ITC MIE-AEM-4)",
+      "conformidad": 100,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    },
+    {
+      "id": "1a2cbd13-b74b-43f0-b8b9-ad68d68df42b",
+      "codigo_empresa": "EMP-01",
+      "nombre": "Mercadona Logística España",
+      "cif": "A-46000000",
+      "centro": "C.L. Madrid Sur (Valdemoro)",
+      "puesto_critico": "Operador de Carretillas Elevadoras hasta 10t (Norma UNE 58451)",
+      "conformidad": 100,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    }
+  ],
+  "operarios": [],
+  "certificados": [
+    {
+      "id": "ca08f879-ad3d-4f07-8d36-4b8506c16632",
+      "codigo": "EQ-ALM-01",
+      "tipo": "Acta de Inspección y Adecuación de Maquinaria",
+      "titular": "Carretilla Elevadora Frontal - Modelo FL-3000",
+      "esquema": "Real Decreto 1215/1997 Anexo I y II (UNE-EN ISO/IEC 17020)",
+      "estado": "ADECUADO - REGISTRO CONFORME",
+      "is_active": true,
+      "fecha_examen": "2025-11-18",
+      "vencimiento": "2028-11-18",
+      "hash": "sha256-e2a12b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a",
+      "inspector": "Fdo. Dirección Técnica de Inspección Hurvant",
+      "gps": "37.389092, -5.984459 (Sector Logística Sevilla)",
+      "operator_id": null,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T14:04:05.883192+00:00"
+    },
+    {
+      "id": "fd8eb992-b22b-483e-8a3b-2b4ed0645c4c",
+      "codigo": "HVT-0982",
+      "tipo": "Certificado de Competencia de Personas",
+      "titular": "Carlos Gómez Sánchez",
+      "esquema": "UNE-EN ISO/IEC 17024 - Operador Retráctil T4",
+      "estado": "ACTIVO - CONFORME",
+      "is_active": true,
+      "fecha_examen": "2025-10-12",
+      "vencimiento": "2030-10-12",
+      "hash": "sha256-4a7b9c9d8e7f6a5b4c3d2e1f9876543210abcdef0123456789abcdef012345",
+      "inspector": "Fdo. José Rivas (Nº Col. 9843-COITI)",
+      "gps": "40.416775, -3.703790 (Madrid Sur)",
+      "operator_id": null,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    },
+    {
+      "id": "32295604-b249-475c-9a3e-49c352560689",
+      "codigo": "HVT-1143",
+      "tipo": "Certificado de Competencia de Personas",
+      "titular": "Marta Ruiz Calvo",
+      "esquema": "UNE-EN ISO/IEC 17024 - Espacios Confinados Cat. C",
+      "estado": "ACTIVO - CONFORME",
+      "is_active": true,
+      "fecha_examen": "2026-02-04",
+      "vencimiento": "2029-02-04",
+      "hash": "sha256-8e2d1f9d8c7b6a5a4c3b2a1a0987654321fedcba0123456789abcdef987654",
+      "inspector": "Fdo. Amparo Serra (Nº Col. 11202-COITI)",
+      "gps": "41.385064, 2.173403 (Planta Barcelona)",
+      "operator_id": null,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    },
+    {
+      "id": "5c28a653-a32f-429b-8bda-ef2deb5eb920",
+      "codigo": "HVT-0731",
+      "tipo": "Certificado de Competencia de Personas",
+      "titular": "Jorge Benítez Ortiz",
+      "esquema": "UNE-EN ISO/IEC 17024 - Trabajos en Altura Telco",
+      "estado": "VENCIDO - REQUIERE REEVALUACIÓN",
+      "is_active": false,
+      "fecha_examen": "2023-05-15",
+      "vencimiento": "2026-05-15",
+      "hash": "sha256-f5c2b9f3e4d5c6b7a8d9e0f1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0",
+      "inspector": "Fdo. José Rivas (Nº Col. 9843-COITI)",
+      "gps": "39.469907, -0.376288 (Zona Levante)",
+      "operator_id": null,
+      "created_at": "2026-05-23T14:04:05.883192+00:00",
+      "updated_at": "2026-05-23T15:53:05.878242+00:00"
+    }
+  ],
+  "auth_users": [
+    {
+      "id": "f750c60b-69a7-451e-a654-ccc8feae01be",
+      "aud": "authenticated",
+      "role": "authenticated",
+      "email": "styloaerografo@gmail.com",
+      "email_confirmed_at": "2026-06-05T11:57:26.598552Z",
+      "phone": "",
+      "confirmed_at": "2026-06-05T11:57:26.598552Z",
+      "last_sign_in_at": "2026-06-11T00:38:29.809149Z",
+      "app_metadata": {
+        "provider": "email",
+        "providers": [
+          "email"
+        ]
+      },
+      "user_metadata": {
+        "email_verified": true
+      },
+      "identities": null,
+      "created_at": "2026-06-05T00:16:35.977819Z",
+      "updated_at": "2026-06-11T00:38:29.847551Z",
+      "is_anonymous": false
+    },
+    {
+      "id": "a092fb68-0690-412d-aba2-1edcce1b4664",
+      "aud": "authenticated",
+      "role": "authenticated",
+      "email": "ginatorres.bernal@gmail.com",
+      "email_confirmed_at": "2026-06-05T12:27:54.118238Z",
+      "phone": "",
+      "confirmation_sent_at": "2026-05-26T11:44:31.531181Z",
+      "confirmed_at": "2026-06-05T12:27:54.118238Z",
+      "last_sign_in_at": "2026-06-09T07:33:38.495372Z",
+      "app_metadata": {
+        "provider": "email",
+        "providers": [
+          "email"
+        ]
+      },
+      "user_metadata": {
+        "email": "ginatorres.bernal@gmail.com",
+        "email_verified": false,
+        "nombre": "Gina Torres Bernal",
+        "num_colegiado": "DNI-Z0541040Q",
+        "phone_verified": false,
+        "rol": "Administrador",
+        "sub": "a092fb68-0690-412d-aba2-1edcce1b4664"
+      },
+      "identities": null,
+      "created_at": "2026-05-26T11:44:31.525909Z",
+      "updated_at": "2026-06-10T07:27:20.503538Z",
+      "is_anonymous": false
+    }
+  ]
+}
