@@ -137,6 +137,16 @@ export default function Footer({ onViewChange }) {
                 Hurvant Photo
               </a>
             </li>
+            <li>
+              <a 
+                href="https://intranet.hurvant.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm hover:text-white transition-colors"
+              >
+                Hurvant Intranet
+              </a>
+            </li>
           </ul>
         </div>
       </div>
