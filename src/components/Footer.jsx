@@ -15,9 +15,9 @@ export default function Footer({ onViewChange }) {
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
             {/* Filter drop-shadow-md for high visibility on dark footer */}
-            <img 
-              src="/Logo.png" 
-              alt="HURVANT Logo" 
+            <img
+              src="/Logo.png"
+              alt="HURVANT Logo"
               className="h-16 w-auto object-contain"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
@@ -35,8 +35,8 @@ export default function Footer({ onViewChange }) {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a 
-                href="#services" 
+              <a
+                href="#services"
                 onClick={(e) => handleLinkClick(e, 'services')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -44,8 +44,8 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="#sectors" 
+              <a
+                href="#sectors"
                 onClick={(e) => handleLinkClick(e, 'sectors')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -53,8 +53,8 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 onClick={(e) => handleLinkClick(e, 'about')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -72,8 +72,8 @@ export default function Footer({ onViewChange }) {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a 
-                href="#complaints" 
+              <a
+                href="#complaints"
                 onClick={(e) => handleLinkClick(e, 'complaints')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -81,8 +81,8 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="#verification" 
+              <a
+                href="#verification"
                 onClick={(e) => handleLinkClick(e, 'verification')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -90,8 +90,8 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="#dashboard" 
+              <a
+                href="#dashboard"
                 onClick={(e) => handleLinkClick(e, 'dashboard')}
                 className="text-sm text-hurvant-cyan hover:text-white transition-colors font-semibold"
               >
@@ -99,8 +99,8 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 onClick={(e) => handleLinkClick(e, 'contact')}
                 className="text-sm hover:text-white transition-colors"
               >
@@ -118,9 +118,9 @@ export default function Footer({ onViewChange }) {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a 
-                href="https://trace.hurvant.com" 
-                target="_blank" 
+              <a
+                href="https://trace.hurvant.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-white transition-colors"
               >
@@ -128,9 +128,9 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="https://www.hurvantphoto.com" 
-                target="_blank" 
+              <a
+                href="https://www.hurvantphoto.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-white transition-colors"
               >
@@ -138,9 +138,9 @@ export default function Footer({ onViewChange }) {
               </a>
             </li>
             <li>
-              <a 
-                href="https://intranet.hurvant.com" 
-                target="_blank" 
+              <a
+                href="https://intranet.hurvant.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-white transition-colors"
               >
@@ -160,22 +160,22 @@ export default function Footer({ onViewChange }) {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} HURVANT. Todos los derechos reservados. Portal institucional de validación técnica.</p>
           <div className="flex gap-6">
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               onClick={(e) => handleLinkClick(e, 'about')}
               className="hover:text-slate-300 transition-colors"
             >
               Aviso de Imparcialidad
             </a>
-            <a 
-              href="#verification" 
+            <a
+              href="#verification"
               onClick={(e) => handleLinkClick(e, 'verification')}
               className="hover:text-slate-300 transition-colors"
             >
               Cumplimiento RGPD
             </a>
-            <a 
-              href="#complaints" 
+            <a
+              href="#complaints"
               onClick={(e) => handleLinkClick(e, 'complaints')}
               className="hover:text-slate-300 transition-colors"
             >
