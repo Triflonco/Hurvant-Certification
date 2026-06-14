@@ -169,11 +169,11 @@ export default function Services() {
                     <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">{service.description}</p>
                     
                     <div className="pt-4 border-t border-slate-100">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
                         {service.details.map((detail, dIdx) => (
                           <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
-                            <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5`}>
+                            <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
                               ✓
                             </span>
                             <span>{detail}</span>
@@ -193,8 +193,8 @@ export default function Services() {
           <div className="bg-slate-900 text-white p-6 lg:p-8 rounded-custom-lg border-l-4 border-amber-500 relative overflow-hidden shadow-md space-y-4">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full pointer-events-none" />
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-              <span className="text-[10px] font-bold tracking-widest text-amber-400 uppercase block">Gobernanza y Transición de Calidad</span>
-              <span className="text-[9px] font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="text-xs font-bold tracking-widest text-amber-400 uppercase block">Gobernanza y Transición de Calidad</span>
+              <span className="text-xs font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                 Cataluña · Pre-Acreditación 2026
               </span>
             </div>
@@ -216,7 +216,7 @@ export default function Services() {
               <div className="space-y-6">
                 <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
                   <div>
-                    <span className="text-[10px] font-bold tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17024</span>
+                    <span className="text-xs font-bold tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17024</span>
                     <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
                       Esquema E-HVT-01: Certificación de Competencia de Personas
                     </h4>
@@ -257,7 +257,7 @@ export default function Services() {
               <div className="space-y-6">
                 <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
                   <div>
-                    <span className="text-[10px] font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020</span>
+                    <span className="text-xs font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020</span>
                     <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
                       Esquema E-HVT-02: Inspección y Adecuación (RD 1215/97)
                     </h4>
@@ -298,7 +298,7 @@ export default function Services() {
               <div className="space-y-6">
                 <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
                   <div>
-                    <span className="text-[10px] font-bold tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020/9712</span>
+                    <span className="text-xs font-bold tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020/9712</span>
                     <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
                       Esquema E-HVT-03: Ensayos END y Grúas de Elevación
                     </h4>

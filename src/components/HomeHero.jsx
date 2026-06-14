@@ -65,7 +65,7 @@ export default function HomeHero({ onViewChange }) {
                 
                 {/* Declaración Jurada destacada en color corporativo */}
                 <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-hurvant-navy-dark text-white p-6 rounded-custom-md border-l-4 border-amber-500 border border-slate-800/80 shadow-md space-y-2.5">
-                  <span className="text-[10px] font-bold tracking-widest text-amber-400 uppercase block">
+                  <span className="text-xs font-bold tracking-widest text-amber-400 uppercase block">
                     Aviso de Imparcialidad (UNE-EN ISO/IEC 17024 & ISO/IEC 17020)
                   </span>
                   <p className="text-xs sm:text-sm leading-relaxed text-slate-200">
@@ -143,21 +143,21 @@ export default function HomeHero({ onViewChange }) {
                 
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-[10px] font-black">✓</span>
+                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
                     <div className="text-xs">
                       <strong className="text-slate-800 block">Código Único de Registro</strong>
                       <span className="text-slate-500">Trazabilidad individual pública e inmutable en nuestro registro nacional.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-[10px] font-black">✓</span>
+                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
                     <div className="text-xs">
                       <strong className="text-slate-800 block">Firma Criptográfica SHA-256</strong>
                       <span className="text-slate-500">Sello digital inalterable que garantiza la legitimidad frente a inspecciones.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-[10px] font-black">✓</span>
+                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
                     <div className="text-xs">
                       <strong className="text-slate-800 block">Consola Pública de Verificación</strong>
                       <span className="text-slate-500">Buscador seguro integrado con cumplimiento estricto RGPD.</span>
@@ -197,7 +197,7 @@ export default function HomeHero({ onViewChange }) {
                   Confían exclusivamente en la formación teórica presencial u online, la selección de currículums estándar y el cumplimiento básico documental de prevención de riesgos.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-rose-50/80 text-[11px] text-rose-600 font-semibold italic">
+              <div className="mt-6 pt-4 border-t border-rose-50/80 text-xs text-rose-600 font-semibold italic">
                 Resultado: No previene accidentes ni reduce la ineficiencia.
               </div>
             </article>
@@ -215,7 +215,7 @@ export default function HomeHero({ onViewChange }) {
                   No se evalúa la adaptación funcional real de la persona a su puesto físico, su comportamiento ante picos reales de fatiga y estrés, ni su tolerancia a la presión operativa de entrega.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-500 font-semibold italic">
+              <div className="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500 font-semibold italic">
                 Falta de visibilidad sobre los riesgos de campo reales.
               </div>
             </article>
@@ -233,7 +233,7 @@ export default function HomeHero({ onViewChange }) {
                   Evaluamos directamente en campo. Validamos la capacidad funcional ergonómica, el comportamiento seguro real, la resiliencia en picos de demanda y la adecuación persona-puesto.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-slate-800 text-[11px] text-hurvant-cyan font-bold italic uppercase tracking-wide">
+              <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-hurvant-cyan font-bold italic uppercase tracking-wide">
                 Gobernanza y trazabilidad técnica objetiva.
               </div>
             </article>
@@ -277,7 +277,7 @@ export default function HomeHero({ onViewChange }) {
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-indigo-500/5 to-transparent rounded-bl-full pointer-events-none" />
                   <p className="text-xs sm:text-sm font-black text-hurvant-navy">{quote.text}</p>
-                  <span className="text-[10px] text-slate-500 font-semibold block mt-1">{quote.sub}</span>
+                  <span className="text-xs text-slate-500 font-semibold block mt-1">{quote.sub}</span>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ export default function HomeHero({ onViewChange }) {
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-hurvant-cyan/10 to-transparent rounded-bl-full pointer-events-none" />
           
           <div className="space-y-3 max-w-2xl">
-            <span className="text-[10px] font-bold text-hurvant-cyan uppercase tracking-widest block">Programa Piloto de Validación Directa</span>
+            <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-widest block">Programa Piloto de Validación Directa</span>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight">¿Desea probar la metodología Hurvant en su empresa?</h2>
             <p className="text-xs sm:text-sm text-slate-350 leading-relaxed">
               Realice una implementación de prueba en un área específica o turno acotado. Evaluamos y mitigamos problemas operativos en semanas, con cero fricción e interrupción para su centro.

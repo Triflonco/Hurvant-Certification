@@ -38,7 +38,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#services"
                 onClick={(e) => handleLinkClick(e, 'services')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Evaluación Operativa de Personas
               </a>
@@ -47,7 +47,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#sectors"
                 onClick={(e) => handleLinkClick(e, 'sectors')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Sectores Críticos: Logística y Hotelería
               </a>
@@ -56,7 +56,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#about"
                 onClick={(e) => handleLinkClick(e, 'about')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Estructura de Imparcialidad y Calidad
               </a>
@@ -75,7 +75,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#complaints"
                 onClick={(e) => handleLinkClick(e, 'complaints')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Canal de Quejas y Apelaciones
               </a>
@@ -84,7 +84,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#verification"
                 onClick={(e) => handleLinkClick(e, 'verification')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Buscador de Certificados RGPD
               </a>
@@ -93,7 +93,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#dashboard"
                 onClick={(e) => handleLinkClick(e, 'dashboard')}
-                className="text-sm text-hurvant-cyan hover:text-white transition-colors font-semibold"
+                className="text-sm text-hurvant-cyan inline-block py-1 hover:text-white transition-colors font-semibold"
               >
                 Área Privada de Control (Ledger)
               </a>
@@ -102,7 +102,7 @@ export default function Footer({ onViewChange }) {
               <a
                 href="#contact"
                 onClick={(e) => handleLinkClick(e, 'contact')}
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Solicitar Programa Piloto
               </a>
@@ -122,7 +122,7 @@ export default function Footer({ onViewChange }) {
                 href="https://trace.hurvant.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Hurvant Trace
               </a>
@@ -132,7 +132,7 @@ export default function Footer({ onViewChange }) {
                 href="https://www.hurvantphoto.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Hurvant Photo
               </a>
@@ -142,7 +142,7 @@ export default function Footer({ onViewChange }) {
                 href="https://intranet.hurvant.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm hover:text-white transition-colors"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Hurvant Intranet
               </a>
@@ -163,21 +163,21 @@ export default function Footer({ onViewChange }) {
             <a
               href="#about"
               onClick={(e) => handleLinkClick(e, 'about')}
-              className="hover:text-slate-300 transition-colors"
+              className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Aviso de Imparcialidad
             </a>
             <a
               href="#verification"
               onClick={(e) => handleLinkClick(e, 'verification')}
-              className="hover:text-slate-300 transition-colors"
+              className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Cumplimiento RGPD
             </a>
             <a
               href="#complaints"
               onClick={(e) => handleLinkClick(e, 'complaints')}
-              className="hover:text-slate-300 transition-colors"
+              className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Quejas y Apelaciones
             </a>

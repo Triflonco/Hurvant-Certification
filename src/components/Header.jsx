@@ -35,7 +35,7 @@ export default function Header({ currentView, onViewChange }) {
             alt="HURVANT Logo"
             className="h-[58px] w-auto object-contain"
           />
-          <span className="hidden sm:inline-block text-[11px] font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
+          <span className="hidden sm:inline-block text-xs font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
             Organismo Técnico
           </span>
         </a>
@@ -67,7 +67,7 @@ export default function Header({ currentView, onViewChange }) {
         <div className="xl:hidden flex items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-custom-sm text-slate-600 hover:text-hurvant-navy hover:bg-slate-100 transition-colors"
+            className="p-3 rounded-custom-sm text-slate-600 hover:text-hurvant-navy hover:bg-slate-100 transition-colors"
             aria-expanded={mobileMenuOpen}
             aria-label="Alternar menú de navegación"
           >

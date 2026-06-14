@@ -122,7 +122,7 @@ export default function Sectors() {
                   <div className="absolute top-4 right-4 bg-white/10 p-2.5 rounded-custom-md backdrop-blur-md">
                     <IconComp className="h-6 w-6 text-white" />
                   </div>
-                  <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-white mb-2`}>
+                  <span className={`inline-flex px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white mb-2`}>
                     Área de Intervención Crítica
                   </span>
                   <h3 className="text-xl sm:text-2xl font-black tracking-tight">{sector.title}</h3>
@@ -155,7 +155,7 @@ export default function Sectors() {
                     <ul className="space-y-2.5">
                       {sector.evaluations.map((evalItem, eIdx) => (
                         <li key={eIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                          <span className={`inline-flex h-4.5 w-4.5 rounded-full ${sector.badgeBg} flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5`}>
+                          <span className={`inline-flex h-4.5 w-4.5 rounded-full ${sector.badgeBg} flex items-center justify-center text-xs font-black shrink-0 mt-0.5`}>
                             ✓
                           </span>
                           <span>{evalItem}</span>
@@ -183,7 +183,7 @@ export default function Sectors() {
             </p>
           </div>
         </div>
-        <span className="text-[10px] font-bold text-slate-400 border border-slate-200 px-3 py-1.5 rounded-full uppercase tracking-wider shrink-0 bg-white">
+        <span className="text-xs font-bold text-slate-400 border border-slate-200 px-3 py-1.5 rounded-full uppercase tracking-wider shrink-0 bg-white">
           Metodología Universal
         </span>
       </div>

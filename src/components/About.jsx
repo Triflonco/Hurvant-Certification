@@ -22,7 +22,7 @@ export default function About() {
         <article className="lg:col-span-7 bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white rounded-custom-lg p-8 shadow-md border-l-4 border-hurvant-cyan relative overflow-hidden space-y-6">
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-cyan/10 to-transparent rounded-bl-full pointer-events-none" />
 
-          <span className="text-[10px] font-bold tracking-widest text-hurvant-cyan uppercase block">
+          <span className="text-xs font-bold tracking-widest text-hurvant-cyan uppercase block">
             Filosofía Operativa
           </span>
 
@@ -116,7 +116,7 @@ export default function About() {
             <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
               <div>
                 <strong className="text-xs sm:text-sm text-hurvant-navy block font-bold">Fdo. Dirección General de Hurvant</strong>
-                <span className="text-[10px] sm:text-xs text-slate-500 font-semibold block">Sello Oficial de Calidad y Gobernanza</span>
+                <span className="text-xs text-slate-500 font-semibold block">Sello Oficial de Calidad y Gobernanza</span>
               </div>
               <div className="h-10 w-10 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center">
                 <Award className="h-5 w-5 text-hurvant-indigo" />
@@ -174,10 +174,10 @@ export default function About() {
 
         <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-850">
           <div>
-            <span className="text-[9px] font-black tracking-widest text-amber-400 uppercase block mb-1">Estatus Regulatorio e Implantación</span>
+            <span className="text-xs font-black tracking-widest text-amber-400 uppercase block mb-1">Estatus Regulatorio e Implantación</span>
             <h4 className="text-base sm:text-lg font-black text-white">Lanzamiento Comercial y Plan de Acreditación ENAC</h4>
           </div>
-          <span className="text-[10px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-xs font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full uppercase tracking-wider">
             Cataluña · Fase de Lanzamiento 2026
           </span>
         </header>

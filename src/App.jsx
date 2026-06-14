@@ -48,6 +48,20 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.setAttribute('name', 'robots');
+      document.head.appendChild(metaRobots);
+    }
+    if (currentView === 'dashboard') {
+      metaRobots.setAttribute('content', 'noindex, nofollow');
+    } else {
+      metaRobots.setAttribute('content', 'index, follow');
+    }
+  }, [currentView]);
+
   const handleViewChange = (viewId) => {
     setCurrentView(viewId);
     window.location.hash = `#${viewId}`;
