@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Building, Mail, Phone, Calendar, Send, CheckCircle2, FileText, Sparkles } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ export default function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -25,7 +27,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.consentimiento) {
       alert('Debe aceptar la política de privacidad y protección de datos RGPD.');
@@ -33,12 +35,30 @@ export default function Contact() {
     }
 
     setIsSubmitting(true);
+    setError(null);
 
-    // Simular envío de datos a API técnico-operativa de Hurvant
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const fullMessage = `Empresa: ${formData.empresa}\nCargo: ${formData.cargo}\nSector: ${formData.sector}\n\nMensaje:\n${formData.mensaje}`;
+
+    const { error: insertError } = await supabase
+      .from('hurvant_contacts')
+      .insert([
+        {
+          name: formData.nombre,
+          email: formData.email,
+          phone: formData.telefono,
+          service: formData.tipoSolicitud,
+          message: fullMessage,
+        }
+      ]);
+
+    setIsSubmitting(false);
+
+    if (insertError) {
+      console.error(insertError);
+      setError('Ha ocurrido un error al enviar su solicitud. Por favor, inténtelo más tarde.');
+    } else {
       setSubmitted(true);
-    }, 1200);
+    }
   };
 
   return (

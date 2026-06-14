@@ -10,6 +10,7 @@ import ComplaintsWizard from './components/ComplaintsWizard';
 import CertSearch from './components/CertSearch';
 import Contact from './components/Contact';
 import ClientDashboard from './components/ClientDashboard';
+import Admin from './components/Admin';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -28,7 +29,8 @@ export default function App() {
         'complaints', 
         'verification', 
         'contact',
-        'dashboard'
+        'dashboard',
+        'admin'
       ];
       
       if (validViews.includes(viewId)) {
@@ -55,7 +57,7 @@ export default function App() {
       metaRobots.setAttribute('name', 'robots');
       document.head.appendChild(metaRobots);
     }
-    if (currentView === 'dashboard') {
+    if (currentView === 'dashboard' || currentView === 'admin') {
       metaRobots.setAttribute('content', 'noindex, nofollow');
     } else {
       metaRobots.setAttribute('content', 'index, follow');
@@ -93,6 +95,7 @@ export default function App() {
         {currentView === 'verification' && <CertSearch />}
         {currentView === 'contact' && <Contact />}
         {currentView === 'dashboard' && <ClientDashboard />}
+        {currentView === 'admin' && <Admin />}
       </main>
 
       {/* Footer corporativo oficial */}
