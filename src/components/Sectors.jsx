@@ -118,7 +118,7 @@ export default function Sectors() {
               {/* Contenido a dos columnas (en pantalla grande) para los detalles */}
               <div className="flex-grow flex flex-col justify-between w-full">
                 {/* Encabezado del Sector con gradiente premium */}
-                <div className={`bg-gradient-to-r ${sector.color} text-white p-6 relative shrink-0`}>
+                <div className={`bg-gradient-to-r ${sector.color} text-white p-6 relative shrink-0 text-center flex flex-col items-center`}>
                   <div className="absolute top-4 right-4 bg-white/10 p-2.5 rounded-custom-md backdrop-blur-md">
                     <IconComp className="h-6 w-6 text-white" />
                   </div>
