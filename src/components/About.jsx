@@ -1,10 +1,17 @@
 import React from 'react';
 import { Target, Landmark, Milestone, Award, Users, ShieldCheck, HeartHandshake } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
-//paco//
 export default function About() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="about-title">
+    <>
+      <PageMeta 
+        title="Filosofía, Imparcialidad y Gobernanza | HURVANT Certification"
+        description="Conozca la gobernanza, estructura de imparcialidad y la filosofía de evaluación de competencias de HURVANT Certification."
+        canonicalPath="/sobre-hurvant"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="about-title">
+
       {/* Cabecera */}
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Sobre la Organización</span>
@@ -195,5 +202,7 @@ export default function About() {
         </div>
       </div>
     </section>
+    </>
   );
 }
+

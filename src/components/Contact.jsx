@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Building, Mail, Phone, Calendar, Send, CheckCircle2, FileText, Sparkles } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import PageMeta from './shared/PageMeta';
 
 export default function Contact() {
+
   const [formData, setFormData] = useState({
     nombre: '',
     empresa: '',
@@ -62,7 +64,14 @@ export default function Contact() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="contact-title">
+    <>
+      <PageMeta 
+        title="Contacto Corporativo | Solicitud de Piloto | HURVANT"
+        description="Solicite un programa piloto de evaluación de personal o auditoría técnica de maquinaria para su empresa. Atención técnica corporativa en 24h."
+        canonicalPath="/contacto"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="contact-title">
+
       {/* Cabecera */}
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Contacto Corporativo</span>
@@ -376,5 +385,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
+

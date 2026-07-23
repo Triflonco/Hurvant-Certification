@@ -1,5 +1,6 @@
 import React from 'react';
 import { Truck, Hotel, ShieldAlert, CheckCircle2, Factory, HelpCircle } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
 export default function Sectors() {
   const sectorsData = [
@@ -81,7 +82,14 @@ export default function Sectors() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="sectors-title">
+    <>
+      <PageMeta 
+        title="Sectores Críticos de Intervención | HURVANT"
+        description="Soluciones de evaluación práctica y reducción del riesgo en logística, hotelería, industria pesada y grúas de elevación."
+        canonicalPath="/sectores"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="sectors-title">
+
       {/* Cabecera */}
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Especialización Sectorial</span>
@@ -188,5 +196,7 @@ export default function Sectors() {
         </span>
       </div>
     </section>
+    </>
   );
 }
+

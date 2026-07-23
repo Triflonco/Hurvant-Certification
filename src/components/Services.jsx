@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight, Cpu } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
 export default function Services() {
   const [activeTab, setActiveTab] = useState('services');
@@ -9,6 +11,7 @@ export default function Services() {
       id: 'evaluacion-operativa',
       title: 'Evaluación Operativa de Personas',
       subtitle: 'Análisis práctico y observacional en el entorno real',
+      link: '/servicios/evaluacion-operativa',
       icon: Activity,
       image: '/eval_interview.jpg',
       color: 'from-indigo-500 to-indigo-600',
@@ -28,6 +31,7 @@ export default function Services() {
       id: 'informes-desempeno',
       title: 'Informes de Desempeño y Riesgo',
       subtitle: 'Entregables ejecutivos claros y orientados a la acción',
+      link: '/servicios/evaluacion-operativa',
       icon: FileText,
       color: 'from-cyan-500 to-cyan-600',
       textColor: 'text-cyan-600',
@@ -44,27 +48,49 @@ export default function Services() {
     },
     {
       id: 'inspeccion-equipos',
-      title: 'Inspección de Equipos y NDT',
-      subtitle: 'Ensayos no destructivos y validación física',
+      title: 'Inspección de Equipos y Maquinaria (RD 1215/97)',
+      subtitle: 'Validación física de conformidad e inspección de adecuación',
+      link: '/servicios/inspeccion-equipos',
       icon: Wrench,
-      image: '/ndt_testing_weld.png',
+      image: '/heavy_machinery_loader.png',
       color: 'from-amber-500 to-amber-600',
       textColor: 'text-amber-600',
       bgLight: 'bg-amber-50/50',
       borderColor: 'hover:border-amber-500/30',
-      description: 'Ensayos No Destructivos (NDT) e inspección reglamentaria para certificar la seguridad estructural de maquinaria pesada e izaje.',
+      description: 'Auditoría técnica e inspección reglamentaria según RD 1215/1997 para certificar la seguridad de maquinaria pesada.',
       details: [
         'Inspección reglamentaria de grúas, eslingas y accesorios de izaje.',
-        'Ensayos NDT: ultrasonidos, partículas magnéticas y líquidos penetrantes.',
         'Inspección y adecuación de maquinaria según el RD 1215/1997.',
         'Pruebas mecánicas de fatiga y estabilidad estructural in-situ.',
-        'Emisión de dictámenes técnicos y firma digital inmutable en el ledger.'
+        'Placa de identificación con código QR único.',
+        'Emisión de dictámenes técnicos y firma digital inmutable.'
+      ]
+    },
+    {
+      id: 'ensayos-no-destructivos',
+      title: 'Ensayos No Destructivos (NDT / END)',
+      subtitle: 'Ultrasonidos, partículas magnéticas y líquidos penetrantes',
+      link: '/servicios/ensayos-no-destructivos',
+      icon: Cpu,
+      image: '/ndt_testing_weld.png',
+      color: 'from-cyan-600 to-cyan-700',
+      textColor: 'text-cyan-600',
+      bgLight: 'bg-cyan-50/50',
+      borderColor: 'hover:border-cyan-500/30',
+      description: 'Detección de defectos volumétricos y superficiales en estructuras, soldaduras y equipos críticos.',
+      details: [
+        'Ensayos NDT: ultrasonidos (UT), partículas magnéticas (MT) y líquidos penetrantes (PT).',
+        'Inspectores cualificados bajo norma UNE-EN ISO 9712 Nivel II/III.',
+        'Control de soldaduras y elementos estructurales sometidos a fatiga.',
+        'Inspección visual avanzada (VT) según UNE-EN ISO 17637.',
+        'Informes técnicos de integridad física con trazabilidad digital.'
       ]
     },
     {
       id: 'programas-piloto',
       title: 'Programas Piloto de Validación',
       subtitle: 'Implementación controlada y de cero fricción',
+      link: '/servicios/programas-piloto',
       icon: Sliders,
       color: 'from-slate-700 to-hurvant-navy',
       textColor: 'text-hurvant-navy',
@@ -82,112 +108,131 @@ export default function Services() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="services-title">
-      {/* Cabecera */}
-      <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
-        <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Portafolio Técnico y Gobernanza</span>
-        <h2 id="services-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
-          Servicios y Hoja de Ruta de Certificación
-        </h2>
-        <p className="text-slate-500 font-medium mt-1.5 text-sm sm:text-base">
-          Validación operativa inmediata y plan de transición regulada hacia esquemas de certificación bajo estándares internacionales.
-        </p>
-      </header>
+    <>
+      <PageMeta 
+        title="Servicios Técnicos de Certificación y Validación | HURVANT"
+        description="Portafolio de servicios técnicos de HURVANT: Evaluación de personas, inspección de maquinaria RD 1215/97, ensayos no destructivos NDT y programas piloto."
+        canonicalPath="/servicios"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="services-title">
+        {/* Cabecera */}
+        <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
+          <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Portafolio Técnico y Gobernanza</span>
+          <h2 id="services-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
+            Servicios y Hoja de Ruta de Certificación
+          </h2>
+          <p className="text-slate-500 font-medium mt-1.5 text-sm sm:text-base">
+            Validación operativa inmediata y plan de transición regulada hacia esquemas de certificación bajo estándares internacionales.
+          </p>
+        </header>
 
-      {/* Selector de Sección: Servicios vs Hoja de Ruta ISO */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-12 bg-slate-100 p-1.5 rounded-custom-lg border border-slate-200/80">
-        <button
-          onClick={() => setActiveTab('services')}
-          className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
-            activeTab === 'services'
-              ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white shadow-md'
-              : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
-          }`}
-        >
-          <Activity className="h-5 w-5" />
-          <span>Servicios Operativos Iniciales</span>
-        </button>
-        <button
-          onClick={() => setActiveTab('roadmap')}
-          className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
-            activeTab === 'roadmap'
-              ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-cyan text-white shadow-md'
-              : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
-          }`}
-        >
-          <GraduationCap className="h-5.5 w-5.5" />
-          <span>Hoja de Ruta Técnica (ISO 17024 / 17020)</span>
-        </button>
-      </div>
-
-      {activeTab === 'services' ? (
-        <div className="space-y-12">
-          {/* Introducción a los Servicios */}
-          <div className="bg-indigo-50/40 border border-indigo-100/60 p-6 rounded-custom-lg mb-8">
-            <h3 className="text-base font-bold text-hurvant-navy mb-2 flex items-center gap-2">
-              <Shield className="h-5 w-5 text-hurvant-indigo shrink-0" />
-              ¿Por qué evaluar el desempeño en la operación real?
-            </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              Muchas empresas cumplen formalmente con cursos de prevención de riesgos o formación teórica, pero siguen sufriendo alta rotación, fallos costosos o accidentes. Hurvant interviene precisamente en ese punto crítico: evaluando de manera objetiva el comportamiento, la capacidad funcional y el encaje persona-puesto directamente en la actividad diaria.
-            </p>
-          </div>
-
-          {/* Grid de Servicios como Filas Horizontales Premium */}
-          <div className="space-y-8">
-            {initialServices.map((service, idx) => {
-              const IconComp = service.icon;
-              return (
-                <article
-                  key={service.id}
-                  className={`glass-card rounded-custom-lg p-6 lg:p-8 border border-slate-200/60 shadow-xs flex flex-col ${
-                    idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } gap-8 items-center transition-all duration-300 glass-card-hover border-l-4 border-l-slate-300 overflow-hidden ${service.borderColor}`}
-                >
-                  {service.image && (
-                    <div className="w-full lg:w-5/12 h-52 lg:h-64 rounded-custom-md overflow-hidden relative border border-slate-200/60 shrink-0">
-                      <img 
-                        src={service.image} 
-                        alt={service.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
-                    </div>
-                  )}
-                  
-                  <div className="flex-grow space-y-4 w-full">
-                    <div className="flex items-center gap-4">
-                      <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm shrink-0`}>
-                        <IconComp className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg lg:text-xl font-bold text-hurvant-navy leading-tight">{service.title}</h3>
-                        <span className="text-xs text-slate-400 font-medium block mt-0.5">{service.subtitle}</span>
-                      </div>
-                    </div>
-                    
-                    <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">{service.description}</p>
-                    
-                    <div className="pt-4 border-t border-slate-100">
-                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
-                        {service.details.map((detail, dIdx) => (
-                          <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
-                            <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
-                              ✓
-                            </span>
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+        {/* Selector de Sección: Servicios vs Hoja de Ruta ISO */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-12 bg-slate-100 p-1.5 rounded-custom-lg border border-slate-200/80">
+          <button
+            onClick={() => setActiveTab('services')}
+            className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
+              activeTab === 'services'
+                ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white shadow-md'
+                : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
+            }`}
+          >
+            <Activity className="h-5 w-5" />
+            <span>Servicios Operativos Iniciales</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('roadmap')}
+            className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
+              activeTab === 'roadmap'
+                ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-cyan text-white shadow-md'
+                : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
+            }`}
+          >
+            <GraduationCap className="h-5.5 w-5.5" />
+            <span>Hoja de Ruta Técnica (ISO 17024 / 17020)</span>
+          </button>
         </div>
-      ) : (
+
+        {activeTab === 'services' ? (
+          <div className="space-y-12">
+            {/* Introducción a los Servicios */}
+            <div className="bg-indigo-50/40 border border-indigo-100/60 p-6 rounded-custom-lg mb-8">
+              <h3 className="text-base font-bold text-hurvant-navy mb-2 flex items-center gap-2">
+                <Shield className="h-5 w-5 text-hurvant-indigo shrink-0" />
+                ¿Por qué evaluar el desempeño en la operación real?
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Muchas empresas cumplen formalmente con cursos de prevención de riesgos o formación teórica, pero siguen sufriendo alta rotación, fallos costosos o accidentes. Hurvant interviene precisamente en ese punto crítico: evaluando de manera objetiva el comportamiento, la capacidad funcional y el encaje persona-puesto directamente en la actividad diaria.
+              </p>
+            </div>
+
+            {/* Grid de Servicios como Filas Horizontales Premium */}
+            <div className="space-y-8">
+              {initialServices.map((service, idx) => {
+                const IconComp = service.icon;
+                return (
+                  <article
+                    key={service.id}
+                    className={`glass-card rounded-custom-lg p-6 lg:p-8 border border-slate-200/60 shadow-xs flex flex-col ${
+                      idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    } gap-8 items-center transition-all duration-300 glass-card-hover border-l-4 border-l-slate-300 overflow-hidden ${service.borderColor}`}
+                  >
+                    {service.image && (
+                      <div className="w-full lg:w-5/12 h-52 lg:h-64 rounded-custom-md overflow-hidden relative border border-slate-200/60 shrink-0">
+                        <img 
+                          src={service.image} 
+                          alt={service.title} 
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
+                      </div>
+                    )}
+                    
+                    <div className="flex-grow space-y-4 w-full">
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-4">
+                          <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm shrink-0`}>
+                            <IconComp className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg lg:text-xl font-bold text-hurvant-navy leading-tight">{service.title}</h3>
+                            <span className="text-xs text-slate-400 font-medium block mt-0.5">{service.subtitle}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">{service.description}</p>
+                      
+                      <div className="pt-4 border-t border-slate-100">
+                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
+                          {service.details.map((detail, dIdx) => (
+                            <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
+                              <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
+                                ✓
+                              </span>
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pt-2">
+                        <Link 
+                          to={service.link}
+                          className="inline-flex items-center gap-2 text-xs font-bold text-hurvant-indigo hover:text-hurvant-navy transition-colors bg-indigo-50/80 px-4 py-2 rounded-custom-sm"
+                        >
+                          <span>Ver información detallada del servicio</span>
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+
         <div className="space-y-8">
           {/* Banner de Posicionamiento ENAC/Roadmap */}
           <div className="bg-slate-900 text-white p-6 lg:p-8 rounded-custom-lg border-l-4 border-amber-500 relative overflow-hidden shadow-md space-y-4">
@@ -337,5 +382,6 @@ export default function Services() {
         </div>
       )}
     </section>
+    </>
   );
 }

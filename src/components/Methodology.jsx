@@ -1,5 +1,6 @@
 import React from 'react';
 import { Eye, ShieldAlert, Cpu, Heart, CheckCircle2 } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
 export default function Methodology() {
   const steps = [
@@ -54,7 +55,14 @@ export default function Methodology() {
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="methodology-title">
+    <>
+      <PageMeta 
+        title="Metodología Científico-Operativa de Evaluación | HURVANT"
+        description="Conozca el proceso de 4 fases de HURVANT para la observación directa y análisis funcional en el puesto de trabajo real."
+        canonicalPath="/metodologia"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="methodology-title">
+
       {/* Cabecera */}
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Rigor Metodológico</span>
@@ -115,5 +123,7 @@ export default function Methodology() {
         })}
       </div>
     </section>
+    </>
   );
 }
+

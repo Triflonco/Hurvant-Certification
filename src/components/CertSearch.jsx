@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Search, ShieldCheck, ShieldAlert, Cpu, Download, Compass, Calendar, UserCheck } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
 const CERTIFICATES_REGISTRY = {
+
   'HVT-0982': {
     tipo: 'Certificado de Competencia de Personas',
     titular: 'Carlos Gómez Sánchez',
@@ -80,7 +82,14 @@ export default function CertSearch() {
   };
 
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="verification-title">
+    <>
+      <PageMeta 
+        title="Buscador Seguro de Certificados | HURVANT"
+        description="Consola pública de verificación de certificados de aptitud técnica y resoluciones de adecuación con trazabilidad criptográfica."
+        canonicalPath="/verificacion"
+      />
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="verification-title">
+
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Transparencia y Protección de Datos</span>
         <h2 id="verification-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
@@ -224,5 +233,7 @@ export default function CertSearch() {
         )}
       </div>
     </section>
+    </>
   );
 }
+

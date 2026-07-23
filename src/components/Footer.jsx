@@ -1,20 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ShieldCheck, Scale, Globe } from 'lucide-react';
 
-export default function Footer({ onViewChange }) {
-  const handleLinkClick = (e, viewId) => {
-    e.preventDefault();
-    onViewChange(viewId);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+export default function Footer() {
   return (
     <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-16 px-4 sm:px-6 lg:px-8" role="contentinfo">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
         {/* Info de Marca */}
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
-            {/* Filter drop-shadow-md for high visibility on dark footer */}
             <img
               src="/Logo.png"
               alt="HURVANT Logo"
@@ -35,31 +29,36 @@ export default function Footer({ onViewChange }) {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#services"
-                onClick={(e) => handleLinkClick(e, 'services')}
+              <Link
+                to="/servicios/evaluacion-operativa"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Evaluación Operativa de Personas
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#sectors"
-                onClick={(e) => handleLinkClick(e, 'sectors')}
+              <Link
+                to="/servicios/inspeccion-equipos"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
-                Sectores Críticos: Logística y Hotelería
-              </a>
+                Inspección de Equipos (RD 1215/97)
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
-                onClick={(e) => handleLinkClick(e, 'about')}
+              <Link
+                to="/servicios/ensayos-no-destructivos"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
-                Estructura de Imparcialidad y Calidad
-              </a>
+                Ensayos No Destructivos (NDT)
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sectores"
+                className="text-sm inline-block py-1 hover:text-white transition-colors"
+              >
+                Sectores Críticos
+              </Link>
             </li>
           </ul>
         </div>
@@ -72,40 +71,36 @@ export default function Footer({ onViewChange }) {
           </h3>
           <ul className="space-y-3">
             <li>
-              <a
-                href="#complaints"
-                onClick={(e) => handleLinkClick(e, 'complaints')}
+              <Link
+                to="/quejas-y-apelaciones"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Canal de Quejas y Apelaciones
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#verification"
-                onClick={(e) => handleLinkClick(e, 'verification')}
+              <Link
+                to="/verificacion"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Buscador de Certificados RGPD
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#dashboard"
-                onClick={(e) => handleLinkClick(e, 'dashboard')}
+              <Link
+                to="/dashboard"
                 className="text-sm text-hurvant-cyan inline-block py-1 hover:text-white transition-colors font-semibold"
               >
                 Área Privada de Control (Ledger)
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                onClick={(e) => handleLinkClick(e, 'contact')}
+              <Link
+                to="/contacto"
                 className="text-sm inline-block py-1 hover:text-white transition-colors"
               >
                 Solicitar Programa Piloto
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -160,27 +155,24 @@ export default function Footer({ onViewChange }) {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} HURVANT. Todos los derechos reservados. Portal institucional de validación técnica.</p>
           <div className="flex gap-6">
-            <a
-              href="#about"
-              onClick={(e) => handleLinkClick(e, 'about')}
+            <Link
+              to="/sobre-hurvant"
               className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Aviso de Imparcialidad
-            </a>
-            <a
-              href="#verification"
-              onClick={(e) => handleLinkClick(e, 'verification')}
+            </Link>
+            <Link
+              to="/verificacion"
               className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Cumplimiento RGPD
-            </a>
-            <a
-              href="#complaints"
-              onClick={(e) => handleLinkClick(e, 'complaints')}
+            </Link>
+            <Link
+              to="/quejas-y-apelaciones"
               className="inline-block py-2 hover:text-slate-300 transition-colors"
             >
               Quejas y Apelaciones
-            </a>
+            </Link>
           </div>
         </div>
       </div>

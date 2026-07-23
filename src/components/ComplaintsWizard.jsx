@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Scale, Info, CheckCircle2, ChevronRight } from 'lucide-react';
+import PageMeta from './shared/PageMeta';
 
 export default function ComplaintsWizard() {
+
   const [formData, setFormData] = useState({
     category: '',
     name: '',
@@ -60,7 +62,14 @@ export default function ComplaintsWizard() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="complaints-title">
+    <>
+      <PageMeta 
+        title="Canal de Quejas y Apelaciones | HURVANT"
+        description="Procedimiento oficial y transparente para la tramitación independiente de quejas y apelaciones técnicas."
+        canonicalPath="/quejas-y-apelaciones"
+      />
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="complaints-title">
+
       <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
         <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Garantía de Transparencia</span>
         <h2 id="complaints-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
@@ -269,5 +278,7 @@ export default function ComplaintsWizard() {
         </div>
       </div>
     </section>
+    </>
   );
 }
+
