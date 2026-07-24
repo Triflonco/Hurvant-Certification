@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>fase_3_catalogo_corporativo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>CATÁLOGO CORPORATIVO INSTITUCIONAL</h1>
+<h2>HURVANT Certification &amp; Technical Validation</h2>
+<p><em>Edición Oficial 2026 / 2027 — Documentación de Tercera Parte</em></p>
+<pre><code>================================================================================
+                                 H U R V A N T
+                    ORGANISMO TÉCNICO DE CERTIFICACIÓN
+                         Y VALIDACIÓN EN CAMPO
+================================================================================
+                  EVALUAMOS COMPETENCIAS, NO ASISTENCIAS.
+================================================================================
+</code></pre>
+<hr>
+<h2>ÍNDICE DEL DOCUMENTO</h2>
+<ol>
+<li><p><strong>BIENVENIDA INSTITUCIONAL</strong><br>1.1. Carta de la Dirección General<br>1.2. Manifiesto del Rigor Técnico  </p>
+</li>
+<li><p><strong>HISTORIA Y PROPÓSITO DE HURVANT</strong><br>2.1. El Origen: El Vacío en la Evaluación Industrial Española<br>2.2. Misión, Visión y Trascendencia  </p>
+</li>
+<li><p><strong>GOBERNANZA E IMPARCIALIDAD RADICAL</strong><br>3.1. Declaración de Imparcialidad y Separación de Actividades<br>3.2. Comité de Salvaguarda de la Imparcialidad<br>3.3. Estándares Regulatorios (UNE-EN ISO/IEC 17024 e ISO/IEC 17020)  </p>
+</li>
+<li><p><strong>PORTAFOLIO DE SERVICIOS TÉCNICOS DE EVALUACIÓN</strong><br>4.1. Esquema E-HVT-01: Evaluación Operativa de Personas en Campo<br>4.2. Esquema E-HVT-02: Inspección y Adecuación de Maquinaria (RD 1215/1997)<br>4.3. Esquema E-HVT-03: Ensayos No Destructivos (NDT / END - ISO 9712)<br>4.4. Esquema E-HVT-04: Auditoría de Eficacia Preventiva de Campo (Compliance PRL)<br>4.5. Esquema E-HVT-05: Verificación Documental Avanzada y CAE  </p>
+</li>
+<li><p><strong>METODOLOGÍA DE INTERVENCIÓN EN CAMPO</strong><br>5.1. Protocolo de 4 Fases de Evaluación In-Situ<br>5.2. Cero Fricción Operativa: Evaluación en Turno Real  </p>
+</li>
+<li><p><strong>ECOSISTEMA TECNOLÓGICO DE TRAZABILIDAD DIGITAL</strong><br>6.1. Portal Corporativo SaaS de Empresas (Cuadro de Mando Ledger)<br>6.2. Pasaporte Técnico del Trabajador (Acreditación Móvil por Código QR)<br>6.3. Firma Criptográfica SHA-256 e Inmutabilidad de Evidencias  </p>
+</li>
+<li><p><strong>SOLUCIONES SECTORIALES EN ESPAÑA</strong><br>7.1. Sector Logística y Gran Distribución<br>7.2. Sector Heavy Industry, Grúas e Izaje<br>7.3. Sector Construcción e Infraestructuras<br>7.4. Sector Energías Renovables (Eólica y Fotovoltaica)<br>7.5. Sector Agroalimentario y Procesado Automatizado  </p>
+</li>
+<li><p><strong>DESPLIEGUE DE PROGRAMAS PILOTO CONTROLADOS</strong><br>8.1. Estructura del Piloto de 14 Días<br>8.2. Entregables del Piloto y Garantía de Evaluación  </p>
+</li>
+<li><p><strong>MATRIZ COMPARATIVA DE VENTAJAS CORPORATIVAS</strong>  </p>
+</li>
+<li><p><strong>PREGUNTAS FRECUENTES TÉCNICAS Y JURÍDICAS (FAQ)</strong>  </p>
+</li>
+<li><p><strong>CANALES OFICIALES Y CONTACTO INSTITUCIONAL</strong></p>
+</li>
+</ol>
+<hr>
+<h2>1. BIENVENIDA INSTITUCIONAL</h2>
+<h3>1.1. Carta de la Dirección General</h3>
+<p>Estimado directivo, profesional de la prevención y responsable operativo:</p>
+<p>El desarrollo de la industria moderna en España exige niveles de precisión, seguridad y productividad sin precedentes. Sin embargo, paradójicamente, el modelo tradicional de verificación del factor humano y de los equipos de trabajo ha quedado anclado en la burocracia documental del siglo pasado.</p>
+<p>Durante décadas, las organizaciones han confiado la seguridad de sus plantas y almacenes a diplomas teóricos de asistencia y a carpetas de prevención archivadas que nadie lee en el día a día. Las consecuencias de esta brecha son conocidas por cualquier director de planta: siniestralidad recurrente, rotación acelerada de personal temporero, daños en maquinaria exigente y una vulnerabilidad jurídica crítica para los administradores ante una inspección de trabajo.</p>
+<p><strong>HURVANT</strong> nace como la respuesta técnica de tercera parte que el mercado español demandaba. No somos una academia de formación ni comercializamos maquinaria. Somos ingenieros e evaluadores independientes apasionados por el rigor empírico. Nuestra labor es evaluar directamente en el puesto real si una persona sabe operar de forma segura y si una máquina cumple físicamente con los estándares normativos.</p>
+<p>Le invitamos a conocer en este catálogo una metodología concebida para aportar dos activos de incalculable valor a su organización: <strong>excelencia en la operación diaria y tranquilidad absoluta ante la ley.</strong></p>
+<p><em>Fdo. Dirección General de HURVANT Certification</em></p>
+<hr>
+<h2>2. HISTORIA Y PROPÓSITO DE HURVANT</h2>
+<h3>2.1. El Origen: El Vacío en la Evaluación Industrial Española</h3>
+<p>HURVANT surge del análisis directo de la siniestralidad industrial y logística en España. Las estadísticas de la Inspección de Trabajo reflejan de forma constante una realidad incontestable: <strong>más del 90% de los trabajadores involucrados en incidentes graves con maquinaria disponían del certificado de formación teórica legalmente exigido.</strong></p>
+<p>El problema no radica en la falta de cursos, sino en la <strong>ausencia de verificación práctica de competencias en contexto real de fatiga, presión y exigencia ergonómica</strong>. HURVANT fue creada para cerrar de manera definitiva este vacío entre la teoría del aula y la realidad del centro de trabajo.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Formación Teórica Presencial / Online] --&gt;|Falta de Evaluación Práctica| B{Entorno Real de Trabajo}
+    B --&gt;|Sin Supervisión Técnica| C[Errores Operativos y Siniestralidad]
+    B --&gt;|Con Evaluación HURVANT| D[Competencia Validada + Blindaje Jurídico]
+</code></pre>
+<hr>
+<h2>3. GOBERNANZA E IMPARCIALIDAD RADICAL</h2>
+<h3>3.1. Declaración Institucional de Imparcialidad</h3>
+<p>Para garantizar que nuestros dictámenes e informes técnicos tengan pleno valor probatorio frente a inspecciones laborales y tribunales de justicia, HURVANT mantiene una <strong>separación radical de actividades</strong>:</p>
+<blockquote>
+<p>🛑 <strong>HURVANT NO IMPARTE FORMACIÓN PREPARATORIA.</strong><br>🛑 <strong>HURVANT NO PRESTA ASESORÍA TÉCNICA O COMERCIAL EN PRL.</strong><br>🛑 <strong>HURVANT NO DISTRIBUYE, VENDE NI ALQUILA MAQUINARIA O EQUIPOS.</strong>  </p>
+</blockquote>
+<p>Esta neutralidad absoluta asegura que nuestros evaluadores no tengan conflicto de interés alguno al examinar a un trabajador o auditar una máquina.</p>
+<h3>3.2. Comité de Salvaguarda de la Imparcialidad</h3>
+<p>HURVANT está supervisada por un <strong>Comité de Imparcialidad externo e independiente</strong>, integrado por representantes de Colegios Oficiales de Ingenieros, técnicos de prevención de reconocido prestigio y asociaciones de usuarios industriales. Este órgano ostenta plena potestad para revisar los expedientes técnicos de validación y paralizar cualquier dictamen que no cumpla con el rigor exigido.</p>
+<hr>
+<h2>4. PORTAFOLIO DE SERVICIOS TÉCNICOS DE EVALUACIÓN</h2>
+<pre><code>+-----------------------------------------------------------------------------------+
+|               CATÁLOGO DE ESQUEMAS TÉCNICOS DE EVALUACIÓN HURVANT                |
++-----------------------------------------------------------------------------------+
+|  ESQUEMA E-HVT-01  |  Evaluación Operativa y Certificación de Personas (ISO 17024)|
+|  ESQUEMA E-HVT-02  |  Inspección y Adecuación de Maquinaria (RD 1215/1997)         |
+|  ESQUEMA E-HVT-03  |  Ensayos No Destructivos (NDT / END - ISO 9712)               |
+|  ESQUEMA E-HVT-04  |  Auditoría de Eficacia Preventiva de Campo (Compliance PRL)   |
+|  ESQUEMA E-HVT-05  |  Verificación Documental Avanzada y Control CAE              |
++-----------------------------------------------------------------------------------+
+</code></pre>
+<hr>
+<h3>4.1. ESQUEMA E-HVT-01: Evaluación Operativa y Certificación de Personas</h3>
+<h4>Descripción del Servicio</h4>
+<p>Procedimiento de evaluación observacional in-situ diseñado para medir las capacidades prácticas reales, la técnica de manipulación, la postura ergonómica y el comportamiento seguro de los operarios en su puesto físico de trabajo.</p>
+<h4>Equipos y Perfiles Evaluados</h4>
+<ul>
+<li>Operadores de Carretillas Elevadoras (Frontal, Retráctil, Bilateral, Trilateral).</li>
+<li>Operadores de Plataformas Elevadoras Móviles de Personal (PEMP).</li>
+<li>Operadores de Puentes Grúa y Grúas Mástil.</li>
+<li>Personal de Manipulación de Cargas Pesadas y Logística de Frío.</li>
+<li>Operadores de Líneas Automatizadas y Envasado Industrial.</li>
+</ul>
+<h4>Entregables Técnicos</h4>
+<ol>
+<li><strong>Certificado Individual de Competencia Operativa:</strong> Documento oficial con código de registro único e inalterable.</li>
+<li><strong>Pasaporte Técnico QR Digital:</strong> Acreditación móvil con fotografía del operario accesible desde cualquier teléfono inteligente.</li>
+<li><strong>Informe de Brechas de Desempeño:</strong> Ficha cuantitativa entregada a la dirección con indicación de hábitos correctivos recomendados.</li>
+</ol>
+<hr>
+<h3>4.2. ESQUEMA E-HVT-02: Inspección y Adecuación de Maquinaria (RD 1215/1997)</h3>
+<h4>Descripción del Servicio</h4>
+<p>Auditoría técnica e inspección física detallada de máquinas y equipos de trabajo para certificar su plena conformidad con las disposiciones del Real Decreto 1215/1997.</p>
+<h4>Alcance de la Inspección</h4>
+<ul>
+<li>Verificación física de resguardos, protecciones mecánicas y vallados perimetrales.</li>
+<li>Inspección de circuitos de mando, paradas de emergencia y dispositivos LOTO.</li>
+<li>Pruebas dinámicas de estabilidad y sistemas de limitación de carga.</li>
+<li>Verificación de señalización, manuales de instrucciones en castellano y marcado CE.</li>
+</ul>
+<h4>Entregables Técnicos</h4>
+<ol>
+<li><strong>Dictamen Técnico de Conformidad RD 1215/97:</strong> Firmado por Ingeniero colegiado autor de la inspección.</li>
+<li><strong>Placa Metálica / Vinílica con Código QR:</strong> Fijada físicamente a la máquina para inspección rápida en planta.</li>
+<li><strong>Matriz de Defectos Priorizada:</strong> Clasificación de deficiencias en <em>Bloqueantes, Graves y Leves</em> con propuestas técnicas de ingeniería.</li>
+</ol>
+<hr>
+<h3>4.3. ESQUEMA E-HVT-03: Ensayos No Destructivos (NDT / END)</h3>
+<h4>Descripción del Servicio</h4>
+<p>Inspección instrumental avanzada sin alteración ni daño del componente, orientada a detectar fisuras por fatiga, defectos en soldaduras y desgaste estructural en aparatos de elevación y construcciones metálicas.</p>
+<h4>Métodos de Ensayo Disponibles</h4>
+<ul>
+<li><strong>Ultrasonidos (UT):</strong> Medición de espesores y detección de defectos volumétricos internos (norma UNE-EN ISO 17640).</li>
+<li><strong>Partículas Magnéticas (MT):</strong> Detección de grietas superficiales y subsuperficiales en elementos ferromagnéticos (ganchos, eslingas, estructuras).</li>
+<li><strong>Líquidos Penetrantes (PT):</strong> Inspección de discontinuidades abiertas a la superficie en materiales no porosos.</li>
+<li><strong>Inspección Visual Avanzada (VT):</strong> Análisis boroscópico y dimensional de uniones soldadas (norma UNE-EN ISO 17637).</li>
+</ul>
+<h4>Personal Certificado</h4>
+<p>Todas las inspecciones NDT son ejecutadas por técnicos especialistas certificados bajo la norma <strong>UNE-EN ISO 9712 (Nivel II / Nivel III)</strong>.</p>
+<hr>
+<h3>4.4. ESQUEMA E-HVT-04: Auditoría de Eficacia Preventiva de Campo (Compliance PRL)</h3>
+<h4>Descripción del Servicio</h4>
+<p>Auditoría de tercera parte orientada a medir la &quot;brecha de cumplimiento&quot; entre el Plan de Prevención escrito en las oficinas y la realidad ejecutada por los trabajadores en las líneas de producción.</p>
+<h4>Resultados para la Dirección</h4>
+<ul>
+<li>Mapa interactivo de riesgo humano por centro de trabajo.</li>
+<li>Diagnóstico de comportamientos de riesgo antes de que deriven en siniestros.</li>
+<li>Informe de Diligencia Debida para el Comité de Dirección y Consejo de Administración.</li>
+</ul>
+<hr>
+<h3>4.5. ESQUEMA E-HVT-05: Verificación Documental Avanzada y CAE Inteligente</h3>
+<h4>Descripción del Servicio</h4>
+<p>Auditoría técnica de veracidad y vigencia documental para subcontratas y personal externo (Coordinación de Actividades Empresariales).</p>
+<h4>Cero Aprobaciones Automáticas</h4>
+<p>Técnicos cualificados de HURVANT revisan la veracidad de firmas, vigencias de aptitud médica y adecuaciones de maquinaria subcontratada, eliminando las validaciones administrativas ciegas.</p>
+<hr>
+<h2>5. METODOLOGÍA DE INTERVENCIÓN EN CAMPO</h2>
+<pre><code class="language-mermaid">sequenceDiagram
+    autonumber
+    participant C as Cliente / Empresa
+    participant H as Inspector HURVANT
+    participant S as Servidor Registro HURVANT
+    
+    C-&gt;&gt;H: Solicitud de Intervención / Definición de Puestos
+    H-&gt;&gt;C: Inspección In-Situ en Turno Real de Trabajo
+    Note over H,C: Observación sin interferir en los tiempos de producción
+    H-&gt;&gt;S: Carga de Datos en Tableta de Inspección Encriptada
+    S--&gt;&gt;C: Emisión de Certificados + Pasaporte QR + Informe en Dashboard
+</code></pre>
+<h3>Protocolo de 4 Fases</h3>
+<ol>
+<li><strong>Fase 1: Preparación y Alineación:</strong> Definición de los perfiles de puesto y check-lists técnicos adaptados a la planta del cliente.</li>
+<li><strong>Fase 2: Observación Directa en Campo:</strong> Intervención presencial de evaluadores cualificados durante el turno de trabajo habitual.</li>
+<li><strong>Fase 3: Procesamiento cuantitativo:</strong> Clasificación de evidencias y análisis de riesgo mediante algoritmos de evaluación.</li>
+<li><strong>Fase 4: Emisión de Dictámenes y Firma Digital:</strong> Carga inmediata de expedientes firmados criptográficamente en la plataforma cliente.</li>
+</ol>
+<hr>
+<h2>6. ECOSISTEMA TECNOLÓGICO DE TRAZABILIDAD DIGITAL</h2>
+<h3>6.1. Portal Corporativo SaaS de Empresas (Dashboard Ledger)</h3>
+<p>Un entorno web privado con estética de cuadro de mando técnico que permite a la dirección controlar el 100% de sus evidencias de seguridad:</p>
+<ul>
+<li><strong>Skill Matrix Global:</strong> Estado de aptitud operativa de cada trabajador en tiempo real (Verde: Validado; Naranja: Próximo a vencer; Rojo: Bloqueado).</li>
+<li><strong>Gestión del Parque de Maquinaria:</strong> Expediente único por máquina con sus informes RD 1215/97, actas NDT y vigencias.</li>
+<li><strong>Descarga de Dictámenes Firmados:</strong> Repositorio de PDFs con firma criptográfica inmutable.</li>
+</ul>
+<pre><code>+-----------------------------------------------------------------------------------------+
+|  HURVANT | Portal Corporativo (SaaS)            [Buscar operario, máquina...]       (👤) |
++-----------------------------------------------------------------------------------------+
+| [⚡ Inicio]      | PANEL DE CONTROL GENERAL - COMPLIANCE OPERATIVO                       |
+| [👥 Personal]    |                                                                       |
+| [🚜 Equipos]     |  +-------------------+  +-------------------+  +-------------------+  |
+| [📄 Informes]    |  | ÍNDICE DE APTITUD |  | CONTROL MAQUINARIA|  | ALERTAS CAE       |  |
+|                  |  |      94.2%        |  | 42 / 45 Equipos   |  | 3 Subcontratas    |  |
+|                  |  +-------------------+  +-------------------+  +-------------------+  |
+|                  |                                                                       |
+|                  |  ÚLTIMAS VALIDACIONES EMITIDAS CON QR                                 |
+|                  |  +-----------------------------------------------------------------+  |
+|                  |  | Operario        | Competencia Validada       | Estado  | QR Code |  |
+|                  |  +-----------------+----------------------------+---------+---------+  |
+|                  |  | Carlos Gómez    | Operador Carretilla Tipo 4 | ACTIVO  | [Ver QR]|  |
+|                  |  | Marta Ruiz      | Espacios Confinados Cat. C | ACTIVO  | [Ver QR]|  |
+|                  |  +-----------------------------------------------------------------+  |
++-----------------------------------------------------------------------------------------+
+</code></pre>
+<h3>6.2. Pasaporte Técnico del Trabajador (Acreditación QR Móvil)</h3>
+<p>Cada operario evaluado por HURVANT recibe un código QR dinámico de alta seguridad. Cuando un coordinador de seguridad o cliente escanea el código en campo desde cualquier teléfono móvil, la plataforma devuelve una página de validación pública segura:</p>
+<pre><code>┌──────────────────────────────────────────────────────────┐
+│  HURVANT | VERIFICACIÓN PÚBLICA DE COMPETENCIA           │
+│                                                          │
+│  👤 OPERARIO: Gómez Sánchez, Carlos                      │
+│  🏢 EMPRESA: Logística del Norte S.L.                    │
+│  🆔 REGISTRO: HVT-0982-2026                              │
+│                                                          │
+│  ✅ COMPETENCIAS VALIDADAS EN CAMPO:                     │
+│  • Carretilla Elevadora Frontal/Retráctil  - ACTIVA      │
+│  • Transpaleta Eléctrica Operador a Bordo - ACTIVA      │
+│                                                          │
+│  ⏱️ VINCULADO A REGISTRO CRIPTOGRÁFICO SHA-256           │
+└──────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2>7. SOLUCIONES SECTORIALES ESPECÍFICAS</h2>
+<h3>7.1. Logística, Almacenes y Gran Distribución</h3>
+<ul>
+<li><strong>Retos del sector:</strong> Alta rotación por ETT, ritmo intenso de preparación de pedidos, accidentes por atropellos de carretilla y caída de pallets.</li>
+<li><strong>Solución HURVANT:</strong> Evaluación práctica express in-situ de carretilleros, verificación de aptitud de personal temporal y marcado QR de adecuación RD 1215/97 en carretillas y retráctiles.</li>
+</ul>
+<h3>7.2. Industria Pesada, Metalurgia y Grúas</h3>
+<ul>
+<li><strong>Retos del sector:</strong> Izaje de grandes cargas, soldaduras sometidas a vibraciones y fatiga, riesgo de siniestro catastrófico.</li>
+<li><strong>Solución HURVANT:</strong> Ensayos No Destructivos NDT (ultrasonidos y partículas magnéticas en ganchos/eslingas) y certificación de operadores de puente grúa.</li>
+</ul>
+<h3>7.3. Construcción y Obra Civil</h3>
+<ul>
+<li><strong>Retos del sector:</strong> Subcontratación en cascada, rotación constante de maquinaria alquilada, exigencias de diligencia debida del promotor.</li>
+<li><strong>Solución HURVANT:</strong> Inspección previa a la puesta en marcha de excavadoras y grúas móviles, y Pasaporte Técnico QR para control de acceso en obra.</li>
+</ul>
+<h3>7.4. Energías Renovables (Eólica y Fotovoltaica)</h3>
+<ul>
+<li><strong>Retos del sector:</strong> Parques aislados, trabajos en altura extrema y personal subcontratado internacional.</li>
+<li><strong>Solución HURVANT:</strong> Auditoría de seguridad técnica in-situ de los elementos de sujeción e izado en aerogeneradores y validación de competencia técnica de montadores.</li>
+</ul>
+<hr>
+<h2>8. DESPLIEGUE DE PROGRAMAS PILOTO CONTROLADOS</h2>
+<p>Para permitir a las grandes organizaciones probar la metodología HURVANT con <strong>cero riesgo y cero fricción</strong>, ofrecemos el <strong>Programa Piloto de Validación Directa</strong>:</p>
+<pre><code>+-----------------------------------------------------------------------------------+
+|               ESTRUCTURA DEL PROGRAMA PILOTO CONTROLADO (14 DÍAS)                 |
++-----------------------------------------------------------------------------------+
+|  1. Acotación: Selección de 1 turno o área de trabajo específica (10-20 operarios) |
+|  2. Evaluación: 1 jornada de observación presencial de evaluadores HURVANT        |
+|  3. Informe: Entrega de Matriz de Riesgo y Cuadro de Mando en 14 días             |
+|  4. Garantía: Sin compromiso de permanencia ni cuotas obligatorias posteriores    |
++-----------------------------------------------------------------------------------+
+</code></pre>
+<hr>
+<h2>9. MATRIZ COMPARATIVA DE VENTAJAS CORPORATIVAS</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Variable de Selección</th>
+<th align="left">Servicio PRL / Formación Genérica</th>
+<th align="left">HURVANT Certification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Evaluación Práctica Real</strong></td>
+<td align="left">❌ Nula (solo teoría presencial/online)</td>
+<td align="left">✅ 100% Observacional en puesto real</td>
+</tr>
+<tr>
+<td align="left"><strong>Prueba en Juicio / Inspección</strong></td>
+<td align="left">⚠️ Muy débil (simple firma de asistencia)</td>
+<td align="left">✅ Máxima (Informe con huella SHA-256)</td>
+</tr>
+<tr>
+<td align="left"><strong>Marcado Físico de Maquinaria</strong></td>
+<td align="left">❌ No disponible</td>
+<td align="left">✅ Placa física con QR de validación</td>
+</tr>
+<tr>
+<td align="left"><strong>Acceso a Cuadro de Mando SaaS</strong></td>
+<td align="left">❌ PDFs dispersos por email</td>
+<td align="left">✅ Dashboard corporativo unificado</td>
+</tr>
+<tr>
+<td align="left"><strong>Control de Subcontratas</strong></td>
+<td align="left">⚠️ Comprobación ciega administrativa</td>
+<td align="left">✅ Verificación técnica real por expertos</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>10. PREGUNTAS FRECUENTES TÉCNICAS Y JURÍDICAS (FAQ)</h2>
+<h3>¿HURVANT sustituye a nuestro Servicio de Prevención de Riesgos (SPA/SPTP)?</h3>
+<p><strong>No, lo complementa y audita.</strong> El SPA redacta la evaluación de riesgos y la planificación preventiva. HURVANT actúa como entidad de tercera parte independiente que evalúa si lo que está escrito en el papel se cumple realmente en el campo mediante pruebas prácticas y ensayos de maquinaria.</p>
+<h3>¿Tienen validez legal las evaluaciones de HURVANT ante la Inspección de Trabajo?</h3>
+<p><strong>Absolutamente.</strong> Nuestros dictámenes están redactados por ingenieros y técnicos titulados bajo procedimientos conformes con normativas UNE-EN e ISO. Constituyen la mejor prueba documental de <strong>Diligencia Debida</strong> conforme al Código Penal (Art. 316-318) y a la Ley de Prevención de Riesgos Laborales.</p>
+<h3>¿Se interrumpe la producción durante la evaluación de nuestros operarios?</h3>
+<p><strong>En absoluto.</strong> La metodología de HURVANT se basa en la observación observacional estructurada en el contexto real de trabajo. El evaluador acompaña al operario durante su actividad habitual sin ralentizar sus tiempos de entrega ni detener las máquinas.</p>
+<hr>
+<h2>11. CANALES OFICIALES Y CONTACTO INSTITUCIONAL</h2>
+<p>Para solicitar una propuesta técnica a medida o concertar la implantación de un <strong>Programa Piloto de Validación</strong>:</p>
+<ul>
+<li>🏢 <strong>Entidad:</strong> HURVANT Certification &amp; Technical Validation</li>
+<li>📧 <strong>Correo Electrónico Corporativo:</strong> <code>hello@hurvant.com</code></li>
+<li>☎️ <strong>Teléfono Sede Directa:</strong> <code>+34 611 888 179</code></li>
+<li>🌐 <strong>Portal Institucional:</strong> <a href="https://www.hurvant.com">https://www.hurvant.com</a></li>
+<li>🔒 <strong>Consola de Verificación QR:</strong> <a href="https://www.hurvant.com/verificacion">https://www.hurvant.com/verificacion</a></li>
+<li>📍 <strong>Área de Intervención Primaria:</strong> Cataluña (Barcelona, Tarragona, Girona, Lleida) y Cobertura Nacional en España.</li>
+</ul>
+<hr>
+<pre><code>================================================================================
+          © 2026 HURVANT Certification. Todos los derechos reservados.
+           Documento Corporativo Oficial — Calidad e Imparcialidad.
+================================================================================
+</code></pre>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>

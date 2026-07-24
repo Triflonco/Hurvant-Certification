@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>fase_1_estrategia_global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>FASE 1: ESTRATEGIA GLOBAL DE MARCA Y LANZAMIENTO NACIONAL</h1>
+<h2>HURVANT Certification &amp; Technical Validation</h2>
+<p><strong>Fecha de emisión:</strong> Julio 2026<br><strong>Autor:</strong> Equipo de Dirección Estratégica, Creativa y Marketing Global<br><strong>Proyecto:</strong> Lanzamiento Oficial de Hurvant en España (Quincena de Septiembre 2026)<br><strong>Clasificación:</strong> Estratégico / Confidencial Corporativo  </p>
+<hr>
+<h2>1. ESTUDIO DE MARCA (BRAND AUDIT)</h2>
+<h3>1.1. Contexto de Mercado y Oportunidad</h3>
+<p>El mercado español de evaluación industrial, prevención de riesgos laborales (PRL) y certificación de personal se encuentra actualmente polarizado en dos extremos ineficientes:</p>
+<ol>
+<li><strong>La burocracia documental y de formación tradicional:</strong> Entidades de formación y servicios de prevención que emiten miles de &quot;certificados de asistencia&quot; teóricos sin verificar si el trabajador sabe operar de forma segura y eficiente en el entorno real de trabajo.</li>
+<li><strong>Las inspecciones OCD / OCA obligatorias:</strong> Organismos autorizados centrados exclusivamente en trámites ministeriales e inspecciones periódicas de plantilla estática, con nula integración de trazabilidad digital e incapacidad de evaluar el comportamiento humano dinámico.</li>
+</ol>
+<p><strong>Hurvant</strong> nace para ocupar el espacio estratégico más valioso: la <strong>evaluación técnica independiente de tercera parte</strong>, enfocada en la aptitud operativa real, la adecuación de maquinaria (RD 1215/1997), los ensayos no destructivos (NDT/END) y la mitigación de la responsabilidad penal corporativa del empresario.</p>
+<pre><code class="language-mermaid">graph LR
+    A[Formación Teórica Tradicional] --&gt;|Brecha Operativa| B(HURVANT: Validación Práctica en Campo)
+    C[OCAs / Inspecciones Industriales] --&gt;|Falta de Foco Humano| B
+    B --&gt; D[Evidencia Trazable en Registro Digital SHA-256]
+</code></pre>
+<h3>1.2. ADN de Marca</h3>
+<ul>
+<li><strong>Propósito Fundamental:</strong> Blindar jurídicamente a las organizaciones y proteger la vida de los operarios verificando en el puesto real si las personas y las máquinas están capacitadas para operar en entornos de alta exigencia.</li>
+<li><strong>Misión:</strong> Transformar la verificación de competencias y adecuación técnica en España, reemplazando el papel inerte por pruebas observacionales empíricas y trazabilidad criptográfica inalterable.</li>
+<li><strong>Visión:</strong> Convertirse en el plazo de 36 meses en la entidad técnica de validación independiente de referencia en España, logrando la acreditación formal por ENAC bajo las normas UNE-EN ISO/IEC 17024 e ISO/IEC 17020.</li>
+<li><strong>Valores Corporativos:</strong><ul>
+<li><em>Rigor Científico:</em> Evaluación basada exclusivamente en datos objetivos, normativas UNE/ISO y pruebas físicas in-situ.</li>
+<li><em>Imparcialidad Radicada:</em> Separación absoluta de actividades (no impartir formación, no hacer consultoría PRL, no alquilar maquinaria).</li>
+<li><em>Inmutabilidad Digital:</em> Registro transparente de dictámenes mediante firmas criptográficas SHA-256 y códigos QR de verificación pública.</li>
+<li><em>Humanismo Técnico:</em> Comprensión del ajuste ergonómico y psicofísico entre el trabajador y su puesto.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>2. POSICIONAMIENTO ESTRATÉGICO</h2>
+<h3>2.1. Declaración de Posicionamiento (Positioning Statement)</h3>
+<blockquote>
+<p><em>Para directores de operaciones, responsables de prevención (HSE/PRL), directores de compras y administradores de empresas exigentes en España que sufren por la alta rotación, las inspecciones laborales y la falta de control sobre los riesgos de campo:</em><br><strong>HURVANT es la entidad técnica independiente de tercera parte</strong> que valida de forma empírica y observacional la competencia real de operarios y la seguridad física de equipos industriales (RD 1215/97), a diferencia de las academias de formación tradicional o consultoras de papel, proporcionando evidencias inalterables con trazabilidad digital instantánea que garantizan la diligencia debida corporativa.</p>
+</blockquote>
+<h3>2.2. Ejes de Diferenciación</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Dimensión</th>
+<th align="left">Competencia Tradicional</th>
+<th align="left">HURVANT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Objeto de Evaluación</strong></td>
+<td align="left">Asistencia teórica / Examen escrito genérico</td>
+<td align="left">Desempeño y habilidad funcional observable en el puesto real</td>
+</tr>
+<tr>
+<td align="left"><strong>Gobernanza</strong></td>
+<td align="left">Conflicto de interés (venden formación y evalúan)</td>
+<td align="left">Separación total de actividades + Comité de Imparcialidad externo</td>
+</tr>
+<tr>
+<td align="left"><strong>Trazabilidad</strong></td>
+<td align="left">Certificados en papel / PDFs editables</td>
+<td align="left">Firma criptográfica SHA-256 + Código QR de verificación RGPD</td>
+</tr>
+<tr>
+<td align="left"><strong>Respuesta ante Inspección</strong></td>
+<td align="left">Justificante de asistencia a curso</td>
+<td align="left">Dossier técnico de Diligencia Debida con valor probatorio</td>
+</tr>
+<tr>
+<td align="left"><strong>Enfoque Tecnológico</strong></td>
+<td align="left">Burocracia lenta manual</td>
+<td align="left">Plataforma SaaS corporativa + Pasaporte Técnico Móvil</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>3. PÚBLICO OBJETIVO Y BUYER PERSONAS</h2>
+<h3>3.1. Segmentación de Mercado (B2B)</h3>
+<ul>
+<li><strong>Sector Primario / Directo:</strong> Logística, Distribución, Almacenamiento Automatizado, Gran Consumo.</li>
+<li><strong>Sector Industrial Crítico:</strong> Industria Metalúrgica, Química, Manufactura Pesada, Operaciones de Izaje y Grúas.</li>
+<li><strong>Sector Infraestructuras:</strong> Construcción, Obra Civil, Energías Renovables (Eólica y Solar).</li>
+</ul>
+<h3>3.2. Buyer Personas Detallados</h3>
+<h4>Persona 1: Francisco &quot;El Director de Prevención y Compliance&quot;</h4>
+<ul>
+<li><strong>Cargo:</strong> Director de HSE / Responsable de PRL Corporativo.</li>
+<li><strong>Edad / Perfil:</strong> 44 años, Ingeniero Técnico, 15+ años en el sector industrial o logístico.</li>
+<li><strong>Metas:</strong> Cero accidentes graves en planta, superar auditorías e inspecciones laborales sin sanciones, blindar la responsabilidad penal propia y del Consejo de Administración.</li>
+<li><strong>Puntos de Dolor (Pains):</strong><ul>
+<li>Los operarios contratados por ETT traen diplomas de &quot;carretillero&quot; de 8 horas pero en el primer día dañan estanterías o maniobran sin seguridad.</li>
+<li>Gran volumen de papeleo CAE no verificado técnicamente.</li>
+<li>Miedo constante a un accidente grave que derive en recargo de prestaciones o juzgado de lo penal.</li>
+</ul>
+</li>
+<li><strong>Mensaje Clave para Francisco:</strong> <em>&quot;HURVANT te proporciona evidencias probatorias inalterables de que evaluaste la habilidad real del operario en su puesto de trabajo antes de darle acceso a la máquina.&quot;</em></li>
+</ul>
+<h4>Persona 2: Manuel &quot;El Director de Operaciones y Planta&quot;</h4>
+<ul>
+<li><strong>Cargo:</strong> Director de Operaciones / Jefe de Planta / COO.</li>
+<li><strong>Edad / Perfil:</strong> 49 años, enfocado en margen operativo, OEE (Overall Equipment Effectiveness) y tiempos de entrega.</li>
+<li><strong>Metas:</strong> Máxima productividad, minimizar paradas de línea por fallos de maquinaria o bajas laborales, reducir rotación de personal en turnos de picos de demanda.</li>
+<li><strong>Puntos de Dolor (Pains):</strong><ul>
+<li>No puede permitir que una auditoría externa paralice la planta durante dos días.</li>
+<li>La rotación constante de personal temporal ralentiza el ritmo de salida del almacén.</li>
+<li>Incertidumbre sobre el estado mecánico real de equipos antiguos o subcontratados.</li>
+</ul>
+</li>
+<li><strong>Mensaje Clave para Manuel:</strong> <em>&quot;Evaluamos a tus operarios e inspeccionamos tus máquinas in-situ sin detener tus turnos productivos y entregamos el cuadro de mando en 14 días.&quot;</em></li>
+</ul>
+<hr>
+<h2>4. PROPUESTA DE VALOR Y PROPUESTA ÚNICA DE VENTA (PUV)</h2>
+<h3>Propuesta Única de Venta (PUV)</h3>
+<p><strong>&quot;Validación Técnica Inalterable en el Puesto Real: Evaluamos Competencias, No Asistencias.&quot;</strong></p>
+<h3>Arquitectura de Valor</h3>
+<ol>
+<li><strong>Para la Dirección Jurídica y Compliance:</strong> Blindaje de la Diligencia Debida con actas con huella digital SHA-256 e inmutabilidad probatoria.</li>
+<li><strong>Para la Dirección de Recursos Humanos y PRL:</strong> Matriz de competencias en tiempo real (Skill Matrix) accesible desde la nube para verificar si cada trabajador está apto, próximo a revisión o bloqueado.</li>
+<li><strong>Para los Equipos de Campo:</strong> Pasaporte Técnico de Competencias móvil mediante QR para verificación instantánea en centros de trabajo y obras.</li>
+</ol>
+<hr>
+<h2>5. ESTRATEGIA DE COMPETENCIA Y MATRIZ COMPETITIVA</h2>
+<pre><code>                   ALTO RIGOR TÉCNICO &amp; TRAZABILIDAD
+                                  │
+                                  │       🔵 HURVANT
+                                  │   (Validación 3ª Parte + SaaS + NDT)
+                                  │
+   BUROCRÁTICO / LENTO ───────────┼─────────── DIGITAL / ÁGIL
+                                  │
+      🔴 OCAs / Entidades         │       🟡 Plataformas Software CAE
+         Tradicionales            │          (Dokify, CTAIMA, e-coordina)
+                                  │
+                                  │
+      🔴 Academias Formación      │
+         y Servicios PRL          │
+                                  │
+                   BAJO RIGOR TÉCNICO &amp; EVALUACIÓN TEÓRICA
+</code></pre>
+<h3>Estrategia de Flanqueo Competitivo</h3>
+<ul>
+<li><strong>Frente a las Academias PRL:</strong> No competimos en &quot;vender cursos&quot;. Apoyamos a la empresa en verificar si el curso sirvió de algo evaluando la práctica en campo.</li>
+<li><strong>Frente a Software CAE:</strong> No somos un simple gestor de documentos; somos los ingenieros e inspectores que auditan in-situ la veracidad física de lo que se sube a la plataforma.</li>
+</ul>
+<hr>
+<h2>6. ESTRATEGIA DE LANZAMIENTO, CAPTACIÓN Y CRECIMIENTO</h2>
+<h3>6.1. Estrategia de Prelanzamiento y Lanzamiento (Agosto - Septiembre 2026)</h3>
+<ul>
+<li><strong>Campañas Teaser B2B en LinkedIn:</strong> Publicación de artículos de autoridad firmados sobre la &quot;Responsabilidad Penal del Director de Compras ante Accidentes con Maquinaria Alquilada&quot;.</li>
+<li><strong>Despliegue del Programa Piloto Gratuito (10 Grandes Cuentas):</strong> Implementación del piloto en 10 empresas tractoras del sector logístico en Cataluña para generar los primeros casos de éxito y datos empíricos de reducción de incidencias.</li>
+<li><strong>Nota de Prensa Nacional:</strong> Difusión en medios económicos y sectoriales (<em>Expansión, El Economista, Cadena de Suministro, Interempresas</em>) anunciando la irrupción de Hurvant como nuevo referente de validación técnica independiente.</li>
+</ul>
+<h3>6.2. Estrategia de Captación Inbound &amp; Outbound</h3>
+<pre><code class="language-mermaid">graph TD
+    A[Estrategia de Captación B2B] --&gt; B(Outbound Account-Based Marketing)
+    A --&gt; C(Inbound Authority Marketing)
+    
+    B --&gt; B1[Campañas LinkedIn InMail a Directores HSE y COO]
+    B --&gt; B2[Secuencias Email C-Level Personalizadas]
+    B --&gt; B3[Llamadas de Cualificación Técnica SLA 24h]
+    
+    C --&gt; C1[Google Search Ads para Keywords de Alta Intención]
+    C C2[Lead Magnets: Guía de Inspección RD 1215/97]
+    C --&gt; C3[Blog Técnico SEO Jurisprudencia PRL]
+</code></pre>
+<h3>6.3. Estrategia de Crecimiento Agresivo (Growth Engine)</h3>
+<ol>
+<li><strong>Efecto Red por Pasaporte Técnico QR:</strong> Cada vez que un operario de Hurvant muestra su QR en la planta de un cliente o contratista, el responsable que lo escanea descubre la consola de verificación de Hurvant, actuando como un canal viral B2B.</li>
+<li><strong>Integración API con Plataformas CAE:</strong> Conexión automatizada con proveedores de software CAE para que un operario certificado por Hurvant quede automáticamente validado en el sistema del cliente.</li>
+<li><strong>Venta Cruzada (Cross-selling):</strong> Clientes que contratan la inspección de maquinaria RD 1215 son convertidos a la evaluación de competencias de sus carretilleros y ensayos NDT de sus grúas.</li>
+</ol>
+<hr>
+<h2>7. OBJETIVOS SMART Y KPIS MEDIBLES</h2>
+<h3>7.1. Objetivos SMART (Primeros 6 Meses: Septiembre 2026 - Febrero 2027)</h3>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Objetivo 1 (Notoriedad y Marca):</strong> Alcanzar más de 250.000 impresiones cualificadas B2B en LinkedIn y Google Display en el sector industrial y logístico de España antes del 31 de diciembre de 2026.</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Objetivo 2 (Lead Generation):</strong> Generar al menos 45 solicitudes calificadas (SQL) de Programas Piloto y Auditorías de Maquinaria durante los primeros 90 días tras el lanzamiento.</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Objetivo 3 (Conversión y Clientes):</strong> Cerrar 15 contratos corporativos recurrentes de validación operativa en el primer trimestre post-lanzamiento.</p>
+</blockquote>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Objetivo 4 (Autoridad SEO):</strong> Posicionar en TOP 3 de Google España al menos 8 palabras clave estratégicas relacionadas con <em>adecuación RD 1215/97</em>, <em>evaluación de competencias operativas</em> y <em>ensayos no destructivos grúas</em>.</p>
+</blockquote>
+<h3>7.2. Cuadro de Mandos de KPIs</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Área</th>
+<th align="left">KPI Principal</th>
+<th align="left">Meta Mensual (M1-M3)</th>
+<th align="left">Frecuencia de Medición</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Branding &amp; PR</strong></td>
+<td align="left">Menciones en medios / Alcance LinkedIn</td>
+<td align="left">50.000 impresiones</td>
+<td align="left">Semanal</td>
+</tr>
+<tr>
+<td align="left"><strong>SEO Orgánico</strong></td>
+<td align="left">Tráfico orgánico B2B / CTR en Search</td>
+<td align="left">2.500 visitas / CTR &gt; 4.5%</td>
+<td align="left">Semanal</td>
+</tr>
+<tr>
+<td align="left"><strong>Publicidad Ads</strong></td>
+<td align="left">CPL (Coste por Lead Cualificado B2B)</td>
+<td align="left">&lt; 45 € en Google / &lt; 75 € LinkedIn</td>
+<td align="left">Diario</td>
+</tr>
+<tr>
+<td align="left"><strong>Ventas / Growth</strong></td>
+<td align="left">Solicitudes de Piloto / Tasa de Conversión</td>
+<td align="left">15 leads SQL / &gt; 25% conversión</td>
+<td align="left">Mensual</td>
+</tr>
+<tr>
+<td align="left"><strong>Operación</strong></td>
+<td align="left">Emisión de Certificados con QR</td>
+<td align="left">&gt; 300 operarios/mes</td>
+<td align="left">Mensual</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>8. CALENDARIO GENERAL (TIMELINE MASTER)</h2>
+<pre><code class="language-gantt">    title Plan Maestro de Lanzamiento Hurvant (2026)
+    dateFormat  YYYY-MM-DD
+    section FASE 1: Estrategia
+    Estrategia Global &amp; Aprobación       :done,    des1, 2026-07-24, 2026-07-28
+    section FASE 2: Identidad
+    Copywriting, Claims &amp; Manual Voces   :active,  des2, 2026-07-29, 2026-08-05
+    section FASE 3: Materiales
+    Catálogo, Tríptico, Dossier PDF      :         des3, 2026-08-06, 2026-08-18
+    section FASE 4: Digital &amp; SEO
+    Setup SEO, Blog &amp; Redes Sociales     :         des4, 2026-08-19, 2026-08-31
+    section FASE 5: Publicidad
+    Creación de Campañas Ads             :         des5, 2026-09-01, 2026-09-10
+    section FASE 6: Social Media
+    Producción Bloques de Contenido      :         des6, 2026-09-11, 2026-09-17
+    section FASE 7: Lanzamiento
+    LANZAMIENTO OFICIAL &amp; NOTA DE PRENSA :crit,    des7, 2026-09-18, 2026-09-30
+</code></pre>
+<hr>
+<h2>CONCLUIDA LA FASE 1: ESTRATEGIA GLOBAL</h2>
+<p>Este documento establece el marco estratégico sobre el cual se construirá toda la producción de contenidos, materiales impresos, campañas de publicidad digital y calendarios editoriales de las siguientes fases.</p>
+<hr>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>
