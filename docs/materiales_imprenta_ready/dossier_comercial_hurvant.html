@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>HURVANT - Dossier Comercial Executive (Ortografía Revisada - Texto Justificado)</title>
+  <title>HURVANT - Dossier Comercial Executive (Portada Llena - Logo Prominente)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
       height: 297mm;
       margin: 20px auto;
       background: #ffffff;
-      padding: 18mm 16mm;
+      padding: 16mm 14mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -31,37 +31,66 @@
     }
     @media print { body { background: none; } .dossier-page { margin: 0; box-shadow: none; width: 210mm; height: 297mm; } }
 
-    /* ESTILO LUMINOSO DE ALTA CALIDAD */
-    .brand-logo-dossier { height: 52px; width: auto; object-fit: contain; }
-    
-    .page-header-row {
+    /* CABECERA PROMINENTE CON LOGO GRANDE */
+    .header-logo-container {
+      background: #f8fafc;
+      border: 2.5px solid #1b2e4b;
+      border-radius: 14px;
+      padding: 14px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid #1b2e4b;
-      padding-bottom: 14px;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
-    .page-tag { font-size: 10px; font-weight: 800; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px; }
+    .brand-logo-dossier { height: 68px; width: auto; object-fit: contain; }
+    .page-tag { font-size: 11px; font-weight: 900; color: #1b2e4b; text-transform: uppercase; letter-spacing: 1px; }
 
     .cover-title-light {
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 900;
       line-height: 1.15;
-      margin-top: 40px;
+      margin-top: 24px;
       color: #1b2e4b;
       letter-spacing: -1px;
       text-align: left;
     }
     .cover-title-light span { color: #4f46e5; }
-    .cover-subtitle-light { font-size: 14.5px; color: #475569; margin-top: 14px; font-weight: 500; line-height: 1.55; text-align: justify; }
+    .cover-subtitle-light { font-size: 13.5px; color: #475569; margin-top: 10px; font-weight: 500; line-height: 1.5; text-align: justify; }
+
+    /* BLOQUE CENTRAL DE TARJETAS QUE LLENAN LA MITAD DE PORTADA */
+    .cover-kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .kpi-card-item {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4.5px solid #1b2e4b;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .kpi-card-item h4 {
+      font-size: 12px;
+      font-weight: 900;
+      color: #1b2e4b;
+    }
+    .kpi-card-item p {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 3px;
+      line-height: 1.35;
+      text-align: justify;
+    }
 
     .cover-img-frame {
       width: 100%;
-      height: 270px;
+      height: 230px;
       border-radius: 14px;
       overflow: hidden;
-      margin-top: 30px;
-      border: 2px solid #e2e8f0;
+      margin-top: 10px;
+      border: 2px solid #cbd5e1;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     .cover-img-frame img { width: 100%; height: 100%; object-fit: cover; }
@@ -118,12 +147,12 @@
 </head>
 <body>
 
-  <!-- PÁGINA 1: PORTADA EJECUTIVA LUMINOSA -->
+  <!-- PÁGINA 1: PORTADA EJECUTIVA LLENA Y POTENTE -->
   <div class="dossier-page">
     <div>
-      <div class="page-header-row">
+      <div class="header-logo-container">
         <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-dossier" />
-        <span class="page-tag">Dossier de Presentación Oficial</span>
+        <span class="page-tag">Dossier Ejecutivo Oficial</span>
       </div>
 
       <h1 class="cover-title-light">
@@ -132,6 +161,26 @@
       <p class="cover-subtitle-light">
         Organismo técnico de tercera parte especializado en la evaluación observacional de personas, la adecuación de maquinaria según el Real Decreto 1215/1997 y la trazabilidad criptográfica inalterable.
       </p>
+
+      <!-- TARJETAS CENTRALES QUE LLENAN EL ESPACIO MEDIO DE LA PORTADA -->
+      <div class="cover-kpi-grid">
+        <div class="kpi-card-item">
+          <h4>👥 Evaluación Personas (ISO 17024)</h4>
+          <p>Pruebas observacionales presenciales en el puesto de trabajo con Pasaporte QR Móvil.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#0284c7;">
+          <h4>🚜 Maquinaria (RD 1215/1997)</h4>
+          <p>Dictamen de ingeniería firmado por colegiado y placa metálica con código QR.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#d97706;">
+          <h4>🔬 Ensayos NDT (ISO 9712)</h4>
+          <p>Ultrasonidos y partículas magnéticas para grúas e izaje por técnicos cualificados.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#16a34a;">
+          <h4>🔐 Firma Criptográfica SHA-256</h4>
+          <p>Registro inalterable con validez probatoria ante Inspección de Trabajo y Juzgados.</p>
+        </div>
+      </div>
 
       <div class="cover-img-frame">
         <img src="../../public/training_alignment.jpg" alt="HURVANT Governance" />
@@ -147,9 +196,9 @@
   <!-- PÁGINA 2: CONTENIDO TÉCNICO -->
   <div class="dossier-page">
     <div>
-      <div class="page-header-row">
+      <div class="header-logo-container" style="background:#ffffff;border-color:#cbd5e1;">
         <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-dossier" />
-        <span class="page-tag">Propuesta de Valor & Servicios</span>
+        <span class="page-tag" style="color:#4f46e5;">Propuesta de Valor</span>
       </div>
 
       <h2 class="section-h2">Evaluación Objetiva en Campo vs Formación en Papel</h2>

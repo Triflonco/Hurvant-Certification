@@ -2,20 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>HURVANT - Flyer Promocional A5 (Ortografía Revisada - Texto Justificado)</title>
+  <title>HURVANT - Flyer Promocional A5 (Portada Impactante - Logo Prominente)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    @page {
-      size: A5 portrait;
-      margin: 0;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    @page { size: A5 portrait; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background-color: #cbd5e1;
@@ -23,7 +16,7 @@
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-    p, li, div.sub-hero-light, .service-card-light p, .pilot-banner-light p, .contact-details {
+    p, .sub-hero-light, .service-card-light p, .pilot-banner-light p, .contact-details {
       text-align: justify;
       text-justify: inter-word;
     }
@@ -39,42 +32,46 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 18mm 14mm;
+      padding: 14mm 12mm;
     }
     @media print {
       body { background: none; }
       .page-container { margin: 0; box-shadow: none; width: 148mm; height: 210mm; }
     }
 
-    /* ESTILO LUMINOSO DE ALTA CALIDAD */
-    .header-logo-row {
+    /* CABECERA CON LOGO POTENTE */
+    .header-logo-container {
+      background: #f8fafc;
+      border: 2px solid #1b2e4b;
+      border-radius: 12px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 3px solid #1b2e4b;
-      padding-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     .brand-logo-img {
-      height: 46px;
+      height: 58px; /* LOGO MUCHO MÁS GRANDE Y PROMINENTE */
       width: auto;
       object-fit: contain;
     }
     .badge-tag-light {
-      background: #e0f2fe;
-      border: 1.5px solid #0284c7;
-      color: #0369a1;
-      padding: 4px 10px;
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 5px 12px;
       border-radius: 9999px;
       font-size: 9px;
       font-weight: 800;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
     }
+
+    /* TITULAR Y SUBTÍTULO */
     .hero-title-light {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 900;
       line-height: 1.2;
-      margin-top: 14px;
+      margin-top: 12px;
       color: #1b2e4b;
       letter-spacing: -0.4px;
       text-align: left;
@@ -83,23 +80,48 @@
       color: #4f46e5;
     }
     .sub-hero-light {
-      font-size: 11px;
+      font-size: 10.5px;
       color: #475569;
-      margin-top: 6px;
-      line-height: 1.45;
+      margin-top: 4px;
+      line-height: 1.4;
       font-weight: 500;
-      text-align: justify;
     }
 
+    /* BLOQUE CENTRAL DE RELLENO VISUAL (MANDOS DE VALOR) */
+    .center-feature-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .feature-pill {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #4f46e5;
+      padding: 6px 8px;
+      border-radius: 6px;
+    }
+    .feature-pill strong {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #1b2e4b;
+      display: block;
+    }
+    .feature-pill span {
+      font-size: 8.5px;
+      color: #64748b;
+    }
+
+    /* IMAGEN PRINCIPAL */
     .image-frame {
       width: 100%;
-      height: 150px;
+      height: 145px;
       border-radius: 10px;
       overflow: hidden;
-      border: 2px solid #e2e8f0;
+      border: 2px solid #cbd5e1;
       position: relative;
-      margin: 12px 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     .image-frame img {
       width: 100%;
@@ -110,33 +132,32 @@
       position: absolute;
       bottom: 8px;
       left: 8px;
-      background: rgba(27, 46, 75, 0.92);
+      background: rgba(27, 46, 75, 0.94);
       color: #ffffff;
       padding: 4px 10px;
       border-radius: 6px;
-      font-size: 9.5px;
-      font-weight: 700;
+      font-size: 9px;
+      font-weight: 800;
     }
 
     .bullets-list-light {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 5px;
     }
     .bullets-list-light li {
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 700;
       color: #1e293b;
       display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      text-align: justify;
-      line-height: 1.35;
+      align-items: center;
+      gap: 7px;
+      text-align: left;
     }
     .bullet-check-icon {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       background: #dcfce7;
       border: 1.5px solid #16a34a;
       color: #15803d;
@@ -144,75 +165,70 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 900;
       flex-shrink: 0;
-      margin-top: 1px;
     }
 
     .footer-bar-light {
-      background: #f8fafc;
-      border: 1.5px solid #cbd5e1;
-      border-left: 4px solid #4f46e5;
-      padding: 10px 12px;
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 8px 12px;
       border-radius: 8px;
       text-align: center;
+      margin-top: 6px;
     }
     .slogan-text-light {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 900;
-      color: #1b2e4b;
+      color: #ffffff;
       letter-spacing: 0.3px;
     }
 
-    /* CARA 2 (REVERSO TÉCNICO LUMINOSO) */
+    /* CARA 2 (REVERSO TÉCNICO) */
     .services-grid-container {
       display: flex;
       flex-direction: column;
-      gap: 9px;
-      margin: 12px 0;
+      gap: 8px;
+      margin: 10px 0;
     }
     .service-card-light {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-left: 4px solid #1b2e4b;
-      padding: 10px 12px;
+      padding: 9px 11px;
       border-radius: 8px;
     }
     .service-card-light h4 {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 800;
       color: #1b2e4b;
-      text-align: left;
     }
     .service-card-light p {
-      font-size: 9.5px;
+      font-size: 9px;
       color: #475569;
-      margin-top: 3px;
-      line-height: 1.4;
-      text-align: justify;
+      margin-top: 2px;
+      line-height: 1.35;
     }
     .pilot-banner-light {
       background: #e0f2fe;
       border: 1.5px solid #0284c7;
       border-left: 4px solid #0284c7;
       color: #0c4a6e;
-      padding: 12px;
+      padding: 10px 12px;
       border-radius: 8px;
     }
     .pilot-banner-light h3 {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 900;
       color: #0369a1;
       text-transform: uppercase;
-      text-align: left;
     }
     .pilot-banner-light p {
-      font-size: 9.5px;
+      font-size: 9px;
       color: #0c4a6e;
-      margin-top: 4px;
-      line-height: 1.4;
-      text-align: justify;
+      margin-top: 3px;
+      line-height: 1.35;
     }
     .contact-footer-row {
       display: flex;
@@ -220,23 +236,23 @@
       justify-content: space-between;
       background: #1b2e4b;
       color: #ffffff;
-      padding: 10px 14px;
+      padding: 9px 12px;
       border-radius: 8px;
     }
     .contact-details {
-      font-size: 9.5px;
+      font-size: 9px;
       color: #cbd5e1;
-      line-height: 1.4;
+      line-height: 1.35;
       text-align: left;
     }
     .contact-details strong {
       color: #ffffff;
-      font-size: 10.5px;
+      font-size: 10px;
       display: block;
     }
     .qr-white-box {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       background: #ffffff;
       padding: 3px;
       border-radius: 6px;
@@ -249,10 +265,11 @@
 </head>
 <body>
 
-  <!-- CARA 1 (FRONTAL LUMINOSA) -->
+  <!-- CARA 1 (FRONTAL IMPRESIONANTE) -->
   <div class="page-container">
     <div>
-      <div class="header-logo-row">
+      <!-- CABECERA ENMARCADAS CON LOGO DESTACADO -->
+      <div class="header-logo-container">
         <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-img" />
         <span class="badge-tag-light">Trazabilidad SHA-256</span>
       </div>
@@ -264,6 +281,27 @@
         De la teoría en papel a la evidencia real observada en el puesto físico de trabajo de su centro operativo.
       </p>
 
+      <!-- TARJETAS DE VALOR QUE RELLENAN LA MITAD DE PORTADA -->
+      <div class="center-feature-bar">
+        <div class="feature-pill">
+          <strong>100% Imparcialidad</strong>
+          <span>Sin venta de formación</span>
+        </div>
+        <div class="feature-pill" style="border-left-color:#0284c7;">
+          <strong>Evaluación In-Situ</strong>
+          <span>Cero paro de planta</span>
+        </div>
+        <div class="feature-pill" style="border-left-color:#d97706;">
+          <strong>RD 1215/97 Maquinaria</strong>
+          <span>Placa metálica QR</span>
+        </div>
+        <div class="feature-pill" style="border-left-color:#16a34a;">
+          <strong>Blindaje Legal</strong>
+          <span>Evidencia probatoria</span>
+        </div>
+      </div>
+
+      <!-- IMAGEN DE CAMPO ENMARCADA -->
       <div class="image-frame">
         <img src="../../public/eval_interview.jpg" alt="Evaluación Operativa Hurvant" />
         <div class="image-badge-overlay">
@@ -274,7 +312,7 @@
       <ul class="bullets-list-light">
         <li>
           <span class="bullet-check-icon">✓</span>
-          <span>Evaluación observacional de competencias en campo (norma ISO 17024).</span>
+          <span>Certificación de Personas observacional en campo (norma ISO 17024).</span>
         </li>
         <li>
           <span class="bullet-check-icon">✓</span>
@@ -282,11 +320,11 @@
         </li>
         <li>
           <span class="bullet-check-icon">✓</span>
-          <span>Ensayos No Destructivos NDT en grúas y equipos de izaje (ISO 9712).</span>
+          <span>Ensayos No Destructivos NDT en grúas e izaje (norma ISO 9712).</span>
         </li>
         <li>
           <span class="bullet-check-icon">✓</span>
-          <span>Pasaporte Técnico QR y firma criptográfica inalterable con validez probatoria.</span>
+          <span>Pasaporte Técnico QR y firma criptográfica inalterable para inspecciones.</span>
         </li>
       </ul>
     </div>
@@ -296,12 +334,12 @@
     </div>
   </div>
 
-  <!-- CARA 2 (REVERSO LUMINOSO) -->
+  <!-- CARA 2 (REVERSO TÉCNICO) -->
   <div class="page-container">
     <div>
-      <div class="header-logo-row">
+      <div class="header-logo-container" style="background:#ffffff;border-color:#e2e8f0;">
         <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-img" />
-        <span class="badge-tag-light" style="background:#e0e7ff;border-color:#6366f1;color:#4338ca;">Servicios Técnicos</span>
+        <span class="badge-tag-light" style="background:#4f46e5;">Servicios Técnicos</span>
       </div>
 
       <div class="services-grid-container">

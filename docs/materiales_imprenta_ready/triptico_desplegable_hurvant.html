@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>HURVANT - Tríptico Desplegable 6 Palas (Ortografía Revisada - Texto Justificado)</title>
+  <title>HURVANT - Tríptico Desplegable 6 Palas (Logo Prominente - Portada Llena)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
     .panel {
       width: 99mm;
       height: 210mm;
-      padding: 16mm 14mm;
+      padding: 14mm 12mm;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -42,12 +42,49 @@
     }
     .panel:last-child { border-right: none; }
 
-    /* ESTILO LUMINOSO DE ALTA IMPRESIÓN */
-    .brand-logo-panel { height: 44px; width: auto; object-fit: contain; }
-    .badge-tag-panel { font-size: 8.5px; font-weight: 800; padding: 4px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; background: #e0f2fe; color: #0369a1; border: 1px solid #0284c7; display: inline-block; }
-    .panel-title { font-size: 18px; font-weight: 900; color: #1b2e4b; line-height: 1.25; margin-top: 10px; text-align: left; }
+    /* LOGO DESTACADO Y PROMINENTE */
+    .brand-logo-panel { height: 58px; width: auto; object-fit: contain; }
+    
+    .header-logo-box {
+      background: #f8fafc;
+      border: 1.5px solid #1b2e4b;
+      border-radius: 10px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .badge-tag-panel { font-size: 8.5px; font-weight: 800; padding: 4px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.5px; background: #1b2e4b; color: #ffffff; display: inline-block; }
+    .panel-title { font-size: 17.5px; font-weight: 900; color: #1b2e4b; line-height: 1.25; margin-top: 8px; text-align: left; }
     .panel-title span { color: #4f46e5; }
-    .panel-p { font-size: 10px; color: #475569; line-height: 1.45; margin-top: 6px; text-align: justify; }
+    .panel-p { font-size: 9.5px; color: #475569; line-height: 1.45; margin-top: 4px; text-align: justify; }
+
+    /* PILARES QUE LLENAN EL CENTRO DE LA PORTADA */
+    .cover-pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    .cover-pillar-item {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #4f46e5;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .cover-pillar-item strong {
+      font-size: 9px;
+      font-weight: 800;
+      color: #1b2e4b;
+      display: block;
+    }
+    .cover-pillar-item span {
+      font-size: 8.5px;
+      color: #64748b;
+    }
 
     .card-box-panel {
       background: #f8fafc;
@@ -55,28 +92,28 @@
       border-left: 4px solid #1b2e4b;
       padding: 10px 12px;
       border-radius: 8px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
-    .card-box-panel h4 { font-size: 11px; font-weight: 800; color: #1b2e4b; text-align: left; }
-    .card-box-panel p { font-size: 9px; color: #475569; margin-top: 3px; line-height: 1.4; text-align: justify; }
+    .card-box-panel h4 { font-size: 10.5px; font-weight: 800; color: #1b2e4b; text-align: left; }
+    .card-box-panel p { font-size: 9px; color: #475569; margin-top: 2px; line-height: 1.35; text-align: justify; }
 
     .qr-container-panel {
-      width: 65px;
-      height: 65px;
+      width: 60px;
+      height: 60px;
       background: #ffffff;
       border: 1px solid #cbd5e1;
-      padding: 4px;
+      padding: 3px;
       border-radius: 8px;
-      margin: 10px 0;
+      margin: 8px 0;
     }
 
     .img-box-panel {
       width: 100%;
-      height: 115px;
+      height: 105px;
       border-radius: 8px;
       overflow: hidden;
-      border: 1.5px solid #e2e8f0;
-      margin-top: 12px;
+      border: 1.5px solid #cbd5e1;
+      margin-top: 8px;
     }
     .img-box-panel img { width: 100%; height: 100%; object-fit: cover; }
   </style>
@@ -88,15 +125,15 @@
     <!-- PALA 5: SOLAPA INTERIOR -->
     <div class="panel" style="background:#f8fafc;">
       <div>
-        <span class="badge-tag-panel" style="background:#e0e7ff;color:#4338ca;border-color:#6366f1;">¿POR QUÉ HURVANT?</span>
+        <span class="badge-tag-panel" style="background:#e0e7ff;color:#4338ca;">¿POR QUÉ HURVANT?</span>
         <h3 class="panel-title">El Vacío en la Formación</h3>
         <p class="panel-p">El 90% de los accidentes graves ocurren con trabajadores que disponían del diploma teórico legalmente exigido.</p>
         
-        <div class="card-box-panel" style="border-left-color:#ef4444;margin-top:14px;">
+        <div class="card-box-panel" style="border-left-color:#ef4444;margin-top:10px;">
           <h4 style="color:#b91c1c;">❌ Lo habitual</h4>
           <p>Cursos teóricos en aula que no garantizan hábitos seguros bajo el estrés y la fatiga del turno real.</p>
         </div>
-        <div class="card-box-panel" style="border-left-color:#16a34a;margin-top:10px;">
+        <div class="card-box-panel" style="border-left-color:#16a34a;margin-top:8px;">
           <h4 style="color:#15803d;">✅ Solución HURVANT</h4>
           <p>Evaluación observacional in-situ en el puesto físico de trabajo con registro y trazabilidad SHA-256.</p>
         </div>
@@ -110,10 +147,12 @@
     <!-- PALA 6: CONTRAPORTADA (CENTRAL) -->
     <div class="panel" style="background:#ffffff;">
       <div>
-        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
-        <p class="panel-p" style="font-weight:600;color:#1b2e4b;margin-top:8px;text-align:left;">Organismo Técnico de Certificación y Validación en Campo</p>
+        <div class="header-logo-box">
+          <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
+        </div>
+        <p class="panel-p" style="font-weight:600;color:#1b2e4b;margin-top:6px;text-align:left;">Organismo Técnico de Certificación y Validación en Campo</p>
         
-        <div class="card-box-panel" style="background:#f1f5f9;border-left-color:#0284c7;margin-top:16px;">
+        <div class="card-box-panel" style="background:#f1f5f9;border-left-color:#0284c7;margin-top:12px;">
           <div style="font-size:10px;font-weight:800;color:#0369a1;margin-bottom:4px;text-align:left;">VERIFICACIÓN PÚBLICA RGPD</div>
           <div class="qr-container-panel">
             <svg viewBox="0 0 100 100" style="width:100%;height:100%;">
@@ -131,25 +170,43 @@
       </div>
     </div>
 
-    <!-- PALA 1: PORTADA PRINCIPAL (EXTERIOR DERECHA) -->
+    <!-- PALA 1: PORTADA PRINCIPAL (EXTERIOR DERECHA - LLENA Y IMPACTANTE) -->
     <div class="panel" style="background:#ffffff;">
       <div>
-        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
-        <span class="badge-tag-panel" style="margin-top:12px;">ORGANISMO TÉCNICO</span>
+        <div class="header-logo-box">
+          <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
+          <span class="badge-tag-panel">OFICIAL</span>
+        </div>
         
-        <h1 class="panel-title" style="font-size:22px;margin-top:10px;">
+        <h1 class="panel-title" style="font-size:20px;margin-top:8px;">
           Evaluamos Competencias, <span>No Asistencias.</span>
         </h1>
-        <p class="panel-p" style="font-size:10.5px;margin-top:6px;text-align:justify;">
-          Validación práctica observacional en el puesto real | Inspección RD 1215/1997 | Ensayos No Destructivos NDT
+        <p class="panel-p" style="font-size:9.5px;margin-top:4px;text-align:justify;">
+          Validación observacional in-situ | Adecuación RD 1215/1997 | Ensayos NDT
         </p>
+
+        <!-- TARJETAS QUE LLENAN EL CENTRO QUE ESTABA VACÍO -->
+        <div class="cover-pillars-grid">
+          <div class="cover-pillar-item">
+            <strong>✓ Certificación de Personas (ISO 17024)</strong>
+            <span>Pasaporte Técnico QR Móvil individual</span>
+          </div>
+          <div class="cover-pillar-item" style="border-left-color:#0284c7;">
+            <strong>✓ Inspección de Maquinaria (RD 1215/97)</strong>
+            <span>Placa metálica con QR de validación en máquina</span>
+          </div>
+          <div class="cover-pillar-item" style="border-left-color:#d97706;">
+            <strong>✓ Ensayos No Destructivos (NDT)</strong>
+            <span>Ultrasonidos y partículas por técnicos ISO 9712</span>
+          </div>
+        </div>
 
         <div class="img-box-panel">
           <img src="../../public/heavy_machinery_loader.png" alt="Inspección Hurvant" />
         </div>
       </div>
 
-      <div style="background:#e0f2fe;border:1.5px solid #0284c7;padding:8px;border-radius:6px;text-align:center;font-size:9px;font-weight:800;color:#0369a1;">
+      <div style="background:#1b2e4b;color:#ffffff;padding:8px;border-radius:6px;text-align:center;font-size:9px;font-weight:800;">
         Trazabilidad Criptográfica SHA-256
       </div>
     </div>
@@ -160,8 +217,10 @@
     <!-- PALA 2: SERVICIOS TÉCNICOS -->
     <div class="panel">
       <div>
-        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
-        <h3 class="panel-title" style="font-size:16px;margin-top:10px;">Servicios de Evaluación</h3>
+        <div class="header-logo-box">
+          <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-panel" />
+        </div>
+        <h3 class="panel-title" style="font-size:15px;margin-top:8px;">Servicios de Evaluación</h3>
         
         <div class="card-box-panel" style="border-left-color:#4f46e5;">
           <h4>👥 Evaluación Personas (ISO 17024)</h4>
@@ -183,7 +242,7 @@
     <div class="panel" style="background:#f8fafc;">
       <div>
         <span class="badge-tag-panel">TECNOLOGÍA EN LA NUBE</span>
-        <h3 class="panel-title" style="font-size:16px;">Portal SaaS & Pasaporte QR</h3>
+        <h3 class="panel-title" style="font-size:15px;">Portal SaaS & Pasaporte QR</h3>
         <p class="panel-p">Control total de su planta desde la nube con encriptación criptográfica de evidencias.</p>
 
         <div class="card-box-panel" style="background:#ffffff;border-left-color:#0284c7;">
@@ -201,20 +260,20 @@
     <!-- PALA 4: PILOTO Y CONTACTO -->
     <div class="panel" style="background:#ffffff;">
       <div>
-        <span class="badge-tag-panel" style="background:#dcfce7;color:#15803d;border-color:#16a34a;">CERO FRICCIÓN</span>
-        <h3 class="panel-title" style="font-size:17px;color:#1b2e4b;">Programa Piloto (14 Días)</h3>
+        <span class="badge-tag-panel" style="background:#dcfce7;color:#15803d;">CERO FRICCIÓN</span>
+        <h3 class="panel-title" style="font-size:16px;color:#1b2e4b;">Programa Piloto (14 Días)</h3>
         <p class="panel-p">Pruebe la metodología HURVANT en 1 turno o área acotada de su empresa sin detener la producción.</p>
 
-        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:12px;border-radius:8px;margin-top:14px;font-size:9.5px;line-height:1.55;color:#334155;text-align:justify;">
+        <div style="background:#f1f5f9;border:1px solid #cbd5e1;padding:10px;border-radius:8px;margin-top:10px;font-size:9px;line-height:1.5;color:#334155;text-align:justify;">
           ✔ De 10 a 20 operarios en área delimitada.<br>
           ✔ Entrega de Informe Ejecutivo de Riesgo en 14 días.<br>
           ✔ Sin cuotas obligatorias ni permanencia posterior.
         </div>
       </div>
 
-      <div style="background:#1b2e4b;color:#ffffff;padding:12px;border-radius:8px;text-align:center;font-weight:900;font-size:11px;">
+      <div style="background:#1b2e4b;color:#ffffff;padding:10px;border-radius:8px;text-align:center;font-weight:900;font-size:10.5px;">
         SOLICITAR PILOTO AHORA<br>
-        <span style="font-size:9px;font-weight:600;color:#38bdf8;">hola@hurvant.com | +34 611 888 179</span>
+        <span style="font-size:8.5px;font-weight:600;color:#38bdf8;">hola@hurvant.com | +34 611 888 179</span>
       </div>
     </div>
   </div>
