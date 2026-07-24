@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>arquitectura_y_estrategia_hurvant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>Hurvant | Arquitectura de Información, Estrategia de Contenidos y Posicionamiento Técnico</h1>
+<p>Este documento define la base estratégica, el tono editorial (copywriting), la arquitectura de la información (sitemap), la experiencia de usuario (UX) de los portales interactivos y el sistema de diseño visual para <strong>Hurvant</strong>, concebida como una entidad técnica de vanguardia especializada en la validación operativa, verificación documental, evaluación de competencias y PRL con un enfoque de cumplimiento de alta exigencia.</p>
+<p>El objetivo de esta arquitectura es posicionar a <strong>Hurvant</strong> como un referente de rigor e imparcialidad técnica en el mercado español, proyectando una visión alineada con estándares de acreditación internacional (como ISO/IEC 17024 e ISO/IEC 17020), pero respetando escrupulosamente el marco regulatorio actual sin incurrir en publicidad engañosa.</p>
+<hr>
+<h2>1. Enfoque del Copy y Posicionamiento Estratégico</h2>
+<p>El éxito comercial y legal de Hurvant radica en su capacidad de diferenciarse de una consultora de prevención tradicional o una academia de formación. Se debe proyectar la imagen de una <strong>entidad de tercera parte</strong>, rigurosa, digitalizada y orientada a mitigar la responsabilidad penal y civil de los administradores de empresas.</p>
+<h3>1.1. Principios de Posicionamiento</h3>
+<ul>
+<li><strong>Tercera Parte Imparcial:</strong> Presentarse como un evaluador externo que audita y valida con criterios objetivos. No &quot;ayudamos a redactar el plan&quot; (consultoría ordinaria), sino que &quot;evaluamos y testamos la eficacia operativa de los controles y competencias&quot; (validación técnica).</li>
+<li><strong>Enfoque de Compliance y Mitigación de Riesgo Legal:</strong> El lenguaje debe apelar a directores de compras, directores de recursos humanos, responsables de HSE (Salud, Seguridad y Medio Ambiente) y asesores jurídicos corporativos. La propuesta de valor es la <strong>evidencia trazable ante inspecciones de trabajo o procesos judiciales</strong>.</li>
+<li><strong>Alineamiento Metodológico:</strong> Aunque no se posea la acreditación de ENAC en esta fase inicial, toda la estructura organizativa, documental y procedimental debe diseñarse bajo los estándares de las normas <strong>UNE-EN ISO/IEC 17024</strong> (para certificación de personas) y <strong>UNE-EN ISO/IEC 17020</strong> (para entidades de inspección). Esto facilita una transición directa a la acreditación formal en fases posteriores.</li>
+</ul>
+<h3>1.2. Diccionario de Términos: Qué usar y qué evitar</h3>
+<p>Para evitar sanciones de la Comisión Nacional de los Mercados y la Competencia (CNMC) y mantener un posicionamiento honesto pero sumamente riguroso, se establece el siguiente control de vocabulario:</p>
+<table>
+<thead>
+<tr>
+<th align="left">🚫 TÉRMINOS A EVITAR</th>
+<th align="left">️✅ ALTERNATIVAS TÉCNICAS A USAR</th>
+<th align="left">JUSTIFICACIÓN TÉCNICA / LEGAL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&quot;Certificación oficial&quot; / &quot;Homologado ENAC&quot;</td>
+<td align="left"><strong>&quot;Evaluación bajo estándares alineados con ISO 17024&quot;</strong> / <strong>&quot;Esquemas propios de validación técnica&quot;</strong></td>
+<td align="left">Evita la suplantación de entidades formalmente acreditadas por ENAC, pero posiciona el servicio bajo la misma estructura metodológica internacional.</td>
+</tr>
+<tr>
+<td align="left">&quot;Curso de formación&quot; / &quot;Academia de prevención&quot;</td>
+<td align="left"><strong>&quot;Esquema de evaluación de competencias&quot;</strong> / <strong>&quot;Validación operativa práctica&quot;</strong></td>
+<td align="left">La formación tradicional tiene una connotación de bajo valor y nula verificación real. Hurvant se enfoca en verificar si el trabajador <em>sabe operar de forma segura en la realidad</em>, no en si asistió a una charla.</td>
+</tr>
+<tr>
+<td align="left">&quot;Acreditado&quot; / &quot;Organismo de Control Autorizado (OCA)&quot;</td>
+<td align="left"><strong>&quot;Entidad técnica independiente de tercera parte&quot;</strong> / <strong>&quot;Validación de conformidad operativa&quot;</strong></td>
+<td align="left">Reserva el concepto de OCA para las inspecciones reglamentarias obligatorias del Ministerio de Industria, situando a Hurvant en el plano del <em>compliance voluntario de alta exigencia</em>.</td>
+</tr>
+<tr>
+<td align="left">&quot;Aprobado&quot;</td>
+<td align="left"><strong>&quot;Evidencia técnica de aptitud operativa&quot;</strong> / <strong>&quot;Criterio de conformidad alcanzado&quot;</strong></td>
+<td align="left">Transmite que el resultado se basa en datos y pruebas objetivas documentadas, no en un juicio subjetivo o un examen teórico trivial.</td>
+</tr>
+<tr>
+<td align="left">&quot;Diploma de asistencia&quot;</td>
+<td align="left"><strong>&quot;Certificado de competencia operativa emitida por entidad técnica&quot;</strong></td>
+<td align="left">Enfatiza que el documento emitido requiere una evaluación de habilidades prácticas reales y documentadas con trazabilidad digital.</td>
+</tr>
+</tbody></table>
+<h3>1.3. Tono y Voz de la Marca</h3>
+<ul>
+<li><strong>Rigor Científico y Técnico:</strong> La redacción debe ser precisa, estructurada y basada en normativas técnicas (e.g., Reales Decretos, directivas europeas, normas UNE/ISO).</li>
+<li><strong>Orientación Tecnológica:</strong> Evitar el papel, el desorden y la burocracia. El copy debe resaltar conceptos como <em>trazabilidad digital en tiempo real</em>, <em>encriptación de evidencias</em>, <em>código QR de validación en campo</em> e <em>indicadores predictivos</em>.</li>
+<li><strong>Seguridad Jurídica:</strong> Usar términos que den tranquilidad a los departamentos legales de los clientes (e.g., <em>diligencia debida</em>, <em>trazabilidad de la evidencia</em>, <em>descargo de responsabilidad corporativa</em>, <em>mitigación del riesgo operacional</em>).</li>
+</ul>
+<hr>
+<h2>2. Estructura Completa de la Web (Sitemap)</h2>
+<p>Para proyectar una entidad robusta y estructurada, el sitemap se diseña de manera jerárquica, asegurando la indexación SEO de cada servicio y sector, a la vez que se provee un acceso intuitivo a las herramientas operativas.</p>
+<pre><code class="language-mermaid">graph TD
+    A[Home - Hurvant] --&gt; B[Servicios]
+    A --&gt; C[Sectores]
+    A --&gt; D[Metodología de Tercera Parte]
+    A --&gt; E[Áreas Privadas]
+    A --&gt; F[Autoridad Técnica]
+    A --&gt; G[Gobernanza e Imparcialidad]
+    A --&gt; H[Contacto Corporativo]
+
+    B --&gt; B1[Certificación de Personas ISO 17024 Concept]
+    B --&gt; B2[PRL Moderna y Cultura Preventiva]
+    B --&gt; B3[Validación Operativa de Maquinaria]
+    B --&gt; B4[Verificación Documental Avanzada]
+    B --&gt; B5[Coordinación de Actividades Empresariales CAE]
+    B --&gt; B6[Evaluación de Competencias Profesionales]
+    B --&gt; B7[Observación Preventiva en Campo]
+    B --&gt; B8[Informes Técnicos de Trazabilidad]
+
+    C --&gt; C1[Logística y Distribución]
+    C --&gt; C2[Construcción e Infraestructura]
+    C --&gt; C3[Industria Manufacturera y Metalúrgica]
+    C --&gt; C4[Energías Renovables]
+    C --&gt; C5[Sector Agroalimentario]
+
+    D --&gt; D1[Alineamiento con Estándares UNE-EN]
+    D --&gt; D2[Trazabilidad de la Evidencia Técnica]
+
+    E --&gt; E1[Portal Clientes - Dashboard Empresa]
+    E --&gt; E2[Portal Trabajadores - Pasaporte de Competencias]
+
+    F --&gt; F1[Blog Técnico de Compliance]
+    F --&gt; F2[Whitepapers &amp; Guías de Inspección]
+
+    G --&gt; G1[Comité de Imparcialidad]
+    G --&gt; G2[Canal Ético y de Denuncias]
+    G --&gt; G3[Política de Calidad y Confidencialidad]
+</code></pre>
+<h3>Detalle de las Secciones del Sitemap</h3>
+<ol>
+<li><strong>Home (Página Principal):</strong> Presentación del ecosistema Hurvant. Propuesta de valor: &quot;Rigor técnico y validación operativa con trazabilidad documental instantánea&quot;. Visualización tipo panel de control híbrido con estadísticas de mercado y acceso directo a la verificación de certificados por código QR.</li>
+<li><strong>Servicios (8 Fichas Individuales de Alta Densidad Informativa):</strong> Páginas específicas estructuradas para capturar búsquedas de intención de compra (B2B).</li>
+<li><strong>Sectores (5 Páginas Sectoriales):</strong> Enfoque directo a la problemática operativa de cada industria en España.</li>
+<li><strong>Metodología y Trazabilidad:</strong> Explicación técnica de cómo Hurvant realiza la recogida de evidencias operativas en campo (foto/video verificado, geolocalización, firma digital) para asegurar que cada certificado emitido tiene respaldo judicial.</li>
+<li><strong>Área Cliente (SaaS Corporativo):</strong> Landing explicativa del portal de clientes con capturas simuladas del dashboard de alta tecnología, invitando al registro corporativo.</li>
+<li><strong>Área Trabajador (Pasaporte Técnico):</strong> Explicación del funcionamiento del &quot;Pasaporte de Competencias&quot; mediante QR para operarios en campo.</li>
+<li><strong>Gobernanza y Calidad:</strong> Apartado crítico para simular una estructura tipo ENAC. Contiene la composición del Comité de Imparcialidad (externo), la Declaración de Imparcialidad del CEO y los procedimientos de reclamación y apelación de dictámenes.</li>
+<li><strong>Blog y Autoridad Técnica:</strong> Espacio editorial especializado en normativas, sentencias judiciales de PRL, compliance y gestión de riesgos.</li>
+<li><strong>Contacto y Solicitud de Auditoría:</strong> Formulario técnico detallado donde el cliente no pide un &quot;presupuesto&quot; genérico, sino que introduce variables operativas (número de plantas, tipología de maquinaria, volumen de trabajadores subcontratados).</li>
+</ol>
+<hr>
+<h2>3. Desarrollo Fino de Servicios Principales (Enfoque Comercial y SEO)</h2>
+<p>Para que cada servicio resulte comercialmente atractivo y se posicione orgánicamente en Google España, debe estructurarse como una &quot;Ficha Técnica de Solución&quot;. Evitaremos descripciones vagas de texto continuo y utilizaremos una estructura sistemática:</p>
+<ul>
+<li><strong>El Desafío de Cumplimiento (Dolor del Cliente):</strong> Qué le preocupa a la empresa (sanciones, accidentes graves, responsabilidad solidaria/subsidiaria, recargo de prestaciones).</li>
+<li><strong>Criterio Técnico y Normativa de Referencia:</strong> Qué leyes o estándares de calidad respaldan la evaluación (e.g., Ley 31/1995 de PRL, RD 1215/1997 de Equipos de Trabajo).</li>
+<li><strong>Metodología de Validación Hurvant:</strong> Cómo auditamos de forma objetiva (evidencias tangibles).</li>
+<li><strong>El Entregable Técnico:</strong> Qué recibe el cliente (Certificado de Aptitud Operativa, Informes Técnicos con trazabilidad digital, matriz de competencias).</li>
+</ul>
+<p>A continuación se desarrolla el contenido estratégico de los servicios prioritarios:</p>
+<hr>
+<h3>3.1. Certificación y Validación de Personas (Alineada con ISO 17024)</h3>
+<ul>
+<li><strong>Enfoque Comercial:</strong> El 90% de los accidentes graves con maquinaria se deben a una formación teórica deficiente o a una falta de evaluación práctica real. Hurvant no emite &quot;diplomas de haber asistido a un curso&quot;. Emitimos una <strong>certificación técnica de competencia operativa de personas</strong> basada en un examen riguroso de habilidades prácticas en el puesto de trabajo.</li>
+<li><strong>Enfoque SEO:</strong> Palabras clave como <em>evaluación de competencias operativas</em>, <em>certificación de operadores de maquinaria</em>, <em>validación de aptitud laboral práctica</em>, <em>esquemas de certificación ISO 17024 España</em>.</li>
+<li><strong>Estructura del Servicio:</strong><ul>
+<li><strong>Paso 1: Definición del Perfil de Competencia:</strong> Alineación con el estándar del sector o diseño a medida para la empresa.</li>
+<li><strong>Paso 2: Evaluación Práctica Rigurosa:</strong> Un examinador técnico de Hurvant evalúa al operario en su entorno real de trabajo mediante listas de control objetivas estructuradas en tabletas digitales.</li>
+<li><strong>Paso 3: Emisión de Certificado con Trazabilidad QR:</strong> En caso de conformidad, se genera un certificado digital con código QR de verificación pública inmediata.</li>
+<li><strong>Paso 4: Plan de Mantenimiento de Competencia:</strong> Alertas automáticas ante la necesidad de reevaluación periódica.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>3.2. PRL Moderna y Cultura Preventiva Integrada</h3>
+<ul>
+<li><strong>Enfoque Comercial:</strong> Romper con la PRL de &quot;papeleo archivado que nadie lee&quot;. Ayudamos a las empresas a auditar la implantación efectiva de su servicio de prevención (propio o ajeno). Validamos si las medidas preventivas escritas se ejecutan realmente en la línea de producción o si existe una brecha de cumplimiento de alto riesgo.</li>
+<li><strong>Enfoque SEO:</strong> <em>Auditoría de cultura preventiva</em>, <em>evaluación de la eficacia preventiva de campo</em>, <em>compliance en prevención de riesgos laborales</em>, <em>brecha de cumplimiento PRL España</em>.</li>
+<li><strong>Estructura del Servicio:</strong><ul>
+<li><strong>Diagnóstico de Campo:</strong> Inspección física de las condiciones de trabajo y contraste directo con las evaluaciones de riesgos existentes.</li>
+<li><strong>Auditoría de Comportamientos Seguros:</strong> Medición científica del nivel de cultura preventiva basándonos en metodologías internacionales de seguridad basada en el comportamiento (SBC).</li>
+<li><strong>Cuadro de Mando de Riesgos Legales:</strong> Presentación de un mapa interactivo para el Comité de Dirección que indica exactamente qué departamentos o centros tienen un nivel crítico de exposición legal o de siniestralidad potencial.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>3.3. Evaluación Operativa y Adecuación de Maquinaria (RD 1215/97)</h3>
+<ul>
+<li><strong>Enfoque Comercial:</strong> Asegurar que los equipos de trabajo (carretillas, plataformas elevadoras, puentes grúa, líneas automatizadas) cumplen estrictamente con las disposiciones del Real Decreto 1215/1997. Ofrecemos informes de validación técnica antes de la puesta en servicio de nuevos equipos o de forma periódica para maquinaria en uso, proporcionando blindaje legal a la dirección.</li>
+<li><strong>Enfoque SEO:</strong> <em>Validación técnica maquinaria RD 1215</em>, <em>adecuación de equipos de trabajo</em>, <em>informe técnico de seguridad maquinaria</em>, <em>inspección de conformidad de equipos industriales</em>.</li>
+<li><strong>Estructura del Servicio:</strong><ul>
+<li><strong>Inspección Detallada:</strong> Verificación de resguardos, mandos de seguridad, paradas de emergencia, señalización y documentación del fabricante.</li>
+<li><strong>Pruebas de Funcionamiento Dinámicas:</strong> Evaluación de los sistemas de seguridad en condiciones de carga e interacción con el operario.</li>
+<li><strong>Informe de Defectos y Plan de Acción:</strong> Listado priorizado por nivel de criticidad (Bloqueante, Grave, Leve) con propuestas de medidas correctoras de ingeniería.</li>
+<li><strong>Placa de Validación Física:</strong> Colocación de una placa física con QR en el equipo que certifica que ha superado la evaluación técnica de Hurvant.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>3.4. Verificación Documental Avanzada y CAE (Coordinación de Actividades Empresariales)</h3>
+<ul>
+<li><strong>Enfoque Comercial:</strong> La subcontratación en España genera una ingente cantidad de documentación CAE que suele ser validada por administrativos sin criterio técnico. Hurvant aporta un equipo de ingenieros y técnicos especializados que auditan la <strong>calidad y veracidad</strong> de la documentación cargada (certificados de aptitud reales, acreditaciones específicas, adecuación de equipos subcontratados).</li>
+<li><strong>Enfoque SEO:</strong> <em>Auditoría documental CAE</em>, <em>verificación técnica de subcontratistas</em>, <em>gestión de cumplimiento documental empresarial</em>, <em>trazabilidad documental subcontratas</em>.</li>
+<li><strong>Estructura del Servicio:</strong><ul>
+<li><strong>Cero &quot;Aprobados Automáticos&quot;:</strong> Verificación exhaustiva de firmas, vigencias, registros oficiales y contenido técnico de las evaluaciones de riesgos concurrentes.</li>
+<li><strong>Validación de Habilitación Profesional:</strong> Comprobación sistemática de que los técnicos y operarios externos disponen de los registros y habilitaciones oficiales pertinentes.</li>
+<li><strong>Alertas Predictivas:</strong> Notificación al cliente de desajustes documentales de proveedores críticos semanas antes de que accedan a sus instalaciones.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>3.5. Observación Preventiva y Registro de Evidencias en Campo</h3>
+<ul>
+<li><strong>Enfoque Comercial:</strong> La mejor defensa legal es la posesión de pruebas objetivas que demuestren que la empresa ejerce una labor activa de supervisión y control sobre sus operarios y contratas. Hurvant provee un servicio sistemático de <strong>Observaciones Preventivas del Trabajo (OPT)</strong>, ejecutadas por técnicos expertos que registran comportamientos, condiciones físicas e interacciones operativas mediante una metodología digital de trazabilidad infranqueable.</li>
+<li><strong>Enfoque SEO:</strong> <em>Observaciones preventivas del trabajo OPT</em>, <em>auditoría de comportamientos seguros</em>, <em>registro digital de evidencias de seguridad</em>, <em>supervisión técnica en obra y planta</em>.</li>
+<li><strong>Estructura del Servicio:</strong><ul>
+<li><strong>Planificación de Visitas Inopinadas:</strong> Observaciones en campo sin aviso previo para capturar la realidad del comportamiento operativo.</li>
+<li><strong>Registro Multimodal de Evidencias:</strong> Captura mediante aplicación móvil de fotografías geolocalizadas, grabaciones de voz y firmas en pantalla de los supervisados.</li>
+<li><strong>Informe Técnico de Diligencia Debida:</strong> Generación automática de un dossier técnico que demuestra la labor de control del empresario ante cualquier requerimiento de la Inspección de Trabajo.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>4. Área Cliente (SaaS) y Área Trabajador (Pasaporte Técnico)</h2>
+<p>Este apartado conceptualiza el núcleo tecnológico de Hurvant, alejándola de una consultora tradicional y presentándola como una plataforma digital escalable de alto valor tecnológico.</p>
+<h3>4.1. Portal de Empresas (Dashboard de Compliance y Trazabilidad)</h3>
+<p>Un entorno web privado, con diseño oscuro minimalista de alta tecnología, que permite a los responsables de compras, HSE y dirección general controlar en tiempo real el estado de su ecosistema operativo.</p>
+<h4>Funcionalidades Clave del Portal de Empresas</h4>
+<ol>
+<li><strong>Matriz de Competencias del Personal (Skill Matrix en Tiempo Real):</strong> Un panel visual que muestra a cada empleado y su nivel de validación operativa en tiempo real (Color Verde: Validado; Naranja: Próximo a vencer; Rojo: No apto/Bloqueado).</li>
+<li><strong>Gestión de Evidencias de Maquinaria:</strong> Expediente digital único de cada máquina en planta o almacén con sus informes técnicos RD 1215, actas de mantenimiento y el QR de trazabilidad asociado.</li>
+<li><strong>Módulo CAE Inteligente:</strong> Pantalla de control de contratas donde se visualiza el porcentaje de cumplimiento real de cada subcontratista, no solo con un &quot;apto/no apto&quot;, sino con un índice de calidad documental.</li>
+<li><strong>Buzón de Informes Técnicos Firmados Digitalmente:</strong> Repositorio inmutable que aloja todas las auditorías, OPT y actas de examen emitidas por Hurvant, con huella digital hash para garantizar su inalterabilidad ante tribunales.</li>
+<li><strong>Notificaciones de Vencimientos Automatizados:</strong> Sistema de alertas multicanal (Email, SMS) que avisa del vencimiento inminente de validaciones de operarios o adecuaciones de maquinaria.</li>
+</ol>
+<h4>Mockup Estructural del Dashboard del Portal de Empresas</h4>
+<pre><code>+-----------------------------------------------------------------------------------------+
+|  HURVANT | Portal Corporativo               [Buscar operario, máquina o informe...]  (👤) |
++-----------------------------------------------------------------------------------------+
+| [⚡ Inicio]      | PANEL DE CONTROL GENERAL - COMPLIANCE OPERATIVO                       |
+| [👥 Personal]    |                                                                       |
+| [🚜 Equipos]     |  +-------------------+  +-------------------+  +-------------------+  |
+| [📄 Informes]    |  | ÍNDICE DE APTITUD |  | CONTROL MAQUINARIA|  | ALERTAS CAE       |  |
+| [🔧 Ajustes]     |  |      94.2%        |  | 42 / 45 Equipos   |  | 3 Subcontratas    |  |
+|                  |  |  (Cumplimiento)   |  |   Adecuados       |  |  con Incidencias  |  |
+|                  |  +-------------------+  +-------------------+  +-------------------+  |
+|                  |                                                                       |
+|                  |  ÚLTIMAS VALIDACIONES EMITIDAS                                        |
+|                  |  +-----------------------------------------------------------------+  |
+|                  |  | Operario        | Competencia Validada       | Estado  | Trazab. |  |
+|                  |  +-----------------+----------------------------+---------+---------+  |
+|                  |  | Carlos Gómez    | Operador Carretilla Tipo 4 | ACTIVO  | [QR-Ver]|  |
+|                  |  | Marta Ruiz      | Espacios Confinados Cat. C | ACTIVO  | [QR-Ver]|  |
+|                  |  | Jorge Benítez   | Trabajos en Altura Telco   | VENCIDO | [Alerta]|  |
+|                  |  +-----------------------------------------------------------------+  |
+|                  |                                                                       |
+|                  |  AUDITORÍAS OPERATIVAS RECIENTES                                      |
+|                  |  [📄 Informe RD 1215 - Línea de Envasado 3 - Firmado PDF] [Descargar]   |
+|                  |  [📄 Acta de Observación Preventiva - Almacén Central]   [Descargar]   |
++-----------------------------------------------------------------------------------------+
+</code></pre>
+<hr>
+<h3>4.2. Portal del Trabajador (Pasaporte Técnico de Competencias)</h3>
+<p>Diseñado específicamente para dispositivos móviles. Cada operario validado por Hurvant posee un perfil digital único que sirve como su acreditación técnica profesional ante clientes y contratas.</p>
+<h4>Funcionalidades Clave del Portal del Trabajador</h4>
+<ol>
+<li><strong>Pasaporte Digital de Habilidades (Mobile-First):</strong> Una interfaz limpia optimizada para teléfonos móviles que muestra la fotografía del trabajador y un código QR dinámico de alta seguridad.</li>
+<li><strong>Verificación Pública Segura por QR:</strong> Cuando un coordinador de seguridad (CSS) o el cliente escanea el QR en el campo de trabajo, la web de Hurvant devuelve una página de validación pública simplificada (sin credenciales) que confirma:<ul>
+<li>Identidad del operario.</li>
+<li>Competencias validadas y activas.</li>
+<li>Fecha de validez del examen práctico y técnico de Hurvant.</li>
+<li>Exclusiones o limitaciones operativas específicas (e.g., &quot;Apto solo para carretillas eléctricas de hasta 3 tn&quot;).</li>
+</ul>
+</li>
+<li><strong>Historial de Desempeño y Observaciones:</strong> Registro transparente de las observaciones preventivas realizadas al trabajador durante su actividad, permitiendo visualizar su evolución en materia de seguridad.</li>
+<li><strong>Repositorio de Evidencias Digitales:</strong> El operario puede descargar la documentación técnica de sus evaluaciones y acceder a material de reciclaje técnico interactivo de alta calidad.</li>
+</ol>
+<h4>Flujo de Experiencia de Usuario (UX) de Verificación en Campo</h4>
+<pre><code>[Operario en Planta] 📱 Muestra su QR del Pasaporte Técnico
+        │
+        ▼
+[Inspector / Responsable CAE] 📸 Escanea el QR con su móvil corporativo
+        │
+        ▼
+[Servidor Hurvant (Página Pública Segura)]
+ ┌──────────────────────────────────────────────────────────┐
+ │  HURVANT | VERIFICACIÓN INSTANTÁNEA DE APTITUD           |
+ │                                                          |
+ │  👤 OPERARIO: Gómez Sánchez, Carlos                      |
+ │  🏢 EMPRESA: Logística del Norte S.L.                    |
+ │                                                          |
+ │  ✅ COMPETENCIAS VALIDADAS:                              |
+ │  • Carretilla Elevadora Frontal (RD 1215)   - ACTIVA     |
+ │  • Transpaleta Eléctrica Operador a Bordo - ACTIVA     |
+ │                                                          |
+ │  ⚠️ LIMITACIONES / EXCLUSIONES:                           |
+ │  • Requiere uso obligatorio de lentes correctoras.       |
+ │                                                          |
+ │  ⏱️ PRÓXIMA EVALUACIÓN PRÁCTICA: 12/10/2026              |
+ │                                                          |
+ │  🔒 EVIDENCIA RESPALDADA POR FIRMA DIGITAL HURVANT       |
+ └──────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h2>5. Sectores Objetivo en España: Análisis de Demanda y Enfoque Comercial</h2>
+<p>Para captar clientes corporativos de alto valor de forma inmediata, la web debe hablar el lenguaje operativo y responder a las problemáticas regulatorias específicas de los 5 sectores más dinámicos de la economía española.</p>
+<h3>5.1. Logística, Distribución y Gran Consumo</h3>
+<ul>
+<li><strong>Problemática Real en España:</strong> Elevada rotación de personal externo por ETT, uso intensivo de maquinaria móvil (carretillas, retráctiles, transpaletas), y alto índice de siniestralidad por atropellos y caída de cargas.</li>
+<li><strong>Enfoque Comercial Hurvant:</strong><ul>
+<li>Ofrecer esquemas de validación de carretilleros express pero ultra-rigurosos in-situ en el propio almacén del cliente.</li>
+<li>Auditar la seguridad de las zonas de tránsito y estanterías conforme a la norma UNE EN 15635.</li>
+<li>Implantar un sistema de control de operarios externos mediante el código QR del Pasaporte Técnico, asegurando que ninguna ETT introduzca personal no evaluado en sus instalaciones.</li>
+</ul>
+</li>
+</ul>
+<h3>5.2. Construcción, Obra Civil e Infraestructuras</h3>
+<ul>
+<li><strong>Problemática Real en España:</strong> Rigidez del Convenio General del Sector de la Construcción, control de subcontratación en cascada complejo, y gran volumen de maquinaria pesada sin la adecuación de seguridad RD 1215 al día.</li>
+<li><strong>Enfoque Comercial Hurvant:</strong><ul>
+<li>Validar operativamente a los maquinistas de excavadoras, retroexcavadoras y grúas de forma independiente a los cursos teóricos obligatorios del convenio.</li>
+<li>Realizar inspecciones técnicas in-situ de la maquinaria subcontratada antes de su acceso a la obra para evitar la paralización de trabajos por deficiencias de seguridad.</li>
+<li>Proporcionar informes técnicos de &quot;diligencia debida&quot; para el Promotor y la Constructora Principal ante posibles inspecciones de trabajo.</li>
+</ul>
+</li>
+</ul>
+<h3>5.3. Industria Metalúrgica, Química y Manufacturera</h3>
+<ul>
+<li><strong>Problemática Real en España:</strong> Paradas técnicas de mantenimiento complejas con gran confluencia de contratas, operaciones de alto riesgo (trabajos en altura, espacios confinados, soldadura), e implantación deficiente del sistema LOTO (Lockout/Tagout - Consignación de Máquinas).</li>
+<li><strong>Enfoque Comercial Hurvant:</strong><ul>
+<li>Certificación interna de operarios de mantenimiento para la realización de trabajos críticos bajo estándares metodológicos rigurosos.</li>
+<li>Auditorías operativas de consignación de energías y sistemas LOTO, verificando físicamente la estanqueidad y seguridad de los bloqueos de maquinaria.</li>
+<li>Evaluación y testeo de la eficacia real de los planes de emergencia e instalaciones industriales críticas.</li>
+</ul>
+</li>
+</ul>
+<h3>5.4. Energías Renovables (Eólica y Solar Fotovoltaica)</h3>
+<ul>
+<li><strong>Problemática Real en España:</strong> Emplazamientos geográficamente aislados, condiciones meteorológicas extremas, subcontratación internacional de perfiles altamente cualificados, y exigencias de los estándares GWO (Global Wind Organisation) o similares.</li>
+<li><strong>Enfoque Comercial Hurvant:</strong><ul>
+<li>Evaluación técnica práctica del personal de instalación y mantenimiento eólico en trabajos en altura y rescate técnico.</li>
+<li>Validación operativa del estado físico de los sistemas de izado y escaleras de servicio de los aerogeneradores de acuerdo con el RD 1215/1997.</li>
+<li>Verificación documental y técnica avanzada de empresas subcontratadas extranjeras para asegurar el cumplimiento estricto de la legislación española de subcontratación.</li>
+</ul>
+</li>
+</ul>
+<h3>5.5. Sector Agroalimentario y Envasado Automatizado</h3>
+<ul>
+<li><strong>Problemática Real en España:</strong> Alta estacionalidad con picos de contratación masiva, líneas de producción automatizadas complejas con puntos de atrapamiento severos, y necesidad de cumplir con normativas internacionales de calidad alimentaria (IFS, BRC) que exigen control exhaustivo de competencias y proveedores.</li>
+<li><strong>Enfoque Comercial Hurvant:</strong><ul>
+<li>Certificación práctica de competencias del personal temporal para líneas automatizadas complejas.</li>
+<li>Evaluación operativa de los resguardos y sistemas de seguridad interconectados de las líneas de envasado y procesado.</li>
+<li>Auditoría de cumplimiento legal en PRL integrada en los estándares de calidad alimentaria exigidos por las cadenas de gran distribución.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>6. Estrategia de Contenidos y Blog de Autoridad Técnica</h2>
+<p>La web no debe nutrirse de posts de relleno sobre consejos de ergonomía genéricos. Cada artículo debe ser un documento técnico detallado que atraiga tráfico B2B cualificado y consolide a Hurvant como el referente doctrinal en España en materia de validación operativa y compliance.</p>
+<h3>6.1. Categorías del Blog y Pilares Temáticos</h3>
+<ol>
+<li><strong>Jurisprudencia y Compliance Técnico (Legal HSE):</strong> Análisis de sentencias reales del Tribunal Supremo y Tribunales Superiores de Justicia en España sobre responsabilidad penal de los administradores y técnicos de prevención.</li>
+<li><strong>Seguridad de Equipos de Trabajo (RD 1215/97):</strong> Desglose detallado de los requisitos técnicos de seguridad aplicables a diferentes tipos de maquinaria, solucionando las dudas de interpretación técnica habituales de la normativa.</li>
+<li><strong>Esquemas de Certificación de Competencias:</strong> Artículos explicativos sobre los beneficios de la evaluación práctica del personal y los estándares metodológicos de la norma ISO/IEC 17024.</li>
+<li><strong>Trazabilidad y Digitalización Documental:</strong> Tendencias y tecnologías aplicadas al control documental, firma electrónica cualificada de actas y trazabilidad de evidencias mediante criptografía o bases de datos descentralizadas.</li>
+</ol>
+<h3>6.2. Calendario Editorial Inicial (Temas de Alta Visibilidad y Tráfico B2B)</h3>
+<ul>
+<li><strong>Tema 1:</strong> <em>&quot;La Responsabilidad Penal del Director de Compras y Producción ante Accidentes con Maquinaria Alquilada: El papel del RD 1215/97&quot;</em>.<ul>
+<li><em>Objetivo:</em> Generar concienciación y leads de directores de compras sobre la importancia de exigir informes de adecuación independientes.</li>
+</ul>
+</li>
+<li><strong>Tema 2:</strong> <em>&quot;¿Es Suficiente la Formación del Convenio del Metal ante un Accidente Laboral? Análisis de la jurisprudencia del Tribunal Supremo&quot;</em>.<ul>
+<li><em>Objetivo:</em> Demostrar que los cursos de 20 horas no eximen de responsabilidad y proponer la validación de competencias prácticas de Hurvant como el escudo legal necesario.</li>
+</ul>
+</li>
+<li><strong>Tema 3:</strong> <em>&quot;Cómo Diseñar un Plan LOTO Infranqueable: Errores comunes en la consignación de líneas automatizadas&quot;</em>.<ul>
+<li><em>Objetivo:</em> Atraer a directores de mantenimiento y jefes de planta con contenido de alta ingeniería.</li>
+</ul>
+</li>
+<li><strong>Tema 4:</strong> <em>&quot;Guía Completa para Superar con Éxito una Inspección de Trabajo en el Sector Logístico: El Check-list del Inspector&quot;</em>.<ul>
+<li><em>Objetivo:</em> Generar tráfico de técnicos de prevención internos de grandes centros de distribución y descargas de un lead magnet (plantilla de autoevaluación).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>7. Identidad Visual, UI y Diseño del Ecosistema Digital</h2>
+<p>Para transmitir el rigor técnico de una entidad de certificación e inspección, la estética visual debe alejarse por completo de la calidez simplista de las academias de formación o de la sobriedad aburrida de la PRL tradicional. Se propone una estética de <strong>Rigor Tecnológico Premium</strong>.</p>
+<h3>7.1. Paleta de Colores Corporativa</h3>
+<ul>
+<li><strong>Azul Prusia Oscuro (Deep Prussian Blue) <code>[#0A192F]</code>:</strong> Color principal de fondo para transmitir máxima seriedad, autoridad y solidez institucional. Evoca confianza jurídica y corporativa.</li>
+<li><strong>Gris Platino Técnico (Platinum Slate) <code>[#64748B]</code> / <code>[#E2E8F0]</code>:</strong> Colores neutros para textos, marcos de datos y división de paneles, emulando la interfaz limpia de planos técnicos y software de ingeniería.</li>
+<li><strong>Verde Esmeralda Técnico (Teal / Emerald Conformity) <code>[#10B981]</code>:</strong> Usado de forma estratégica para indicar el estado de &quot;Conformidad&quot;, &quot;Validado&quot; y &quot;Trazabilidad Exitosa&quot;. Evita el verde brillante genérico, optando por una tonalidad esmeralda elegante de alta tecnología.</li>
+<li><strong>Ámbar de Alerta Controlado (Amber Warning) <code>[#F59E0B]</code>:</strong> Para advertir de vencimientos y revisiones obligatorias de competencias y maquinaria en los dashboards.</li>
+</ul>
+<h3>7.2. Tipografía y Tipos de Letra</h3>
+<ul>
+<li><strong>Tipografía de Títulos:</strong> <em>Cabinet Grotesk</em> o <em>Outfit</em> (Google Fonts). Fuentes de geometría muy limpia, moderna y con un corte técnico marcado que aporta personalidad institucional.</li>
+<li><strong>Tipografía de Cuerpo:</strong> <em>Inter</em> o <em>Geist</em> (Mono/Regular). Una de las fuentes más legibles y optimizadas para interfaces de datos y paneles interactivos. Transmite precisión milimétrica y claridad.</li>
+</ul>
+<h3>7.3. Elementos de Interfaz y UX (Aesthetics &amp; Feel)</h3>
+<ul>
+<li><strong>Glassmorphism Técnico:</strong> Contenedores con fondos translúcidos, desenfoque de fondo (<code>backdrop-filter</code>) y bordes muy finos en gris platino, recreando la interfaz de paneles de control y software militar o aeroespacial.</li>
+<li><strong>Micro-animaciones de Estado:</strong> Cambios de estado suaves en botones y tarjetas con transiciones de color y escalados milimétricos (e.g., al pasar el ratón sobre un QR de verificación, este genera una sutil iluminación esmeralda de fondo).</li>
+<li><strong>Cero Fotografías de Stock Tópicas:</strong> Queda terminantemente prohibido usar las clásicas fotos de banco de imágenes de personas fingiendo reír con cascos limpios. En su lugar, se emplearán:<ul>
+<li>Renderizados vectoriales en 3D de piezas mecánicas o diagramas de planta.</li>
+<li>Esquemas técnicos, planos de planta vectoriales y diagramas de flujo estilizados.</li>
+<li>Fotografías de situaciones reales en blanco y negro contrastado con los colores de conformidad esmeralda de la marca superpuestos.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>8. Visión Futura y Hoja de Ruta para Acreditación (Roadmap)</h2>
+<p>La web y la estructura empresarial de Hurvant no son estáticas; están concebidas para escalar gradualmente de una entidad técnica independiente a un líder nacional acreditado formalmente.</p>
+<pre><code class="language-mermaid">gantt
+    title Plan de Crecimiento Tecnológico y Organizacional - Hurvant
+    dateFormat  YYYY-MM
+    section Fase 1: Autoridad
+    Lanzamiento Web Corp. &amp; Blog Técnico :active, f1-1, 2026-06, 3m
+    Generación de Leads B2B &amp; SEO Base :active, f1-2, 2026-07, 6m
+    section Fase 2: Digitalización
+    Lanzamiento MVP SaaS Portal Empresas :f2-1, 2026-09, 4m
+    Lanzamiento Pasaporte Técnico QR :f2-2, 2026-10, 3m
+    section Fase 3: Integración
+    API de Conexión CAE Externa :f3-1, 2026-12, 5m
+    Módulo de Observaciones Preventivas :f3-2, 2027-02, 4m
+    section Fase 4: ENAC Acreditación
+    Auditoría Interna Estándar ISO 17024 :f4-1, 2027-04, 3m
+    Solicitud y Acreditación ENAC :f4-2, 2027-06, 6m
+</code></pre>
+<h3>8.1. Fase 1: Consolidación de Autoridad y Tráfico B2B (Meses 1-3)</h3>
+<ul>
+<li><strong>Objetivo Tecnológico:</strong> Lanzamiento de la web corporativa en formato estático de alta fidelidad, con el blog técnico completamente operativo y la estructura jurídica e imparcialidad definida.</li>
+<li><strong>Objetivo de Negocio:</strong> Captar las primeras solicitudes de informes técnicos de adecuación de maquinaria RD 1215 e impartir los primeros esquemas propios de validación práctica presencial.</li>
+</ul>
+<h3>8.2. Fase 2: Lanzamiento del SaaS Operativo (Meses 4-6)</h3>
+<ul>
+<li><strong>Objetivo Tecnológico:</strong> Desarrollo e implantación del Portal de Empresas (Dashboard) y del Portal del Trabajador (Pasaporte Técnico QR). Generación automatizada de las páginas públicas seguras de verificación.</li>
+<li><strong>Objetivo de Negocio:</strong> Ofrecer a los primeros clientes el uso gratuito del portal como valor añadido por contratarnos la validación de sus operarios y auditorías, fidelizando las cuentas recurrentes.</li>
+</ul>
+<h3>8.3. Fase 3: Integraciones CAE e Inteligencia Predictiva (Meses 7-12)</h3>
+<ul>
+<li><strong>Objetivo Tecnológico:</strong> Integración de la plataforma de Hurvant mediante APIs con las herramientas líderes de CAE del mercado español (e.g., CTAIMA, e-coordina, Dokify). De este modo, cuando un operario es validado por Hurvant, su expediente CAE se actualiza y aprueba automáticamente en la plataforma del cliente sin intervención manual.</li>
+<li><strong>Objetivo de Negocio:</strong> Convertirse en un socio estratégico de los proveedores de software CAE, que derivarán clientes hacia nuestros esquemas de validación técnica práctica debido al ahorro administrativo radical.</li>
+</ul>
+<h3>8.4. Fase 4: Preparación y Acreditación ISO/IEC 17024 e ISO/IEC 17020 (Meses 12+)</h3>
+<ul>
+<li><strong>Objetivo Tecnológico:</strong> Adecuación formal de los repositorios de evidencias, el registro de firmas, los esquemas de examen práctico y las actas de imparcialidad del portal web para cumplir formalmente con los estrictos requisitos de la auditoría de ENAC.</li>
+<li><strong>Objetivo de Negocio:</strong> Obtención de la acreditación ENAC formal, convirtiendo todos los esquemas propios de Hurvant en &quot;Certificaciones Oficiales Acreditadas&quot;, escalando el precio y margen de los servicios corporativos a nivel nacional.</li>
+</ul>
+<hr>
+<p><em>Propuesta de arquitectura y estrategia comercial diseñada para <strong>Hurvant</strong>. Creado en exclusiva para asegurar el liderazgo técnico y cumplimiento regulatorio.</em></p>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>25_fase_6_calendario_30_dias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>FASE 6 — ENTREGABLE 6.1: CALENDARIO EDITORIAL OPERATIVO DE 30 DÍAS (POST POR POST)</h1>
+<h2>HURVANT Certification &amp; Technical Validation</h2>
+<p><strong>Fecha de emisión:</strong> Julio 2026<br><strong>Autor:</strong> Community Manager Senior &amp; Head of Content<br><strong>Proyecto:</strong> Lanzamiento Nacional Hurvant — Fase 6: Redes Sociales<br><strong>Objetivo:</strong> Guía de ejecución diaria para la parrilla de contenidos en LinkedIn, Instagram, Facebook, TikTok y Threads  </p>
+<hr>
+<h2>1. PARRILLA SEMANAL DE PUBLICACIÓN (MATRIZ MULTICANAL)</h2>
+<pre><code>+-----------------------------------------------------------------------------------+
+| PARRILLA DÍA A DÍA - MES DE LANZAMIENTO (SEMANAS 1 A 4)                          |
++-----------------------------------------------------------------------------------+
+| LUNES:     LinkedIn (Carusel PDF)  | Instagram (Post Feed)    | Threads (Hilo 1)   |
+| MARTES:    TikTok (Vídeo NDT)      | Instagram (Reel Campo)   | Facebook (Blog)    |
+| MIÉRCOLES: LinkedIn (Encuesta B2B) | Threads (Debate Legal)   | YouTube (Short)    |
+| JUEVES:    LinkedIn (Caso Estudio) | Instagram (Carusel)      | TikTok (Vídeo)     |
+| VIERNES:   LinkedIn (Noticia Legal)| Instagram (Stories Q&amp;A)  | Facebook (Vídeo)   |
++-----------------------------------------------------------------------------------+
+</code></pre>
+<hr>
+<h2>2. DETALLE OPERATIVO: SEMANA 1 (DÍAS 1 A 7 DE LANZAMIENTO)</h2>
+<h3>DÍA 1 (LUNES) — LANZAMIENTO OFICIAL: EL MANIFIESTO HURVANT</h3>
+<ul>
+<li><strong>Canal Principal:</strong> LinkedIn + Instagram + Facebook.</li>
+<li><strong>Formato:</strong> Carusel PDF (10 Diapositivas) / Imagen Corporativa de Alto Impacto.</li>
+<li><strong>Copy Textual Completo:</strong><blockquote>
+<p>Hoy nace oficialmente <strong>HURVANT Certification &amp; Technical Validation</strong> en España. 🇪🇸  </p>
+<p>Durante décadas, la gestión de la seguridad industrial se ha basado en acumular diplomas de asistencia en carpetas físicas. Cursos teóricos de 8 horas que no garantizan que un operario sepa maniobrar bajo el estrés real de un turno de trabajo.  </p>
+<p>Nosotros nacemos para cambiar esta realidad.  </p>
+<p>📌 <strong>Nuestra Misión:</strong> Evaluamos la competencia observada in-situ en el puesto físico de trabajo (ISO 17024), auditamos la adecuación de maquinaria (RD 1215/97) y ejecutamos Ensayos No Destructivos NDT (ISO 9712).  </p>
+<p>🔒 <strong>Nuestra Garantía:</strong> Trazabilidad criptográfica SHA-256 y Pasaporte QR Móvil con valor probatorio ante la Inspección de Trabajo.  </p>
+<p>🚫 <strong>Nuestra Imparcialidad:</strong> No vendemos cursos de formación. No vendemos maquinaria. Evaluamos con rigor independiente de tercera parte.  </p>
+<p>Bienvenidos a la nueva era de la validación industrial.  </p>
+<p>👉 Conoce nuestros esquemas técnicos en <a href="http://www.hurvant.com">www.hurvant.com</a>  </p>
+<p><code>#Hurvant</code> <code>#EvaluamosCompetenciasNoAsistencias</code> <code>#LanzamientoOficial</code> <code>#ISO17024</code> <code>#PRLEspaña</code> <code>#SeguridadIndustrial</code></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3>DÍA 2 (MARTES) — VÍDEO DE CAMPO: INSPECCIÓN DE CARRETILLA</h3>
+<ul>
+<li><strong>Canal Principal:</strong> TikTok + Instagram Reels + YouTube Shorts.</li>
+<li><strong>Formato:</strong> Vídeo Vertical 9:16 (25 segundos) con subtítulos dinámicos.</li>
+<li><strong>Copy Textual Completo:</strong><blockquote>
+<p>¿De qué sirve una carretilla elevadora si el operario no ha sido evaluado en su propio entorno de trabajo?  </p>
+<p>En HURVANT observamos la maniobra real sin detener los turnos de producción. Al finalizar, emitimos el Pasaporte Técnico QR inalterable.  </p>
+<p>🔗 Solicita tu Programa Piloto de 14 Días en el enlace de la bio.  </p>
+<p><code>#Carretilleros</code> <code>#InspeccionIndustrial</code> <code>#Hurvant</code> <code>#RD1215</code> <code>#Logistica</code></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3>DÍA 3 (MIÉRCOLES) — ENCUESTA B2B DE PREVENCIÓN</h3>
+<ul>
+<li><strong>Canal Principal:</strong> LinkedIn.</li>
+<li><strong>Formato:</strong> Encuesta Interactiva (Duración: 3 días).</li>
+<li><strong>Pregunta:</strong> <em>¿Cómo verifica tu empresa la aptitud práctica de sus operadores de maquinaria?</em><ul>
+<li>Opción A: Diploma del curso inicial.</li>
+<li>Opción B: Evaluación interna del supervisor.</li>
+<li>Opción C: Evaluación observacional ISO 17024 (Hurvant).</li>
+<li>Opción D: No disponemos de verificación.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>DÍA 4 (JUEVES) — ENSAYOS NDT (ULTRASONIDOS EN GRÚAS)</h3>
+<ul>
+<li><strong>Canal Principal:</strong> Instagram + Facebook + Threads.</li>
+<li><strong>Formato:</strong> Galería fotográfica de alta resolución (Inspector aplicando ultrasonidos).</li>
+<li><strong>Copy Textual Completo:</strong><blockquote>
+<p>Lo que el ojo no ve, la tecnología NDT lo revela. 🔬  </p>
+<p>En la inspección de grúas e instalaciones de izaje, una microfisura interna en una soldadura puede desencadenar un accidente catastrófico.  </p>
+<p>Nuestros inspectores certificados bajo norma ISO 9712 Nivel II y III ejecutan Ensayos No Destructivos por ultrasonidos (UT) y partículas magnéticas (MT) para certificar la integridad estructural de tus equipos.  </p>
+<p>📍 Cobertura técnica in-situ en Cataluña y en toda España.<br>🌐 Más información en <a href="http://www.hurvant.com/servicios/ensayos-no-destructivos">www.hurvant.com/servicios/ensayos-no-destructivos</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3>DÍA 5 (VIERNES) — COMPLIANCE &amp; RESPONSABILIDAD PENAL</h3>
+<ul>
+<li><strong>Canal Principal:</strong> LinkedIn (Artículo / Noticia).</li>
+<li><strong>Formato:</strong> Texto de Autoridad Firmado por el Director Técnico.</li>
+<li><strong>Copy Textual Completo:</strong><blockquote>
+<p>La Diligencia Debida del Director de Planta ante el Tribunal Supremo. ⚖️  </p>
+<p>La jurisprudencia penal en España es clara: demostrar que se impartió un curso de formación no exime de la responsabilidad por recargo de prestaciones tras un accidente grave si no existe constancia de supervisión y evaluación del comportamiento práctico.  </p>
+<p>En HURVANT aportamos la evidencia inalterable que protege a la dirección.  </p>
+<p><code>#CompliancePenal</code> <code>#PRL</code> <code>#Hurvant</code> <code>#DiligenciaDebida</code></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>
