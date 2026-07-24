@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>31_estrategia_financiacion_subvenciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>GUÍA ESTRATÉGICA DE FINANCIACIÓN PÚBLICA, SUBVENCIONES Y LEY DE STARTUPS</h1>
+<h2>HURVANT Certification &amp; Technical Validation</h2>
+<p><strong>Fecha de emisión:</strong> Julio 2026<br><strong>Autor:</strong> Director Financiero (CFO) &amp; Especialista en Financiación Pública<br><strong>Proyecto:</strong> Estrategia de Inversión Inicial y Ayudas Estatales/Autonómicas para Hurvant<br><strong>Objetivo:</strong> Obtención de capital público sin avales personales, subvenciones a fondo perdido y beneficios fiscales para emprendedores extranjeros en España  </p>
+<hr>
+<h2>1. MARCO LEGAL Y BENEFICIOS DE LA LEY DE STARTUPS (LEY 28/2022) PARA EM PRENDEDORES EXTRANJEROS</h2>
+<p>Hurvant encaja perfectamente en la definición de <strong>Empresa Emergente (Startup Tecnológica)</strong> por combinar desarrollo de software SaaS (Portal de Trazabilidad Criptográfica SHA-256) con inspección técnica de tercera parte.</p>
+<h3>1.1. Certificación Oficial por ENISA</h3>
+<ul>
+<li>HURVANT puede solicitar la <strong>Certificación de Empresa Emergente</strong> expedida de forma gratuita por ENISA en un plazo máximo de 3 meses.</li>
+<li><strong>Beneficios Fiscales Directos:</strong><ul>
+<li><strong>Impuesto de Sociedades Reducido al 15%</strong> (en lugar del tipo general del 25%) durante el primer ejercicio con base imponible positiva y los 3 siguientes (total 4 años).</li>
+<li><strong>Aplazamiento de Deudas Tributarias:</strong> Aplazamiento automático del pago del Impuesto sobre Sociedades durante los 2 primeros ejercicios positivos sin necesidad de aportar garantías o avales bancarios.</li>
+<li><strong>Eliminación de los pagos a cuenta</strong> del Impuesto sobre Sociedades durante los 2 primeros años.</li>
+</ul>
+</li>
+</ul>
+<h3>1.2. Autorización de Residencia para Emprendedores Extranjeros (Ley 14/2013)</h3>
+<ul>
+<li><strong>Visado de Emprendedor / Residencia de Startup:</strong> Permite al emprendedor extranjero y a su familia obtener la residencia legal en España por <strong>3 años</strong> (renovable por 2 años más).</li>
+<li><strong>Trámite de ENISA:</strong> ENISA evalúa favorablemente el Plan de Empresa de Hurvant al ser un proyecto de alto valor añadido con creación de empleo local en Cataluña y desarrollo tecnológico propio.</li>
+</ul>
+<hr>
+<h2>2. LÍNEAS DE CRÉDITO PÚBLICAS SIN AVALES PERSONALES (PRÉSTAMOS PARTICIPATIVOS)</h2>
+<h3>2.1. ENISA — Línea Jóvenes Emprendedores / ENISA Startups</h3>
+<p>Es la principal fuente de financiación pública blanda en España para la puesta en marcha de empresas innovadoras.</p>
+<ul>
+<li><strong>Cuantía del Préstamo:</strong> Desde <strong>25.000 € hasta 300.000 €</strong> (según necesidades de tesorería y fondos propios).</li>
+<li><strong>Garantías Exigidas:</strong> <strong>NINGUNA.</strong> No requiere avales personales del emprendedor ni hipotecas reales. La única garantía es la viabilidad del propio proyecto HURVANT.</li>
+<li><strong>Tipos de Interés:</strong> Tipo variable bonificado (Euríbor + diferencial del 3,75% al 8% según rentabilidad).</li>
+<li><strong>Plazo de Amortización:</strong> Hasta 7 años, con hasta <strong>3 años de carencia</strong> inicial.</li>
+<li><strong>Requisito Clave de Fondos Propios:</strong><ul>
+<li>En la línea <em>Jóvenes Emprendedores</em> (&lt;40 años), los socios deben aportar en fondos propios al menos el <strong>50% de la cuantía solicitada</strong> a ENISA (ejemplo: para pedir 30.000 € a ENISA, los socios deben aportar 15.000 € al capital de Hurvant).</li>
+<li>En la línea <em>Startups General</em>, la relación de Fondos Propios es de <strong>1:1</strong> (1 € de fondos propios por cada 1 € de préstamo ENISA).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>2.2. ICO — Línea ICO Empresas y Emprendedores (vía Banca Comercial)</h3>
+<ul>
+<li><strong>Entidades Colaboradoras:</strong> Banco Santander, BBVA, CaixaBank, Sabadell.</li>
+<li><strong>Función:</strong> Financiación garantizada parcialmente por el Instituto de Crédito Oficial para compra de activos fijos (equipos NDT, tablets, vehículos) y liquidez.</li>
+<li><strong>Condiciones:</strong> Tipos de interés bonificados y plazos de devolución de hasta 20 años (con carencia de hasta 3 años).</li>
+</ul>
+<hr>
+<h3>2.3. ICF (Institut Català de Finances) — Préstamos ICF Emprèn</h3>
+<ul>
+<li><strong>Organismo:</strong> Entidad financiera pública de la Generalitat de Catalunya.</li>
+<li><strong>Cuantía:</strong> Préstamos participativos desde <strong>20.000 € hasta 200.000 €</strong>.</li>
+<li><strong>Requisito:</strong> Pymes o Startups con sede operativa en Cataluña.</li>
+</ul>
+<hr>
+<h2>3. SUBVENCIONES Y AYUDAS A FONDO PERDIDO (GRANTS)</h2>
+<h3>3.1. ACCIÓ — Programa Startup Capital (Generalitat de Catalunya)</h3>
+<ul>
+<li><strong>Importe:</strong> Hasta <strong>100.000 € A FONDO PERDIDO</strong> (subvención no reembolsable).</li>
+<li><strong>Dirigido a:</strong> Startups tecnológicas emergentes de entre 3 meses y 3 años de vida con sede en Cataluña.</li>
+<li><strong>Uso de los Fondos:</strong> Financiación de salarios del equipo, desarrollo de la plataforma SaaS, compra de equipamiento NDT y estrategia de marketing.</li>
+</ul>
+<h3>3.2. ACCIÓ — Cupons d&#39;Innovació i Tecnologia</h3>
+<ul>
+<li><strong>Importe:</strong> Subvenciones de <strong>6.000 € a 20.000 €</strong> para la contratación de proveedores tecnológicos y auditorías de ciberseguridad/RGPD.</li>
+</ul>
+<h3>3.3. CDTI — Programa NEOTEC (Fase de Crecimiento Tecnológico)</h3>
+<ul>
+<li><strong>Importe:</strong> De <strong>250.000 € a 325.000 € a fondo perdido</strong> para empresas con un fuerte componente de I+D propia (Portal SaaS e Inteligencia de Datos).</li>
+</ul>
+<hr>
+<h2>4. AYUDAS AL TRABAJO AUTÓNOMO Y CAPITALIZACIÓN</h2>
+<ol>
+<li><strong>Cuota Reducida de Autónomo (Tarifa Plana):</strong>  <ul>
+<li>En Cataluña, la cuota fija es de <strong>80 €/mes</strong> durante el primer año.  </li>
+<li>Además, el Departament d&#39;Empresa i Treball de la Generalitat bonifica el 100% de la cuota para jóvenes y nuevos emprendedores.</li>
+</ul>
+</li>
+<li><strong>Pago Único del Paro (Capitalización del Desempleo):</strong>  <ul>
+<li>Si el emprendedor tuviera prestación por desempleo acumulada en España o UE, puede solicitar el 100% del importe en un único pago para financiar el capital social inicial de HURVANT y la compra del equipo físico NDT.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>5. HOJA DE RUTA RECOMENDADA PARA LA INVERSIÓN INICIAL DE HURVANT</h2>
+<pre><code class="language-mermaid">graph TD
+    A[Capital Inicial Propio / Socios: 15.000€] --&gt; B[Constitución de SL + Firma Capital Social]
+    B --&gt; C[Solicitud de Certificación Startup en ENISA]
+    C --&gt; D[Obtención del Préstamo ENISA Jóvenes Emprendedores: 30.000€ sin aval]
+    D --&gt; E[Solicitud Subvención ACCIÓ Startup Capital: 75.000€ a fondo perdido]
+    E --&gt; F[Inversión Total Disponible: 120.000€ para Lanzamiento Nacional]
+</code></pre>
+<h3>Plan Financiero de Despliegue de Inversión Inicial (120.000 € Totales)</h3>
+<ul>
+<li><strong>Equipamiento Físico NDT &amp; Hardware de Campo:</strong> 4.400 €</li>
+<li><strong>Desarrollo del Portal SaaS &amp; Infraestructura Cloud:</strong> 12.000 €</li>
+<li><strong>Campaña de Lanzamiento &amp; Publicidad Paid Media (Fase 5):</strong> 18.000 € (3 meses a 6.000€/mes)</li>
+<li><strong>Personal Técnico &amp; Gastos Operativos:</strong> 60.000 €</li>
+<li><strong>Fondo de Reserva de Tesorería:</strong> 25.600 €</li>
+</ul>
+<hr>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>

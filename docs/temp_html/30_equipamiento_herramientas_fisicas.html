@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>30_equipamiento_herramientas_fisicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.6;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* HEADER CORPORATIVO EN CADA PÁGINA */
+    .header-doc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+    .header-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    .header-tag {
+      font-size: 9pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* ESTILOS DE TEXTO E IMPRESIÓN */
+    h1 {
+      font-size: 22pt;
+      font-weight: 900;
+      color: #1b2e4b;
+      line-height: 1.25;
+      margin-top: 18px;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-size: 15pt;
+      font-weight: 800;
+      color: #1b2e4b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #0369a1;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1b2e4b;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 12px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 6px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    blockquote {
+      background: #f8fafc;
+      border-left: 4px solid #1b2e4b;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #1e293b;
+    }
+    blockquote p {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10pt;
+      page-break-inside: avoid;
+    }
+    th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 800;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 9pt;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      background: #f1f5f9;
+      color: #0369a1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+    }
+    pre {
+      background: #0a192f;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 9pt;
+      page-break-inside: avoid;
+    }
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #e2e8f0;
+      margin: 24px 0;
+    }
+
+    .footer-doc {
+      margin-top: 36px;
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-doc">
+    <img src="file:///Users/antoniocontreras/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/Hurvant/public/Logo.png" alt="HURVANT Logo Oficial" class="header-logo" />
+    <span class="header-tag">Documento Oficial de Estrategia</span>
+  </div>
+
+  <div class="content">
+    <h1>GUÍA DE EQUIPAMIENTO, PROVEEDORES EN ESPAÑA Y HERRAMIENTAS FÍSICAS DE CAMPO</h1>
+<h2>HURVANT Certification &amp; Technical Validation</h2>
+<p><strong>Fecha de emisión:</strong> Julio 2026<br><strong>Autor:</strong> Dirección de Operaciones &amp; Inspección Técnica<br><strong>Proyecto:</strong> Equipamiento Operativo de Campo Hurvant<br><strong>Objetivo:</strong> Guía de adquisición con proveedores oficializados en España, modelos exactos y presupuesto de inversión (€)  </p>
+<hr>
+<h2>1. PROVEEDORES OFICIALES Y EQUIPOS NDT / INSPECCIÓN EN ESPAÑA</h2>
+<h3>1.1. Yugos Magnéticos y Consumibles MT / PT (ISO 9712)</h3>
+<ul>
+<li><strong>Modelos Recomendados:</strong> Magnaflux Y-2 (CA) o Magnaflux Y-7 (CA/CC).</li>
+<li><strong>Distribuidores Oficiales en España:</strong><ol>
+<li><strong>Tecnitest NDT</strong> (<code>www.tecnitestndt.net</code> - Madrid): Especialistas en suministro de equipos de Ensayos No Destructivos, certificación y soporte técnico.</li>
+<li><strong>Neurtek Instruments</strong> (<code>www.neurtek.com</code> - Guipúzcoa): Distribuidor de instrumentación de control de calidad y NDT.</li>
+<li><strong>Magnaflux EMEA</strong> (<code>www.magnaflux.eu</code>): Fabricante oficial para solicitud de certificados ASTM E1444 y ASME Sección V.</li>
+</ol>
+</li>
+<li><strong>Consumibles (Kits PT / MT):</strong> Magnaflux WCP-2 (contraste blanco) + 7HF (partículas negras) y SKD-S2 (revelador para líquidos penetrantes).</li>
+</ul>
+<hr>
+<h3>1.2. Medidores de Espesores por Ultrasonidos (UT)</h3>
+<ul>
+<li><strong>Modelos Recomendados:</strong> <strong>DeFelsko PosiTector UTG</strong> (Sonda UTG C para corrosión o UTG M a través de pintura) o <strong>PCE-TG 300 / PCE-UTG M</strong>.</li>
+<li><strong>Distribuidores Oficiales en España:</strong><ol>
+<li><strong>UMI (Útiles y Máquinas Industriales, S.A.)</strong> (<code>www.umi.es</code>): Distribuidor oficial exclusivo de DeFelsko en España.</li>
+<li><strong>PCE Instruments Ibérica</strong> (<code>www.pce-iberica.es</code> - Albacete): Compra directa online con certificado de calibración ISO de fábrica.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3>1.3. Calibres de Desgaste de Horquillas para Carretillas (ISO 5057)</h3>
+<ul>
+<li><strong>Normativa Exigida:</strong> ISO 5057 (Rechazo automático de la horquilla si el desgaste del talón supera el 10% del espesor original).</li>
+<li><strong>Distribuidores Oficiales en España:</strong><ol>
+<li><strong>TVH España</strong> (<code>www.tvh.com</code> - Barcelona/Madrid): Líder en recambios e instrumental de inspección de carretillas (Envío 24/48h).</li>
+<li><strong>Cascade España</strong> (<code>www.cascorp.com</code>): Fabricante especializado de horquillas e instrumental de seguridad.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3>1.4. Placas Metálicas de Adecuación RD 1215/97 con Código QR</h3>
+<ul>
+<li><strong>Material:</strong> Aluminio Anodizado Industrial (Resistente a rayos UV, aceites, grasa y abrasión).</li>
+<li><strong>Fijación:</strong> Taladros para remaches de acero inoxidable Bralo + Adhesivo estructural 3M VHB incorporado.</li>
+<li><strong>Fabricantes Especializados en España:</strong><ol>
+<li><strong>Suprametal</strong> (<code>www.suprametal.com</code> - Barcelona): Especialistas en grabado láser inalterable de códigos QR y datos variables.</li>
+<li><strong>Sergar Marcaje Industrial</strong> (<code>www.sergar.com</code> - Valencia): Placas de aluminio anodizado de alta resistencia ambiental.</li>
+<li><strong>Alumigraf</strong> (<code>www.alumigraf.es</code>): Placas técnicas de características e inspección.</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2>2. MATRIZ DE COMPRA Y PRESUPUESTO INICIAL (EQUIPO PARA 1 INSPECTOR)</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Herramienta / Equipo Físico</th>
+<th align="left">Modelo Recomendado</th>
+<th align="left">Proveedor Oficial</th>
+<th align="left">Coste Estimado (€)</th>
+<th align="left">Prioridad</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Yugo Magnético Portátil (MT)</strong></td>
+<td align="left">Magnaflux Y-2 / Y-7</td>
+<td align="left">Tecnitest NDT / Neurtek</td>
+<td align="left">850€ - 1.300€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Consumibles Partículas / Penetrantes</strong></td>
+<td align="left">Magnaflux WCP-2 + 7HF + SKD-S2</td>
+<td align="left">Tecnitest NDT / Magnaflux</td>
+<td align="left">150€ - 250€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Medidor de Espesores Ultrasonidos</strong></td>
+<td align="left">DeFelsko PosiTector UTG</td>
+<td align="left">UMI, S.A. / PCE Instruments</td>
+<td align="left">1.400€ - 2.600€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Calibre Desgaste Horquillas ISO 5057</strong></td>
+<td align="left">Calibre Mecánico TVH</td>
+<td align="left">TVH España</td>
+<td align="left">150€ - 280€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Placas Metálicas QR RD 1215/97 (100 uds)</strong></td>
+<td align="left">Aluminio Anodizado Láser + 3M VHB</td>
+<td align="left">Suprametal / Sergar</td>
+<td align="left">250€ - 400€ (lote)</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Remachadora Batería / Neumática + Remaches</strong></td>
+<td align="left">Bralo / Makita</td>
+<td align="left">Würth España / Bralo</td>
+<td align="left">180€ - 320€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Luxómetro Digital Calibrado</strong></td>
+<td align="left">PCE-LXM 100 / Testo 540</td>
+<td align="left">PCE Instruments / Testo</td>
+<td align="left">120€ - 240€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Sonómetro Calibrado Clase 2</strong></td>
+<td align="left">PCE-MSM 4 / Testo 815</td>
+<td align="left">PCE Instruments / Testo</td>
+<td align="left">220€ - 480€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Tablet Ruguerizada de Campo (IP68)</strong></td>
+<td align="left">Samsung Galaxy Tab Active4 Pro</td>
+<td align="left">Amazon Business / Samsung IT</td>
+<td align="left">650€ - 850€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Funda UAG con Correa para Tablet</strong></td>
+<td align="left">UAG Scout Series</td>
+<td align="left">Urban Armor Gear</td>
+<td align="left">65€ - 85€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Casco de Seguridad de Protección</strong></td>
+<td align="left">Petzl Vertex / MSA V-Gard</td>
+<td align="left">Profero / 3M Safety</td>
+<td align="left">50€ - 85€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Chaleco Reflectante HURVANT (5 uds)</strong></td>
+<td align="left">Velilla EN ISO 20471</td>
+<td align="left">Velilla Confección</td>
+<td align="left">60€ - 100€ (lote)</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Calzado de Seguridad S3 ESD</strong></td>
+<td align="left">Base Protection / U-Power</td>
+<td align="left">Base Protection</td>
+<td align="left">80€ - 130€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>Maleta Hermética Tipo Peli con Espuma</strong></td>
+<td align="left">Pelicase 1510 / Explorer 4419</td>
+<td align="left">Peli Cases España</td>
+<td align="left">180€ - 280€</td>
+<td align="left">🟢 Fase 1</td>
+</tr>
+<tr>
+<td align="left"><strong>TOTAL ESTIMADO FASE 1:</strong></td>
+<td align="left"><strong>Kit Completo 1 Inspector</strong></td>
+<td align="left"><strong>Proveedores España</strong></td>
+<td align="left"><strong>~4.400€ + IVA</strong></td>
+<td align="left"><strong>🟢 Listo</strong></td>
+</tr>
+</tbody></table>
+<hr>
+
+
+  </div>
+
+  <div class="footer-doc">
+    <div>HURVANT Certification & Technical Validation | España</div>
+    <div>📧 hello@hurvant.com | 🌐 www.hurvant.com</div>
+  </div>
+</body>
+</html>
