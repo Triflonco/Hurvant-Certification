@@ -80,7 +80,7 @@ HURVANT Certification & Technical Validation
 
 SEDE Y CONTACTO CORPORATIVO:
 📍 Cobertura Nacional · Operativa Prioritaria en Cataluña
-📧 Email: hola@hurvant.com
+📧 Email: hello@hurvant.com
 ☎️ Teléfono Directo: +34 611 888 179
 🌐 Web Oficial: www.hurvant.com
 
@@ -183,7 +183,7 @@ Pruebe la metodología HURVANT en un turno o área acotada de su planta:
 
 ────────────── ACCIÓN INMEDIATA ──────────────
 Solicite la implantación de su Programa Piloto:
-📧 hola@hurvant.com  |  ☎️ +34 611 888 179
+📧 hello@hurvant.com  |  ☎️ +34 611 888 179
 🌐 Formulario Directo: www.hurvant.com/contacto
 ```
 

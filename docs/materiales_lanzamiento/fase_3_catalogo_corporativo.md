@@ -345,7 +345,7 @@ Para permitir a las grandes organizaciones probar la metodología HURVANT con **
 Para solicitar una propuesta técnica a medida o concertar la implantación de un **Programa Piloto de Validación**:
 
 - 🏢 **Entidad:** HURVANT Certification & Technical Validation
-- 📧 **Correo Electrónico Corporativo:** `hola@hurvant.com`
+- 📧 **Correo Electrónico Corporativo:** `hello@hurvant.com`
 - ☎️ **Teléfono Sede Directa:** `+34 611 888 179`
 - 🌐 **Portal Institucional:** [https://www.hurvant.com](https://www.hurvant.com)
 - 🔒 **Consola de Verificación QR:** [https://www.hurvant.com/verificacion](https://www.hurvant.com/verificacion)

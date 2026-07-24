@@ -15,7 +15,7 @@
 - **Categoría:** Servicio de Inspección Técnica / Certificación
 - **Descripción del Perfil:**
   > Organismo Técnico Independiente de Tercera Parte. Evaluación observacional de personas (ISO 17024), adecuación de maquinaria (RD 1215/97) y Ensayos NDT (ISO 9712). Trazabilidad SHA-256.  
-  > 🌐 www.hurvant.com | 📧 hola@hurvant.com
+  > 🌐 www.hurvant.com | 📧 hello@hurvant.com
 - **Horario de Atención:** Lunes a Viernes de 08:00 a 19:00 (Respuesta automatizada 24/7 en fuera de horario).
 
 ---

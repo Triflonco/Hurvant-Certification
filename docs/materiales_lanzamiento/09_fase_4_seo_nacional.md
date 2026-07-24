@@ -103,7 +103,7 @@ Este fragmento debe incluirse en la cabecera `<head>` de la web para que Google 
       "url": "https://www.hurvant.com/",
       "logo": "https://www.hurvant.com/Logo.png",
       "description": "Organismo Técnico Independiente de Tercera Parte especializado en la evaluación observacional de personas (ISO 17024), adecuación de maquinaria (RD 1215/1997) y Ensayos No Destructivos NDT (ISO 9712).",
-      "email": "hola@hurvant.com",
+      "email": "hello@hurvant.com",
       "telephone": "+34611888179",
       "areaServed": {
         "@type": "Country",

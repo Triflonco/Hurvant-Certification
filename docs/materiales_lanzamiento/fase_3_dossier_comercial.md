@@ -93,6 +93,6 @@ graph LR
 Para programar una demostración del **Portal SaaS Corporativo** o solicitar la implantación de un **Programa Piloto**:
 
 - 🏢 **HURVANT Certification & Technical Validation**
-- 📧 **Email:** `hola@hurvant.com`
+- 📧 **Email:** `hello@hurvant.com`
 - ☎️ **Teléfono Directo:** `+34 611 888 179`
 - 🌐 **Web:** [www.hurvant.com/contacto](https://www.hurvant.com/contacto)

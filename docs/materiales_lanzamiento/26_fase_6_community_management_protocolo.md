@@ -25,7 +25,7 @@
 
 ### Pregunta 2: "¿Cuánto cuesta la inspección de una carretilla o maquinaria?"
 - **Respuesta Oficial:**  
-  > *"Estimado/a [Nombre], el coste de la inspección técnica según el Real Decreto 1215/1997 depende del volumen del parque de maquinaria y la ubicación del centro productivo. Le invitamos a solicitar una propuesta personalizada o activar nuestro Programa Piloto de 14 Días en www.hurvant.com/contacto o escribiéndonos directamente a hola@hurvant.com."*
+  > *"Estimado/a [Nombre], el coste de la inspección técnica según el Real Decreto 1215/1997 depende del volumen del parque de maquinaria y la ubicación del centro productivo. Le invitamos a solicitar una propuesta personalizada o activar nuestro Programa Piloto de 14 Días en www.hurvant.com/contacto o escribiéndonos directamente a hello@hurvant.com."*
 
 ---
 

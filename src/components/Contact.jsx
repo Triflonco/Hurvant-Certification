@@ -122,7 +122,7 @@ export default function Contact() {
             <ul className="space-y-3.5">
               <li className="flex items-center gap-3.5 text-xs text-slate-600">
                 <Mail className="h-4.5 w-4.5 text-hurvant-indigo shrink-0" />
-                <span>hola@hurvant.com</span>
+                <span>hello@hurvant.com</span>
               </li>
               <li className="flex items-center gap-3.5 text-xs text-slate-600">
                 <Phone className="h-4.5 w-4.5 text-hurvant-indigo shrink-0" />

@@ -78,7 +78,7 @@
 |                                                                   |
 |  +---------------------------+   [ CÓDIGO QR SOLICITUD PILOTO ]   |
 |  | SOLICITAR PILOTO AHORA:   |   Escanee con su móvil para        |
-|  | 📧 hola@hurvant.com       |   agendar la sesión técnica        |
+|  | 📧 hello@hurvant.com       |   agendar la sesión técnica        |
 |  | ☎️ +34 611 888 179        |   en menos de 24 horas.            |
 |  | 🌐 www.hurvant.com        |                                    |
 |  +---------------------------+                                    |
