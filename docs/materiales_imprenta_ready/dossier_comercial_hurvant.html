@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HURVANT - Dossier Comercial Executive (Ortografía Revisada - Texto Justificado)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #cbd5e1; color: #0f172a; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    
+    p, .text-body, .card-info-light p, .cover-subtitle-light {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .dossier-page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 18mm 16mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      page-break-after: always;
+      position: relative;
+    }
+    @media print { body { background: none; } .dossier-page { margin: 0; box-shadow: none; width: 210mm; height: 297mm; } }
+
+    /* ESTILO LUMINOSO DE ALTA CALIDAD */
+    .brand-logo-dossier { height: 52px; width: auto; object-fit: contain; }
+    
+    .page-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1b2e4b;
+      padding-bottom: 14px;
+    }
+    .page-tag { font-size: 10px; font-weight: 800; color: #4f46e5; text-transform: uppercase; letter-spacing: 1px; }
+
+    .cover-title-light {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-top: 40px;
+      color: #1b2e4b;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+    .cover-title-light span { color: #4f46e5; }
+    .cover-subtitle-light { font-size: 14.5px; color: #475569; margin-top: 14px; font-weight: 500; line-height: 1.55; text-align: justify; }
+
+    .cover-img-frame {
+      width: 100%;
+      height: 270px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 30px;
+      border: 2px solid #e2e8f0;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .cover-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    .section-h2 { font-size: 20px; font-weight: 900; color: #1b2e4b; margin-top: 20px; text-align: left; }
+    .text-body { font-size: 11.5px; color: #475569; line-height: 1.6; margin-top: 8px; text-align: justify; }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .card-info-light {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #4f46e5;
+      padding: 14px;
+      border-radius: 8px;
+    }
+    .card-info-light h3 { font-size: 12.5px; font-weight: 800; color: #1b2e4b; text-align: left; }
+    .card-info-light p { font-size: 10.5px; color: #64748b; margin-top: 5px; line-height: 1.45; text-align: justify; }
+
+    .table-dossier {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 11px;
+    }
+    .table-dossier th {
+      background: #1b2e4b;
+      color: #ffffff;
+      padding: 10px;
+      text-align: left;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .table-dossier td {
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #334155;
+      text-align: justify;
+    }
+
+    .footer-dossier {
+      border-top: 2px solid #e2e8f0;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PÁGINA 1: PORTADA EJECUTIVA LUMINOSA -->
+  <div class="dossier-page">
+    <div>
+      <div class="page-header-row">
+        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-dossier" />
+        <span class="page-tag">Dossier de Presentación Oficial</span>
+      </div>
+
+      <h1 class="cover-title-light">
+        Dossier Comercial <span>y Soluciones de Validación</span>
+      </h1>
+      <p class="cover-subtitle-light">
+        Organismo técnico de tercera parte especializado en la evaluación observacional de personas, la adecuación de maquinaria según el Real Decreto 1215/1997 y la trazabilidad criptográfica inalterable.
+      </p>
+
+      <div class="cover-img-frame">
+        <img src="../../public/training_alignment.jpg" alt="HURVANT Governance" />
+      </div>
+    </div>
+
+    <div class="footer-dossier">
+      <div>HURVANT Certification & Technical Validation | España</div>
+      <div>Edición Ejecutiva 2026 / 2027</div>
+    </div>
+  </div>
+
+  <!-- PÁGINA 2: CONTENIDO TÉCNICO -->
+  <div class="dossier-page">
+    <div>
+      <div class="page-header-row">
+        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-dossier" />
+        <span class="page-tag">Propuesta de Valor & Servicios</span>
+      </div>
+
+      <h2 class="section-h2">Evaluación Objetiva en Campo vs Formación en Papel</h2>
+      <p class="text-body">
+        HURVANT ofrece a la alta dirección la tranquilidad jurídica de contar con evidencias inalterables con valor probatorio ante la Inspección de Trabajo y juzgados de lo penal. Evaluamos el comportamiento práctico del trabajador en su puesto real de trabajo y la adecuación física de la maquinaria.
+      </p>
+
+      <div class="grid-2col">
+        <div class="card-info-light">
+          <h3>👥 Certificación de Personas (ISO 17024)</h3>
+          <p>Pruebas observacionales in-situ en el puesto de trabajo habitual. Emisión de Certificado Individual y Pasaporte Técnico QR Móvil por cada trabajador verificado.</p>
+        </div>
+        <div class="card-info-light" style="border-left-color: #0284c7;">
+          <h3>🚜 Inspección de Maquinaria (RD 1215/1997)</h3>
+          <p>Dictamen técnico de ingeniería firmado por profesional colegiado junto con la fijación de placa metálica con código QR de verificación fijada en la máquina.</p>
+        </div>
+        <div class="card-info-light" style="border-left-color: #d97706;">
+          <h3>🔬 Ensayos No Destructivos (NDT / END)</h3>
+          <p>Ultrasonidos (UT) y partículas magnéticas (MT) para grúas y equipos de izaje por inspectores cualificados bajo norma ISO 9712 Nivel II y III.</p>
+        </div>
+        <div class="card-info-light" style="border-left-color: #16a34a;">
+          <h3>💻 Portal SaaS Corporativo</h3>
+          <p>Cuadro de mando en la nube con Skill Matrix en tiempo real, expediente único por máquina y repositorios de expedientes firmados criptográficamente.</p>
+        </div>
+      </div>
+
+      <h2 class="section-h2" style="font-size:18px;margin-top:24px;">Modelos de Contratación Comercial</h2>
+      <table class="table-dossier">
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Alcance Operativo</th>
+            <th>Entregables</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Programa Piloto (14 Días)</strong></td>
+            <td>10 a 20 operarios en 1 turno o área acotada</td>
+            <td>Informe Ejecutivo de Riesgo + Acceso SaaS Piloto</td>
+          </tr>
+          <tr>
+            <td><strong>2. Proyecto / Auditoría Puntual</strong></td>
+            <td>Parque completo de maquinaria o campaña NDT</td>
+            <td>Dictámenes Colegiados + Placas QR Físicas</td>
+          </tr>
+          <tr>
+            <td><strong>3. Acuerdos Enterprise / Retainer</strong></td>
+            <td>Suscripción anual para grandes centros e industrias</td>
+            <td>SLA 24h + Skill Matrix SaaS + Validación ETT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-dossier">
+      <div>HURVANT Certification | 📧 hola@hurvant.com | ☎️ +34 611 888 179</div>
+      <div>Página 2 de 2</div>
+    </div>
+  </div>
+
+</body>
+</html>
