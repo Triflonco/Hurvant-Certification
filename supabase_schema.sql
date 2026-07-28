@@ -9,6 +9,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 -- 2. limpieza de tablas previas (para entornos de pruebas)
 DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 DROP FUNCTION IF EXISTS public.handle_new_user();
+DROP TABLE IF EXISTS hurvant_contacts CASCADE;
 DROP TABLE IF EXISTS certificados CASCADE;
 DROP TABLE IF EXISTS operarios CASCADE;
 DROP TABLE IF EXISTS empresas_clientes CASCADE;
@@ -108,6 +109,25 @@ CREATE INDEX idx_certificados_codigo ON certificados(codigo);
 CREATE INDEX idx_certificados_hash ON certificados(hash);
 
 -- =====================================================================
+-- TABLA: hurvant_contacts
+-- Registro de mensajes de solicitud de contacto y programas piloto
+-- =====================================================================
+CREATE TABLE hurvant_contacts (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    phone VARCHAR(50),
+    service VARCHAR(100),
+    message TEXT,
+    status VARCHAR(50) DEFAULT 'nuevo' CHECK (status IN ('nuevo', 'contactado', 'archivado')),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+CREATE INDEX idx_contacts_email ON hurvant_contacts(email);
+CREATE INDEX idx_contacts_status ON hurvant_contacts(status);
+
+-- =====================================================================
 -- TRIGGERS Y FUNCIONES: CONTROL DE TIEMPO (updated_at)
 -- =====================================================================
 CREATE OR REPLACE FUNCTION update_modified_column()
@@ -132,6 +152,10 @@ FOR EACH ROW EXECUTE FUNCTION update_modified_column();
 
 CREATE TRIGGER update_certificados_modtime 
 BEFORE UPDATE ON certificados 
+FOR EACH ROW EXECUTE FUNCTION update_modified_column();
+
+CREATE TRIGGER update_hurvant_contacts_modtime 
+BEFORE UPDATE ON hurvant_contacts 
 FOR EACH ROW EXECUTE FUNCTION update_modified_column();
 
 -- =====================================================================
@@ -220,6 +244,7 @@ ALTER TABLE perfiles_usuarios ENABLE ROW LEVEL SECURITY;
 ALTER TABLE empresas_clientes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE operarios ENABLE ROW LEVEL SECURITY;
 ALTER TABLE certificados ENABLE ROW LEVEL SECURITY;
+ALTER TABLE hurvant_contacts ENABLE ROW LEVEL SECURITY;
 
 -- 1. Políticas de Perfiles de Usuarios
 CREATE POLICY "Permitir a cada usuario leer su propio perfil"
@@ -303,6 +328,27 @@ USING (
     WHERE id = auth.uid() AND rol IN ('Inspector Técnico'::rol_usuario, 'Administrador'::rol_usuario)
   )
 );
+
+-- 5. Políticas de Formulario de Contactos (hurvant_contacts)
+CREATE POLICY "Permitir insercion publica de contactos"
+ON hurvant_contacts FOR INSERT
+TO anon, authenticated
+WITH CHECK (true);
+
+CREATE POLICY "Permitir lectura de contactos a usuarios autenticados"
+ON hurvant_contacts FOR SELECT
+TO authenticated
+USING (true);
+
+CREATE POLICY "Permitir actualizacion de contactos a usuarios autenticados"
+ON hurvant_contacts FOR UPDATE
+TO authenticated
+USING (true);
+
+CREATE POLICY "Permitir eliminacion de contactos a usuarios autenticados"
+ON hurvant_contacts FOR DELETE
+TO authenticated
+USING (true);
 
 -- =====================================================================
 -- SEMILLADO DE DATOS (SEED DATA)

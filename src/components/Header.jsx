@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Award } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,12 +8,12 @@ export default function Header() {
 
   const navItems = [
     { path: '/', label: 'Inicio' },
-    { path: '/servicios', label: 'Qué hacemos' },
+    { path: '/servicios', label: 'Ecosistema' },
     { path: '/sectores', label: 'Sectores' },
     { path: '/metodologia', label: 'Metodología' },
     { path: '/sobre-hurvant', label: 'Sobre Hurvant' },
-    { path: '/quejas-y-apelaciones', label: 'Quejas y Apelaciones' },
-    { path: '/verificacion', label: 'Verificación' },
+    { path: '/quejas-y-apelaciones', label: 'Gobernanza' },
+    { path: '/verificacion', label: 'Verificación QR' },
     { path: '/contacto', label: 'Contacto' }
   ];
 
@@ -25,21 +25,26 @@ export default function Header() {
   return (
     <header className="sticky top-0 left-0 w-full z-50 glass-header shadow-xs" role="banner">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Logo oficial con fondo transparente */}
+        {/* Logo oficial con eslogan corporativo */}
         <Link
           to="/"
           onClick={() => setMobileMenuOpen(false)}
           className="flex items-center gap-3 transition-transform duration-200 active:scale-98"
-          aria-label="HURVANT - Inicio"
+          aria-label="HURVANT - Impulsando la Competencia Técnica"
         >
           <img
             src="/Logo.png"
             alt="HURVANT Logo"
-            className="h-[58px] w-auto object-contain"
+            className="h-[56px] w-auto object-contain"
           />
-          <span className="hidden sm:inline-block text-xs font-semibold text-hurvant-navy-light uppercase border-l-2 border-slate-200 pl-3 ml-1 tracking-wider">
-            Organismo Técnico
-          </span>
+          <div className="hidden sm:flex flex-col border-l-2 border-slate-200 pl-3 ml-1">
+            <span className="text-[11px] font-black text-hurvant-navy uppercase tracking-wider">
+              HURVANT
+            </span>
+            <span className="text-[9.5px] font-bold text-hurvant-indigo tracking-tight">
+              Impulsando la Competencia Técnica
+            </span>
+          </div>
         </Link>
 
         {/* Menú Desktop */}

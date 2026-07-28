@@ -1,387 +1,313 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight, Cpu } from 'lucide-react';
+import { 
+  Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight, Cpu,
+  Award, ShieldCheck, BookOpen, Search, Code, Camera, Sparkles, Layers
+} from 'lucide-react';
 import PageMeta from './shared/PageMeta';
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState('services');
+  const [activeDivision, setActiveDivision] = useState('all');
 
-  const initialServices = [
+  const divisions = [
+    { id: 'all', name: 'Todas las Divisiones', icon: Layers },
+    { id: 'certification', name: 'HURVANT CERTIFICATION', icon: Award },
+    { id: 'inspection', name: 'HURVANT INSPECTION', icon: ShieldCheck },
+    { id: 'academy', name: 'HURVANT ACADEMY', icon: BookOpen },
+    { id: 'trace', name: 'HURVANT TRACE', icon: Search },
+    { id: 'digital', name: 'HURVANT DIGITAL', icon: Code },
+    { id: 'photo', name: 'HURVANT PHOTO', icon: Camera }
+  ];
+
+  const ecosystemServices = [
     {
-      id: 'evaluacion-operativa',
-      title: 'Evaluación Operativa de Personas',
-      subtitle: 'Análisis práctico y observacional en el entorno real',
+      id: 'cert-personas',
+      divisionId: 'certification',
+      divisionName: 'HURVANT CERTIFICATION',
+      title: 'Certificación de Personas (ISO 17024)',
+      subtitle: 'Evaluación objetiva y examen de competencias operativas',
       link: '/servicios/evaluacion-operativa',
-      icon: Activity,
+      icon: Award,
       image: '/eval_interview.jpg',
-      color: 'from-indigo-500 to-indigo-600',
-      textColor: 'text-indigo-600',
-      bgLight: 'bg-indigo-50/50',
-      borderColor: 'hover:border-indigo-500/30',
-      description: 'Evaluamos directamente el comportamiento, adaptación y desempeño en el puesto físico de trabajo para identificar brechas reales.',
+      color: 'from-indigo-600 to-hurvant-navy',
+      textColor: 'text-hurvant-indigo',
+      badge: 'UNE-EN ISO/IEC 17024',
+      description: 'Evaluamos y certificamos las competencias técnicas reales de operarios, supervisores y técnicos en entornos exigentes.',
       details: [
-        'Observación de campo estructurada mediante inspectores técnicos.',
-        'Entrevistas operativas breves sin interferir en la productividad.',
-        'Evaluación funcional y de capacidad real en contexto real de estrés.',
-        'Análisis en profundidad de riesgos conductuales y de seguridad.',
-        'Detección temprana de desajustes críticos entre la persona y el puesto.'
+        'Exámenes prácticos y teóricos bajo esquemas acreditados ISO 17024.',
+        'Observación directa de desempeño y hábitos seguros en campo.',
+        'Evaluación funcional y de capacidad real en contexto de fatiga y presión.',
+        'Emisión de certificados individuales con firma digital inmutable SHA-256.',
+        'Inclusión en el Registro Público Nacional de Competencias Verificables.'
       ]
     },
     {
-      id: 'informes-desempeno',
-      title: 'Informes de Desempeño y Riesgo',
-      subtitle: 'Entregables ejecutivos claros y orientados a la acción',
-      link: '/servicios/evaluacion-operativa',
-      icon: FileText,
-      color: 'from-cyan-500 to-cyan-600',
-      textColor: 'text-cyan-600',
-      bgLight: 'bg-cyan-50/50',
-      borderColor: 'hover:border-cyan-500/30',
-      description: 'Proveemos visibilidad absoluta sobre los factores de riesgo humano e ineficiencias antes de que impacten en los resultados.',
-      details: [
-        'Mapeo de puntos críticos y cuellos de botella de desempeño.',
-        'Matriz cuantitativa de riesgos de seguridad detectados.',
-        'Identificación de fortalezas del equipo y mejores prácticas in situ.',
-        'Detección de necesidades de adecuación funcional.',
-        'Recomendaciones operativas concretas de optimización y seguridad.'
-      ]
-    },
-    {
-      id: 'inspeccion-equipos',
-      title: 'Inspección de Equipos y Maquinaria (RD 1215/97)',
-      subtitle: 'Validación física de conformidad e inspección de adecuación',
+      id: 'cert-maquinaria',
+      divisionId: 'certification',
+      divisionName: 'HURVANT CERTIFICATION',
+      title: 'Certificación y Adecuación de Equipos (RD 1215/97)',
+      subtitle: 'Validación reglamentaria de seguridad en maquinaria industrial',
       link: '/servicios/inspeccion-equipos',
       icon: Wrench,
       image: '/heavy_machinery_loader.png',
-      color: 'from-amber-500 to-amber-600',
-      textColor: 'text-amber-600',
-      bgLight: 'bg-amber-50/50',
-      borderColor: 'hover:border-amber-500/30',
-      description: 'Auditoría técnica e inspección reglamentaria según RD 1215/1997 para certificar la seguridad de maquinaria pesada.',
-      details: [
-        'Inspección reglamentaria de grúas, eslingas y accesorios de izaje.',
-        'Inspección y adecuación de maquinaria según el RD 1215/1997.',
-        'Pruebas mecánicas de fatiga y estabilidad estructural in-situ.',
-        'Placa de identificación con código QR único.',
-        'Emisión de dictámenes técnicos y firma digital inmutable.'
-      ]
-    },
-    {
-      id: 'ensayos-no-destructivos',
-      title: 'Ensayos No Destructivos (NDT / END)',
-      subtitle: 'Ultrasonidos, partículas magnéticas y líquidos penetrantes',
-      link: '/servicios/ensayos-no-destructivos',
-      icon: Cpu,
-      image: '/ndt_testing_weld.png',
-      color: 'from-cyan-600 to-cyan-700',
-      textColor: 'text-cyan-600',
-      bgLight: 'bg-cyan-50/50',
-      borderColor: 'hover:border-cyan-500/30',
-      description: 'Detección de defectos volumétricos y superficiales en estructuras, soldaduras y equipos críticos.',
-      details: [
-        'Ensayos NDT: ultrasonidos (UT), partículas magnéticas (MT) y líquidos penetrantes (PT).',
-        'Inspectores cualificados bajo norma UNE-EN ISO 9712 Nivel II/III.',
-        'Control de soldaduras y elementos estructurales sometidos a fatiga.',
-        'Inspección visual avanzada (VT) según UNE-EN ISO 17637.',
-        'Informes técnicos de integridad física con trazabilidad digital.'
-      ]
-    },
-    {
-      id: 'programas-piloto',
-      title: 'Programas Piloto de Validación',
-      subtitle: 'Implementación controlada y de cero fricción',
-      link: '/servicios/programas-piloto',
-      icon: Sliders,
-      color: 'from-slate-700 to-hurvant-navy',
+      color: 'from-indigo-700 to-slate-900',
       textColor: 'text-hurvant-navy',
-      bgLight: 'bg-slate-100/50',
-      borderColor: 'hover:border-hurvant-navy/30',
-      description: 'Validamos el encaje de la metodología en áreas delimitadas sin interrumpir las operaciones en curso.',
+      badge: 'Real Decreto 1215/1997',
+      description: 'Auditoría técnica de adecuación y certificación de maquinaria pesada, equipos de elevación e instalaciones.',
       details: [
-        'Despliegue ágil en un área específica o sección crítica.',
-        'Evaluación en equipos concretos (ej. un turno de trabajo específico).',
-        'Validación y modelado de problemas en un entorno de prueba acotado.',
-        'Demostración medible de la reducción de incidencias en semanas.',
-        'Diseño de planes de escala progresivos según los resultados.'
+        'Inspección reglamentaria de carretillas, grúas, PEMP y plataformas.',
+        'Dictámenes de adecuación según Real Decreto 1215/1997 Anexo I y II.',
+        'Pruebas mecánicas de estabilidad y dispositivos de seguridad.',
+        'Marcado con código QR único para inspección inmediata de autoridades.',
+        'Informe técnico con plena validez jurídica e institucional.'
+      ]
+    },
+    {
+      id: 'insp-ndt',
+      divisionId: 'inspection',
+      divisionName: 'HURVANT INSPECTION',
+      title: 'Ensayos No Destructivos (NDT / END)',
+      subtitle: 'Inspección volumétrica y superficial de estructuras (ISO 9712)',
+      link: '/servicios/ensayos-no-destructivos',
+      icon: ShieldCheck,
+      image: '/ndt_testing_weld.png',
+      color: 'from-cyan-600 to-slate-900',
+      textColor: 'text-hurvant-cyan',
+      badge: 'UNE-EN ISO 9712',
+      description: 'Detección de defectos estructurales, discontinuidades en soldadura y fatiga de materiales críticos sin alterar el activo.',
+      details: [
+        'Ultrasonidos (UT), Partículas Magnéticas (MT) y Líquidos Penetrantes (PT).',
+        'Inspectores cualificados Nivel II / III bajo norma UNE-EN ISO 9712.',
+        'Inspección visual avanzada (VT) según norma UNE-EN ISO 17637.',
+        'Supervisión de líneas de vida y puntos de anclaje (UNE-EN 795).',
+        'Inspección de estanterías metálicas de almacén (UNE-EN 15635).'
+      ]
+    },
+    {
+      id: 'acad-ia',
+      divisionId: 'academy',
+      divisionName: 'HURVANT ACADEMY',
+      title: 'Capacitación Técnica Avanzada y Plataforma IA',
+      subtitle: 'e-Learning adaptativo y generación de contenidos con IA',
+      link: '/contacto',
+      icon: BookOpen,
+      color: 'from-emerald-600 to-slate-900',
+      textColor: 'text-emerald-600',
+      badge: 'Plataforma IA Adaptativa',
+      description: 'Formación técnica reglada y programas de reacondicionamiento operativo mediante algoritmos de generación de contenidos asistidos por Inteligencia Artificial.',
+      details: [
+        'Cursos técnicos interactivos adaptados al nivel del operario.',
+        'Generación automatizada de casos de prueba y simulaciones operativas.',
+        'Formación reglada en prevención de riesgos operativos específicos.',
+        'Certificación de superación e integración con el portal de acreditación.',
+        'Evaluación continua del progreso técnico sin interferir en el turno.'
+      ]
+    },
+    {
+      id: 'trace-osint',
+      divisionId: 'trace',
+      divisionName: 'HURVANT TRACE',
+      title: 'Investigación Técnica, Due Diligence y OSINT',
+      subtitle: 'Verificación documental inmutable e inteligencia de fuentes abiertas',
+      link: 'https://trace.hurvant.com',
+      icon: Search,
+      color: 'from-amber-600 to-slate-900',
+      textColor: 'text-amber-600',
+      badge: 'Verification & OSINT IA',
+      description: 'Verificación de autenticidad documental, Due Diligence técnica y análisis de reputación y riesgo respaldados por IA.',
+      details: [
+        'Verificación inalterable de firmas criptográficas e historial de certificados.',
+        'Auditoría de integridad documental para licitaciones y aseguradoras.',
+        'Análisis OSINT de fuentes abiertas para evaluar solvencia técnica.',
+        'Detección de fraudes en credenciales profesionales o diplomas.',
+        'Informes ejecutivos de riesgo documental e idoneidad corporativa.'
+      ]
+    },
+    {
+      id: 'digital-saas',
+      divisionId: 'digital',
+      divisionName: 'HURVANT DIGITAL',
+      title: 'Soluciones Digitales, ERP/CRM e Inteligencia Artificial',
+      subtitle: 'El habilitador tecnológico del Grupo Hurvant y clientes externos',
+      link: '/servicios',
+      icon: Code,
+      color: 'from-indigo-600 to-slate-900',
+      textColor: 'text-indigo-600',
+      badge: 'Software & SaaS Corporativo',
+      description: 'Hurvant Digital es la división tecnológica que desarrolla el software, los sistemas ERP/CRM y los motores de IA que impulsan todo el Ecosistema Hurvant y ofrece soluciones SaaS a clientes externos.',
+      details: [
+        'Desarrollo de Plataformas SaaS de Gestión de Inspección y Registro.',
+        'Sistemas ERP y CRM a medida orientados al cumplimiento ISO.',
+        'Integración de Algoritmos de Inteligencia Artificial en Procesos.',
+        'Automatización de Flujos de Trabajo e Infraestructura en la Nube.',
+        'Consultoría de Transformación Digital para Entidades Industriales.'
+      ]
+    },
+    {
+      id: 'photo-doc',
+      divisionId: 'photo',
+      divisionName: 'HURVANT PHOTO',
+      title: 'Documentación Fotográfica Técnica e Industrial',
+      subtitle: 'Contenido visual profesional e imagen corporativa de alta calidad',
+      link: 'https://www.hurvantphoto.com',
+      icon: Camera,
+      color: 'from-purple-600 to-slate-900',
+      textColor: 'text-purple-600',
+      badge: 'Contenido Visual Profesional',
+      description: 'Servicios de fotografía técnica para inspección de activos, así como fotografía industrial, corporativa, inmobiliaria y cobertura de eventos.',
+      details: [
+        'Documentación fotográfica de precisión para informes de inspección.',
+        'Fotografía de instalaciones industriales, maquinaria y procesos.',
+        'Fotografía corporativa para equipos directivos y comunicación.',
+        'Fotografía inmobiliaria y de patrimonio arquitectónico.',
+        'Cobertura visual completa de eventos corporativos e institucionales.'
       ]
     }
   ];
 
+  const filteredServices = activeDivision === 'all' 
+    ? ecosystemServices 
+    : ecosystemServices.filter(s => s.divisionId === activeDivision);
+
   return (
     <>
       <PageMeta 
-        title="Servicios Técnicos de Certificación y Validación | HURVANT"
-        description="Portafolio de servicios técnicos de HURVANT: Evaluación de personas, inspección de maquinaria RD 1215/97, ensayos no destructivos NDT y programas piloto."
+        title="Divisiones y Catálogo del Ecosistema | GRUPO HURVANT"
+        description="Conozca el catálogo de divisiones del Grupo Hurvant: Hurvant Certification, Hurvant Inspection, Hurvant Academy, Hurvant Trace, Hurvant Digital y Hurvant Photo."
         canonicalPath="/servicios"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="services-title">
         {/* Cabecera */}
         <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
-          <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Portafolio Técnico y Gobernanza</span>
+          <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Ecosistema Empresarial</span>
           <h2 id="services-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
-            Servicios y Hoja de Ruta de Certificación
+            Divisiones Especializadas del Grupo Hurvant
           </h2>
           <p className="text-slate-500 font-medium mt-1.5 text-sm sm:text-base">
-            Validación operativa inmediata y plan de transición regulada hacia esquemas de certificación bajo estándares internacionales.
+            Cada división responde a un área de excelencia técnica respaldada por una única gobernanza de calidad e innovación.
           </p>
         </header>
 
-        {/* Selector de Sección: Servicios vs Hoja de Ruta ISO */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-12 bg-slate-100 p-1.5 rounded-custom-lg border border-slate-200/80">
-          <button
-            onClick={() => setActiveTab('services')}
-            className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
-              activeTab === 'services'
-                ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white shadow-md'
-                : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
-            }`}
-          >
-            <Activity className="h-5 w-5" />
-            <span>Servicios Operativos Iniciales</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('roadmap')}
-            className={`flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-custom-md font-bold text-sm sm:text-base transition-all duration-300 ${
-              activeTab === 'roadmap'
-                ? 'bg-gradient-to-r from-hurvant-navy to-hurvant-cyan text-white shadow-md'
-                : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
-            }`}
-          >
-            <GraduationCap className="h-5.5 w-5.5" />
-            <span>Hoja de Ruta Técnica (ISO 17024 / 17020)</span>
-          </button>
+        {/* Filtro por División */}
+        <div className="flex flex-wrap gap-2 mb-12 bg-slate-100 p-2 rounded-custom-lg border border-slate-200/80">
+          {divisions.map((div) => {
+            const Icon = div.icon;
+            const active = activeDivision === div.id;
+            return (
+              <button
+                key={div.id}
+                onClick={() => setActiveDivision(div.id)}
+                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
+                  active
+                    ? 'bg-hurvant-navy text-white shadow-md'
+                    : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
+                }`}
+              >
+                <Icon className="h-4 w-4 shrink-0" />
+                <span>{div.name}</span>
+              </button>
+            );
+          })}
         </div>
 
-        {activeTab === 'services' ? (
-          <div className="space-y-12">
-            {/* Introducción a los Servicios */}
-            <div className="bg-indigo-50/40 border border-indigo-100/60 p-6 rounded-custom-lg mb-8">
-              <h3 className="text-base font-bold text-hurvant-navy mb-2 flex items-center gap-2">
-                <Shield className="h-5 w-5 text-hurvant-indigo shrink-0" />
-                ¿Por qué evaluar el desempeño en la operación real?
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                Muchas empresas cumplen formalmente con cursos de prevención de riesgos o formación teórica, pero siguen sufriendo alta rotación, fallos costosos o accidentes. Hurvant interviene precisamente en ese punto crítico: evaluando de manera objetiva el comportamiento, la capacidad funcional y el encaje persona-puesto directamente en la actividad diaria.
-              </p>
-            </div>
-
-            {/* Grid de Servicios como Filas Horizontales Premium */}
-            <div className="space-y-8">
-              {initialServices.map((service, idx) => {
-                const IconComp = service.icon;
-                return (
-                  <article
-                    key={service.id}
-                    className={`glass-card rounded-custom-lg p-6 lg:p-8 border border-slate-200/60 shadow-xs flex flex-col ${
-                      idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                    } gap-8 items-center transition-all duration-300 glass-card-hover border-l-4 border-l-slate-300 overflow-hidden ${service.borderColor}`}
-                  >
-                    {service.image && (
-                      <div className="w-full lg:w-5/12 h-52 lg:h-64 rounded-custom-md overflow-hidden relative border border-slate-200/60 shrink-0">
-                        <img 
-                          src={service.image} 
-                          alt={service.title} 
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-103"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
-                      </div>
-                    )}
-                    
-                    <div className="flex-grow space-y-4 w-full">
-                      <div className="flex items-center justify-between gap-4">
-                        <div className="flex items-center gap-4">
-                          <div className={`h-12 w-12 rounded-custom-md bg-gradient-to-br ${service.color} text-white flex items-center justify-center shadow-sm shrink-0`}>
-                            <IconComp className="h-6 w-6" />
-                          </div>
-                          <div>
-                            <h3 className="text-lg lg:text-xl font-bold text-hurvant-navy leading-tight">{service.title}</h3>
-                            <span className="text-xs text-slate-400 font-medium block mt-0.5">{service.subtitle}</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">{service.description}</p>
-                      
-                      <div className="pt-4 border-t border-slate-100">
-                        <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-3">Detalles Técnicos de Campo:</span>
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
-                          {service.details.map((detail, dIdx) => (
-                            <li key={dIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 leading-normal">
-                              <span className={`h-4.5 w-4.5 rounded-full ${service.bgLight} ${service.textColor} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5`}>
-                                ✓
-                              </span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="pt-2">
-                        <Link 
-                          to={service.link}
-                          className="inline-flex items-center gap-2 text-xs font-bold text-hurvant-indigo hover:text-hurvant-navy transition-colors bg-indigo-50/80 px-4 py-2 rounded-custom-sm"
-                        >
-                          <span>Ver información detallada del servicio</span>
-                          <ArrowRight className="h-4 w-4" />
-                        </Link>
-                      </div>
+        {/* Grid de Servicios y Divisiones */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-16">
+          {filteredServices.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <article 
+                key={service.id}
+                className="bg-white rounded-custom-lg border border-slate-200/80 shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between"
+              >
+                {service.image && (
+                  <div className="h-48 overflow-hidden relative border-b border-slate-100">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-3 right-3 bg-slate-900/90 text-hurvant-cyan text-[10px] font-black uppercase px-3 py-1 rounded-full border border-slate-700 tracking-wider">
+                      {service.badge}
                     </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-        ) : (
-
-        <div className="space-y-8">
-          {/* Banner de Posicionamiento ENAC/Roadmap */}
-          <div className="bg-slate-900 text-white p-6 lg:p-8 rounded-custom-lg border-l-4 border-amber-500 relative overflow-hidden shadow-md space-y-4">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full pointer-events-none" />
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-              <span className="text-xs font-bold tracking-widest text-amber-400 uppercase block">Gobernanza y Transición de Calidad</span>
-              <span className="text-xs font-black text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                Cataluña · Pre-Acreditación 2026
-              </span>
-            </div>
-            <h3 className="text-lg lg:text-xl font-bold mb-2">Visión de Acreditación como Entidad de Certificación de Tercera Parte</h3>
-            <div className="space-y-3 text-xs sm:text-sm leading-relaxed text-slate-300">
-              <p>
-                <strong>HURVANT Certification</strong> es una entidad técnica de nueva creación que iniciará sus operaciones de campo en los próximos meses, enfocándose inicialmente en el mercado de <strong>Cataluña (provincias de Barcelona, Tarragona, Girona y Lleida)</strong>. Nuestra metodología, manuales e instrucciones técnicas han sido estructurados desde el primer día bajo los rigurosos requisitos de las normas internacionales de calidad.
-              </p>
-              <p>
-                Declaramos con absoluta transparencia y sinceridad que <strong>actualmente nos encontramos en fase de lanzamiento comercial y no disponemos todavía de la acreditación formal otorgada por la Entidad Nacional de Acreditación (ENAC)</strong>. Nuestra hoja de ruta estratégica contempla la consolidación inicial de operaciones en Cataluña y la subsiguiente solicitud de acreditación técnica bajo las normas <strong>UNE-EN ISO/IEC 17024</strong> (certificación de personas) e <strong>ISO/IEC 17020</strong> (organismo de inspección) ante ENAC.
-              </p>
-            </div>
-          </div>
-
-          {/* Acordeones / Paneles Técnicos de los Esquemas de la Hoja de Ruta */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Esquema 1 */}
-            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
-              <div className="space-y-6">
-                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
-                  <div>
-                    <span className="text-xs font-bold tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17024</span>
-                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
-                      Esquema E-HVT-01: Certificación de Competencia de Personas
-                    </h4>
                   </div>
-                  <GraduationCap className="h-8 w-8 text-hurvant-indigo shrink-0 bg-indigo-50 p-1.5 rounded-custom-md" />
-                </div>
-                
-                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                  Diseñado para evaluar y certificar de manera inalterable la competencia técnica de operarios especializados en equipos exigentes como carretillas elevadoras, plataformas y grúas de carga, alineado con la norma <strong>UNE-EN ISO/IEC 17024</strong>.
-                </p>
+                )}
 
-                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
-                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-indigo shrink-0">1. Pre-requisito:</span>
-                      <span>Revisión de aptitud médica laboral y formación básica de operador.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-indigo shrink-0">2. Examen Teórico:</span>
-                      <span>Evaluación controlada sobre seguridad en cargas y física de estabilidad.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-indigo shrink-0">3. Examen Práctico:</span>
-                      <span>Examen presencial individual de maniobras y simulación de fallos in-situ.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-indigo shrink-0">4. Mantenimiento:</span>
-                      <span>Vigencia por 5 años sujeta a informe anual de siniestralidad de la empresa.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            {/* Esquema 2 */}
-            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
-              <div className="space-y-6">
-                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
-                  <div>
-                    <span className="text-xs font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020</span>
-                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
-                      Esquema E-HVT-02: Inspección y Adecuación (RD 1215/97)
-                    </h4>
+                <div className="p-8 space-y-6 flex-grow">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-hurvant-indigo">
+                      <IconComponent className="h-4 w-4" />
+                      <span>{service.divisionName}</span>
+                    </div>
+                    <h3 className="text-xl font-black text-hurvant-navy tracking-tight">{service.title}</h3>
+                    <span className="text-xs font-semibold text-slate-500 block">{service.subtitle}</span>
                   </div>
-                  <Wrench className="h-8 w-8 text-hurvant-cyan shrink-0 bg-cyan-50 p-1.5 rounded-custom-md" />
-                </div>
-                
-                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                  Procedimiento independiente para la validación física de maquinaria de trabajo de acuerdo a las exigencias legales del <strong>Real Decreto 1215/1997</strong>, estructurado para futuras acreditaciones de tipo <strong>ISO/IEC 17020</strong>.
-                </p>
 
-                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
-                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-cyan shrink-0">1. Auditoría Inicial:</span>
-                      <span>Examen minucioso de manuales de uso, marcado CE y fichas de mantenimiento.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-cyan shrink-0">2. Examen Físico:</span>
-                      <span>Pruebas mecánicas y eléctricas de sistemas de parada y resguardos físicos.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-cyan shrink-0">3. Emisión de Acta:</span>
-                      <span>Informe estructurado y placa de identificación física con código QR único.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-hurvant-cyan shrink-0">4. Inspección Trienal:</span>
-                      <span>Seguimiento de seguridad obligatorio cada 3 años para mantener la validez.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                    {service.description}
+                  </p>
 
-            {/* Esquema 3 */}
-            <article className="glass-card rounded-custom-lg p-6 border border-slate-200/60 shadow-xs space-y-6 flex flex-col justify-between">
-              <div className="space-y-6">
-                <div className="flex justify-between items-start gap-4 border-b border-slate-100 pb-4">
-                  <div>
-                    <span className="text-xs font-bold tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full uppercase">Futuro Esquema 17020/9712</span>
-                    <h4 className="text-base sm:text-lg font-black text-hurvant-navy mt-1.5 leading-tight">
-                      Esquema E-HVT-03: Ensayos END y Grúas de Elevación
-                    </h4>
+                  <div className="space-y-2 pt-4 border-t border-slate-100">
+                    <span className="text-[10px] font-bold text-slate-800 uppercase tracking-wider block">Características Destacadas:</span>
+                    <ul className="space-y-2">
+                      {service.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-xs text-slate-600">
+                          <span className={`font-black shrink-0 ${service.textColor}`}>✓</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <Cpu className="h-8 w-8 text-amber-500 shrink-0 bg-amber-50 p-1.5 rounded-custom-md" />
                 </div>
-                
-                <p className="text-xs sm:text-sm text-slate-650 leading-relaxed">
-                  Procedimiento instrumental para la validación de integridad física en grúas e izaje bajo normas UNE e <strong>ISO 9712 / ISO 17020</strong>, preparado para futuros reconocimientos.
-                </p>
 
-                <div className="bg-slate-50 p-4 rounded-custom-md border border-slate-200/60 space-y-3">
-                  <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">Parámetros del Esquema Técnico:</span>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-amber-600 shrink-0">1. Inspección Visual (VT):</span>
-                      <span>Control de soldaduras según norma UNE-EN ISO 17637.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-amber-600 shrink-0">2. Ensayos NDT (MT/PT):</span>
-                      <span>Detección de fisuras por partículas magnéticas y líquidos penetrantes.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-amber-600 shrink-0">3. Ultrasonidos (UT):</span>
-                      <span>Evaluación volumétrica de espesores y soldaduras críticas (UNE-EN ISO 17640).</span>
-                    </li>
-                    <li className="flex items-start gap-2.5 text-xs text-slate-600">
-                      <span className="font-bold text-amber-600 shrink-0">4. Inspectores Certificados:</span>
-                      <span>Operadores certificados bajo UNE-EN ISO 9712 Nivel II/III.</span>
-                    </li>
-                  </ul>
+                <div className="p-6 bg-slate-50 border-t border-slate-100">
+                  {service.link.startsWith('http') ? (
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between w-full text-xs font-bold text-hurvant-navy hover:text-hurvant-indigo transition-colors"
+                    >
+                      <span>Acceder al Portal de {service.divisionName}</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={service.link}
+                      className="inline-flex items-center justify-between w-full text-xs font-bold text-hurvant-navy hover:text-hurvant-indigo transition-colors"
+                    >
+                      <span>Más información sobre {service.title}</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            );
+          })}
         </div>
-      )}
-    </section>
+
+        {/* Módulo de HURVANT DIGITAL como Habilitador Tecnológico */}
+        <div className="bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white rounded-custom-lg p-8 sm:p-12 shadow-lg border-l-4 border-hurvant-indigo space-y-6">
+          <div className="flex items-center gap-3">
+            <Code className="h-7 w-7 text-hurvant-cyan" />
+            <div>
+              <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-widest block">Habilitador Tecnológico Transversal</span>
+              <h3 className="text-2xl font-black text-white">HURVANT DIGITAL</h3>
+            </div>
+          </div>
+
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl font-medium">
+            HURVANT DIGITAL es la división encargada del desarrollo de la tecnología de vanguardia, software de trazabilidad inmutable, motores de Inteligencia Artificial y plataformas SaaS que impulsan a todas las demás divisiones del Grupo Hurvant. Además, ofrece estos mismos desarrollos a organizaciones externas que buscan la máxima excelencia digital.
+          </p>
+
+          <Link
+            to="/contacto"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan text-white font-bold text-xs px-6 py-3 rounded-custom-md hover:brightness-110 transition-all uppercase tracking-wider"
+          >
+            <span>Consultar Soluciones Digitales Corporativas</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
