@@ -7,8 +7,8 @@ export default function ServiceInspeccion() {
   return (
     <>
       <PageMeta 
-        title="Inspección y Adecuación de Maquinaria RD 1215/97 | HURVANT Certification"
-        description="Auditoría técnica y certificación de equipos de trabajo según el Real Decreto 1215/1997. Verificación física in-situ, placas de marcado QR y blindaje legal para directores de planta."
+        title="Inspección de Maquinaria ISO 17020 & RD 1215/97 | HURVANT Inspection"
+        description="Auditoría e inspección técnica de equipos de trabajo bajo norma UNE-EN ISO/IEC 17020 y Real Decreto 1215/1997. Verificación física in-situ, placas de marcado QR y blindaje legal LPRL Ley 31/1995."
         canonicalPath="/servicios/inspeccion-equipos"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 animate-slide-up">
@@ -18,21 +18,26 @@ export default function ServiceInspeccion() {
           <span>/</span>
           <Link to="/servicios" className="hover:text-hurvant-indigo">Servicios</Link>
           <span>/</span>
-          <span className="text-hurvant-navy font-bold">Inspección de Equipos (RD 1215/97)</span>
+          <span className="text-hurvant-navy font-bold">Inspección de Equipos (ISO 17020 / RD 1215)</span>
         </nav>
 
         {/* Hero de la Landing */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200 uppercase tracking-widest">
-              <Wrench className="h-4 w-4" />
-              Adecuación Técnica RD 1215/1997
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200 uppercase tracking-widest">
+                <Wrench className="h-4 w-4" />
+                Organismo de Inspección (UNE-EN ISO/IEC 17020)
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
+                RD 1215/1997 | Ley 31/1995
+              </span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-black text-hurvant-navy tracking-tight leading-tight">
               Inspección y Validación de Maquinaria Industrial
             </h1>
             <p className="text-base sm:text-lg text-slate-600 font-medium leading-relaxed">
-              Aseguramos la plena conformidad de sus equipos de trabajo con las exigencias del Real Decreto 1215/1997. Evite paradas de producción y blinde legalmente a los responsables corporativos.
+              Como Organismo Técnico de Inspección de tercera parte (UNE-EN ISO/IEC 17020), aseguramos la plena conformidad de sus equipos de trabajo con las exigencias del Real Decreto 1215/1997 y la Ley 31/1995 de Prevención de Riesgos Laborales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link

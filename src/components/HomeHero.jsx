@@ -32,7 +32,7 @@ export default function HomeHero() {
     }
   ];
 
-  const ecosystemDivisions = [
+  const primaryDivisions = [
     {
       id: 'certification',
       name: 'HURVANT CERTIFICATION',
@@ -95,7 +95,10 @@ export default function HomeHero() {
         'Programas de Reciclaje y Especialización Industrial'
       ],
       link: '/contacto'
-    },
+    }
+  ];
+
+  const secondaryDivisions = [
     {
       id: 'trace',
       name: 'HURVANT TRACE',
@@ -197,7 +200,7 @@ export default function HomeHero() {
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 shadow-2xs uppercase tracking-wider">
                     <Award className="h-3.5 w-3.5 text-hurvant-cyan-dark" />
-                    UNE-EN ISO/IEC 17024 | RD 1215/1997
+                    UNE-EN ISO/IEC 17020 | ISO/IEC 17024 | RD 1215/1997
                   </span>
                 </div>
 
@@ -211,9 +214,9 @@ export default function HomeHero() {
                   </p>
                 </div>
 
-                {/* Resumen Ejecutivo de Independencia */}
+                {/* Resumen Ejecutivo de Independencia y Marco Normativo */}
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl font-medium">
-                  Como Organismo Técnico de Certificación y Validación de tercera parte, HURVANT garantiza máxima imparcialidad, rigor técnico in situ e inmutabilidad criptográfica en cada proceso de auditoría y dictamen.
+                  Como Organismo Técnico de <strong>Inspección (UNE-EN ISO/IEC 17020)</strong> y <strong>Certificación de Personas (UNE-EN ISO/IEC 17024)</strong> de tercera parte, HURVANT garantiza máxima neutralidad, adecuación legal conforme al <strong>Real Decreto 1215/1997 y Ley 31/1995 (LPRL)</strong> e inmutabilidad criptográfica en cada dictamen técnico.
                 </p>
 
                 {/* Botones de Acción CTA Directos */}
@@ -237,10 +240,10 @@ export default function HomeHero() {
                 {/* Los 5 Pilares de la Marca (Tarjetas Blancas Nativas) */}
                 <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-5 gap-3">
                   {[
-                    { title: 'INDEPENDENCIA', desc: 'Tercera parte', icon: ShieldCheck, color: 'text-hurvant-indigo' },
-                    { title: 'RIGOR TÉCNICO', desc: 'Comité ISO', icon: Award, color: 'text-hurvant-cyan-dark' },
-                    { title: 'TRANSPARENCIA', desc: 'Gobernanza', icon: Eye, color: 'text-indigo-600' },
-                    { title: 'COMPETENCIA', desc: 'ISO 17024', icon: Users, color: 'text-emerald-600' },
+                    { title: 'INDEPENDENCIA', desc: '3ª Parte Neutral', icon: ShieldCheck, color: 'text-hurvant-indigo' },
+                    { title: 'INSPECCIÓN', desc: 'ISO 17020', icon: ShieldAlert, color: 'text-hurvant-cyan-dark' },
+                    { title: 'CERTIFICACIÓN', desc: 'ISO 17024', icon: Award, color: 'text-indigo-600' },
+                    { title: 'ADECUACIÓN', desc: 'RD 1215/97', icon: Scale, color: 'text-emerald-600' },
                     { title: 'EXCELENCIA', desc: 'SHA-256', icon: Sparkles, color: 'text-amber-600' }
                   ].map((p, idx) => {
                     const PillarIcon = p.icon;
@@ -271,10 +274,10 @@ export default function HomeHero() {
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-white/95 text-slate-800 border border-slate-200 shadow-xs uppercase tracking-wider backdrop-blur-md">
                       <Camera className="h-3 w-3 text-hurvant-indigo" />
-                      Evaluación Técnica In Situ
+                      Inspección y Evaluación In Situ
                     </span>
                     <span className="text-[10px] font-mono font-bold text-hurvant-indigo bg-indigo-50 px-2.5 py-0.5 rounded border border-indigo-100">
-                      ISO 17024
+                      ISO 17020 / 17024
                     </span>
                   </div>
                 </div>
@@ -325,25 +328,25 @@ export default function HomeHero() {
         {/* 2. SECCIÓN DE PRUEBA SOCIAL / INDICADORES DE CONFIANZA */}
         <SocialProof />
 
-        {/* 3. NUEVA SECCIÓN PRINCIPAL: NUESTRO ECOSISTEMA CORPORATIVO */}
-        <section id="ecosistema" className="bg-slate-100 border-y border-slate-200/80 py-24 px-4 sm:px-6 lg:px-8">
+        {/* 3. SECCIÓN PRINCIPAL: SERVICIOS Y DIVISIONES NÚCLEO */}
+        <section id="ecosistema" className="bg-slate-100 border-y border-slate-200/80 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-16">
             <header className="text-center max-w-3xl mx-auto space-y-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-100 uppercase tracking-widest">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-200/80 uppercase tracking-widest">
                 <Layers className="h-3.5 w-3.5" />
-                Arquitectura de Marca Matriz
+                Servicios Principales del Ecosistema
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-hurvant-navy tracking-tight">
-                Nuestro Ecosistema Empresarial
+                Nuestras Divisiones Principales
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
-                Siete divisiones especializadas unidas por un único propósito: impulsar la competencia técnica, la seguridad, la conformidad y la excelencia mediante certificación, inspección, formación e inteligencia artificial.
+                Tres áreas centrales de actuación diseñadas para evaluar la conformidad, certificar la competencia técnica, auditar la seguridad operativa y formar a profesionales bajo estándares internacionales.
               </p>
             </header>
 
-            {/* Grid de Tarjetas de las Divisiones del Ecosistema */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {ecosystemDivisions.map((div) => {
+            {/* Grid de 3 Tarjetas de las Divisiones Principales */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+              {primaryDivisions.map((div) => {
                 const IconComponent = div.icon;
                 return (
                   <article 
@@ -397,23 +400,96 @@ export default function HomeHero() {
 
                     {/* Botón CTA */}
                     <div className="mt-8 pt-4 border-t border-slate-100">
+                      <Link 
+                        to={div.link}
+                        className={`inline-flex items-center justify-between w-full text-xs font-bold py-2.5 px-4 rounded-custom-md bg-slate-50 hover:bg-slate-100 ${div.textColor} transition-colors border border-slate-200/60`}
+                      >
+                        <span>Explorar División</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* 3.B. SECCIÓN SECUNDARIA: DIVISIONES TECNOLÓGICAS Y ESPECIALIZADAS HABILITADORAS */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="space-y-12">
+            <header className="text-center max-w-3xl mx-auto space-y-3">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
+                <Cpu className="h-3.5 w-3.5 text-hurvant-cyan-dark" />
+                Habilitadores Tecnológicos & Especialidades
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black text-hurvant-navy tracking-tight">
+                Divisiones Tecnológicas y Habilitadoras del Grupo
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
+                Unidades altamente especializadas encargadas del soporte tecnológico con IA, investigación forense criptográfica y documentación visual de precisión.
+              </p>
+            </header>
+
+            {/* Grid Secundario para Trace, Digital y Photo */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {secondaryDivisions.map((div) => {
+                const IconComponent = div.icon;
+                return (
+                  <article 
+                    key={div.id}
+                    className="bg-white/80 rounded-custom-lg border border-slate-200/90 shadow-2xs hover:shadow-sm p-6 flex flex-col justify-between transition-all hover:border-slate-300"
+                  >
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div className={`h-10 w-10 rounded-custom-md bg-gradient-to-br ${div.color} text-white flex items-center justify-center shadow-2xs shrink-0`}>
+                          <IconComponent className="h-5 w-5" />
+                        </div>
+                        <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${div.tagColor}`}>
+                          {div.badge}
+                        </span>
+                      </div>
+
+                      <div>
+                        <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">{div.tag}</span>
+                        <h4 className="text-lg font-black text-hurvant-navy tracking-tight">{div.name}</h4>
+                      </div>
+
+                      <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                        {div.description}
+                      </p>
+
+                      <div className="space-y-1.5 pt-2 border-t border-slate-100">
+                        <span className="text-[9px] font-bold text-slate-700 uppercase tracking-wider block">Servicios Habilitadores:</span>
+                        <ul className="space-y-1">
+                          {div.services.map((service, idx) => (
+                            <li key={idx} className="flex items-start gap-1.5 text-[11px] text-slate-500">
+                              <span className={`font-black shrink-0 ${div.textColor}`}>▪</span>
+                              <span>{service}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="mt-6 pt-3 border-t border-slate-100">
                       {div.link.startsWith('http') ? (
                         <a 
                           href={div.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-flex items-center justify-between w-full text-xs font-bold py-2.5 px-4 rounded-custom-md bg-slate-50 hover:bg-slate-100 ${div.textColor} transition-colors border border-slate-200/60`}
+                          className={`inline-flex items-center justify-between w-full text-xs font-bold py-2 px-3 rounded-custom-md bg-slate-50 hover:bg-slate-100 ${div.textColor} transition-colors border border-slate-200/60`}
                         >
                           <span>Visitar {div.name}</span>
-                          <ArrowRight className="h-4 w-4" />
+                          <ArrowRight className="h-3.5 w-3.5" />
                         </a>
                       ) : (
                         <Link 
                           to={div.link}
-                          className={`inline-flex items-center justify-between w-full text-xs font-bold py-2.5 px-4 rounded-custom-md bg-slate-50 hover:bg-slate-100 ${div.textColor} transition-colors border border-slate-200/60`}
+                          className={`inline-flex items-center justify-between w-full text-xs font-bold py-2 px-3 rounded-custom-md bg-slate-50 hover:bg-slate-100 ${div.textColor} transition-colors border border-slate-200/60`}
                         >
-                          <span>Explorar División</span>
-                          <ArrowRight className="h-4 w-4" />
+                          <span>Explorar Servicio</span>
+                          <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       )}
                     </div>
@@ -423,25 +499,25 @@ export default function HomeHero() {
             </div>
 
             {/* Bloque Modular para Futuras Divisiones del Holding */}
-            <div className="glass-card bg-gradient-to-r from-slate-900 via-slate-950 to-hurvant-navy-dark text-white rounded-custom-lg p-8 sm:p-10 border border-slate-800 shadow-lg space-y-6">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-slate-800 pb-6">
+            <div className="glass-card bg-gradient-to-r from-slate-900 via-slate-950 to-hurvant-navy-dark text-white rounded-custom-lg p-6 sm:p-8 border border-slate-800 shadow-lg space-y-4">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
                 <div>
-                  <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-widest block mb-1">Escalabilidad Corporativa a 15 Años</span>
-                  <h3 className="text-xl sm:text-2xl font-black text-white">Infraestructura Abierta para Futuras Verticales</h3>
+                  <span className="text-[10px] font-bold text-hurvant-cyan uppercase tracking-widest block mb-0.5">Escalabilidad Corporativa a 15 Años</span>
+                  <h3 className="text-lg sm:text-xl font-black text-white">Infraestructura Abierta para Futuras Verticales</h3>
                 </div>
-                <span className="px-4 py-1.5 rounded-full text-xs font-bold bg-hurvant-cyan/20 text-hurvant-cyan border border-hurvant-cyan/30 uppercase tracking-widest shrink-0">
+                <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-hurvant-cyan/20 text-hurvant-cyan border border-hurvant-cyan/30 uppercase tracking-widest shrink-0">
                   Arquitectura Modular Integrada
                 </span>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
-                La arquitectura del Grupo Hurvant está concebida para integrar de forma nativa nuevas unidades de negocio altamente especializadas, garantizando que cada división comparta la misma gobernanza de marca, motor tecnológico de IA e independencia técnica:
+              <p className="text-xs text-slate-300 leading-relaxed max-w-4xl">
+                La arquitectura del Grupo Hurvant está concebida para integrar de forma nativa nuevas unidades de negocio altamente especializadas, compartiendo gobernanza de marca e independencia técnica.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                 {futureVerticals.map((vert, idx) => (
-                  <div key={idx} className="bg-slate-800/60 border border-slate-700/60 rounded-custom-md p-3 text-center text-xs font-bold text-slate-200 flex items-center justify-center gap-2">
-                    <Sparkles className="h-3.5 w-3.5 text-hurvant-cyan shrink-0" />
+                  <div key={idx} className="bg-slate-800/60 border border-slate-700/60 rounded-custom-md p-2.5 text-center text-xs font-bold text-slate-200 flex items-center justify-center gap-1.5">
+                    <Sparkles className="h-3 w-3 text-hurvant-cyan shrink-0" />
                     <span>{vert}</span>
                   </div>
                 ))}

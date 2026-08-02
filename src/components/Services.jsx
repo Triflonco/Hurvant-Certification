@@ -52,8 +52,8 @@ export default function Services() {
       image: '/heavy_machinery_loader.png',
       color: 'from-indigo-700 to-slate-900',
       textColor: 'text-hurvant-navy',
-      badge: 'Real Decreto 1215/1997',
-      description: 'Auditoría técnica de adecuación y certificación de maquinaria pesada, equipos de elevación e instalaciones.',
+      badge: 'UNE-EN ISO/IEC 17020 | RD 1215/1997',
+      description: 'Inspección técnica reglamentaria y adecuación de maquinaria pesada, equipos de elevación e instalaciones conforme a la norma UNE-EN ISO/IEC 17020 y Ley 31/1995 LPRL.',
       details: [
         'Inspección reglamentaria de carretillas, grúas, PEMP y plataformas.',
         'Dictámenes de adecuación según Real Decreto 1215/1997 Anexo I y II.',
