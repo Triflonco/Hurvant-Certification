@@ -173,168 +173,152 @@ export default function HomeHero() {
         description="Hurvant es un ecosistema empresarial internacional especializado en Certificación, Inspección Industrial, Formación Técnica, Investigación e Innovación Tecnológica con IA."
         canonicalPath="/"
       />
-      <div className="space-y-24">
-        {/* 1. SECCIÓN HERO INSTITUCIONAL PRINCIPAL */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 animate-slide-up" aria-labelledby="home-title">
-          {/* Indicador superior del Ecosistema */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-6">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-100/90 uppercase tracking-widest">
-              <Globe className="h-3.5 w-3.5" />
-              Ecosistema Empresarial Internacional
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
-              <Award className="h-3.5 w-3.5 text-hurvant-cyan" />
-              HURVANT: Impulsando la Competencia Técnica
-            </span>
-          </div>
+      <div className="space-y-16">
+        {/* 1. SECCIÓN HERO INSTITUCIONAL CLARA Y LUMINOSA DE ALTO IMPACTO */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 animate-slide-up" aria-labelledby="home-title">
+          {/* Contenedor Principal en Blanco y Tonos Luminosos */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50/90 to-indigo-50/40 border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 text-slate-800">
+            
+            {/* Efectos de Luz Ambiental Suaves en Fondo */}
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-hurvant-cyan/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(#64748b_1px,transparent_1px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Columna Izquierda: Mensaje Institucional del Holding */}
-            <div className="lg:col-span-7 space-y-8">
-              <div className="space-y-4 text-center md:text-left">
-                <h1 id="home-title" className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-hurvant-navy leading-none">
-                  Impulsando la <span className="text-gradient-brand">Competencia Técnica</span> Global
-                </h1>
-                <p className="text-base sm:text-lg text-slate-600 font-medium max-w-2xl leading-relaxed">
-                  Hurvant es el ecosistema internacional de referencia especializado en <strong>Certificación, Inspección, Formación Técnica e Innovación Tecnológica</strong> para personas, empresas u organizaciones.
-                </p>
-              </div>
-
-              {/* Tarjeta Destacada de la División Matriz: HURVANT CERTIFICATION */}
-              <article className="glass-card rounded-custom-lg p-8 shadow-md border-2 border-hurvant-indigo/40 relative overflow-hidden bg-white">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-indigo/10 via-hurvant-cyan/5 to-transparent rounded-bl-full pointer-events-none" />
-                
-                <div className="flex items-center justify-between mb-4 border-b border-slate-100 pb-3 flex-wrap gap-2">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 bg-indigo-50 text-hurvant-indigo rounded-custom-md flex items-center justify-center border border-indigo-100 shrink-0">
-                      <Award className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] font-black text-hurvant-indigo uppercase tracking-widest block">División Matriz Estandarte</span>
-                      <h2 className="text-xl sm:text-2xl font-black text-hurvant-navy">HURVANT CERTIFICATION</h2>
-                    </div>
-                  </div>
-                  <span className="px-3 py-1 bg-slate-900 text-hurvant-cyan text-xs font-black rounded-full border border-slate-800 tracking-wider">
-                    ISO 17024 | ISO 17020
+            {/* Contenido Principal Grid (12 Col) */}
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              
+              {/* Columna Izquierda: Mensaje Central "Soluciones que Generan Valor" */}
+              <div className="lg:col-span-7 space-y-6">
+                {/* Badges superiores de la Marca Matriz */}
+                <div className="flex flex-wrap items-center gap-2.5">
+                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-200/80 uppercase tracking-widest">
+                    <Globe className="h-3.5 w-3.5" />
+                    Ecosistema Empresarial Internacional
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 shadow-2xs uppercase tracking-wider">
+                    <Award className="h-3.5 w-3.5 text-hurvant-cyan-dark" />
+                    UNE-EN ISO/IEC 17024 | RD 1215/1997
                   </span>
                 </div>
 
-                <div className="space-y-4">
-                  <p className="text-sm sm:text-base leading-relaxed text-slate-600">
-                    Constituida como entidad técnica independiente de <strong>tercera parte</strong>, HURVANT CERTIFICATION representa la máxima expresión de competencia técnica, auditoría y certificación de personas, maquinaria, sistemas de gestión y procesos.
+                {/* Título Principal Institucional Nativo */}
+                <div className="space-y-3">
+                  <h1 id="home-title" className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-hurvant-navy leading-[1.08]">
+                    SOLUCIONES QUE <span className="text-gradient-brand">GENERAN VALOR</span>
+                  </h1>
+                  <p className="text-base sm:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl">
+                    Evaluamos competencias. Creamos confianza. Impulsamos organizaciones más <strong className="text-hurvant-navy font-black">seguras, eficientes y competitivas</strong>.
                   </p>
-                  
-                  {/* Declaración Jurada de Independencia en Dark Glass */}
-                  <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-hurvant-navy-dark text-white p-6 rounded-custom-md border-l-4 border-amber-500 border border-slate-800/80 shadow-md space-y-2">
-                    <span className="text-[11px] font-bold tracking-widest text-amber-400 uppercase block flex items-center gap-2">
-                      <ShieldAlert className="h-4 w-4" />
-                      Gobernanza e Imparcialidad (UNE-EN ISO/IEC 17024 & ISO/IEC 17020)
-                    </span>
-                    <p className="text-xs sm:text-sm leading-relaxed text-slate-200">
-                      En cumplimiento estricto con los principios de gobernanza internacional, HURVANT CERTIFICATION declara formalmente que <strong>NO imparte formación preparatoria, NO presta asesoría técnica en PRL y NO comercializa maquinaria</strong>. Esta independencia radical garantiza la validez jurídica e institucional de nuestros dictámenes ante inspecciones y organismos internacionales.
-                    </p>
-                  </div>
                 </div>
 
-                {/* Botones de Acción Principal */}
-                <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-4 border-t border-slate-100">
+                {/* Resumen Ejecutivo de Independencia */}
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl font-medium">
+                  Como Organismo Técnico de Certificación y Validación de tercera parte, HURVANT garantiza máxima imparcialidad, rigor técnico in situ e inmutabilidad criptográfica en cada proceso de auditoría y dictamen.
+                </p>
+
+                {/* Botones de Acción CTA Directos */}
+                <div className="flex flex-wrap items-center gap-4 pt-2">
                   <Link 
                     to="/contacto"
-                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-sm px-6 py-3.5 rounded-custom-md shadow-md hover:shadow-lg active:scale-98 transition-all hover:brightness-110"
+                    className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-sm px-7 py-3.5 rounded-custom-md shadow-md hover:shadow-lg active:scale-98 transition-all hover:brightness-110 uppercase tracking-wider"
                   >
-                    <span>Contactar con el Grupo Corporativo</span>
+                    <span>Contactar con el Grupo</span>
                     <ArrowRight className="h-4.5 w-4.5" />
                   </Link>
-                  <a 
-                    href="#ecosistema"
-                    className="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-sm px-6 py-3.5 rounded-custom-md active:scale-98 transition-all"
+                  <Link 
+                    to="/verificacion"
+                    className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm px-6 py-3.5 rounded-custom-md border border-slate-200 shadow-xs active:scale-98 transition-all"
                   >
-                    Explorar Ecosistema Hurvant
-                  </a>
+                    <Eye className="h-4 w-4 text-hurvant-indigo" />
+                    <span>Verificar Registro Criptográfico</span>
+                  </Link>
                 </div>
-              </article>
 
-              {/* Grid Secundario de Valores Institucionales */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-white border border-slate-200/60 rounded-custom-md p-6 glass-card-hover">
-                  <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-wider block mb-2 flex items-center gap-1.5">
-                    <Scale className="h-4 w-4" />
-                    Propósito Institucional
-                  </span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    “No vendemos servicios. Impulsamos la competencia técnica de personas, empresas y organizaciones.”
-                  </p>
-                </div>
-                <div className="bg-white border border-slate-200/60 rounded-custom-md p-6 glass-card-hover">
-                  <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-wider block mb-2 flex items-center gap-1.5">
-                    <Cpu className="h-4 w-4" />
-                    Tecnología Habilitadora
-                  </span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                    La Inteligencia Artificial y la inmutabilidad SHA-256 potencian cada división del grupo con rigor y agilidad.
-                  </p>
+                {/* Los 5 Pilares de la Marca (Tarjetas Blancas Nativas) */}
+                <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-5 gap-3">
+                  {[
+                    { title: 'INDEPENDENCIA', desc: 'Tercera parte', icon: ShieldCheck, color: 'text-hurvant-indigo' },
+                    { title: 'RIGOR TÉCNICO', desc: 'Comité ISO', icon: Award, color: 'text-hurvant-cyan-dark' },
+                    { title: 'TRANSPARENCIA', desc: 'Gobernanza', icon: Eye, color: 'text-indigo-600' },
+                    { title: 'COMPETENCIA', desc: 'ISO 17024', icon: Users, color: 'text-emerald-600' },
+                    { title: 'EXCELENCIA', desc: 'SHA-256', icon: Sparkles, color: 'text-amber-600' }
+                  ].map((p, idx) => {
+                    const PillarIcon = p.icon;
+                    return (
+                      <div key={idx} className="bg-white border border-slate-200/80 rounded-custom-md p-3 text-center space-y-1 shadow-2xs hover:shadow-xs hover:border-indigo-200 transition-all">
+                        <PillarIcon className={`h-4 w-4 mx-auto ${p.color}`} />
+                        <span className="text-[10px] font-black tracking-wider text-slate-800 block uppercase">{p.title}</span>
+                        <span className="text-[9px] text-slate-500 font-medium block">{p.desc}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
+
+              {/* Columna Derecha: Composición Visual Integrada Luminosa */}
+              <div className="lg:col-span-5 relative space-y-4">
+                
+                {/* Tarjeta 1: Foto Fotográfica de Inspectores / Evaluación in situ */}
+                <div className="relative group overflow-hidden rounded-custom-lg border border-slate-200 shadow-md bg-white">
+                  <div className="aspect-[16/10] w-full overflow-hidden">
+                    <img 
+                      src="/hero_engineers_inspection.png" 
+                      alt="Evaluación in situ de Operarios e Inspectores Industriales Hurvant" 
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-white/95 text-slate-800 border border-slate-200 shadow-xs uppercase tracking-wider backdrop-blur-md">
+                      <Camera className="h-3 w-3 text-hurvant-indigo" />
+                      Evaluación Técnica In Situ
+                    </span>
+                    <span className="text-[10px] font-mono font-bold text-hurvant-indigo bg-indigo-50 px-2.5 py-0.5 rounded border border-indigo-100">
+                      ISO 17024
+                    </span>
+                  </div>
+                </div>
+
+                {/* Grid Inferior de 2 Tarjetas Complementarias */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  
+                  {/* Tarjeta 2: Escudo Digital de Seguridad e Imparcialidad */}
+                  <div className="bg-gradient-to-br from-indigo-50/80 via-white to-cyan-50/80 border border-indigo-100 rounded-custom-lg p-4 shadow-sm space-y-2 relative overflow-hidden">
+                    <div className="flex items-center justify-between">
+                      <div className="h-8 w-8 rounded-custom-md bg-indigo-100/80 text-hurvant-indigo border border-indigo-200/80 flex items-center justify-center">
+                        <ShieldCheck className="h-5 w-5" />
+                      </div>
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
+                    </div>
+                    <div>
+                      <strong className="text-xs font-black text-slate-800 block">Escudo Criptográfico</strong>
+                      <span className="text-[10px] text-slate-500 font-medium block">Trazabilidad SHA-256 inalterable en servidor RGPD.</span>
+                    </div>
+                  </div>
+
+                  {/* Tarjeta 3: Foto del Sello Oficial de Certificación */}
+                  <div className="relative group overflow-hidden rounded-custom-lg border border-slate-200 shadow-sm bg-white">
+                    <div className="aspect-[4/3] w-full overflow-hidden">
+                      <img 
+                        src="/hero_stamp_document.png" 
+                        alt="Sello de Validez e Imparcialidad Institucional Hurvant" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-2 left-2 z-10">
+                      <span className="text-[9px] font-bold uppercase tracking-wider text-slate-800 bg-white/95 px-2 py-0.5 rounded border border-slate-200 shadow-2xs">
+                        Dictámenes Oficiales
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
 
-            {/* Columna Derecha: Modelo Oficial de Certificación y Trazabilidad */}
-            <aside className="lg:col-span-5 lg:sticky lg:top-28">
-              <div className="glass-card rounded-custom-lg p-6 border-2 border-dashed border-slate-200/80 bg-white shadow-xs">
-                <h3 className="text-xs font-bold text-slate-800 uppercase tracking-widest mb-4 text-center flex items-center justify-center gap-2">
-                  <Award className="h-4 w-4 text-hurvant-indigo" />
-                  Modelo Oficial de Certificado Técnico
-                </h3>
-                
-                {/* Imagen del Certificado Oficial */}
-                <figure className="relative group overflow-hidden rounded-custom-md border border-slate-200/80 shadow-md mb-6 aspect-[4/3] bg-slate-50 flex items-center justify-center">
-                  <img 
-                    src="/Modelo_Certificado_de_Competencia_Hurvant.jpg" 
-                    alt="Modelo Oficial de Certificado de Competencia Hurvant Certification" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Link 
-                      to="/verificacion"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-900 shadow-md hover:bg-slate-100"
-                    >
-                      <Eye className="h-4 w-4 text-hurvant-indigo" />
-                      Verificar en Registro Público RGPD
-                    </Link>
-                  </div>
-                </figure>
-                
-                {/* Garantías Criptográficas y de Registro */}
-                <div className="space-y-4">
-                  <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider border-b border-slate-100 pb-2">
-                    Garantías Internacionales de Validación:
-                  </h4>
-                  
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
-                      <div className="text-xs">
-                        <strong className="text-slate-800 block">Registro Único de Competencia</strong>
-                        <span className="text-slate-500">Trazabilidad individual pública e inalterable bajo custodia inmutable.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
-                      <div className="text-xs">
-                        <strong className="text-slate-800 block">Firma Criptográfica SHA-256</strong>
-                        <span className="text-slate-500">Sello digital inalterable verificado mediante código QR instantáneo.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-50 text-emerald-600 mt-0.5 shrink-0 text-xs font-black">✓</span>
-                      <div className="text-xs">
-                        <strong className="text-slate-800 block">Separación Total de Tercera Parte</strong>
-                        <span className="text-slate-500">Emitido bajo estricta neutralidad sin conflictos de interés comercial.</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </aside>
           </div>
         </section>
 
