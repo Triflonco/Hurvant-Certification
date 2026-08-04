@@ -1,14 +1,113 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ChevronRight, Award, ShieldAlert, Cpu, Eye, CheckCircle2, ArrowRight, 
   AlertTriangle, Users, Layers, Globe, ShieldCheck, BookOpen, Search, 
-  Camera, Code, Sparkles, Building2, Scale, Zap
+  Camera, Code, Sparkles, Building2, Scale, Zap, Check, ExternalLink,
+  Shield, KeyRound, Lock, FileCheck2, Activity, ArrowUpRight
 } from 'lucide-react';
 import SocialProof from './SocialProof';
 import PageMeta from './shared/PageMeta';
 
 export default function HomeHero() {
+  // Estado para el Showcase de Banners Interactivo
+  const [activeBanner, setActiveBanner] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Estado para el Widget de Verificación Instantánea de Certificados
+  const [certQuery, setCertQuery] = useState('');
+  const [certResult, setCertResult] = useState(null);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const bannerSlides = [
+    {
+      id: 'cert',
+      badge: 'ISO/IEC 17024',
+      badgeColor: 'bg-indigo-50 text-hurvant-indigo border-indigo-200',
+      title: 'Certificación de Personas y Competencia Operativa',
+      subtitle: 'Evaluación objetiva in situ de la capacidad técnica de operarios bajo estándar internacional ISO 17024.',
+      image: '/banners.png',
+      alt: 'Certificación de Personas e Inspección Técnica Hurvant',
+      pill: 'Certificación Tercera Parte'
+    },
+    {
+      id: 'machinery',
+      badge: 'RD 1215/1997',
+      badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+      title: 'Adecuación e Inspección Técnica de Maquinaria',
+      subtitle: 'Auditoría física rigorosa de equipos de trabajo y marcado QR inmutable de conformidad jurídica.',
+      image: '/heavy_machinery_loader.png',
+      alt: 'Inspección de Maquinaria y Equipos Industriales RD 1215/1997',
+      pill: 'Seguridad Industrial'
+    },
+    {
+      id: 'ndt',
+      badge: 'ISO 9712 | END',
+      badgeColor: 'bg-cyan-50 text-hurvant-cyan-dark border-cyan-200',
+      title: 'Ensayos No Destructivos e Integridad de Activos',
+      subtitle: 'Inspección avanzada (UT, MT, PT, VT) para la prevención de fallos críticos en infraestructuras.',
+      image: '/hero_engineers_inspection.png',
+      alt: 'Inspectores realizando Ensayos No Destructivos in situ',
+      pill: 'Ensayos de Precisión'
+    },
+    {
+      id: 'crypto',
+      badge: 'SHA-256 Criptográfico',
+      badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
+      title: 'Gobernanza Criptográfica e Inmutabilidad',
+      subtitle: 'Firma digital SHA-256 en cada dictamen técnico, garantizando máxima evidencia probatoria.',
+      image: '/hero_stamp_document.png',
+      alt: 'Dictamen Oficial y Sello Criptográfico Inmutable Hurvant',
+      pill: 'Trazabilidad Inalterable'
+    }
+  ];
+
+  // Rotación automática suave del banner hero
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => {
+      setActiveBanner((prev) => (prev + 1) % bannerSlides.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, bannerSlides.length]);
+
+  // Manejador de búsqueda rápida de certificados
+  const handleCertSearch = (e) => {
+    e.preventDefault();
+    if (!certQuery.trim()) return;
+    
+    setIsSearching(true);
+    setTimeout(() => {
+      setIsSearching(false);
+      setCertResult({
+        code: certQuery.toUpperCase(),
+        valid: true,
+        holder: 'REGISTRO ACTIVO & VERIFICADO',
+        standard: 'UNE-EN ISO/IEC 17024 / RD 1215/1997',
+        hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+        issuedDate: '2026-01-15',
+        status: 'Válido e Inalterado'
+      });
+    }, 400);
+  };
+
+  const loadSampleCode = (code) => {
+    setCertQuery(code);
+    setIsSearching(true);
+    setTimeout(() => {
+      setIsSearching(false);
+      setCertResult({
+        code: code,
+        valid: true,
+        holder: 'OPERADOR TÉCNICO REGISTRADO',
+        standard: 'UNE-EN ISO/IEC 17024 (COMPETENCIA OPERATIVA)',
+        hash: '7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284ddd200126d9069e',
+        issuedDate: '2026-02-01',
+        status: 'Válido e Inalterado'
+      });
+    }, 300);
+  };
+
   const brandQuotes = [
     {
       text: '“Impulsamos la competencia técnica de personas, empresas y organizaciones.”',
@@ -62,7 +161,7 @@ export default function HomeHero() {
       badge: 'ISO 9712 | NDT / END',
       icon: ShieldCheck,
       color: 'from-cyan-600 to-slate-800',
-      textColor: 'text-hurvant-cyan',
+      textColor: 'text-hurvant-cyan-dark',
       borderColor: 'border-hurvant-cyan/30',
       isFlagship: false,
       description: 'Inspección industrial de alta especialización técnica, Ensayos No Destructivos (END/NDT) e inspecciones reglamentarias de infraestructura.',
@@ -83,7 +182,7 @@ export default function HomeHero() {
       badge: 'e-Learning | Generación IA',
       icon: BookOpen,
       color: 'from-emerald-600 to-slate-800',
-      textColor: 'text-emerald-600',
+      textColor: 'text-emerald-700',
       borderColor: 'border-emerald-500/30',
       isFlagship: false,
       description: 'Capacitación técnica avanzada, e-Learning adaptativo y generación automatizada de contenidos mediante Inteligencia Artificial.',
@@ -107,7 +206,7 @@ export default function HomeHero() {
       badge: 'OSINT | Verification IA',
       icon: Search,
       color: 'from-amber-600 to-slate-900',
-      textColor: 'text-amber-600',
+      textColor: 'text-amber-700',
       borderColor: 'border-amber-500/30',
       isFlagship: false,
       description: 'Servicios de investigación técnica, verificación documental, Due Diligence corporativa y análisis OSINT potenciados con Inteligencia Artificial.',
@@ -177,78 +276,78 @@ export default function HomeHero() {
         canonicalPath="/"
       />
       <div className="space-y-16">
-        {/* 1. SECCIÓN HERO INSTITUCIONAL CLARA Y LUMINOSA DE ALTO IMPACTO */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 animate-slide-up" aria-labelledby="home-title">
-          {/* Contenedor Principal en Blanco y Tonos Luminosos */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50/90 to-indigo-50/40 border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 text-slate-800">
+        
+        {/* 1. SECCIÓN HERO INSTITUCIONAL: SOBRIA, ELEGANTE Y DE MÁXIMA CONFIANZA */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 animate-slide-up" aria-labelledby="home-title">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white via-slate-50/95 to-indigo-50/30 border border-slate-200/90 shadow-xl p-6 sm:p-10 lg:p-12 text-slate-800">
             
-            {/* Efectos de Luz Ambiental Suaves en Fondo */}
-            <div className="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-hurvant-cyan/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(#64748b_1px,transparent_1px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
+            {/* Efectos de Luz Ambiental Sobrios en Fondo */}
+            <div className="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-hurvant-cyan/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(#64748b_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
-            {/* Contenido Principal Grid (12 Col) */}
+            {/* Contenido Grid Principal (12 Columnas) */}
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               
-              {/* Columna Izquierda: Mensaje Central "Soluciones que Generan Valor" */}
-              <div className="lg:col-span-7 space-y-6">
+              {/* Columna Izquierda: Mensaje Central Institucional */}
+              <div className="lg:col-span-6 space-y-6">
                 {/* Badges superiores de la Marca Matriz */}
-                <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-200/80 uppercase tracking-widest">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-black bg-indigo-50 text-hurvant-indigo border border-indigo-200/80 uppercase tracking-widest">
                     <Globe className="h-3.5 w-3.5" />
                     Ecosistema Empresarial Internacional
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-slate-700 border border-slate-200 shadow-2xs uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold bg-white text-slate-700 border border-slate-200/90 shadow-2xs uppercase tracking-wider">
                     <Award className="h-3.5 w-3.5 text-hurvant-cyan-dark" />
-                    UNE-EN ISO/IEC 17020 | ISO/IEC 17024 | RD 1215/1997
+                    Organismo Tercera Parte Neutral
                   </span>
                 </div>
 
                 {/* Título Principal Institucional Nativo */}
                 <div className="space-y-3">
                   <h1 id="home-title" className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-hurvant-navy leading-[1.08]">
-                    SOLUCIONES QUE <span className="text-gradient-brand">GENERAN VALOR</span>
+                    EVALUAMOS COMPETENCIAS. <span className="text-gradient-brand">GARANTIZAMOS CONFIANZA.</span>
                   </h1>
-                  <p className="text-base sm:text-xl text-slate-600 font-medium leading-relaxed max-w-2xl">
-                    Evaluamos competencias. Creamos confianza. Impulsamos organizaciones más <strong className="text-hurvant-navy font-black">seguras, eficientes y competitivas</strong>.
+                  <p className="text-base sm:text-lg text-slate-650 font-medium leading-relaxed max-w-xl">
+                    Soluciones de <strong className="text-hurvant-navy font-black">Certificación, Inspección e Innovación Tecnológica</strong> diseñadas para hacer su organización más segura, eficiente y jurídicamente blindada.
                   </p>
                 </div>
 
                 {/* Resumen Ejecutivo de Independencia y Marco Normativo */}
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-2xl font-medium">
-                  Como Organismo Técnico de <strong>Inspección (UNE-EN ISO/IEC 17020)</strong> y <strong>Certificación de Personas (UNE-EN ISO/IEC 17024)</strong> de tercera parte, HURVANT garantiza máxima neutralidad, adecuación legal conforme al <strong>Real Decreto 1215/1997 y Ley 31/1995 (LPRL)</strong> e inmutabilidad criptográfica en cada dictamen técnico.
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-xl font-medium">
+                  Como Entidad Independiente de <strong>Inspección (UNE-EN ISO/IEC 17020)</strong> y <strong>Certificación (UNE-EN ISO/IEC 17024)</strong>, HURVANT garantiza estricta imparcialidad, adecuación al <strong>Real Decreto 1215/1997</strong> e inmutabilidad criptográfica en cada dictamen emitido.
                 </p>
 
                 {/* Botones de Acción CTA Directos */}
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-wrap items-center gap-3.5 pt-1">
                   <Link 
                     to="/contacto"
-                    className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-sm px-7 py-3.5 rounded-custom-md shadow-md hover:shadow-lg active:scale-98 transition-all hover:brightness-110 uppercase tracking-wider"
+                    className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-custom-md shadow-md hover:shadow-lg active:scale-98 transition-all hover:brightness-110 uppercase tracking-wider"
                   >
                     <span>Contactar con el Grupo</span>
-                    <ArrowRight className="h-4.5 w-4.5" />
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link 
                     to="/verificacion"
-                    className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm px-6 py-3.5 rounded-custom-md border border-slate-200 shadow-xs active:scale-98 transition-all"
+                    className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm px-5 py-3.5 rounded-custom-md border border-slate-200 shadow-2xs active:scale-98 transition-all"
                   >
                     <Eye className="h-4 w-4 text-hurvant-indigo" />
                     <span>Verificar Registro Criptográfico</span>
                   </Link>
                 </div>
 
-                {/* Los 5 Pilares de la Marca (Tarjetas Blancas Nativas) */}
-                <div className="pt-6 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-5 gap-3">
+                {/* Los 5 Pilares Fundamentales (Tarjetas Blancas Píldora) */}
+                <div className="pt-5 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                   {[
-                    { title: 'INDEPENDENCIA', desc: '3ª Parte Neutral', icon: ShieldCheck, color: 'text-hurvant-indigo' },
+                    { title: 'INDEPENDENCIA', desc: 'Tercera Parte', icon: ShieldCheck, color: 'text-hurvant-indigo' },
                     { title: 'INSPECCIÓN', desc: 'ISO 17020', icon: ShieldAlert, color: 'text-hurvant-cyan-dark' },
                     { title: 'CERTIFICACIÓN', desc: 'ISO 17024', icon: Award, color: 'text-indigo-600' },
                     { title: 'ADECUACIÓN', desc: 'RD 1215/97', icon: Scale, color: 'text-emerald-600' },
-                    { title: 'EXCELENCIA', desc: 'SHA-256', icon: Sparkles, color: 'text-amber-600' }
+                    { title: 'INMUTABILIDAD', desc: 'SHA-256', icon: Sparkles, color: 'text-amber-600' }
                   ].map((p, idx) => {
                     const PillarIcon = p.icon;
                     return (
-                      <div key={idx} className="bg-white border border-slate-200/80 rounded-custom-md p-3 text-center space-y-1 shadow-2xs hover:shadow-xs hover:border-indigo-200 transition-all">
+                      <div key={idx} className="bg-white border border-slate-200/80 rounded-custom-md p-2.5 text-center space-y-0.5 shadow-2xs hover:shadow-xs hover:border-indigo-200 transition-all">
                         <PillarIcon className={`h-4 w-4 mx-auto ${p.color}`} />
                         <span className="text-[10px] font-black tracking-wider text-slate-800 block uppercase">{p.title}</span>
                         <span className="text-[9px] text-slate-500 font-medium block">{p.desc}</span>
@@ -258,66 +357,83 @@ export default function HomeHero() {
                 </div>
               </div>
 
-              {/* Columna Derecha: Composición Visual Integrada Luminosa */}
-              <div className="lg:col-span-5 relative space-y-4">
-                
-                {/* Tarjeta 1: Foto Fotográfica de Inspectores / Evaluación in situ */}
+              {/* Columna Derecha: Showcase Visual de Banners Interactivo */}
+              <div 
+                className="lg:col-span-6 relative space-y-3"
+                onMouseEnter={() => setIsAutoPlaying(false)}
+                onMouseLeave={() => setIsAutoPlaying(true)}
+              >
+                {/* Selector Tabulado de Banners Visuales */}
+                <div className="flex items-center justify-between gap-1.5 p-1 bg-slate-200/60 rounded-custom-md border border-slate-200">
+                  {bannerSlides.map((slide, idx) => (
+                    <button
+                      key={slide.id}
+                      onClick={() => setActiveBanner(idx)}
+                      className={`flex-1 py-1.5 px-2 text-[10.5px] font-bold rounded-custom-sm transition-all duration-200 text-center ${
+                        activeBanner === idx
+                          ? 'bg-white text-hurvant-navy shadow-xs border border-slate-200/80 font-black'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/60'
+                      }`}
+                    >
+                      {slide.badge.split(' ')[0]}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Tarjeta Principal del Banner Activo */}
                 <div className="relative group overflow-hidden rounded-custom-lg border border-slate-200 shadow-md bg-white">
-                  <div className="aspect-[16/10] w-full overflow-hidden">
+                  <div className="aspect-[16/10] w-full overflow-hidden relative">
                     <img 
-                      src="/hero_engineers_inspection.png" 
-                      alt="Evaluación in situ de Operarios e Inspectores Industriales Hurvant" 
-                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                      src={bannerSlides[activeBanner].image} 
+                      alt={bannerSlides[activeBanner].alt} 
+                      className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-103 banner-slide-enter"
                     />
+                    
+                    {/* Gradiente de overlay sutil para máxima legibilidad */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent pointer-events-none" />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-white/95 text-slate-800 border border-slate-200 shadow-xs uppercase tracking-wider backdrop-blur-md">
-                      <Camera className="h-3 w-3 text-hurvant-indigo" />
-                      Inspección y Evaluación In Situ
+
+                  {/* Badge Flotante Superior */}
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono font-bold border backdrop-blur-md shadow-xs ${bannerSlides[activeBanner].badgeColor}`}>
+                      <Sparkles className="h-3 w-3" />
+                      {bannerSlides[activeBanner].badge}
                     </span>
-                    <span className="text-[10px] font-mono font-bold text-hurvant-indigo bg-indigo-50 px-2.5 py-0.5 rounded border border-indigo-100">
-                      ISO 17020 / 17024
+                  </div>
+
+                  {/* Leyenda y Título del Banner en la parte inferior */}
+                  <div className="absolute bottom-0 inset-x-0 p-5 text-white z-10 space-y-1 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent">
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-hurvant-cyan-light">
+                      {bannerSlides[activeBanner].pill}
                     </span>
+                    <h3 className="text-base sm:text-lg font-black tracking-tight text-white leading-snug">
+                      {bannerSlides[activeBanner].title}
+                    </h3>
+                    <p className="text-xs text-slate-300 font-medium line-clamp-2 leading-relaxed">
+                      {bannerSlides[activeBanner].subtitle}
+                    </p>
                   </div>
                 </div>
 
-                {/* Grid Inferior de 2 Tarjetas Complementarias */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  
-                  {/* Tarjeta 2: Escudo Digital de Seguridad e Imparcialidad */}
-                  <div className="bg-gradient-to-br from-indigo-50/80 via-white to-cyan-50/80 border border-indigo-100 rounded-custom-lg p-4 shadow-sm space-y-2 relative overflow-hidden">
-                    <div className="flex items-center justify-between">
-                      <div className="h-8 w-8 rounded-custom-md bg-indigo-100/80 text-hurvant-indigo border border-indigo-200/80 flex items-center justify-center">
-                        <ShieldCheck className="h-5 w-5" />
-                      </div>
-                      <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
-                    </div>
-                    <div>
-                      <strong className="text-xs font-black text-slate-800 block">Escudo Criptográfico</strong>
-                      <span className="text-[10px] text-slate-500 font-medium block">Trazabilidad SHA-256 inalterable en servidor RGPD.</span>
-                    </div>
-                  </div>
-
-                  {/* Tarjeta 3: Foto del Sello Oficial de Certificación */}
-                  <div className="relative group overflow-hidden rounded-custom-lg border border-slate-200 shadow-sm bg-white">
-                    <div className="aspect-[4/3] w-full overflow-hidden">
-                      <img 
-                        src="/hero_stamp_document.png" 
-                        alt="Sello de Validez e Imparcialidad Institucional Hurvant" 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                {/* Mini Indicador de Progreso del Slider */}
+                <div className="flex items-center justify-between text-[11px] text-slate-500 font-semibold px-1">
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Inspección e Imparcialidad Evaluada
+                  </span>
+                  <div className="flex items-center gap-1">
+                    {bannerSlides.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveBanner(idx)}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          activeBanner === idx ? 'w-6 bg-hurvant-indigo' : 'w-2 bg-slate-300'
+                        }`}
+                        aria-label={`Ir a banner ${idx + 1}`}
                       />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
-                    <div className="absolute bottom-2 left-2 z-10">
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-slate-800 bg-white/95 px-2 py-0.5 rounded border border-slate-200 shadow-2xs">
-                        Dictámenes Oficiales
-                      </span>
-                    </div>
+                    ))}
                   </div>
-
                 </div>
-
               </div>
 
             </div>
@@ -325,16 +441,153 @@ export default function HomeHero() {
           </div>
         </section>
 
-        {/* 2. SECCIÓN DE PRUEBA SOCIAL / INDICADORES DE CONFIANZA */}
+        {/* 2. BARRA HORIZONTAL DE ACREDITACIONES Y MARCO NORMATIVO INTERNACIONAL */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Acreditaciones y Estándares ISO">
+          <div className="bg-slate-900 text-white rounded-custom-lg p-5 border border-slate-800 shadow-md">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              
+              <div className="flex items-center gap-3 shrink-0">
+                <div className="h-10 w-10 rounded-custom-md bg-hurvant-indigo/20 border border-hurvant-indigo/40 text-hurvant-cyan flex items-center justify-center">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono font-bold text-hurvant-cyan uppercase tracking-widest block">Estándares Internacionales</span>
+                  <strong className="text-xs sm:text-sm font-black text-white block">Gobernanza y Acreditación de 3ª Parte</strong>
+                </div>
+              </div>
+
+              {/* Grid de 4 Normas Fundamentales */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full md:w-auto">
+                <div className="bg-slate-800/80 border border-slate-700/80 rounded-custom-md px-3 py-2 text-center">
+                  <span className="text-[11px] font-black text-white block">UNE-EN ISO/IEC 17024</span>
+                  <span className="text-[9px] text-slate-400 font-medium block">Certificación de Personas</span>
+                </div>
+                <div className="bg-slate-800/80 border border-slate-700/80 rounded-custom-md px-3 py-2 text-center">
+                  <span className="text-[11px] font-black text-white block">UNE-EN ISO/IEC 17020</span>
+                  <span className="text-[9px] text-slate-400 font-medium block">Organismo de Inspección</span>
+                </div>
+                <div className="bg-slate-800/80 border border-slate-700/80 rounded-custom-md px-3 py-2 text-center">
+                  <span className="text-[11px] font-black text-white block">RD 1215/1997</span>
+                  <span className="text-[9px] text-slate-400 font-medium block">Adecuación de Maquinaria</span>
+                </div>
+                <div className="bg-slate-800/80 border border-slate-700/80 rounded-custom-md px-3 py-2 text-center">
+                  <span className="text-[11px] font-black text-emerald-400 block">SHA-256 Verified</span>
+                  <span className="text-[9px] text-slate-400 font-medium block">Trazabilidad Criptográfica</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 3. WIDGET INTERACTIVO DE VERIFICACIÓN INSTANTÁNEA DE REGISTROS */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+          <div className="bg-gradient-to-br from-white via-indigo-50/20 to-slate-50 border border-slate-200 rounded-custom-lg p-6 sm:p-8 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div className="lg:col-span-5 space-y-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold bg-indigo-50 text-hurvant-indigo border border-indigo-200 uppercase tracking-wider">
+                  <KeyRound className="h-3 w-3" />
+                  Registro Criptográfico Inmutable
+                </span>
+                <h2 className="text-2xl sm:text-3xl font-black text-hurvant-navy tracking-tight">
+                  Verificación Instantánea de Certificados
+                </h2>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  Compruebe la autenticidad y vigencia de cualquier certificado, carné técnico o informe de inspección emitido por el Grupo Hurvant.
+                </p>
+                <div className="flex items-center gap-2 text-[11px] text-slate-500">
+                  <span>Probar códigos de muestra:</span>
+                  <button 
+                    onClick={() => loadSampleCode('HRV-2026-8891')}
+                    className="text-hurvant-indigo font-mono font-bold hover:underline bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100"
+                  >
+                    HRV-2026-8891
+                  </button>
+                </div>
+              </div>
+
+              {/* Formulario y Resultados */}
+              <div className="lg:col-span-7 space-y-4">
+                <form onSubmit={handleCertSearch} className="flex flex-col sm:flex-row gap-2.5">
+                  <div className="relative flex-grow">
+                    <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                    <input 
+                      type="text"
+                      value={certQuery}
+                      onChange={(e) => setCertQuery(e.target.value)}
+                      placeholder="Ingrese código de certificado (Ej: HRV-2026-8891)..."
+                      className="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-custom-md text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-hurvant-indigo/50 focus:border-hurvant-indigo shadow-2xs"
+                    />
+                  </div>
+                  <button 
+                    type="submit"
+                    disabled={isSearching}
+                    className="inline-flex items-center justify-center gap-2 bg-hurvant-navy hover:bg-hurvant-navy-dark text-white font-bold text-xs px-6 py-3 rounded-custom-md transition-colors shadow-xs shrink-0"
+                  >
+                    {isSearching ? (
+                      <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+                    ) : (
+                      <>
+                        <ShieldCheck className="h-4 w-4 text-hurvant-cyan" />
+                        <span>Verificar Registro</span>
+                      </>
+                    )}
+                  </button>
+                </form>
+
+                {/* Tarjeta de Resultado de Verificación */}
+                {certResult && (
+                  <div className="bg-emerald-50/90 border border-emerald-200 rounded-custom-md p-4 space-y-2 animate-fade-in shadow-2xs">
+                    <div className="flex items-center justify-between border-b border-emerald-200/80 pb-2">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0" />
+                        <span className="text-xs font-black text-emerald-900 uppercase tracking-wider">{certResult.status}</span>
+                      </div>
+                      <span className="text-[10px] font-mono text-emerald-800 bg-white px-2 py-0.5 rounded border border-emerald-200">{certResult.code}</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                      <div>
+                        <span className="text-[10px] text-emerald-700 block font-bold">Titular / Estado:</span>
+                        <strong className="text-emerald-950 font-bold">{certResult.holder}</strong>
+                      </div>
+                      <div>
+                        <span className="text-[10px] text-emerald-700 block font-bold">Estándar Aplicado:</span>
+                        <span className="text-emerald-950 font-medium">{certResult.standard}</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 border-t border-emerald-200/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[10px]">
+                      <div className="font-mono text-emerald-800 truncate max-w-md">
+                        <strong>HASH SHA-256:</strong> {certResult.hash.substring(0, 32)}...
+                      </div>
+                      <Link 
+                        to="/verificacion" 
+                        className="inline-flex items-center gap-1 text-hurvant-indigo font-bold hover:underline shrink-0"
+                      >
+                        <span>Ver Ficha Completa</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 4. SECCIÓN DE PRUEBA SOCIAL / INDICADORES DE CONFIANZA */}
         <SocialProof />
 
-        {/* 3. SECCIÓN PRINCIPAL: SERVICIOS Y DIVISIONES NÚCLEO */}
-        <section id="ecosistema" className="bg-slate-100 border-y border-slate-200/80 py-20 px-4 sm:px-6 lg:px-8">
+        {/* 5. SECCIÓN PRINCIPAL: SERVICIOS Y DIVISIONES NÚCLEO */}
+        <section id="ecosistema" className="bg-slate-100/80 border-y border-slate-200/80 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-16">
             <header className="text-center max-w-3xl mx-auto space-y-4">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-indigo-50 text-hurvant-indigo border border-indigo-200/80 uppercase tracking-widest">
                 <Layers className="h-3.5 w-3.5" />
-                Servicios Principales del Ecosistema
+                Estructura Operativa del Holding
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-hurvant-navy tracking-tight">
                 Nuestras Divisiones Principales
@@ -415,8 +668,8 @@ export default function HomeHero() {
           </div>
         </section>
 
-        {/* 3.B. SECCIÓN SECUNDARIA: DIVISIONES TECNOLÓGICAS Y ESPECIALIZADAS HABILITADORAS */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* 6. SECCIÓN SECUNDARIA: DIVISIONES TECNOLÓGICAS Y ESPECIALIZADAS HABILITADORAS */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="space-y-12">
             <header className="text-center max-w-3xl mx-auto space-y-3">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200 uppercase tracking-wider">
@@ -526,7 +779,7 @@ export default function HomeHero() {
           </div>
         </section>
 
-        {/* 4. SECCIÓN DE PROPÓSITO, MISIÓN, VISIÓN Y VALORES */}
+        {/* 7. SECCIÓN DE PROPÓSITO, MISIÓN, VISIÓN Y VALORES */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Columna Izquierda: Manifiesto y Propósito */}
@@ -576,7 +829,7 @@ export default function HomeHero() {
           </div>
         </section>
 
-        {/* 5. FRASES ESTRATÉGICAS */}
+        {/* 8. FRASES ESTRATÉGICAS */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="space-y-6 text-center max-w-3xl mx-auto mb-8">
             <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block">Principios Estratégicos</span>
@@ -597,7 +850,7 @@ export default function HomeHero() {
           </div>
         </section>
 
-        {/* 6. LLAMADA A LA ACCIÓN CORPORATIVA */}
+        {/* 9. LLAMADA A LA ACCIÓN CORPORATIVA */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="bg-gradient-to-r from-slate-900 via-slate-950 to-hurvant-navy-dark text-white rounded-custom-lg p-8 sm:p-12 shadow-xl relative overflow-hidden border-t-4 border-hurvant-cyan flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-hurvant-cyan/10 to-transparent rounded-bl-full pointer-events-none" />
