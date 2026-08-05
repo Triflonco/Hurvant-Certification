@@ -21,6 +21,16 @@ export default function HomeHero() {
 
   const bannerSlides = [
     {
+      id: 'team',
+      badge: 'EQUIPO TÉCNICO REGISTRADO',
+      badgeColor: 'bg-indigo-50 text-hurvant-indigo border-indigo-200',
+      title: 'Equipo de Inspección y Certificación In Situ',
+      subtitle: 'Inspectores técnicos cualificados realizando auditorías de conformidad y verificación de competencia operativa.',
+      image: '/hurvant_team_inspection_hero.png',
+      alt: 'Equipo de Inspectores Técnicos Hurvant',
+      pill: 'Inspección & Certificación In Situ'
+    },
+    {
       id: 'cert',
       badge: 'ISO/IEC 17024',
       badgeColor: 'bg-indigo-50 text-hurvant-indigo border-indigo-200',
