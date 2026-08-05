@@ -67,12 +67,14 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <Link
-                to="/servicios"
+              <a
+                href="https://digital.hurvant.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
                 💻 HURVANT DIGITAL
-              </Link>
+              </a>
             </li>
             <li>
               <a

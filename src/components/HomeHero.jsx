@@ -238,7 +238,7 @@ export default function HomeHero() {
         'Infraestructura Web y Automatización Digital Avanzada',
         'Transformación Digital Integral para Entidades Industriales'
       ],
-      link: '/servicios'
+      link: 'https://digital.hurvant.com'
     },
     {
       id: 'photo',

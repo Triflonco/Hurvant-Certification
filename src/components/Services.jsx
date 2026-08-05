@@ -299,13 +299,15 @@ export default function Services() {
             HURVANT DIGITAL es la división encargada del desarrollo de la tecnología de vanguardia, software de trazabilidad inmutable, motores de Inteligencia Artificial y plataformas SaaS que impulsan a todas las demás divisiones del Grupo Hurvant. Además, ofrece estos mismos desarrollos a organizaciones externas que buscan la máxima excelencia digital.
           </p>
 
-          <Link
-            to="/contacto"
+          <a
+            href="https://digital.hurvant.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan text-white font-bold text-xs px-6 py-3 rounded-custom-md hover:brightness-110 transition-all uppercase tracking-wider"
           >
-            <span>Consultar Soluciones Digitales Corporativas</span>
+            <span>Ir a digital.hurvant.com</span>
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </>

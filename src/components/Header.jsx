@@ -9,6 +9,7 @@ export default function Header() {
   const navItems = [
     { path: '/', label: 'Inicio' },
     { path: '/servicios', label: 'Ecosistema' },
+    { path: 'https://digital.hurvant.com', label: 'Digital', isExternal: true },
     { path: '/sectores', label: 'Sectores' },
     { path: '/metodologia', label: 'Metodología' },
     { path: '/sobre-hurvant', label: 'Sobre Hurvant' },
@@ -50,6 +51,19 @@ export default function Header() {
         {/* Menú Desktop */}
         <nav className="hidden xl:flex items-center space-x-1" role="navigation" aria-label="Navegación principal">
           {navItems.map((item) => {
+            if (item.isExternal) {
+              return (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-2 text-[13px] font-bold rounded-custom-sm transition-all duration-200 text-slate-650 hover:text-hurvant-navy hover:bg-slate-50 flex items-center gap-1"
+                >
+                  {item.label}
+                </a>
+              );
+            }
             const active = isActivePath(item.path);
             return (
               <Link
@@ -88,6 +102,20 @@ export default function Header() {
         <div className="xl:hidden glass-header border-t border-slate-100 animate-fade-in absolute w-full left-0 z-45 shadow-lg">
           <nav className="px-4 pt-2 pb-6 space-y-1">
             {navItems.map((item) => {
+              if (item.isExternal) {
+                return (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-3 text-base font-semibold rounded-custom-md transition-all text-slate-600 hover:text-hurvant-navy hover:bg-slate-50"
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
               const active = isActivePath(item.path);
               return (
                 <Link
