@@ -9,7 +9,7 @@ export default function Header() {
   const navItems = [
     { path: '/', label: 'Inicio' },
     { path: '/servicios', label: 'Ecosistema' },
-    { path: 'https://digital.hurvant.com', label: 'Digital', isExternal: true },
+    { path: 'https://digital.hurvant.com', label: 'digital.hurvant.com', isExternal: true },
     { path: '/sectores', label: 'Sectores' },
     { path: '/metodologia', label: 'Metodología' },
     { path: '/sobre-hurvant', label: 'Sobre Hurvant' },

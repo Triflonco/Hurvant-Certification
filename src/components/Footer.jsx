@@ -73,7 +73,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                💻 HURVANT DIGITAL
+                💻 digital.hurvant.com
               </a>
             </li>
             <li>
