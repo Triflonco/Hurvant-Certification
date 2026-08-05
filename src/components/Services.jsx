@@ -129,7 +129,7 @@ export default function Services() {
       divisionName: 'HURVANT DIGITAL',
       title: 'Soluciones Digitales, ERP/CRM e Inteligencia Artificial',
       subtitle: 'El habilitador tecnológico del Grupo Hurvant y clientes externos',
-      link: 'https://digital.hurvant.com',
+      link: '/servicios',
       icon: Code,
       color: 'from-indigo-600 to-slate-900',
       textColor: 'text-indigo-600',
