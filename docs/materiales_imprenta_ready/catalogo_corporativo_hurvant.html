@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HURVANT - Catálogo Corporativo Oficial 2026/2027 (Email hello@hurvant.com)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #cbd5e1; color: #0f172a; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    
+    p, .p-cat-light, .service-card-cat-light p, .cat-subtitle-light {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .cat-page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 16mm 14mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      page-break-after: always;
+      position: relative;
+    }
+    @media print { body { background: none; } .cat-page { margin: 0; box-shadow: none; width: 210mm; height: 297mm; } }
+
+    .header-logo-container {
+      background: #f8fafc;
+      border: 2.5px solid #1b2e4b;
+      border-radius: 14px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .brand-logo-cat { height: 70px; width: auto; object-fit: contain; }
+    .tag-cat-light { font-size: 11px; font-weight: 900; color: #1b2e4b; text-transform: uppercase; letter-spacing: 1px; }
+
+    .cat-title-light { font-size: 36px; font-weight: 900; line-height: 1.1; margin-top: 24px; color: #1b2e4b; letter-spacing: -1px; text-align: left; }
+    .cat-title-light span { color: #4f46e5; }
+    .cat-subtitle-light { font-size: 13.5px; color: #475569; margin-top: 10px; font-weight: 500; line-height: 1.5; text-align: justify; }
+
+    .cover-kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .kpi-card-item {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 4.5px solid #1b2e4b;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .kpi-card-item h4 {
+      font-size: 12px;
+      font-weight: 900;
+      color: #1b2e4b;
+    }
+    .kpi-card-item p {
+      font-size: 10px;
+      color: #64748b;
+      margin-top: 3px;
+      line-height: 1.35;
+      text-align: justify;
+    }
+    
+    .hero-img-frame {
+      width: 100%;
+      height: 230px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 10px;
+      border: 2px solid #cbd5e1;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    .h2-cat-light { font-size: 20px; font-weight: 900; color: #1b2e4b; margin-top: 20px; text-align: left; }
+    .p-cat-light { font-size: 11.5px; color: #475569; line-height: 1.6; margin-top: 8px; text-align: justify; }
+
+    .grid-services-light { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .service-card-cat-light { background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #4f46e5; padding: 14px; border-radius: 8px; }
+    .service-card-cat-light h3 { font-size: 12.5px; font-weight: 800; color: #1b2e4b; text-align: left; }
+    .service-card-cat-light p { font-size: 10.5px; color: #64748b; margin-top: 4px; line-height: 1.4; text-align: justify; }
+
+    .footer-cat-light { border-top: 2px solid #e2e8f0; padding-top: 12px; display: flex; justify-content: space-between; font-size: 10px; color: #64748b; }
+  </style>
+</head>
+<body>
+
+  <!-- PÁGINA 1: PORTADA -->
+  <div class="cat-page">
+    <div>
+      <div class="header-logo-container">
+        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-cat" />
+        <span class="tag-cat-light">Edición Oficial 2026/2027</span>
+      </div>
+      
+      <h1 class="cat-title-light">
+        Catálogo Corporativo <span>de Servicios Técnicos</span>
+      </h1>
+      <p class="cat-subtitle-light">
+        Organismo Técnico de Tercera Parte especializado en la evaluación observacional de personas, adecuación de maquinaria según el Real Decreto 1215/1997 y ensayos no destructivos.
+      </p>
+
+      <div class="cover-kpi-grid">
+        <div class="kpi-card-item">
+          <h4>👥 Certificación de Personas (ISO 17024)</h4>
+          <p>Pruebas observacionales en puesto real con Pasaporte Técnico QR Móvil por operario.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#0284c7;">
+          <h4>🚜 Maquinaria (RD 1215/1997)</h4>
+          <p>Dictamen técnico de ingeniería firmado por colegiado y placa metálica con QR en máquina.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#d97706;">
+          <h4>🔬 Ensayos NDT (ISO 9712)</h4>
+          <p>Ultrasonidos y partículas magnéticas para grúas e izaje por técnicos cualificados Nivel II/III.</p>
+        </div>
+        <div class="kpi-card-item" style="border-left-color:#16a34a;">
+          <h4>🔐 Firma Criptográfica SHA-256</h4>
+          <p>Registro inalterable con validez probatoria ante la Inspección de Trabajo y Juzgados.</p>
+        </div>
+      </div>
+
+      <div class="hero-img-frame">
+        <img src="../../public/crane_lifting_inspection.png" alt="Inspección Hurvant" />
+      </div>
+    </div>
+
+    <div class="footer-cat-light">
+      <div>HURVANT Certification & Technical Validation</div>
+      <div>Evaluamos Competencias, No Asistencias.</div>
+    </div>
+  </div>
+
+  <!-- PÁGINA 2: ESQUEMAS DE SERVICIO -->
+  <div class="cat-page">
+    <div>
+      <div class="header-logo-container" style="background:#ffffff;border-color:#cbd5e1;">
+        <img src="../../public/Logo.png" alt="HURVANT Logo Oficial" class="brand-logo-cat" />
+        <span class="tag-cat-light" style="color:#4f46e5;">Esquemas Técnicos de Evaluación</span>
+      </div>
+
+      <h2 class="h2-cat-light">Cinco Esquemas Especializados para la Industria</h2>
+      <p class="p-cat-light">
+        HURVANT opera bajo estrictos marcos normativos internacionales (UNE-EN ISO/IEC 17024 e ISO/IEC 17020), aportando valor probatorio inalterable ante la Inspección de Trabajo y procedimientos judiciales.
+      </p>
+
+      <div class="grid-services-light">
+        <div class="service-card-cat-light">
+          <h3>E-HVT-01 | Evaluación Operativa de Personas</h3>
+          <p>Pruebas observacionales in-situ en el puesto de trabajo habitual. Emisión de Certificado Individual y Pasaporte Técnico QR Móvil por cada trabajador verificado.</p>
+        </div>
+        <div class="service-card-cat-light" style="border-left-color:#0284c7;">
+          <h3>E-HVT-02 | Inspección de Maquinaria (RD 1215/1997)</h3>
+          <p>Dictamen técnico de ingeniería firmado por profesional colegiado junto con la fijación física de placa metálica con código QR de verificación en máquina.</p>
+        </div>
+        <div class="service-card-cat-light" style="border-left-color:#d97706;">
+          <h3>E-HVT-03 | Ensayos No Destructivos (NDT / END)</h3>
+          <p>Ultrasonidos (UT) y partículas magnéticas (MT) para grúas e izaje ejecutados por técnicos cualificados bajo norma ISO 9712 Nivel II y III.</p>
+        </div>
+        <div class="service-card-cat-light" style="border-left-color:#16a34a;">
+          <h3>E-HVT-04 | Auditoría de Eficacia Preventiva</h3>
+          <p>Medición cuantitativa del comportamiento seguro en campo y diagnóstico de la brecha de cumplimiento preventivo para la alta dirección.</p>
+        </div>
+      </div>
+
+      <div style="background:#e0f2fe;border:1.5px solid #0284c7;border-left:4px solid #0284c7;padding:16px;border-radius:10px;margin-top:20px;color:#0c4a6e;">
+        <h3 style="font-size:13px;font-weight:900;color:#0369a1;">💻 Ecosistema Tecnológico SaaS & Pasaporte QR</h3>
+        <p style="font-size:10.5px;color:#0c4a6e;margin-top:4px;line-height:1.45;text-align:justify;">
+          Cuadro de mando en la nube con Skill Matrix en tiempo real para responsables de RRHH y PRL, unido a acreditaciones móviles con encriptación SHA-256 para verificación instantánea en campo desde cualquier teléfono inteligente.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-cat-light">
+      <div>HURVANT Certification | 📧 hello@hurvant.com | ☎️ +34 611 888 179 | 🌐 www.hurvant.com</div>
+      <div>Página 2</div>
+    </div>
+  </div>
+
+</body>
+</html>
