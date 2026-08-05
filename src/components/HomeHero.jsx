@@ -392,15 +392,12 @@ export default function HomeHero() {
 
                 {/* Tarjeta Principal del Banner Activo */}
                 <div className="relative group overflow-hidden rounded-custom-lg border border-slate-200 shadow-md bg-white">
-                  <div className="aspect-[16/9] sm:aspect-[16/10] w-full overflow-hidden relative">
+                  <div className="aspect-[16/10] w-full overflow-hidden relative">
                     <img 
                       src={bannerSlides[activeBanner].image} 
                       alt={bannerSlides[activeBanner].alt} 
                       className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-103 banner-slide-enter"
                     />
-                    
-                    {/* Soft left fade ONLY towards the text side */}
-                    <div className="absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-white/60 via-white/20 to-transparent pointer-events-none z-10" />
                     
                     {/* Gradiente de overlay sutil para máxima legibilidad */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent pointer-events-none" />
