@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Enlace al sitemap oficial de Hurvant
+Sitemap: https://www.hurvant.com/sitemap.xml
