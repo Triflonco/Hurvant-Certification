@@ -26,7 +26,7 @@ export default function HomeHero() {
       badgeColor: 'bg-indigo-50 text-hurvant-indigo border-indigo-200',
       title: 'Certificación de Personas y Competencia Operativa',
       subtitle: 'Evaluación objetiva in situ de la capacidad técnica de operarios bajo estándar internacional ISO 17024.',
-      image: '/banners.png',
+      image: '/institutional_authority_hero.png',
       alt: 'Certificación de Personas e Inspección Técnica Hurvant',
       pill: 'Certificación Tercera Parte'
     },
