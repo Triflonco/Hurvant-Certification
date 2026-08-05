@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-logo: var(--font-montserrat);
+
+  --color-brand-primary: #1B2E4B;
+  --color-brand-secondary: #00B7D7;
+  --color-brand-accent: #06B6D4;
+  --color-brand-light: #F8FAFC;
+  --color-brand-dark: #0F172B;
+
+  /* Sobrescribir todas las sombras para asegurar un diseño limpio y plano */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
+  --shadow-inner: none;
+  --drop-shadow-sm: none;
+  --drop-shadow-md: none;
+  --drop-shadow-lg: none;
+  --drop-shadow-xl: none;
+  --drop-shadow-2xl: none;
+}
+
+body {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-dark);
+}
+
+p {
+  text-align: justify;
+}
+
+/* Utilitarios personalizados para mantener el diseño limpio */
+@layer utilities {
+  .no-glow {
+    box-shadow: none !important;
+    filter: none !important;
+  }
+}
