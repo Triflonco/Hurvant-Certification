@@ -1,5 +1,5 @@
-const OLD_HURVANT_URL = 'https://agwvbhbisniufhtmjqlj.supabase.co';
-const OLD_HURVANT_SR_KEY = 'sb_secret_fJi9A68EDrfDeehc7spC2A_xtU-Ckx-';
+const OLD_HURVANT_URL = process.env.VITE_SUPABASE_URL || 'https://agwvbhbisniufhtmjqlj.supabase.co';
+const OLD_HURVANT_SR_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || 'your_secret_key_here';
 
 async function run() {
   console.log(`\n=== Fetching OpenAPI Schema for Old Hurvant using Service Role ===`);
