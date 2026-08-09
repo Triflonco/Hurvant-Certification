@@ -67,7 +67,6 @@ export default function ComplaintsWizard() {
         title="Canal de Quejas y Apelaciones | HURVANT"
         description="Procedimiento oficial y transparente para la tramitación independiente de quejas y apelaciones técnicas."
         canonicalPath="/quejas-y-apelaciones"
-        ogImage="https://www.hurvant.com/institutional_authority_hero.png"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="complaints-title">
 

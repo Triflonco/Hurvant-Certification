@@ -10,7 +10,6 @@ export default function ServiceEvaluacion() {
         title="Evaluación Operativa de Personas | HURVANT Certification"
         description="Validación práctica y observacional de competencias en el puesto de trabajo. Evaluación del comportamiento seguro, la adaptación funcional y la capacidad real sin interrumpir la producción."
         canonicalPath="/servicios/evaluacion-operativa"
-        ogImage="https://www.hurvant.com/eval_interview.jpg"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 animate-slide-up">
         {/* Breadcrumb */}

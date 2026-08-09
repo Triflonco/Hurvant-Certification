@@ -87,7 +87,6 @@ export default function Sectors() {
         title="Sectores Críticos de Intervención | HURVANT"
         description="Soluciones de evaluación práctica y reducción del riesgo en logística, hotelería, industria pesada y grúas de elevación."
         canonicalPath="/sectores"
-        ogImage="https://www.hurvant.com/stress_warehouse.jpg"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="sectors-title">
 

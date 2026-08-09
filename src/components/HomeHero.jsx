@@ -284,7 +284,6 @@ export default function HomeHero() {
         title="HURVANT - Impulsando la Competencia Técnica | Ecosistema Global"
         description="Hurvant es un ecosistema empresarial internacional especializado en Certificación, Inspección Industrial, Formación Técnica, Investigación e Innovación Tecnológica con IA."
         canonicalPath="/"
-        ogImage="https://www.hurvant.com/hurvant_team_inspection_hero.png"
       />
       <div className="space-y-16">
         

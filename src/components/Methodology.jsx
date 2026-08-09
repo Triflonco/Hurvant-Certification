@@ -58,9 +58,8 @@ export default function Methodology() {
     <>
       <PageMeta 
         title="Metodología Científico-Operativa de Evaluación | HURVANT"
-        description="Conozca nuestro modelo de evaluación en 4 fases: Observación directa, Evaluación contextual, Análisis funcional y Enfoque humano."
+        description="Conozca el proceso de 4 fases de HURVANT para la observación directa y análisis funcional en el puesto de trabajo real."
         canonicalPath="/metodologia"
-        ogImage="https://www.hurvant.com/hero_stamp_document.png"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="methodology-title">
 

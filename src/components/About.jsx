@@ -23,7 +23,6 @@ export default function About() {
         title="Identidad Corporativa, Misión y Gobernanza | GRUPO HURVANT"
         description="Conozca el manifiesto corporativo del Grupo Hurvant: Misión, Visión, Propósito y la gobernanza de imparcialidad de HURVANT Certification."
         canonicalPath="/sobre-hurvant"
-        ogImage="https://www.hurvant.com/hurvant_team_inspection_hero.png"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="about-title">
 

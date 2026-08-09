@@ -10,7 +10,6 @@ export default function ServiceInspeccion() {
         title="Inspección de Maquinaria ISO 17020 & RD 1215/97 | HURVANT Inspection"
         description="Auditoría e inspección técnica de equipos de trabajo bajo norma UNE-EN ISO/IEC 17020 y Real Decreto 1215/1997. Verificación física in-situ, placas de marcado QR y blindaje legal LPRL Ley 31/1995."
         canonicalPath="/servicios/inspeccion-equipos"
-        ogImage="https://www.hurvant.com/heavy_machinery_loader.png"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 animate-slide-up">
         {/* Breadcrumb */}

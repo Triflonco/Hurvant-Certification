@@ -10,7 +10,6 @@ export default function ServiceNDT() {
         title="Ensayos No Destructivos NDT / END | HURVANT Certification"
         description="Inspección instrumental y ensayos no destructivos (ultrasonidos, partículas magnéticas, líquidos penetrantes, inspección visual) para grúas, estructuras y elementos de izaje."
         canonicalPath="/servicios/ensayos-no-destructivos"
-        ogImage="https://www.hurvant.com/hero_engineers_inspection.png"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 animate-slide-up">
         {/* Breadcrumb */}

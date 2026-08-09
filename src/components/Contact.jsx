@@ -69,7 +69,6 @@ export default function Contact() {
         title="Contacto Corporativo | Solicitud de Piloto | HURVANT"
         description="Solicite un programa piloto de evaluación de personal o auditoría técnica de maquinaria para su empresa. Atención técnica corporativa en 24h."
         canonicalPath="/contacto"
-        ogImage="https://www.hurvant.com/institutional_authority_hero.png"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="contact-title">
 
