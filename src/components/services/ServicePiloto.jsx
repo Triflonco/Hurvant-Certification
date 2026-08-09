@@ -10,6 +10,7 @@ export default function ServicePiloto() {
         title="Programa Piloto de Validación | HURVANT Certification"
         description="Pruebe la metodología de evaluación práctica de HURVANT en un turno o área delimitada de su empresa, sin fricción ni interrupción operativa."
         canonicalPath="/servicios/programas-piloto"
+        ogImage="https://www.hurvant.com/training_alignment.jpg"
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16 animate-slide-up">
         {/* Breadcrumb */}

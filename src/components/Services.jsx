@@ -175,39 +175,42 @@ export default function Services() {
         title="Divisiones y Catálogo del Ecosistema | GRUPO HURVANT"
         description="Conozca el catálogo de divisiones del Grupo Hurvant: Hurvant Certification, Hurvant Inspection, Hurvant Academy, Hurvant Trace, Hurvant Digital y Hurvant Photo."
         canonicalPath="/servicios"
+        ogImage="https://www.hurvant.com/institutional_authority_hero.png"
       />
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="services-title">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 animate-slide-up" aria-labelledby="services-title">
         {/* Cabecera */}
-        <header className="border-b-3 border-hurvant-navy pb-6 mb-12">
+        <header className="border-b-3 border-hurvant-navy pb-6 mb-8 sm:mb-12">
           <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Ecosistema Empresarial</span>
-          <h2 id="services-title" className="text-3xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
+          <h2 id="services-title" className="text-2xl sm:text-4xl font-black text-hurvant-navy tracking-tight">
             Divisiones Especializadas del Grupo Hurvant
           </h2>
-          <p className="text-slate-500 font-medium mt-1.5 text-sm sm:text-base">
+          <p className="text-slate-500 font-medium mt-1.5 text-xs sm:text-base">
             Cada división responde a un área de excelencia técnica respaldada por una única gobernanza de calidad e innovación.
           </p>
         </header>
 
-        {/* Filtro por División */}
-        <div className="flex flex-wrap gap-2 mb-12 bg-slate-100 p-2 rounded-custom-lg border border-slate-200/80">
-          {divisions.map((div) => {
-            const Icon = div.icon;
-            const active = activeDivision === div.id;
-            return (
-              <button
-                key={div.id}
-                onClick={() => setActiveDivision(div.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
-                  active
-                    ? 'bg-hurvant-navy text-white shadow-md'
-                    : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
-                }`}
-              >
-                <Icon className="h-4 w-4 shrink-0" />
-                <span>{div.name}</span>
-              </button>
-            );
-          })}
+        {/* Filtro por División con scroll horizontal suave en móvil */}
+        <div className="overflow-x-auto pb-2 mb-8 sm:mb-12 scrollbar-none">
+          <div className="flex flex-nowrap md:flex-wrap gap-2 bg-slate-100 p-2 rounded-2xl border border-slate-200/80 min-w-max md:min-w-0">
+            {divisions.map((div) => {
+              const Icon = div.icon;
+              const active = activeDivision === div.id;
+              return (
+                <button
+                  key={div.id}
+                  onClick={() => setActiveDivision(div.id)}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap min-h-[44px] ${
+                    active
+                      ? 'bg-hurvant-navy text-white shadow-md'
+                      : 'text-slate-700 hover:text-hurvant-navy hover:bg-white/80 active:bg-white'
+                  }`}
+                >
+                  <Icon className="h-4 w-4 shrink-0" />
+                  <span>{div.name}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Grid de Servicios y Divisiones */}

@@ -125,10 +125,16 @@ body {
   background-clip: text;
 }
 
-/* Justificación global de textos descriptivos e informativos */
+/* Alineación responsiva de textos: izquierda en móvil para legibilidad fluida, justificada en pantallas medianas/grandes */
 p, li, blockquote, dd {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  p, li, blockquote, dd {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 /* Transiciones suaves para el showcase de banners */
@@ -139,5 +145,12 @@ p, li, blockquote, dd {
 .glow-subtle {
   box-shadow: 0 0 45px -10px rgba(79, 70, 229, 0.15);
 }
+
+/* Utilidad táctil para asegurar áreas de interacción cómodas en pantallas móviles */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
 
 
