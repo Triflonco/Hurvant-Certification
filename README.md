@@ -1,16 +1,17 @@
-# React + Vite
+# HURVANT Certification
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma oficial del Organismo Técnico de Certificación de Personas (UNE-EN ISO/IEC 17024), Inspección Técnica de Equipos (UNE-EN ISO/IEC 17020), Ensayos No Destructivos (NDT / END) y Adecuación de Maquinaria conforme al Real Decreto 1215/1997.
 
-Currently, two official plugins are available:
+## 🚀 Características Principales
+- **Certificación de Personas (ISO 17024):** Evaluación de competencias técnicas reales en el puesto de trabajo.
+- **Inspección e Integridad de Equipos (ISO 17020 / RD 1215/1997):** Auditoría reglamentaria con marcado de seguridad QR.
+- **Ensayos No Destructivos (ISO 9712):** Inspección volumétrica y superficial de estructuras críticas.
+- **Consola de Verificación QR:** Comprobación pública inmutable respaldada por trazabilidad criptográfica SHA-256.
+- **SEO & Responsividad Móvil:** Metadatos dinámicos OpenGraph/Twitter y diseño responsivo adaptado a dispositivos táctiles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologías
+- **React 19** + **Vite**
+- **TailwindCSS** (Diseño y animaciones)
+- **Lucide React** (Iconografía técnica)
+- **Supabase** (Backend & Almacenamiento seguro)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
