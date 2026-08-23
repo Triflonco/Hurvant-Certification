@@ -37,7 +37,7 @@ export default function Footer() {
                 to="/servicios"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors font-semibold text-slate-300"
               >
-                🏆 HURVANT CERTIFICATION
+                HURVANT CERTIFICATION
               </Link>
             </li>
             <li>
@@ -45,7 +45,7 @@ export default function Footer() {
                 to="/servicios/inspeccion-equipos"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                🔬 HURVANT INSPECTION
+                HURVANT INSPECTION
               </Link>
             </li>
             <li>
@@ -53,7 +53,7 @@ export default function Footer() {
                 to="/contacto"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                🎓 HURVANT ACADEMY
+                HURVANT ACADEMY
               </Link>
             </li>
             <li>
@@ -63,7 +63,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                🔍 HURVANT TRACE
+                HURVANT TRACE
               </a>
             </li>
             <li>
@@ -73,7 +73,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                💻 digital.hurvant.com
+                digital.hurvant.com
               </a>
             </li>
             <li>
@@ -83,7 +83,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-xs inline-block py-0.5 hover:text-white transition-colors"
               >
-                📷 HURVANT PHOTO
+                HURVANT PHOTO
               </a>
             </li>
           </ul>
