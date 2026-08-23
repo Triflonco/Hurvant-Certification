@@ -273,9 +273,39 @@ export default function HomeHero() {
     }
   ];
 
-  const futureVerticals = [
-    'Hurvant Security', 'Hurvant Medical', 'Hurvant Energy', 'Hurvant Engineering',
-    'Hurvant Robotics', 'Hurvant Legal', 'Hurvant Environment', 'Hurvant Labs'
+  const technicalSpecialties = [
+    {
+      id: 'renewables',
+      title: 'Energías Renovables & Fotovoltaica',
+      scope: 'Inspección termográfica, adecuación técnica de parques fotovoltaicos y verificación de líneas de evacuación.',
+      standard: 'UNE-EN 62446 / ISO 17020',
+      category: 'Sector Energético',
+      categoryColor: 'bg-cyan-50 text-hurvant-cyan-dark border-cyan-200'
+    },
+    {
+      id: 'robotics',
+      title: 'Seguridad en Robótica & Marcado CE',
+      scope: 'Auditoría de células robotizadas, adecuación a directiva de máquinas y análisis de seguridad funcional.',
+      standard: 'ISO 10218 / ISO 13849',
+      category: 'Seguridad de Máquinas',
+      categoryColor: 'bg-indigo-50 text-hurvant-indigo border-indigo-200'
+    },
+    {
+      id: 'forensics',
+      title: 'Peritaje Técnico e Investigación de Siniestros',
+      scope: 'Dictámenes periciales en fallos mecánicos, rotura de componentes críticos y siniestralidad laboral.',
+      standard: 'Peritaje Técnico Judicial',
+      category: 'Dictamen Pericial',
+      categoryColor: 'bg-emerald-50 text-emerald-800 border-emerald-200'
+    },
+    {
+      id: 'environmental',
+      title: 'Sostenibilidad & Eficiencia Energética',
+      scope: 'Auditorías de rendimiento operativo, verificación técnica de consumos y adecuación ambiental.',
+      standard: 'ISO 14064 / ISO 50001',
+      category: 'Gestión y Eficiencia',
+      categoryColor: 'bg-amber-50 text-amber-800 border-amber-200'
+    }
   ];
 
   return (
@@ -294,7 +324,6 @@ export default function HomeHero() {
             {/* Efectos de Luz Ambiental Sobrios en Fondo */}
             <div className="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-hurvant-cyan/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute inset-0 bg-[radial-gradient(#64748b_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.04] pointer-events-none" />
 
             {/* Contenido Grid Principal (12 Columnas) */}
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -344,26 +373,6 @@ export default function HomeHero() {
                     <Eye className="h-4 w-4 text-hurvant-indigo" />
                     <span>Verificar Registro Criptográfico</span>
                   </Link>
-                </div>
-
-                {/* Los 5 Pilares Fundamentales (Tarjetas Blancas Píldora) */}
-                <div className="pt-5 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-5 gap-2.5">
-                  {[
-                    { title: 'INDEPENDENCIA', desc: 'Tercera Parte', icon: ShieldCheck, color: 'text-hurvant-indigo' },
-                    { title: 'INSPECCIÓN', desc: 'ISO 17020', icon: ShieldAlert, color: 'text-hurvant-cyan-dark' },
-                    { title: 'CERTIFICACIÓN', desc: 'ISO 17024', icon: Award, color: 'text-indigo-600' },
-                    { title: 'ADECUACIÓN', desc: 'RD 1215/97', icon: Scale, color: 'text-emerald-600' },
-                    { title: 'INMUTABILIDAD', desc: 'SHA-256', icon: Sparkles, color: 'text-amber-600' }
-                  ].map((p, idx) => {
-                    const PillarIcon = p.icon;
-                    return (
-                      <div key={idx} className="bg-white border border-slate-200/80 rounded-custom-md p-2.5 text-center space-y-0.5 shadow-2xs hover:shadow-xs hover:border-indigo-200 transition-all">
-                        <PillarIcon className={`h-4 w-4 mx-auto ${p.color}`} />
-                        <span className="text-[10px] font-black tracking-wider text-slate-800 block uppercase">{p.title}</span>
-                        <span className="text-[9px] text-slate-500 font-medium block">{p.desc}</span>
-                      </div>
-                    );
-                  })}
                 </div>
               </div>
 
@@ -443,6 +452,37 @@ export default function HomeHero() {
                       />
                     ))}
                   </div>
+                </div>
+              </div>
+
+              {/* Fila Completa Inferior: Los 5 Pilares Fundamentales (Ampliados y Centrados en la Página) */}
+              <div className="lg:col-span-12 pt-8 border-t border-slate-200/80">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
+                  {[
+                    { title: 'INDEPENDENCIA', desc: 'Tercera Parte', icon: ShieldCheck, color: 'text-hurvant-indigo', bg: 'bg-indigo-50/80 border-indigo-100' },
+                    { title: 'INSPECCIÓN', desc: 'UNE-EN ISO 17020', icon: ShieldAlert, color: 'text-hurvant-cyan-dark', bg: 'bg-cyan-50/80 border-cyan-100' },
+                    { title: 'CERTIFICACIÓN', desc: 'UNE-EN ISO 17024', icon: Award, color: 'text-indigo-600', bg: 'bg-indigo-50/80 border-indigo-100' },
+                    { title: 'ADECUACIÓN', desc: 'RD 1215/1997', icon: Scale, color: 'text-emerald-600', bg: 'bg-emerald-50/80 border-emerald-100' },
+                    { title: 'INMUTABILIDAD', desc: 'Firma SHA-256', icon: Sparkles, color: 'text-amber-600', bg: 'bg-amber-50/80 border-amber-100' }
+                  ].map((p, idx) => {
+                    const PillarIcon = p.icon;
+                    return (
+                      <div 
+                        key={idx} 
+                        className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center shadow-xs hover:shadow-md hover:border-hurvant-indigo/30 hover:-translate-y-0.5 transition-all duration-300 group"
+                      >
+                        <div className={`h-10 w-10 sm:h-11 sm:w-11 rounded-xl ${p.bg} border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 shadow-2xs`}>
+                          <PillarIcon className={`h-5 w-5 ${p.color}`} />
+                        </div>
+                        <span className="text-xs sm:text-[12.5px] font-black tracking-wide text-hurvant-navy uppercase block text-center w-full leading-snug">
+                          {p.title}
+                        </span>
+                        <span className="text-[10px] sm:text-[11px] text-slate-500 font-semibold block text-center w-full mt-1">
+                          {p.desc}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -761,27 +801,51 @@ export default function HomeHero() {
               })}
             </div>
 
-            {/* Bloque Modular para Futuras Divisiones del Holding */}
-            <div className="glass-card bg-gradient-to-r from-slate-900 via-slate-950 to-hurvant-navy-dark text-white rounded-custom-lg p-6 sm:p-8 border border-slate-800 shadow-lg space-y-4">
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            {/* Bloque: Escalabilidad Técnica a 5 Años (Tema Claro de Alto Contraste) */}
+            <div className="bg-gradient-to-br from-white via-slate-50 to-indigo-50/20 text-slate-800 rounded-custom-lg p-6 sm:p-8 border border-slate-200 shadow-md space-y-6">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-200/80 pb-5">
                 <div>
-                  <span className="text-[10px] font-bold text-hurvant-cyan uppercase tracking-widest block mb-0.5">Escalabilidad Corporativa a 15 Años</span>
-                  <h3 className="text-lg sm:text-xl font-black text-white">Infraestructura Abierta para Futuras Verticales</h3>
+                  <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">
+                    Escalabilidad Corporativa a 5 Años
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-hurvant-navy tracking-tight">
+                    Plan de Escalabilidad y Ampliación de Competencias Técnicas
+                  </h3>
                 </div>
-                <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-hurvant-cyan/20 text-hurvant-cyan border border-hurvant-cyan/30 uppercase tracking-widest shrink-0">
-                  Arquitectura Modular Integrada
-                </span>
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 text-xs font-bold text-slate-700 shrink-0 shadow-2xs">
+                  <span className="h-2 w-2 rounded-full bg-hurvant-indigo" />
+                  <span>Arquitectura Modular a 5 Años</span>
+                </div>
               </div>
 
-              <p className="text-xs text-slate-300 leading-relaxed max-w-4xl">
-                La arquitectura del Grupo Hurvant está concebida para integrar de forma nativa nuevas unidades de negocio altamente especializadas, compartiendo gobernanza de marca e independencia técnica.
+              <p className="text-xs sm:text-sm text-slate-650 leading-relaxed max-w-4xl font-medium">
+                Marco de escalabilidad estructurado a 5 años para la incorporación planificada de nuevos alcances regulatorios e industriales, consolidando nuestras divisiones bajo un único estándar de gobernanza técnica e imparcialidad.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                {futureVerticals.map((vert, idx) => (
-                  <div key={idx} className="bg-slate-800/60 border border-slate-700/60 rounded-custom-md p-2.5 text-center text-xs font-bold text-slate-200 flex items-center justify-center gap-1.5">
-                    <Sparkles className="h-3 w-3 text-hurvant-cyan shrink-0" />
-                    <span>{vert}</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {technicalSpecialties.map((spec) => (
+                  <div 
+                    key={spec.id} 
+                    className="bg-white border border-slate-200/90 hover:border-hurvant-indigo/40 rounded-xl p-5 flex flex-col justify-between space-y-4 transition-all duration-200 shadow-xs hover:shadow-md hover:-translate-y-0.5"
+                  >
+                    <div className="space-y-2.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className={`text-[10.5px] font-mono font-bold uppercase px-2.5 py-1 rounded-md border ${spec.categoryColor}`}>
+                          {spec.category}
+                        </span>
+                      </div>
+                      <h4 className="text-sm sm:text-[15px] font-black text-hurvant-navy leading-snug">
+                        {spec.title}
+                      </h4>
+                      <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                        {spec.scope}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono font-bold text-hurvant-indigo">
+                      <span>{spec.standard}</span>
+                      <ArrowUpRight className="h-4 w-4 text-slate-400" />
+                    </div>
                   </div>
                 ))}
               </div>
