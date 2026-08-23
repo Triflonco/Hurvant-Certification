@@ -9,14 +9,19 @@ export default function SocialProof() {
       sub: 'Los títulos teóricos convencionales no garantizan hábitos seguros en campo.'
     },
     {
+      value: 'ISO 17020',
+      label: 'Inspección técnica de equipos',
+      sub: 'Criterios de imparcialidad e independencia de organismo de inspección tipo tercera parte.'
+    },
+    {
       value: 'RD 1215/97',
       label: 'Adecuación de equipos de trabajo',
       sub: 'Auditorías físicas con marcado QR inmutable y blindaje jurídico.'
     },
     {
       value: 'ISO 17024',
-      label: 'Esquema propio alineado',
-      sub: 'Evaluación objetiva de la capacidad operativa real de las personas.'
+      label: 'Certificación de personas',
+      sub: 'Evaluación objetiva y trazabilidad de la capacidad operativa real de operarios.'
     },
     {
       value: '100%',
@@ -62,26 +67,31 @@ export default function SocialProof() {
           </p>
         </div>
 
-        {/* Grid de Cifras e Indicadores */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, idx) => (
-            <div 
-              key={idx} 
-              className="bg-slate-950/60 border border-slate-800/80 rounded-custom-md p-6 flex flex-col justify-between space-y-3 hover:border-hurvant-cyan/40 transition-colors"
-            >
-              <div>
-                <span className="text-3xl sm:text-4xl font-black text-gradient-brand block mb-1">
-                  {stat.value}
-                </span>
-                <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">
-                  {stat.label}
-                </h3>
+        {/* Grid de Cifras e Indicadores (5 Columnas a lo Ancho) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4.5">
+          {stats.map((stat, idx) => {
+            const isLastOdd = idx === 4;
+            return (
+              <div 
+                key={idx} 
+                className={`bg-slate-950/60 border border-slate-800/80 rounded-custom-md p-5 flex flex-col justify-between space-y-3 hover:border-hurvant-cyan/40 transition-colors ${
+                  isLastOdd ? 'sm:col-span-2 lg:col-span-1 max-w-md sm:max-w-none mx-auto w-full' : 'w-full'
+                }`}
+              >
+                <div>
+                  <span className="text-2xl sm:text-3xl font-black text-gradient-brand block mb-1">
+                    {stat.value}
+                  </span>
+                  <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider leading-snug">
+                    {stat.label}
+                  </h3>
+                </div>
+                <p className="text-[11px] text-slate-400 leading-normal font-medium">
+                  {stat.sub}
+                </p>
               </div>
-              <p className="text-[11px] text-slate-400 leading-normal">
-                {stat.sub}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Pilares de Confianza */}
