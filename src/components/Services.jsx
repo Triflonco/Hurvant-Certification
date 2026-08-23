@@ -189,7 +189,7 @@ export default function Services() {
         </header>
 
         {/* Filtro por División */}
-        <div className="flex flex-wrap gap-2 mb-12 bg-slate-100 p-2 rounded-custom-lg border border-slate-200/80">
+        <div className="flex flex-wrap justify-center items-center gap-2.5 mb-12 bg-slate-100/90 p-2.5 rounded-custom-lg border border-slate-200/80">
           {divisions.map((div) => {
             const Icon = div.icon;
             const active = activeDivision === div.id;
@@ -197,7 +197,7 @@ export default function Services() {
               <button
                 key={div.id}
                 onClick={() => setActiveDivision(div.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
+                className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
                   active
                     ? 'bg-hurvant-navy text-white shadow-md'
                     : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
