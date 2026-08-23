@@ -27,8 +27,7 @@ export default function Footer() {
 
         {/* Divisiones del Ecosistema */}
         <div>
-          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
-            <Layers className="h-4 w-4 text-hurvant-cyan" />
+          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4">
             Divisiones del Ecosistema
           </h3>
           <ul className="space-y-2.5">
@@ -91,8 +90,7 @@ export default function Footer() {
 
         {/* Gobernanza y Garantías */}
         <div>
-          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
-            <Scale className="h-4 w-4 text-hurvant-indigo-light" />
+          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4">
             Gobernanza ISO & Contacto
           </h3>
           <ul className="space-y-2.5">
@@ -141,8 +139,7 @@ export default function Footer() {
 
         {/* Estandares y Presencia */}
         <div>
-          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4 flex items-center gap-2">
-            <Award className="h-4 w-4 text-hurvant-cyan" />
+          <h3 className="text-xs font-bold text-slate-200 uppercase tracking-widest mb-4">
             Marco Normativo Técnico
           </h3>
           <ul className="space-y-2.5 text-xs text-slate-400">
