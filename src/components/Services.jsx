@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Activity, FileText, Sliders, GraduationCap, Wrench, Shield, ArrowRight, Cpu,
-  Award, ShieldCheck, BookOpen, Search, Code, Camera, Sparkles, Layers
+  Wrench, ArrowRight, Award, ShieldCheck, Code, Layers
 } from 'lucide-react';
 import PageMeta from './shared/PageMeta';
 
@@ -13,10 +12,7 @@ export default function Services() {
     { id: 'all', name: 'Todas las Divisiones', icon: Layers },
     { id: 'certification', name: 'HURVANT CERTIFICATION', icon: Award },
     { id: 'inspection', name: 'HURVANT INSPECTION', icon: ShieldCheck },
-    { id: 'academy', name: 'HURVANT ACADEMY', icon: BookOpen },
-    { id: 'trace', name: 'HURVANT TRACE', icon: Search },
-    { id: 'digital', name: 'HURVANT DIGITAL', icon: Code },
-    { id: 'photo', name: 'HURVANT PHOTO', icon: Camera }
+    { id: 'digital', name: 'HURVANT DIGITAL', icon: Code }
   ];
 
   const ecosystemServices = [
@@ -32,7 +28,7 @@ export default function Services() {
       color: 'from-indigo-600 to-hurvant-navy',
       textColor: 'text-hurvant-indigo',
       badge: 'UNE-EN ISO/IEC 17024',
-      description: 'Evaluamos y certificamos las competencias técnicas reales de operarios, supervisores y técnicos en entornos exigentes.',
+      description: 'Evaluamos y certificamos las competencias técnicas reales de operarios, supervisores y técnicos en entornos laborales de alta exigencia.',
       details: [
         'Exámenes prácticos y teóricos bajo esquemas acreditados ISO 17024.',
         'Observación directa de desempeño y hábitos seguros en campo.',
@@ -52,8 +48,8 @@ export default function Services() {
       image: '/heavy_machinery_loader.png',
       color: 'from-indigo-700 to-slate-900',
       textColor: 'text-hurvant-navy',
-      badge: 'UNE-EN ISO/IEC 17020 | RD 1215/1997',
-      description: 'Inspección técnica reglamentaria y adecuación de maquinaria pesada, equipos de elevación e instalaciones conforme a la norma UNE-EN ISO/IEC 17020 y Ley 31/1995 LPRL.',
+      badge: 'UNE-EN ISO/IEC 17020 | RD 1215/97',
+      description: 'Inspección técnica reglamentaria y adecuación de maquinaria pesada, equipos de elevación e instalaciones conforme a UNE-EN ISO/IEC 17020 y Ley 31/1995 LPRL.',
       details: [
         'Inspección reglamentaria de carretillas, grúas, PEMP y plataformas.',
         'Dictámenes de adecuación según Real Decreto 1215/1997 Anexo I y II.',
@@ -68,13 +64,13 @@ export default function Services() {
       divisionName: 'HURVANT INSPECTION',
       title: 'Ensayos No Destructivos (NDT / END)',
       subtitle: 'Inspección volumétrica y superficial de estructuras (ISO 9712)',
-      link: '/servicios/ensayos-no-destructivos',
+      link: '/servicios/ensayos-no-destructivos-ndt',
       icon: ShieldCheck,
       image: '/ndt_testing_weld.png',
       color: 'from-cyan-600 to-slate-900',
       textColor: 'text-hurvant-cyan',
       badge: 'UNE-EN ISO 9712',
-      description: 'Detección de defectos estructurales, discontinuidades en soldadura y fatiga de materiales críticos sin alterar el activo.',
+      description: 'Detección de defectos estructurales, discontinuidades en soldadura y fatiga de materiales críticos sin alterar la integridad del activo.',
       details: [
         'Ultrasonidos (UT), Partículas Magnéticas (MT) y Líquidos Penetrantes (PT).',
         'Inspectores cualificados Nivel II / III bajo norma UNE-EN ISO 9712.',
@@ -84,83 +80,24 @@ export default function Services() {
       ]
     },
     {
-      id: 'acad-ia',
-      divisionId: 'academy',
-      divisionName: 'HURVANT ACADEMY',
-      title: 'Capacitación Técnica Avanzada y Plataforma IA',
-      subtitle: 'e-Learning adaptativo y generación de contenidos con IA',
-      link: '/contacto',
-      icon: BookOpen,
-      color: 'from-emerald-600 to-slate-900',
-      textColor: 'text-emerald-600',
-      badge: 'Plataforma IA Adaptativa',
-      description: 'Formación técnica reglada y programas de reacondicionamiento operativo mediante algoritmos de generación de contenidos asistidos por Inteligencia Artificial.',
-      details: [
-        'Cursos técnicos interactivos adaptados al nivel del operario.',
-        'Generación automatizada de casos de prueba y simulaciones operativas.',
-        'Formación reglada en prevención de riesgos operativos específicos.',
-        'Certificación de superación e integración con el portal de acreditación.',
-        'Evaluación continua del progreso técnico sin interferir en el turno.'
-      ]
-    },
-    {
-      id: 'trace-osint',
-      divisionId: 'trace',
-      divisionName: 'HURVANT TRACE',
-      title: 'Investigación Técnica, Due Diligence y OSINT',
-      subtitle: 'Verificación documental inmutable e inteligencia de fuentes abiertas',
-      link: 'https://trace.hurvant.com',
-      icon: Search,
-      color: 'from-amber-600 to-slate-900',
-      textColor: 'text-amber-600',
-      badge: 'Verification & OSINT IA',
-      description: 'Verificación de autenticidad documental, Due Diligence técnica y análisis de reputación y riesgo respaldados por IA.',
-      details: [
-        'Verificación inalterable de firmas criptográficas e historial de certificados.',
-        'Auditoría de integridad documental para licitaciones y aseguradoras.',
-        'Análisis OSINT de fuentes abiertas para evaluar solvencia técnica.',
-        'Detección de fraudes en credenciales profesionales o diplomas.',
-        'Informes ejecutivos de riesgo documental e idoneidad corporativa.'
-      ]
-    },
-    {
       id: 'digital-saas',
       divisionId: 'digital',
       divisionName: 'HURVANT DIGITAL',
       title: 'Soluciones Digitales, ERP/CRM e Inteligencia Artificial',
       subtitle: 'El habilitador tecnológico del Grupo Hurvant y clientes externos',
-      link: '/servicios',
+      link: 'https://digital.hurvant.com',
       icon: Code,
+      image: '/digital_saas_platform.png',
       color: 'from-indigo-600 to-slate-900',
       textColor: 'text-indigo-600',
-      badge: 'Software & SaaS Corporativo',
-      description: 'Hurvant Digital es la división tecnológica que desarrolla el software, los sistemas ERP/CRM y los motores de IA que impulsan todo el Ecosistema Hurvant y ofrece soluciones SaaS a clientes externos.',
+      badge: 'Software SaaS & IA',
+      description: 'Hurvant Digital desarrolla plataformas SaaS de gestión, sistemas ERP/CRM y motores de Inteligencia Artificial para el Ecosistema Hurvant y organizaciones industriales.',
       details: [
         'Desarrollo de Plataformas SaaS de Gestión de Inspección y Registro.',
         'Sistemas ERP y CRM a medida orientados al cumplimiento ISO.',
         'Integración de Algoritmos de Inteligencia Artificial en Procesos.',
         'Automatización de Flujos de Trabajo e Infraestructura en la Nube.',
         'Consultoría de Transformación Digital para Entidades Industriales.'
-      ]
-    },
-    {
-      id: 'photo-doc',
-      divisionId: 'photo',
-      divisionName: 'HURVANT PHOTO',
-      title: 'Documentación Fotográfica Técnica e Industrial',
-      subtitle: 'Contenido visual profesional e imagen corporativa de alta calidad',
-      link: 'https://www.hurvantphoto.com',
-      icon: Camera,
-      color: 'from-purple-600 to-slate-900',
-      textColor: 'text-purple-600',
-      badge: 'Contenido Visual Profesional',
-      description: 'Servicios de fotografía técnica para inspección de activos, así como fotografía industrial, corporativa, inmobiliaria y cobertura de eventos.',
-      details: [
-        'Documentación fotográfica de precisión para informes de inspección.',
-        'Fotografía de instalaciones industriales, maquinaria y procesos.',
-        'Fotografía corporativa para equipos directivos y comunicación.',
-        'Fotografía inmobiliaria y de patrimonio arquitectónico.',
-        'Cobertura visual completa de eventos corporativos e institucionales.'
       ]
     }
   ];
@@ -173,7 +110,7 @@ export default function Services() {
     <>
       <PageMeta 
         title="Divisiones y Catálogo del Ecosistema | GRUPO HURVANT"
-        description="Conozca el catálogo de divisiones del Grupo Hurvant: Hurvant Certification, Hurvant Inspection, Hurvant Academy, Hurvant Trace, Hurvant Digital y Hurvant Photo."
+        description="Conozca el catálogo de divisiones del Grupo Hurvant: Hurvant Certification, Hurvant Inspection y Hurvant Digital."
         canonicalPath="/servicios"
       />
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-slide-up" aria-labelledby="services-title">
@@ -188,7 +125,7 @@ export default function Services() {
           </p>
         </header>
 
-        {/* Filtro por División */}
+        {/* Filtro por División Simétrico */}
         <div className="flex flex-wrap justify-center items-center gap-2.5 mb-12 bg-slate-100/90 p-2.5 rounded-custom-lg border border-slate-200/80">
           {divisions.map((div) => {
             const Icon = div.icon;
@@ -197,7 +134,7 @@ export default function Services() {
               <button
                 key={div.id}
                 onClick={() => setActiveDivision(div.id)}
-                className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
+                className={`inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-custom-md text-xs font-bold transition-all ${
                   active
                     ? 'bg-hurvant-navy text-white shadow-md'
                     : 'text-slate-650 hover:text-hurvant-navy hover:bg-white/80'
@@ -210,7 +147,7 @@ export default function Services() {
           })}
         </div>
 
-        {/* Grid de Servicios y Divisiones */}
+        {/* Grid 2x2 Simétrico de Servicios y Divisiones */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-16">
           {filteredServices.map((service) => {
             const IconComponent = service.icon;
@@ -232,10 +169,10 @@ export default function Services() {
                   </div>
                 )}
 
-                <div className="p-8 space-y-6 flex-grow">
+                <div className="p-8 space-y-6 flex-grow flex flex-col justify-between">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-hurvant-indigo">
-                      <IconComponent className="h-4 w-4" />
+                      <IconComponent className="h-4 w-4 shrink-0" />
                       <span>{service.divisionName}</span>
                     </div>
                     <h3 className="text-xl font-black text-hurvant-navy tracking-tight">{service.title}</h3>
@@ -286,24 +223,26 @@ export default function Services() {
         </div>
 
         {/* Módulo de HURVANT DIGITAL como Habilitador Tecnológico */}
-        <div className="bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white rounded-custom-lg p-8 sm:p-12 shadow-lg border-l-4 border-hurvant-indigo space-y-6">
-          <div className="flex items-center gap-3">
-            <Code className="h-7 w-7 text-hurvant-cyan" />
-            <div>
-              <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-widest block">Habilitador Tecnológico Transversal</span>
-              <h3 className="text-2xl font-black text-white">HURVANT DIGITAL</h3>
+        <div className="bg-gradient-to-r from-slate-900 to-hurvant-navy-dark text-white rounded-custom-lg p-8 sm:p-12 shadow-lg border-l-4 border-hurvant-indigo flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="space-y-4 max-w-2xl">
+            <div className="flex items-center gap-3">
+              <Code className="h-7 w-7 text-hurvant-cyan shrink-0" />
+              <div>
+                <span className="text-xs font-bold text-hurvant-cyan uppercase tracking-widest block">Habilitador Tecnológico Transversal</span>
+                <h3 className="text-2xl font-black text-white">HURVANT DIGITAL</h3>
+              </div>
             </div>
-          </div>
 
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl font-medium">
-            HURVANT DIGITAL es la división encargada del desarrollo de la tecnología de vanguardia, software de trazabilidad inmutable, motores de Inteligencia Artificial y plataformas SaaS que impulsan a todas las demás divisiones del Grupo Hurvant. Además, ofrece estos mismos desarrollos a organizaciones externas que buscan la máxima excelencia digital.
-          </p>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+              HURVANT DIGITAL es la división encargada del desarrollo de la tecnología de vanguardia, software de trazabilidad inmutable, motores de Inteligencia Artificial y plataformas SaaS que impulsan a todas las divisiones del Grupo Hurvant y a organizaciones externas.
+            </p>
+          </div>
 
           <a
             href="https://digital.hurvant.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan text-white font-bold text-xs px-6 py-3 rounded-custom-md hover:brightness-110 transition-all uppercase tracking-wider"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-hurvant-indigo to-hurvant-cyan text-white font-bold text-xs px-6 py-3.5 rounded-custom-md hover:brightness-110 transition-all uppercase tracking-wider shrink-0 shadow-md"
           >
             <span>Ir a digital.hurvant.com</span>
             <ArrowRight className="h-4 w-4" />
