@@ -873,10 +873,10 @@ export default function HomeHero() {
               </p>
             </div>
 
-            {/* Columna Derecha: Los 11 Valores Corporativos Oficiales */}
+            {/* Columna Derecha: Los 12 Valores Corporativos Oficiales */}
             <div className="lg:col-span-7 bg-white rounded-custom-lg border border-slate-200/80 p-8 shadow-xs space-y-6">
               <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block border-b border-slate-100 pb-3">
-                Los 11 Valores del Grupo Hurvant
+                Los 12 Valores del Grupo Hurvant
               </span>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -891,7 +891,8 @@ export default function HomeHero() {
                   { title: 'Confianza', desc: 'Relaciones institucionales duraderas basadas en evidencia.' },
                   { title: 'Transparencia', desc: 'Registros públicos verificables con estricto respeto RGPD.' },
                   { title: 'Calidad', desc: 'Gobernanza continua alineada con los máximos organismos.' },
-                  { title: 'Responsabilidad', desc: 'Protección activa del bienestar operativo y laboral.' }
+                  { title: 'Responsabilidad', desc: 'Protección activa del bienestar operativo y laboral.' },
+                  { title: 'Seguridad Jurídica', desc: 'Blindaje normativo y trazabilidad probatoria ante cualquier organismo.' }
                 ].map((val, idx) => (
                   <div key={idx} className="p-3.5 bg-slate-50/70 border border-slate-150 rounded-custom-md space-y-1">
                     <strong className="text-xs font-black text-hurvant-navy block flex items-center gap-1.5">

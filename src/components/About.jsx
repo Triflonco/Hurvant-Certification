@@ -14,7 +14,8 @@ export default function About() {
     { title: 'Confianza', desc: 'Construcción de relaciones duraderas con clientes e instituciones basadas en hechos verificables.' },
     { title: 'Transparencia', desc: 'Consola pública de verificación de certificados con estricto respeto de la normativa RGPD.' },
     { title: 'Calidad', desc: 'Sistema de gestión y gobernanza continua bajo constante supervisión de la Alta Dirección.' },
-    { title: 'Responsabilidad', desc: 'Protección activa de las personas y de la infraestructura crítica de nuestros clientes.' }
+    { title: 'Responsabilidad', desc: 'Protección activa de las personas y de la infraestructura crítica de nuestros clientes.' },
+    { title: 'Seguridad Jurídica', desc: 'Blindaje normativo y trazabilidad probatoria ante cualquier organismo regulador o judicial.' }
   ];
 
   return (
@@ -43,13 +44,6 @@ export default function About() {
           <article className="lg:col-span-7 bg-gradient-to-r from-slate-900 via-slate-950 to-hurvant-navy-dark text-white rounded-custom-lg p-8 shadow-md border-l-4 border-hurvant-cyan relative overflow-hidden space-y-6">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-hurvant-cyan/10 to-transparent rounded-bl-full pointer-events-none" />
 
-            <span className="text-xs font-bold tracking-widest text-hurvant-cyan uppercase block flex items-center gap-2">
-              <Globe className="h-4 w-4" />
-              Propósito e Identidad Corporativa
-            </span>
-
-            <h3 className="text-2xl font-black tracking-tight text-white">
-              “No vendemos servicios. Impulsamos la competencia técnica de personas, empresas y organizaciones.”
             </h3>
 
             <div className="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
@@ -89,12 +83,12 @@ export default function About() {
           </article>
         </div>
 
-        {/* Los 11 Valores de la Organización */}
+        {/* Los 12 Valores de la Organización */}
         <div className="mb-16 space-y-8">
           <div className="border-b border-slate-200 pb-4">
             <span className="text-xs font-bold text-hurvant-indigo uppercase tracking-widest block mb-1">Cultura Corporativa</span>
             <h3 className="text-2xl sm:text-3xl font-black text-hurvant-navy tracking-tight">
-              Los 11 Valores del Grupo Hurvant
+              Los 12 Valores del Grupo Hurvant
             </h3>
           </div>
 
