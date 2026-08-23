@@ -457,7 +457,7 @@ export default function HomeHero() {
 
               {/* Fila Completa Inferior: Los 5 Pilares Fundamentales (Ampliados y Centrados en la Página) */}
               <div className="lg:col-span-12 pt-8 border-t border-slate-200/80">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto">
                   {[
                     { title: 'INDEPENDENCIA', desc: 'Tercera Parte', icon: ShieldCheck, color: 'text-hurvant-indigo', bg: 'bg-indigo-50/80 border-indigo-100' },
                     { title: 'INSPECCIÓN', desc: 'UNE-EN ISO 17020', icon: ShieldAlert, color: 'text-hurvant-cyan-dark', bg: 'bg-cyan-50/80 border-cyan-100' },
@@ -466,12 +466,15 @@ export default function HomeHero() {
                     { title: 'INMUTABILIDAD', desc: 'Firma SHA-256', icon: Sparkles, color: 'text-amber-600', bg: 'bg-amber-50/80 border-amber-100' }
                   ].map((p, idx) => {
                     const PillarIcon = p.icon;
+                    const isLastOdd = idx === 4;
                     return (
                       <div 
                         key={idx} 
-                        className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center shadow-xs hover:shadow-md hover:border-hurvant-indigo/30 hover:-translate-y-0.5 transition-all duration-300 group"
+                        className={`bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-center text-center shadow-xs hover:shadow-md hover:border-hurvant-indigo/30 hover:-translate-y-0.5 transition-all duration-300 group ${
+                          isLastOdd ? 'col-span-2 sm:col-span-1 max-w-[260px] sm:max-w-none mx-auto w-full' : 'w-full'
+                        }`}
                       >
-                        <div className={`h-10 w-10 sm:h-11 sm:w-11 rounded-xl ${p.bg} border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 shadow-2xs`}>
+                        <div className={`h-10 w-10 sm:h-11 sm:w-11 rounded-xl ${p.bg} border flex items-center justify-center mb-3 transition-transform group-hover:scale-110 shadow-2xs mx-auto`}>
                           <PillarIcon className={`h-5 w-5 ${p.color}`} />
                         </div>
                         <span className="text-xs sm:text-[12.5px] font-black tracking-wide text-hurvant-navy uppercase block text-center w-full leading-snug">
