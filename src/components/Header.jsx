@@ -85,27 +85,35 @@ export default function Header() {
 
       {/* Menú Móvil / Tablet Desplegable */}
       {mobileMenuOpen && (
-        <div className="xl:hidden glass-header border-t border-slate-100 animate-fade-in absolute w-full left-0 z-45 shadow-lg">
-          <nav className="px-4 pt-2 pb-6 space-y-1">
-            {navItems.map((item) => {
-              const active = isActivePath(item.path);
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-3 text-base font-semibold rounded-custom-md transition-all ${
-                    active
-                      ? 'text-hurvant-indigo bg-indigo-50/70 border-l-4 border-hurvant-indigo'
-                      : 'text-slate-600 hover:text-hurvant-navy hover:bg-slate-50'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
+        <>
+          {/* Overlay oscuro para fondo que mejora contraste y permite cerrar al tocar fuera */}
+          <div
+            className="fixed inset-0 top-20 bg-slate-900/30 backdrop-blur-xs z-40 xl:hidden animate-fade-in"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="xl:hidden bg-white border-t border-b border-slate-200 animate-fade-in absolute top-full left-0 w-full z-50 shadow-2xl">
+            <nav className="px-4 py-4 space-y-1">
+              {navItems.map((item) => {
+                const active = isActivePath(item.path);
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-3 text-base font-semibold rounded-custom-md transition-all ${
+                      active
+                        ? 'text-hurvant-indigo bg-indigo-50 border-l-4 border-hurvant-indigo shadow-xs'
+                        : 'text-slate-700 hover:text-hurvant-navy hover:bg-slate-50 active:bg-slate-100'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
