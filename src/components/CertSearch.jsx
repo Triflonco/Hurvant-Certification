@@ -81,6 +81,125 @@ export default function CertSearch() {
     }, 600);
   };
 
+  const handleDownloadCertificate = (cert, code) => {
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      alert('Por favor, habilita las ventanas emergentes en tu navegador para generar el dictamen técnico en PDF.');
+      return;
+    }
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="es">
+      <head>
+        <meta charset="UTF-8">
+        <title>Dictamen Oficial HURVANT - ${code}</title>
+        <style>
+          @page { size: A4; margin: 15mm; }
+          body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #1e293b; margin: 0; padding: 20px; line-height: 1.5; background: #f8fafc; }
+          .cert-container { border: 2px solid #0f172a; padding: 32px; border-radius: 8px; position: relative; background: #fff; max-width: 800px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+          .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #4338ca; padding-bottom: 15px; margin-bottom: 20px; }
+          .logo-title { font-size: 26px; font-weight: 900; color: #0f172a; letter-spacing: 1.5px; }
+          .logo-sub { font-size: 10px; font-weight: 700; color: #4338ca; text-transform: uppercase; margin-top: 2px; }
+          .badge { background: ${cert.isActive ? '#ecfdf5' : '#fff1f2'}; color: ${cert.isActive ? '#047857' : '#be123c'}; border: 1px solid ${cert.isActive ? '#a7f3d0' : '#fecdd3'}; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+          .title { text-align: center; font-size: 20px; font-weight: 900; text-transform: uppercase; color: #0f172a; margin-top: 15px; margin-bottom: 4px; }
+          .subtitle { text-align: center; font-size: 12px; color: #64748b; margin-bottom: 25px; }
+          .details-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+          .details-table th, .details-table td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; font-size: 12px; text-align: left; }
+          .details-table th { color: #64748b; font-weight: 600; width: 35%; background: #f8fafc; }
+          .details-table td { color: #0f172a; font-weight: 700; }
+          .hash-box { background: #0f172a; color: #38bdf8; padding: 12px; border-radius: 6px; font-family: monospace; font-size: 11px; word-break: break-all; margin: 15px 0; text-align: center; border: 1px solid #334155; }
+          .signatures { display: flex; justify-content: space-between; margin-top: 35px; padding-top: 20px; }
+          .sig-box { width: 45%; text-align: center; border-top: 1px dashed #94a3b8; padding-top: 8px; font-size: 11px; color: #475569; }
+          .footer { text-align: center; font-size: 9.5px; color: #94a3b8; margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 12px; }
+          @media print {
+            .no-print { display: none; }
+            body { padding: 0; background: #fff; }
+            .cert-container { box-shadow: none; border: 2px solid #000; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="no-print" style="margin-bottom: 20px; text-align: center;">
+          <button onclick="window.print()" style="background: #4338ca; color: white; border: none; padding: 12px 24px; font-weight: bold; border-radius: 8px; font-size: 14px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            🖨️ Guardar como PDF / Imprimir Dictamen
+          </button>
+        </div>
+        <div class="cert-container">
+          <div class="header">
+            <div>
+              <div class="logo-title">HURVANT</div>
+              <div class="logo-sub">Organismo Técnico de Certificación e Inspección</div>
+            </div>
+            <div class="badge">${cert.estado}</div>
+          </div>
+          
+          <div class="title">Dictamen Oficial de Resolución Técnica</div>
+          <div class="subtitle">Expediente Oficial Nº: <strong>${code}</strong> | Registro Criptográfico Trazado</div>
+          
+          <table class="details-table">
+            <tr>
+              <th>Tipo de Expediente:</th>
+              <td>${cert.tipo}</td>
+            </tr>
+            <tr>
+              <th>Titular / Sujeto Evaluado:</th>
+              <td>${cert.titular}</td>
+            </tr>
+            <tr>
+              <th>Esquema Técnico / Marco Normativo:</th>
+              <td>${cert.esquema}</td>
+            </tr>
+            <tr>
+              <th>Fecha de Examen / Auditoría:</th>
+              <td>${cert.fechaExamen}</td>
+            </tr>
+            <tr>
+              <th>Período de Vigencia y Validez:</th>
+              <td>${cert.vencimiento}</td>
+            </tr>
+            <tr>
+              <th>Inspector Técnico Evaluador:</th>
+              <td>${cert.inspector}</td>
+            </tr>
+            <tr>
+              <th>Coordenadas GPS de Evaluación:</th>
+              <td>${cert.gps}</td>
+            </tr>
+          </table>
+
+          <div style="font-size: 10.5px; font-weight: 700; color: #475569; text-transform: uppercase;">Firma Hash SHA-256 Inmutable:</div>
+          <div class="hash-box">${cert.hash}</div>
+
+          <div class="signatures">
+            <div class="sig-box">
+              <strong>${cert.inspector}</strong><br>
+              Auditor / Inspector Homologado Hurvant
+            </div>
+            <div class="sig-box">
+              <strong>Comité de Imparcialidad y Salvaguarda</strong><br>
+              HURVANT Certification Authority
+            </div>
+          </div>
+
+          <div class="footer">
+            Documento emitido por HURVANT bajo estándares UNE-EN ISO/IEC 17020 y 17024. Verificable públicamente en https://certification.hurvant.com/verificacion
+          </div>
+        </div>
+        <script>
+          window.onload = function() {
+            setTimeout(function() { window.print(); }, 400);
+          };
+        </script>
+      </body>
+      </html>
+    `;
+
+    printWindow.document.open();
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
+  };
+
   return (
     <>
       <PageMeta 
@@ -221,7 +340,8 @@ export default function CertSearch() {
                 </div>
 
                 <button
-                  onClick={() => alert('Descarga de resolución técnica firmada digitalmente (Simulada)...')}
+                  type="button"
+                  onClick={() => handleDownloadCertificate(searchResult, searchedQuery)}
                   className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-hurvant-navy to-hurvant-indigo hover:brightness-110 text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-custom-md shadow-md active:scale-98 transition-all cursor-pointer"
                 >
                   <Download className="h-4 w-4" />
