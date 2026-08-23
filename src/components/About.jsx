@@ -123,49 +123,55 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Declaración de la Alta Dirección */}
-          <article className="glass-card rounded-custom-lg p-8 border border-slate-200/60 shadow-xs relative overflow-hidden bg-white">
-            <h4 className="text-lg font-bold text-hurvant-navy mb-6 border-b border-slate-100 pb-3 flex items-center gap-2.5">
-              <Milestone className="h-5.5 w-5.5 text-hurvant-indigo" />
-              Declaración Institucional de la Alta Dirección
-            </h4>
+          <article className="glass-card rounded-custom-lg p-8 border border-slate-200/80 shadow-xs relative overflow-hidden bg-white flex flex-col justify-between">
+            <div>
+              <h4 className="text-lg font-bold text-hurvant-navy mb-6 border-b border-slate-100 pb-3 flex items-center gap-2.5">
+                <Milestone className="h-5.5 w-5.5 text-hurvant-indigo shrink-0" />
+                <span>Declaración Institucional de la Alta Dirección</span>
+              </h4>
 
-            <div className="space-y-6">
-              <blockquote className="border-l-4 border-hurvant-indigo pl-5 py-3 font-medium text-slate-700 italic text-xs sm:text-sm leading-relaxed bg-slate-50 rounded-r-custom-md">
+              <blockquote className="border-l-4 border-hurvant-indigo pl-5 py-4 font-medium text-slate-700 italic text-xs sm:text-sm leading-relaxed bg-slate-50 rounded-r-custom-md">
                 "La dirección de HURVANT asume el compromiso inequívoco de actuar con absoluta imparcialidad, independencia y neutralidad en el desarrollo de todas sus actividades de certificación e inspección.
                 <br /><br />
                 Las decisiones técnicas se basan exclusivamente en evidencias objetivas recopiladas en campo, exentas de cualquier influencia comercial, corporativa o financiera externa."
               </blockquote>
+            </div>
 
-              <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-                <div>
-                  <strong className="text-xs sm:text-sm text-hurvant-navy block font-bold">Fdo. Alta Dirección del Grupo Hurvant</strong>
-                  <span className="text-xs text-slate-500 font-semibold block">Sello Oficial de Calidad y Gobernanza</span>
-                </div>
-                <div className="h-10 w-10 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center">
-                  <Award className="h-5 w-5 text-hurvant-indigo" />
-                </div>
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-6">
+              <div>
+                <strong className="text-xs sm:text-sm text-hurvant-navy block font-bold">Fdo. Alta Dirección del Grupo Hurvant</strong>
+                <span className="text-xs text-slate-500 font-semibold block">Sello Oficial de Calidad y Gobernanza</span>
+              </div>
+              <div className="h-10 w-10 bg-indigo-50 border border-indigo-100 rounded-full flex items-center justify-center shrink-0">
+                <Award className="h-5 w-5 text-hurvant-indigo" />
               </div>
             </div>
           </article>
 
           {/* Comité de Salvaguarda */}
-          <article className="glass-card rounded-custom-lg p-8 border border-slate-200/60 shadow-xs relative overflow-hidden bg-white">
-            <h4 className="text-lg font-bold text-hurvant-navy mb-6 border-b border-slate-100 pb-3 flex items-center gap-2.5">
-              <Users className="h-5.5 w-5.5 text-hurvant-cyan" />
-              Comité de Salvaguarda de la Imparcialidad
-            </h4>
+          <article className="glass-card rounded-custom-lg p-8 border border-slate-200/80 shadow-xs relative overflow-hidden bg-white flex flex-col justify-between">
+            <div>
+              <h4 className="text-lg font-bold text-hurvant-navy mb-6 border-b border-slate-100 pb-3 flex items-center gap-2.5">
+                <Users className="h-5.5 w-5.5 text-hurvant-cyan shrink-0" />
+                <span>Comité de Salvaguarda de la Imparcialidad</span>
+              </h4>
 
-            <div className="space-y-6 text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
-              <p>
-                Para garantizar un control externo real y transparente, HURVANT cuenta con un **Comité de Salvaguarda de la Imparcialidad** de composición equilibrada e independiente.
-              </p>
-              <p>
-                Este órgano supervisa la separación radical de actividades e impide cualquier presión comercial que pudiera menoscabar la objetividad examinadora.
-              </p>
-              <div className="bg-cyan-50/60 border border-cyan-100 p-4 rounded-custom-md text-xs text-slate-700 font-semibold">
-                ✓ Garantía de Tercera Parte en Certificación de Personas (ISO 17024) e Inspección Técnica (ISO 17020).
+              <blockquote className="border-l-4 border-hurvant-cyan pl-5 py-4 font-medium text-slate-700 italic text-xs sm:text-sm leading-relaxed bg-slate-50 rounded-r-custom-md">
+                "Para garantizar un control externo real y transparente, HURVANT cuenta con un Comité de Salvaguarda de la Imparcialidad de composición equilibrada e independiente.
+                <br /><br />
+                Este órgano supervisa la separación radical de actividades e impide cualquier presión comercial o conflicto de interés en los procesos de evaluación técnica."
+              </blockquote>
+            </div>
+
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-6">
+              <div>
+                <strong className="text-xs sm:text-sm text-hurvant-navy block font-bold">Comité Independiente de Imparcialidad</strong>
+                <span className="text-xs text-slate-500 font-semibold block">Garantía ISO 17024 (Personas) e ISO 17020 (Inspección)</span>
+              </div>
+              <div className="h-10 w-10 bg-cyan-50 border border-cyan-100 rounded-full flex items-center justify-center shrink-0">
+                <ShieldCheck className="h-5 w-5 text-hurvant-cyan" />
               </div>
             </div>
           </article>
