@@ -138,6 +138,10 @@ export default function HomeHero() {
     {
       text: '“Gobernanza transparente e imparcialidad garantizada.”',
       sub: 'Separación estricta de actividades evaluadoras e investigadoras.'
+    },
+    {
+      text: '“Trazabilidad inmutable y blindaje jurídico en cada dictamen emitido.”',
+      sub: 'Firma digital SHA-256 e informes periciales verificables con validez institucional.'
     }
   ];
 
